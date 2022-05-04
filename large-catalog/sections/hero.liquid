@@ -2,9 +2,11 @@
 {{ "buttons.css" | asset_url | stylesheet_tag }}
 
 <section class="hero" style="
-  background-image: url({{ section.settings.background_image | image_url }});
-  background-size: cover;
-  background-position: center;
+  {% if section.settings.background_image %}
+    background-image: url({{ section.settings.background_image | image_url }});
+    background-size: cover;
+    background-position: center;
+  {% endif %}
 ">
   {% for block in section.blocks %}
     {% case block.type %}
@@ -13,7 +15,7 @@
       {% when "text" %}
         <p class="hero__text" style="color: {{ block.settings.color }};">{{ block.settings.text }}</p>
       {% when "button" %}
-        <a class="bq-button bq-button-{{ block.id }}" href="{{ block.settings.url }}" style="
+        <a class="bq-button" href="{{ block.settings.url }}" style="
           background-color: {{ block.settings.background_color }};
           color: {{ block.settings.label_color }};
         ">

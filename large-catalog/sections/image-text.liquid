@@ -1,57 +1,35 @@
 {{ "image-text.css" | asset_url | stylesheet_tag }}
 {{ "buttons.css" | asset_url | stylesheet_tag }}
 
-{% style %}
+<section class="image-text" style="
   {% if section.settings.background_image %}
-    .image-text {
-      background-image: url({{ section.settings.background_image | image_url }});
-      background-size: cover;
-      background-position: center;
-    }
+    background-image: url({{ section.settings.background_image | image_url }});
+    background-size: cover;
+    background-position: center;
   {% endif %}
-
-  {% if section.settings.overlay_color %}
-    .image-text__overlay {
+">
+  <span class="image-text__overlay" style="
+    {% if section.settings.overlay_color %}
       background-color: {{ section.settings.overlay_color }};
-    }
-  {% endif %}
-
-  {% if section.settings.overlay_opacity %}
-    .image-text__overlay {
+    {% endif %}
+    {% if section.settings.overlay_opacity %}
       opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
-    }
-  {% endif %}
-
-  {% for block in section.blocks %}
-    {% case block.type %}
-      {% when "heading" %}
-        .image-text__title {
-          color: {{ block.settings.color }};
-        }
-      {% when "text" %}
-        .image-text__text {
-          color: {{ block.settings.color }};
-        }
-      {% when "button" %}
-        .bq-button-{{ block.id }} {
-          background-color: {{ block.settings.background_color }};
-          color: {{ block.settings.label_color }};
-        }
-    {% endcase %}
-  {% endfor %}
-{% endstyle %}
-
-<section class="image-text">
-  <span class="image-text__overlay"></span>
+    {% endif %}
+  "></span>
   <div class="image-text__content">
     {% for block in section.blocks %}
       {% case block.type %}
         {% when "heading" %}
-          <h2 class="image-text__title">{{ block.settings.text }}</h2>
+          <h2 class="image-text__title" style="color: {{ block.settings.color }};">{{ block.settings.text }}</h2>
         {% when "text" %}
-          <p class="image-text__text">{{ block.settings.text }}</p>
+          <p class="image-text__text" style="color: {{ block.settings.color }};">{{ block.settings.text }}</p>
         {% when "button" %}
-          <a class="bq-button bq-button-{{ block.id }}" href="{{ block.settings.url }}">{{ block.settings.text }}</a>
+          <a class="bq-button" href="{{ block.settings.url }}" style="
+            background-color: {{ block.settings.background_color }};
+            color: {{ block.settings.label_color }};
+          ">
+            {{ block.settings.text }}
+          </a>
       {% endcase %}
     {% endfor %}
   </div>
