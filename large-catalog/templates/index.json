@@ -1,0 +1,57 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "f4150044-d44d-4594-b14d-f4159853655c": {
+          "type": "heading",
+          "settings": {
+            "text": "Hire from us",
+            "color": "#ffffff"
+          }
+        },
+        "09332463-6766-4bfa-8efc-9499bf1fd91b": {
+          "type": "text",
+          "settings": {
+            "text": "Tell something about your company, describe what you do and what makes you unique",
+            "color": "#ffffff"
+          }
+        },
+        "76324d78-aa12-46c5-8d6c-7243d764d78e": {
+          "type": "button",
+          "settings": {
+            "text": "Shop collection",
+            "url": "",
+            "background_color": "#000000",
+            "label_color": "#ffffff"
+          }
+        },
+        "76324d78-aa12-46c5-8d6c-7243d764d78d": {
+          "type": "button",
+          "settings": {
+            "text": "Shop collection",
+            "url": "",
+            "background_color": "#2ccce4",
+            "label_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "f4150044-d44d-4594-b14d-f4159853655c",
+        "09332463-6766-4bfa-8efc-9499bf1fd91b",
+        "76324d78-aa12-46c5-8d6c-7243d764d78e",
+        "76324d78-aa12-46c5-8d6c-7243d764d78d"
+      ],
+      "settings": {
+        "background_image": "https:\/\/images.unsplash.com\/photo-1616116240610-766de3d0926a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3260&q=80"
+      }
+    },
+    "image-text": {
+      "type": "image-text"
+    }
+  },
+  "order": [
+    "hero",
+    "image-text"
+  ]
+}

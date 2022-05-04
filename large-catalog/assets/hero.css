@@ -5,6 +5,8 @@
   align-items: center;
 
   padding: 220px 20px;
+
+  font-family: Open Sans;
 }
 
 .hero__title, .hero__text {
