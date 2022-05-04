@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% comment %} Bootstrap stylesheets {% endcomment %}
+  {{ "bootstrap-reboot.css" | asset_url | stylesheet_tag }}
+  {{ "bootstrap-grid.css" | asset_url | stylesheet_tag }}
+  {% comment %} Fonts links {% endcomment %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Large catalog</title>
+</head>
+<body>
+  {% section 'header_new' %}
+  <main>
+    {{ content_for_layout }}
+  </main>
+</body>
+</html>
