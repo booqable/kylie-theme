@@ -1,0 +1,105 @@
+{{ "header.css" | asset_url | stylesheet_tag }}
+
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+  <symbol id="icon-search" viewbox="0 0 18 19" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" fill="currentColor"/>
+  </symbol>
+
+  <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+    <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+  </symbol>
+</svg>
+<header class="header">
+  <div class="header__wrapper">
+    <div class="header--left">
+      <a href="{{ routes.root_url }}" class="header__link">
+        {% if section.settings.logo %}
+          <img
+            src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
+            alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            class="header__image-logo"
+            width="{{ section.settings.logo.width }}"
+            height="{{ section.settings.logo.height }}"
+          >
+        {% else %}
+          <h1 class="header__text-logo">{{ shop.name }}</h1>
+        {% endif %}
+      </a>
+      <nav class="header__nav">
+        <ul class="list-menu list-menu--horizontal">
+          {% for link in sections.settings.menu.links %}
+            <li class="list-menu__item">
+              {% if link.links %}
+                <ul class="list-submenu">
+                  {% for childlink in link.links %}
+                    <li class="list-menu__item">
+                      <a href="{{ childlink.url }}" class="header__nav-item">
+                        {{ childlink.title | escape }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% else %}
+                <a href="{{ link.url }}" class="header__nav-item">{{ link.title | escape }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    <div class="header--right">
+      <div class="header-search">
+        <label for="floating-search" class="header-search__trigger">
+          <input type="checkbox" id="floating-search">
+          <svg class="header-search__icon">
+            <use href="#icon-search">
+          </svg>
+        </label>
+        <div class="header-search__wrapper">
+          <form action="{{ routes.search_url }}" method="get" role="search">
+            <div class="header-search__input-wrapper">
+              <svg class="header-search__icon">
+                <use href="#icon-search">
+              </svg>
+              <input type="text" class="header-search__input" placeholder="Search">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="bq-cart"></div>
+      <div class="header-floating-menu">
+        <label for="floating-menu-trigger" class="header-floating-menu__trigger">
+          <input type="checkbox" id="floating-menu-trigger">
+          <span class="header-floating-menu__icon open">-</span>
+          <svg class="header-floating-menu__icon close">
+            <use href="#icon-close">
+          </svg>
+        </label>
+        <div class="header-floating-menu__wrapper">
+          <ul class="list-menu list-menu--vertical">
+            {% for link in sections.settings.menu.links %}
+              <li class="list-menu__item">
+                {% if link.links %}
+                  <label for="floating-child-{{ forloop.index }}">
+                    <input type="checkbox" id="floating-child-{{ forloop.index }}">
+                    <ul class="list-submenu">
+                      {% for childlink in link.links %}
+                        <li class="list-menu__item">
+                          <a href="{{ childlink.url }}" class="header__nav-item">
+                            {{ childlink.title | escape }}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </label>
+                {% else %}
+                  <a href="{{ link.url }}" class="header__nav-item">{{ link.title | escape }}</a>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,32 @@
+.hero {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 220px 20px;
+}
+
+.hero__title, .hero__text {
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 40px;
+  line-height: 48px;
+
+  font-weight: 700;
+
+  margin: 6px 0;
+}
+
+.hero__text {
+  font-size: 20px;
+  line-height: 28px;
+
+  margin: 12px 0;
+}
+
+.bq-button {
+  margin: 12px 0;
+}
