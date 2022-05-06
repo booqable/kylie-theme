@@ -1,3 +1,53 @@
 {
-  "current": {}
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "menu": {
+            "links": [
+              {
+                "settings": {
+                  "title": "About us",
+                  "url": "about-us",
+                  "links": [
+                    {
+                      "title": "Our team",
+                      "url": "our-team"
+                    },
+                    {
+                      "title": "Our history",
+                      "url": "our-history",
+                      "links": [
+                        {
+                          "title": "BC",
+                          "url": "our-history/bc"
+                        },
+                        {
+                          "title": "AC",
+                          "url": "our-history/ac"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "settings": {
+                  "title": "Contact us",
+                  "url": "contact-us"
+                }
+              },
+              {
+                "settings": {
+                  "title": "FAQ",
+                  "url": "faq"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
 }

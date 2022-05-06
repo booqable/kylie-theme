@@ -5,30 +5,16 @@
   right: 0;
 
   background-color: #ffffff;
+  z-index: 1000;
 }
 
-.header--left,
-.header--right {
-  display: flex;
-  align-items: center;
-}
-
-.header--left {
-  flex: 1;
-}
-
-.header--right {
-  justify-content: flex-end;
-}
-
-.header--right > *:not(:last-child) {
-  margin-right: 16px;
+.header + main {
+  margin-top: 55px;
 }
 
 .header__wrapper {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content 40px;
   align-items: center;
 
   max-width: 1232px;
@@ -44,6 +30,12 @@
   text-decoration: none;
 
   color: #0c2747;
+
+  margin-right: 40px;
+}
+
+.header__link:hover {
+  color: #0c2747;
 }
 
 .header__text-logo {
@@ -53,17 +45,69 @@
   font-weight: 600;
 
   margin: 0;
-  margin-right: 40px;
 }
 
-.header__nav .list-menu--horizontal {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+.header__nav .header__nav-item {
+  font-size: 16px;
+  line-height: 24px;
+
+  font-weight: 600;
+
+  color: #0C2747;
+
+  text-decoration: none;
 }
 
-.header__nav .list-menu--horizontal .list-menu__item:not(:last-child) {
+.header__nav .list-menu--horizontal > .list-menu__item:not(:last-child) {
+  margin: 0;
   margin-right: 32px;
+}
+
+.header__nav .list-menu--horizontal > .list-menu__item:not(:last-child) {
+  margin: 0;
+  margin-right: 32px;
+}
+
+.header__nav .list-menu--vertical > .list-menu__item {
+  border-bottom: 1px solid #d8dce0;
+}
+
+.header__nav .list-menu--vertical .header__nav-item {
+  display: block;
+
+  padding: 12px 16px;
+}
+
+.header__nav .list-menu__item-caret {
+  margin-left: 16px;
+}
+
+.header__nav .list-submenu .list-menu__item-caret {
+  margin: 0 16px;
+}
+
+.header__nav .list-submenu__container {
+  background-color: #FFFFFF;
+}
+
+.list-submenu__container .header__nav-item {
+  display: block;
+
+  width: 100%;
+
+  padding: 12px 16px;
+
+  font-weight: 400;
+}
+
+.list-submenu .list-submenu .header__nav-item {
+  font-weight: 400;
+}
+
+.header-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-search #floating-search {
@@ -115,8 +159,10 @@
 }
 
 .header-search__icon {
-  width: 20px;
-  height: 20px;
+  font-size: 16px;
+
+  width: 16px;
+  height: 16px;
 }
 
 .header-search__wrapper .header-search__icon.close {
@@ -131,22 +177,63 @@
   display: none;
 }
 
-.header-floating-menu__icon {
-  width: 20px;
-  height: 20px;
+.header-floating-menu__icon.open {
+  font-size: 18px;
+}
+
+.header-floating-menu__icon.close {
+  font-size: 20px;
 }
 
 .header-floating-menu__wrapper {
+  visibility: hidden;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  opacity: 0;
+  transform: translateY(30px);
+
+  transition: visibility 0s linear 300ms, opacity 300ms, transform 250ms;
+
+  height: 100vh;
+
+  background-color: #FFFFFF;
+}
+
+.bq-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#floating-menu-trigger:not(:checked) + .header-floating-menu__trigger .header-floating-menu__icon.close {
   display: none;
 }
 
-@media (max-width: 810px) {
-  .header__nav {
+#floating-menu-trigger:checked + .header-floating-menu__trigger .header-floating-menu__icon.open {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .header__nav .list-menu--horizontal > .list-menu__item:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 762px) {
+  .header__wrapper {
+    grid-template-columns: 1fr repeat(3, 40px);
+  }
+
+  .header__nav--desktop {
     display: none;
   }
 
-  .header--right > *:not(:last-child) {
-    margin-right: 8px;
+  .header__nav .list-menu__item-caret {
+    margin: 0 16px;
   }
 
   .header-search__trigger {
@@ -189,17 +276,32 @@
   .header-search__wrapper .header-search__icon.close {
     display: block;
 
+    font-size: 20px;
+
     margin-left: 8px;
   }
 
   .header-search #floating-search:checked ~ .header-search__wrapper {
+    visibility: visible;
+
     opacity: 1;
     transform: scale(1);
-    visibility: visible;
+
     transition: visibility 0s linear 0s, opacity 300ms, transform 250ms;
   }
 
   .header-floating-menu {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-floating-menu #floating-menu-trigger:checked ~ .header-floating-menu__wrapper {
+    visibility: visible;
+
+    opacity: 1;
+    transform: translateY(0);
+
+    transition: visibility 0s linear 0s, opacity 300ms, transform 250ms;
   }
 }
