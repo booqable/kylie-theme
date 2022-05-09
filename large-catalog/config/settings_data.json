@@ -47,6 +47,39 @@
             ]
           }
         }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "menu": {
+            "links": [
+              {
+                "settings": {
+                  "title": "Contact us",
+                  "url": "contact-us"
+                }
+              },
+              {
+                "settings": {
+                  "title": "FAQ",
+                  "url": "faq"
+                }
+              },
+              {
+                "settings": {
+                  "title": "Contact us",
+                  "url": "contact-us"
+                }
+              },
+              {
+                "settings": {
+                  "title": "FAQ",
+                  "url": "faq"
+                }
+              }
+            ]
+          }
+        }
       }
     }
   }
