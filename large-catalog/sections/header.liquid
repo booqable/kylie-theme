@@ -9,11 +9,9 @@
     <a href="{{ routes.root_url }}" class="header__link">
       {% if section.settings.logo %}
         <img
-          src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
-          alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+          src="{{ section.settings.logo }}"
+          alt="{{ shop.name }}"
           class="header__image-logo"
-          width="{{ section.settings.logo.width }}"
-          height="{{ section.settings.logo.height }}"
         >
       {% else %}
         <h1 class="header__text-logo">{{ shop.name }}</h1>
@@ -132,6 +130,8 @@
 {% schema %}
 {
   "name": "Header",
+  "tag": "header",
+  "class": "header",
   "settings": [
     {
       "type": "image_picker",

@@ -8,7 +8,7 @@
 
   position: relative;
 
-  max-width: 1200px;
+  max-width: 1216px;
 
   border-radius: 8px;
 
@@ -59,7 +59,7 @@
   }
 }
 
-@media (max-width: 1232px) {
+@media (max-width: 1248px) {
   .image-text {
     margin: 20px 16px;
   }
