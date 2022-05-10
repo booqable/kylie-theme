@@ -1,0 +1,92 @@
+.products {
+  max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
+  width: 100%;
+
+  margin: 16px auto;
+  padding: 0 var(--horizontal-padding);
+}
+
+.products__title {
+  font-size: 36px;
+  line-height: 44px;
+
+  font-weight: 600;
+
+  color: #0c2747;
+
+  margin-bottom: 24px;
+}
+
+.products .booqable-product {
+  width: 280px;
+  height: 310px !important;
+
+  background-color: #d8dce0;
+
+  border-radius: 8px;
+}
+
+.products .booqable-product:not(:last-child) {
+  margin-right: 32px;
+}
+
+.products .bq-carousel {
+  position: relative;
+}
+
+.products .bq-carousel__prev,
+.products .bq-carousel__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+}
+
+.products .bq-carousel__prev i,
+.products .bq-carousel__next i {
+  font-size: 24px;
+
+  color: #0c2747;
+}
+
+.products .bq-carousel__prev {
+  left: -40px;
+}
+
+.products .bq-carousel__next {
+  right: -40px;
+}
+
+@media (max-width: 1280px) {
+  .products .bq-carousel__prev,
+  .products .bq-carousel__next {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .products .booqable-product {
+    width: 196px;
+    height: 265px !important;
+  }
+
+  .products .booqable-product:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+@-moz-document url-prefix() {
+  .bq-carousel__inner .glider-track {
+    margin-bottom: 17px;
+  }
+
+  .bq-carousel {
+    overflow: hidden;
+  }
+}

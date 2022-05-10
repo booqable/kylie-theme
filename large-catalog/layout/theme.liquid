@@ -11,6 +11,8 @@
   {% comment %} Bootstrap stylesheets {% endcomment %}
   {{ "bootstrap-reboot.css" | asset_url | stylesheet_tag }}
   {{ "bootstrap-grid.css" | asset_url | stylesheet_tag }}
+  {% comment %} Glider stylesheet {% endcomment %}
+  {{ "glider.min.css" | asset_url | stylesheet_tag }}
   {% comment %} Base stylesheet {% endcomment %}
   {{ "base.css" | asset_url | stylesheet_tag }}
   {% comment %} Font Awesome {% endcomment %}
@@ -23,5 +25,8 @@
     {{ content_for_layout }}
   </main>
   {% section 'footer' %}
+
+  <script src="{{ "glider.min.js" | asset_url }}" defer></script>
+  <script src="{{ "index.js" | asset_url }}" defer></script>
 </body>
 </html>
