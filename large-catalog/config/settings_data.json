@@ -3,6 +3,8 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {},
+        "block_order": [],
         "settings": {
           "menu": {
             "links": [
@@ -11,76 +13,43 @@
                   "title": "About us",
                   "url": "about-us",
                   "links": [
-                    {
-                      "title": "Our team",
-                      "url": "our-team"
-                    },
+                    { "title": "Our team", "url": "our-team" },
                     {
                       "title": "Our history",
                       "url": "our-history",
                       "links": [
-                        {
-                          "title": "BC",
-                          "url": "our-history/bc"
-                        },
-                        {
-                          "title": "AC",
-                          "url": "our-history/ac"
-                        }
+                        { "title": "BC", "url": "our-history/bc" },
+                        { "title": "AC", "url": "our-history/ac" }
                       ]
                     }
                   ]
                 }
               },
-              {
-                "settings": {
-                  "title": "Contact us",
-                  "url": "contact-us"
-                }
-              },
-              {
-                "settings": {
-                  "title": "FAQ",
-                  "url": "faq"
-                }
-              }
+              { "settings": { "title": "Contact us", "url": "contact-us" } },
+              { "settings": { "title": "FAQ", "url": "faq" } }
             ]
           }
-        }
+        },
+        "disabled": null
       },
       "footer": {
         "type": "footer",
+        "blocks": {},
+        "block_order": [],
         "settings": {
           "menu": {
             "links": [
-              {
-                "settings": {
-                  "title": "Contact us",
-                  "url": "contact-us"
-                }
-              },
-              {
-                "settings": {
-                  "title": "FAQ",
-                  "url": "faq"
-                }
-              },
-              {
-                "settings": {
-                  "title": "Contact us",
-                  "url": "contact-us"
-                }
-              },
-              {
-                "settings": {
-                  "title": "FAQ",
-                  "url": "faq"
-                }
-              }
+              { "settings": { "title": "Contact us", "url": "contact-us" } },
+              { "settings": { "title": "FAQ", "url": "faq" } },
+              { "settings": { "title": "Contact us", "url": "contact-us" } },
+              { "settings": { "title": "FAQ", "url": "faq" } }
             ]
-          }
-        }
+          },
+          "show_social_icons": true
+        },
+        "disabled": null
       }
-    }
+    },
+    "social_twitter_link": "https://twitter.com"
   }
 }

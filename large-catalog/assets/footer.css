@@ -3,6 +3,7 @@
   width: 100%;
 
   padding: 0 var(--horizontal-padding) 32px;
+  margin: 0 auto;
 }
 
 .footer__content {
