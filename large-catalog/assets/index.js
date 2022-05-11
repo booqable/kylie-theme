@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+const initCarousels = () => {
   document.querySelectorAll(".bq-carousel").forEach((carousel) => {
     const inner = carousel.querySelector(".bq-carousel__inner");
     const prev = carousel.querySelector(".bq-carousel__prev");
@@ -47,4 +47,22 @@ window.addEventListener("load", () => {
   // Firefox hide scrollbar workaround
   document.addEventListener("glider-loaded", hideFFScrollBars);
   document.addEventListener("glider-refresh", hideFFScrollBars);
+};
+
+const handleHeaderLayout = () => {
+  const header = document.querySelector('header.header')
+  const headerHeight = header.getBoundingClientRect().height;
+  const contentContainer = document.querySelector('#main');
+
+  if (headerHeight > 0) {
+    contentContainer.style.marginTop = headerHeight + 'px';
+  }
+}
+
+window.addEventListener("load", () => {
+  // Initializers
+  initCarousels();
+
+  // Handlers
+  handleHeaderLayout();
 });
