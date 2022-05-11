@@ -4,108 +4,38 @@
 {% assign desktop_menu = section.settings.menu.links %}
 {% assign mobile_menu = section.settings.menu.links %}
 
-<header class="header">
-  <div class="header__wrapper">
-    <a href="{{ routes.root_url }}" class="header__link">
-      {% if section.settings.logo %}
-        <img
-          src="{{ section.settings.logo }}"
-          alt="{{ shop.name }}"
-          class="header__image-logo"
-        >
-      {% else %}
-        <h1 class="header__text-logo">{{ shop.name }}</h1>
-      {% endif %}
-    </a>
-    <nav class="header__nav header__nav--desktop">
-      <ul class="list-menu list-menu--horizontal">
-        {% for link in desktop_menu %}
-          <li class="list-menu__item">
-            <a href="{{ link.settings.url }}" class="header__nav-item">
-              {{ link.settings.title }}
-            </a>
-            {% if link.settings.links %}
-              <i class="fa-solid fa-caret-down list-menu__item-caret"></i>
-              <div class="list-submenu">
-                <ul class="list-submenu__container">
-                  {% for childlink in link.settings.links %}
-                    <li class="list-menu__item">
-                      <a href="{{ childlink.url }}" class="header__nav-item">
-                        {{ childlink.title }}
-                      </a>
-                      {% if childlink.links %}
-                        <i class="fa-solid fa-caret-right list-menu__item-caret"></i>
-                        <div class="list-submenu">
-                          <ul class="list-submenu__container">
-                            {% for grandchildlink in childlink.links %}
-                              <li class="list-menu__item">
-                                <a href="{{ grandchildlink.url }}" class="header__nav-item">
-                                  {{ grandchildlink.title }}
-                                </a>
-                              </li>
-                            {% endfor %}
-                          </ul>
-                        </div>
-                      {% endif %}
-                    </li>
-                  {% endfor %}
-                </ul>
-              </div>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
-    <div class="header-search">
-      <input type="checkbox" id="floating-search">
-      <label for="floating-search" class="header-search__trigger">
-        <i class="fa-solid fa-magnifying-glass header-search__icon"></i>
-      </label>
-      <div class="header-search__wrapper">
-        <form action="{{ routes.search_url }}" method="get" role="search">
-          <div class="header-search__input-wrapper">
-            <i class="fa-solid fa-magnifying-glass header-search__icon"></i>
-            <input type="text" class="header-search__input" placeholder="Search">
-          </div>
-          <label class="header-search__trigger" for="floating-search">
-            <i class="fa-solid fa-xmark header-search__icon close"></i>
-          </label>
-        </form>
-      </div>
-    </div>
-    <div class="bq-cart">
-      <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    <div class="header-floating-menu">
-      <input type="checkbox" id="floating-menu-trigger">
-      <label for="floating-menu-trigger" class="header-floating-menu__trigger">
-        <i class="fa-solid fa-bars header-floating-menu__icon open"></i>
-        <i class="fa-solid fa-xmark header-floating-menu__icon close"></i>
-      </label>
-      <div class="header__nav header__nav--mobile header-floating-menu__wrapper">
-        <ul class="list-menu list-menu--vertical">
-          {% for link in mobile_menu %}
-            <li class="list-menu__item">
-              <a href="{{ link.settings.url }}" class="header__nav-item">
-                {{ link.settings.title }}
-              </a>
-              {% if link.settings.links %}
-                <input type="checkbox" id="floating-child-{{ forloop.index }}">
-                <label for="floating-child-{{ forloop.index }}">
-                  <i class="fa-solid fa-angle-down list-menu__item-caret"></i>
-                </label>
-                <ul class="list-submenu">
-                  {% for childlink in link.settings.links %}
-                    <li class="list-menu__item">
-                      <a href="{{ childlink.url }}" class="header__nav-item">
-                        {{ childlink.title }}
-                      </a>
-                      {% if childlink.links %}
-                        <input type="checkbox" id="floating-grandchild-{{ forloop.index }}">
-                        <label for="floating-grandchild-{{ forloop.index }}">
-                          <i class="fa-solid fa-angle-down list-menu__item-caret"></i>
-                        </label>
-                        <ul class="list-submenu">
+<div class="header__wrapper">
+  <a href="{{ routes.root_url }}" class="header__link">
+    {% if section.settings.logo != null %}
+      <img
+        src="{{ section.settings.logo | image_url }}"
+        alt="{{ shop.name }}"
+        class="header__image-logo"
+      >
+    {% else %}
+      <h1 class="header__text-logo">{{ shop.name }}</h1>
+    {% endif %}
+  </a>
+  <nav class="header__nav header__nav--desktop">
+    <ul class="list-menu list-menu--horizontal">
+      {% for link in desktop_menu %}
+        <li class="list-menu__item">
+          <a href="{{ link.settings.url }}" class="header__nav-item">
+            {{ link.settings.title }}
+          </a>
+          {% if link.settings.links %}
+            <i class="fa-solid fa-caret-down list-menu__item-caret"></i>
+            <div class="list-submenu">
+              <ul class="list-submenu__container">
+                {% for childlink in link.settings.links %}
+                  <li class="list-menu__item">
+                    <a href="{{ childlink.url }}" class="header__nav-item">
+                      {{ childlink.title }}
+                    </a>
+                    {% if childlink.links %}
+                      <i class="fa-solid fa-caret-right list-menu__item-caret"></i>
+                      <div class="list-submenu">
+                        <ul class="list-submenu__container">
                           {% for grandchildlink in childlink.links %}
                             <li class="list-menu__item">
                               <a href="{{ grandchildlink.url }}" class="header__nav-item">
@@ -114,18 +44,86 @@
                             </li>
                           {% endfor %}
                         </ul>
-                      {% endif %}
-                    </li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
+                      </div>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <div class="header-search">
+    <input type="checkbox" id="floating-search">
+    <label for="floating-search" class="header-search__trigger">
+      <i class="fa-solid fa-magnifying-glass header-search__icon"></i>
+    </label>
+    <div class="header-search__wrapper">
+      <form action="{{ routes.search_url }}" method="get" role="search">
+        <div class="header-search__input-wrapper">
+          <i class="fa-solid fa-magnifying-glass header-search__icon"></i>
+          <input type="text" class="header-search__input" placeholder="Search">
+        </div>
+        <label class="header-search__trigger" for="floating-search">
+          <i class="fa-solid fa-xmark header-search__icon close"></i>
+        </label>
+      </form>
     </div>
   </div>
-</header>
+  <div class="bq-cart">
+    <i class="fa-solid fa-cart-shopping"></i>
+  </div>
+  <div class="header-floating-menu">
+    <input type="checkbox" id="floating-menu-trigger">
+    <label for="floating-menu-trigger" class="header-floating-menu__trigger">
+      <i class="fa-solid fa-bars header-floating-menu__icon open"></i>
+      <i class="fa-solid fa-xmark header-floating-menu__icon close"></i>
+    </label>
+    <div class="header__nav header__nav--mobile header-floating-menu__wrapper">
+      <ul class="list-menu list-menu--vertical">
+        {% for link in mobile_menu %}
+          <li class="list-menu__item">
+            <a href="{{ link.settings.url }}" class="header__nav-item">
+              {{ link.settings.title }}
+            </a>
+            {% if link.settings.links %}
+              <input type="checkbox" id="floating-child-{{ forloop.index }}">
+              <label for="floating-child-{{ forloop.index }}">
+                <i class="fa-solid fa-angle-down list-menu__item-caret"></i>
+              </label>
+              <ul class="list-submenu">
+                {% for childlink in link.settings.links %}
+                  <li class="list-menu__item">
+                    <a href="{{ childlink.url }}" class="header__nav-item">
+                      {{ childlink.title }}
+                    </a>
+                    {% if childlink.links %}
+                      <input type="checkbox" id="floating-grandchild-{{ forloop.index }}">
+                      <label for="floating-grandchild-{{ forloop.index }}">
+                        <i class="fa-solid fa-angle-down list-menu__item-caret"></i>
+                      </label>
+                      <ul class="list-submenu">
+                        {% for grandchildlink in childlink.links %}
+                          <li class="list-menu__item">
+                            <a href="{{ grandchildlink.url }}" class="header__nav-item">
+                              {{ grandchildlink.title }}
+                            </a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
 
 {% schema %}
 {

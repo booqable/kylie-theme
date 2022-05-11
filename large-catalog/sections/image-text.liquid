@@ -1,21 +1,24 @@
 {{ "image-text.css" | asset_url | stylesheet_tag }}
 {{ "buttons.css" | asset_url | stylesheet_tag }}
 
-<section class="image-text" style="
+<div class="image-text__inner">
   {% if section.settings.background_image %}
-    background-image: url({{ section.settings.background_image | image_url }});
-    background-size: cover;
-    background-position: center;
+    <img
+      data-src="{{ section.settings.background_image | image_url }}"
+      alt="{{ section.settings.background_image_alt | default: "" }}"
+      class="lazyload image-text__background"
+    >
   {% endif %}
-">
-  <span class="image-text__overlay" style="
-    {% if section.settings.overlay_color %}
-      background-color: {{ section.settings.overlay_color }};
-    {% endif %}
-    {% if section.settings.overlay_opacity %}
-      opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
-    {% endif %}
-  "></span>
+  {% if section.settings.overlay_enabled %}
+    <span class="image-text__overlay" style="
+      {% if section.settings.overlay_color %}
+        background-color: {{ section.settings.overlay_color }};
+      {% endif %}
+      {% if section.settings.overlay_opacity %}
+        opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 | default: 0.2 }};
+      {% endif %}
+    "></span>
+  {% endif %}
   <div class="image-text__content">
     {% for block in section.blocks %}
       {% case block.type %}
@@ -33,11 +36,13 @@
       {% endcase %}
     {% endfor %}
   </div>
-</section>
+</div>
 
 {% schema %}
 {
   "name": "Image with text",
+  "tag": "section",
+  "class": "image-text",
   "settings": [
     {
       "type": "image_picker",
@@ -45,9 +50,13 @@
       "label": "Background image"
     },
     {
+      "type": "checkbox",
+      "id": "overlay_enabled",
+      "label": "Enable overlay"
+    },
+    {
       "type": "color",
       "id": "overlay_color",
-      "default": "#000000",
       "label": "Overlay color"
     },
     {
@@ -55,7 +64,6 @@
       "min": 0,
       "max": 100,
       "step": 1,
-      "default": 20,
       "id": "overlay_opacity",
       "label": "Overlay opacity"
     }

@@ -36,6 +36,16 @@
   text-align: right;
 }
 
+.footer__payment-methods i {
+  color: #0C2747;
+
+  font-size: 32px;
+}
+
+.footer__payment-methods i:not(:last-child) {
+  margin-right: 8px;
+}
+
 .footer__social {
   margin-top: 32px;
 }

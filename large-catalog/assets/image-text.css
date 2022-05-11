@@ -1,4 +1,4 @@
-.image-text {
+.image-text__inner {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -13,7 +13,20 @@
   border-radius: 8px;
 
   margin: 20px auto;
-  padding: 32px;
+  padding: 64px 32px;
+
+  z-index: 1;
+}
+
+.image-text__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
 }
 
 .image-text__title {
@@ -60,7 +73,8 @@
 }
 
 @media (max-width: 1248px) {
-  .image-text {
+  .image-text__inner {
+    padding: 32px;
     margin: 20px 16px;
   }
 }

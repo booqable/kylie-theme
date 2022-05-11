@@ -19,7 +19,7 @@
 
 .products .booqable-product {
   width: 280px;
-  height: 310px !important;
+  height: 350px !important;
 
   background-color: #d8dce0;
 
@@ -61,6 +61,11 @@
 
 .products .bq-carousel__next {
   right: -40px;
+}
+
+.products .bq-carousel__prev.disabled,
+.products .bq-carousel__next.disabled {
+  display: none;
 }
 
 @media (max-width: 1280px) {

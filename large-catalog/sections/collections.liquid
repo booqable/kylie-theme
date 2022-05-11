@@ -1,29 +1,29 @@
 {{ "collections.css" | asset_url | stylesheet_tag }}
 
-<section class="collections">
-  {% if section.settings.title %}
-    <h2 class="collections__title">{{ section.settings.title }}</h2>
-  {% endif %}
-  {% if section.settings.enable_show_more %}
-    <a href="#" class="collections__show-more">
-      Browse all collections
-      <i class="fa-solid fa-chevron-right"></i>
+{% if section.settings.title %}
+  <h2 class="collections__title">{{ section.settings.title }}</h2>
+{% endif %}
+{% if section.settings.enable_show_more %}
+  <a href="#" class="collections__show-more">
+    Browse all collections
+    <i class="fa-solid fa-chevron-right"></i>
+  </a>
+{% endif %}
+<div class="collections__list">
+  {% for collection in section.blocks %}
+    <a href="#">
+      <div class="collection">
+        <h3 class="collection__name">{{ collection.settings.name }}</h3>
+      </div>
     </a>
-  {% endif %}
-  <div class="collections__list">
-    {% for collection in section.blocks %}
-      <a href="#">
-        <div class="collection" {% if collection.settings.image %}style="background-image: url({{ collection.settings.image | image_url }})"{% endif %}>
-          <h3 class="collection__name">{{ collection.settings.name }}</h3>
-        </div>
-      </a>
-    {% endfor %}
-  </div>
-</section>
+  {% endfor %}
+</div>
 
 {% schema %}
 {
   "name": "Collections",
+  "tag": "section",
+  "class": "collections",
   "settings": [
     {
       "type": "text",
@@ -46,16 +46,6 @@
           "type": "text",
           "id": "name",
           "label": "Name"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        },
-        {
-          "type": "product",
-          "id": "product",
-          "label": "Product"
         }
       ]
     }

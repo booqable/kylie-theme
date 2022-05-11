@@ -1,13 +1,14 @@
 {{ "hero.css" | asset_url | stylesheet_tag }}
 {{ "buttons.css" | asset_url | stylesheet_tag }}
 
-<section class="hero" style="
-  {% if section.settings.background_image %}
-    background-image: url({{ section.settings.background_image | image_url }});
-    background-size: cover;
-    background-position: center;
-  {% endif %}
-">
+{% if section.settings.background_image %}
+<img
+  data-src="{{ section.settings.background_image | image_url }}"
+  alt="{{ section.settings.background_image_alt | default: "" }}"
+  class="lazyload hero__background"
+>
+{% endif %}
+<div class="hero__inner">
   {% for block in section.blocks %}
     {% case block.type %}
       {% when "heading" %}
@@ -23,11 +24,13 @@
         </a>
     {% endcase %}
   {% endfor %}
-</section>
+</div>
 
 {% schema %}
 {
   "name": "Hero section",
+  "tag": "section",
+  "class": "hero",
   "settings": [
     {
       "type": "image_picker",

@@ -1,27 +1,27 @@
 {{ "products.css" | asset_url | stylesheet_tag }}
 
-<section class="products">
-  {% if section.settings.title %}
-    <h2 class="products__title">{{ section.settings.title }}</h2>
-  {% endif %}
-  <div class="bq-carousel">
-    <div class="bq-carousel__inner">
-      {% for product in section.blocks %}
-        <div class="booqable-product"></div>
-      {% endfor %}
-    </div>
-    <div class="bq-carousel__prev">
-      <i class="fa-solid fa-arrow-left"></i>
-    </div>
-    <div class="bq-carousel__next">
-      <i class="fa-solid fa-arrow-right"></i>
-    </div>
+{% if section.settings.title %}
+  <h2 class="products__title">{{ section.settings.title }}</h2>
+{% endif %}
+<div class="bq-carousel">
+  <div class="bq-carousel__inner">
+    {% for product in section.blocks %}
+      <div class="booqable-product"></div>
+    {% endfor %}
   </div>
-</section>
+  <div class="bq-carousel__prev">
+    <i class="fa-solid fa-arrow-left"></i>
+  </div>
+  <div class="bq-carousel__next">
+    <i class="fa-solid fa-arrow-right"></i>
+  </div>
+</div>
 
 {% schema %}
 {
   "name": "Products",
+  "tag": "section",
+  "class": "products",
   "settings": [
     {
       "type": "text",

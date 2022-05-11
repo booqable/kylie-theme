@@ -47,6 +47,11 @@
   margin: 0;
 }
 
+.header__image-logo {
+  max-width: 110px;
+  max-height: 45px;
+}
+
 .header__nav .header__nav-item {
   font-size: 16px;
   line-height: 24px;
