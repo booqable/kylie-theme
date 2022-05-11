@@ -34,10 +34,6 @@ window.addEventListener("load", () => {
     });
   });
 
-  // Firefox hide scrollbar workaround
-  document.addEventListener("glider-loaded", hideFFScrollBars);
-  document.addEventListener("glider-refresh", hideFFScrollBars);
-
   const hideFFScrollBars = (e) => {
     var scrollbarHeight = 17;
     if (/firefox/i.test(navigator.userAgent)) {
@@ -47,4 +43,8 @@ window.addEventListener("load", () => {
       }
     }
   };
+
+  // Firefox hide scrollbar workaround
+  document.addEventListener("glider-loaded", hideFFScrollBars);
+  document.addEventListener("glider-refresh", hideFFScrollBars);
 });
