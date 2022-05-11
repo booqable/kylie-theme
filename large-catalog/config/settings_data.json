@@ -28,7 +28,8 @@
               { "settings": { "title": "Contact us", "url": "contact-us" } },
               { "settings": { "title": "FAQ", "url": "faq" } }
             ]
-          }
+          },
+          "logo": "booqable://assets/app_icon.png"
         },
         "disabled": null
       },
@@ -45,7 +46,8 @@
               { "settings": { "title": "FAQ", "url": "faq" } }
             ]
           },
-          "show_social_icons": true
+          "show_social_icons": true,
+          "show_payment_icons": true
         },
         "disabled": null
       }
