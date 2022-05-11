@@ -5,11 +5,3 @@
   margin: 16px auto;
   padding: 0 var(--horizontal-padding);
 }
-
-.date-location .booqable-datepicker {
-  height: 75px;
-
-  border-radius: 8px;
-
-  background-color: #d8dce0;
-}

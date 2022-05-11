@@ -17,6 +17,7 @@
   {{ "base.css" | asset_url | stylesheet_tag }}
   {% comment %} Font Awesome {% endcomment %}
   <script src="https://kit.fontawesome.com/39f40ba49a.js" crossorigin="anonymous"></script>
+  {{ content_for_header }}
   <title>Large catalog</title>
 </head>
 <body>
