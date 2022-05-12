@@ -16,7 +16,7 @@
   {% comment %} Base stylesheet {% endcomment %}
   {{ "base.css" | asset_url | stylesheet_tag }}
   {% comment %} Font Awesome {% endcomment %}
-  <script src="https://kit.fontawesome.com/39f40ba49a.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/ff3b3de2b5.js" crossorigin="anonymous"></script>
   {{ content_for_header }}
   <title>Large catalog</title>
 </head>
@@ -27,7 +27,7 @@
   </main>
   {% section 'footer' %}
 
-  <script src="{{ "lazysizes.min.js" | asset_url }}"></script>
+  <script src="{{ "lazysizes.min.js" | asset_url }}" defer></script>
   <script src="{{ "glider.min.js" | asset_url }}" defer></script>
   <script src="{{ "index.js" | asset_url }}" defer></script>
 </body>
