@@ -1,5 +1,8 @@
 {{ "footer.css" | asset_url | stylesheet_tag }}
 
+{% assign fa = "paypal,stripe" | split: "," %}
+{% assign svg = "p24,eps,bancontact,giropay" | split: "," %}
+
 <div class="footer__content">
   {% if section.settings.menu %}
     <nav class="footer__nav">
@@ -83,7 +86,11 @@
     {% if section.settings.show_payment_icons %}
       <div class="footer__payment-methods">
         {% for provider in payment_methods %}
-          <i class="fa-brands fa-cc-{{ provider }}"></i>
+          {% if fa contains provider %}
+            <i class="fa-brands fa-cc-{{ provider }}"></i>
+          {% elsif svg contains provider %}
+            <img data-src="{{ provider | append: ".svg" | asset_url }}" class="lazyload">
+          {% endif %}
         {% endfor %}
       </div>
     {% endif %}
