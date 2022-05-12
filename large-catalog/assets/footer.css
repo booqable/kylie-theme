@@ -36,10 +36,23 @@
   text-align: right;
 }
 
+.footer__payment-methods {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  margin-bottom: 8px;
+}
+
 .footer__payment-methods i {
-  color: #0C2747;
+  color: #0c2747;
 
   font-size: 32px;
+}
+
+.footer__payment-methods img {
+  max-height: 32px;
+  max-width: 75px;
 }
 
 .footer__payment-methods i:not(:last-child) {
@@ -58,6 +71,10 @@
   color: #0c2747;
 
   font-size: 16px;
+}
+
+.footer__copyright {
+  color: #0c2747;
 }
 
 @media (max-width: 576px) {

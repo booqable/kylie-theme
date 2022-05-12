@@ -1,5 +1,5 @@
 .products {
-  max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
+  max-width: calc(var(--max-width) + var(--horizontal-padding) * 2 + 10px);
   width: 100%;
 
   margin: 16px auto;
@@ -19,9 +19,8 @@
 
 .products .booqable-product {
   width: 280px;
-  height: 350px !important;
 
-  background-color: #d8dce0;
+  padding: 5px;
 
   border-radius: 8px;
 }
@@ -43,6 +42,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
 
   width: 40px;
   height: 40px;
@@ -76,9 +77,16 @@
 }
 
 @media (max-width: 1200px) {
+  .products {
+    padding: 0;
+  }
+
+  .products .glider-track {
+    padding: 0 var(--horizontal-padding);
+  }
+
   .products .booqable-product {
     width: 196px;
-    height: 265px !important;
   }
 
   .products .booqable-product:not(:last-child) {
