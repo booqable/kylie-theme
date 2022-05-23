@@ -1,58 +1,41 @@
 {{ "image-text.css" | asset_url | stylesheet_tag }}
 {{ "buttons.css" | asset_url | stylesheet_tag }}
 
-{% style %}
+<div class="image-text__inner">
   {% if section.settings.background_image %}
-    .image-text {
-      background-image: url({{ section.settings.background_image | image_url }});
-      background-size: cover;
-      background-position: center;
-    }
+    <img
+      data-src="{{ section.settings.background_image | image_url }}"
+      alt="{{ section.settings.background_image_alt | default: "" }}"
+      class="lazyload image-text__background"
+    >
   {% endif %}
-
-  {% if section.settings.overlay_color %}
-    .image-text__overlay {
-      background-color: {{ section.settings.overlay_color }};
-    }
+  {% if section.settings.overlay_enabled %}
+    <span class="image-text__overlay" style="
+      {% if section.settings.overlay_color %}
+        background-color: {{ section.settings.overlay_color }};
+      {% endif %}
+      {% if section.settings.overlay_opacity %}
+        opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 | default: 0.2 }};
+      {% endif %}
+    "></span>
   {% endif %}
-
-  {% if section.settings.overlay_opacity %}
-    .image-text__overlay {
-      opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
-    }
-  {% endif %}
-
-  {% for block in section.blocks %}
-    {% case block.type %}
-      {% when "heading" %}
-        .image-text__title {
-          color: {{ block.settings.color }};
-        }
-      {% when "text" %}
-        .image-text__text {
-          color: {{ block.settings.color }};
-        }
-      {% when "button" %}
-        .bq-button-{{ block.id }} {
-          background-color: {{ block.settings.background_color }};
-          color: {{ block.settings.label_color }};
-        }
-    {% endcase %}
-  {% endfor %}
-{% endstyle %}
-
-<span class="image-text__overlay"></span>
-<div class="image-text__content">
-  {% for block in section.blocks %}
-    {% case block.type %}
-      {% when "heading" %}
-        <h2 class="image-text__title">{{ block.settings.text }}</h2>
-      {% when "text" %}
-        <p class="image-text__text">{{ block.settings.text }}</p>
-      {% when "button" %}
-        <a class="bq-button bq-button-{{ block.id }}" href="{{ block.settings.url }}">{{ block.settings.text }}</a>
-    {% endcase %}
-  {% endfor %}
+  <div class="image-text__content">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when "heading" %}
+          <h2 class="image-text__title" style="color: {{ block.settings.color }};">{{ block.settings.text }}</h2>
+        {% when "text" %}
+          <p class="image-text__text" style="color: {{ block.settings.color }};">{{ block.settings.text }}</p>
+        {% when "button" %}
+          <a class="bq-button" href="{{ block.settings.url }}" style="
+            background-color: {{ block.settings.background_color }};
+            color: {{ block.settings.label_color }};
+          ">
+            {{ block.settings.text }}
+          </a>
+      {% endcase %}
+    {% endfor %}
+  </div>
 </div>
 
 {% schema %}
@@ -67,9 +50,13 @@
       "label": "Background image"
     },
     {
+      "type": "checkbox",
+      "id": "overlay_enabled",
+      "label": "Enable overlay"
+    },
+    {
       "type": "color",
       "id": "overlay_color",
-      "default": "#000000",
       "label": "Overlay color"
     },
     {
@@ -77,7 +64,6 @@
       "min": 0,
       "max": 100,
       "step": 1,
-      "default": 20,
       "id": "overlay_opacity",
       "label": "Overlay opacity"
     }

@@ -1,0 +1,121 @@
+{{ "footer.css" | asset_url | stylesheet_tag }}
+
+{% assign fa = "paypal,stripe" | split: "," %}
+{% assign svg = "p24,eps,bancontact,giropay" | split: "," %}
+
+<div class="footer__content">
+  {% if section.settings.menu %}
+    <nav class="footer__nav">
+      <ul class="list-menu footer__menu">
+        {% for link in section.settings.menu.links %}
+          <li class="list-menu__item">
+            <a href="{{ link.settings.url }}" class="footer__nav-item">{{ link.settings.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      {% if section.settings.show_social_icons %}
+        <ul class="list-menu footer__social">
+          {% if settings.social_twitter_link %}
+            <li class="list-menu__item">
+              <a href="{{ settings.social_twitter_link}}" class="footer__social-item">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.social_facebook_link %}
+            <li class="list-menu__item">
+              <a href="{{ settings.social_facebook_link}}" class="footer__social-item">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.social_pinterest_link %}
+            <li class="list-menu__item">
+              <a href="{{ settings.social_pinterest_link}}" class="footer__social-item">
+                <i class="fa-brands fa-pinterest"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.social_instagram_link %}
+            <li class="list-menu__item">
+              <a href="{{ settings.social_instagram_link}}" class="footer__social-item">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.social_tiktok_link %}
+            <li class="list-menu__item">
+              <a href="{{ settings.social_tiktok_link}}" class="footer__social-item">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.social_tumblr_link %}
+            <li class="list-menu__item">
+              <a href="{{ settings.social_tumblr_link}}" class="footer__social-item">
+                <i class="fa-brands fa-tumblr"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.social_snapchat_link %}
+            <li class="list-menu__item">
+              <a href="{{ settings.social_snapchat_link}}" class="footer__social-item">
+                <i class="fa-brands fa-snapchat"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.social_youtube_link %}
+            <li class="list-menu__item">
+              <a href="{{ settings.social_youtube_link}}" class="footer__social-item">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.social_vimeo_link %}
+            <li class="list-menu__item">
+              <a href="{{ settings.social_vimeo_link}}" class="footer__social-item">
+                <i class="fa-brands fa-vimeo"></i>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      {% endif %}
+    </nav>
+  {% endif %}
+  <div class="footer__bottom">
+    {% if section.settings.show_payment_icons %}
+      <div class="footer__payment-methods">
+        {% for provider in payment_methods %}
+          {% if fa contains provider %}
+            <i class="fa-brands fa-cc-{{ provider }}"></i>
+          {% elsif svg contains provider %}
+            <img data-src="{{ provider | append: ".svg" | asset_url }}" class="lazyload">
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    <div class="footer__copyright">
+      &copy; {{ "now" | date: "%Y" }}, {{ shop.name }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "footer",
+  "class": "footer",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_social_icons",
+      "label": "Show social media icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "Show payment methods icons"
+    }
+  ]
+}
+{% endschema %}
