@@ -192,6 +192,10 @@
   align-items: center;
 }
 
+.header-cart .booqable-cart-button:not(:empty) + i {
+  display: none;
+}
+
 .header-cart .bq-icon-cart::before {
   color: #0c2747;
 
