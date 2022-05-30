@@ -136,13 +136,50 @@
 @media (max-width: 576px) {
   .product {
     grid-template-columns: 1fr;
+
+    padding: 24px 0;
+
+    gap: 0;
   }
 
   .product-gallery {
     grid-row: auto;
+
+    margin-bottom: 32px;
+  }
+
+  .product-info__title,
+  .product-info__label,
+  .product-info .bq-actions > *,
+  .product-gallery,
+  .product-description {
+    padding: 0 var(--horizontal-padding);
+  }
+
+  .product-info
+    .booqable-component
+    .booqable-product-button-wrapper
+    .bq-variation-wrapper {
+    padding: 0;
+    margin: 0 var(--horizontal-padding);
+
+    width: calc(100vw - var(--horizontal-padding) * 2);
   }
 
   .product-description {
     grid-column: auto;
+  }
+
+  .product-info .bq-control {
+    position: sticky;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    border-top: 1px solid #d8dce0;
+    background-color: #ffffff;
+
+    padding: 16px;
   }
 }
