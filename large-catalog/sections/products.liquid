@@ -6,7 +6,7 @@
 <div class="bq-carousel">
   <div class="bq-carousel__inner">
     {% for product in section.blocks %}
-      <div class="booqable-product"></div>
+      {{ product.settings.product | product_card }}
     {% endfor %}
   </div>
   <div class="bq-carousel__prev">

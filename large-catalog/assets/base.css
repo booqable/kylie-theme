@@ -2,3 +2,17 @@
   --max-width: 1216px;
   --horizontal-padding: 16px;
 }
+
+#main .booqable-component *:not(i) {
+  font-family: var(--bs-body-font-family);
+}
+
+.divider {
+  max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
+  width: 100%;
+
+  margin: 16px auto;
+  padding: 0 var(--horizontal-padding);
+
+  color: #d8dce0;
+}

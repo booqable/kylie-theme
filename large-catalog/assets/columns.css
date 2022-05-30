@@ -1,0 +1,19 @@
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+
+  max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
+  width: 100%;
+
+  margin: 16px auto;
+  padding: 0 var(--horizontal-padding);
+}
+
+.columns .columns__column.post {
+  display: block;
+}
+
+.columns .columns__column .post__image {
+  margin-bottom: 16px;
+}

@@ -17,12 +17,11 @@
   margin-bottom: 24px;
 }
 
-.products .booqable-product {
-  width: 280px;
+.products .product-card .booqable-product {
+  width: 264px !important;
 
-  padding: 5px;
-
-  border-radius: 8px;
+  padding: 8px;
+  margin: 0 auto;
 }
 
 .products .booqable-product:not(:last-child) {
@@ -69,6 +68,10 @@
   display: none;
 }
 
+.bq-carousel__inner {
+  display: flex;
+}
+
 @media (max-width: 1280px) {
   .products .bq-carousel__prev,
   .products .bq-carousel__next {
@@ -79,6 +82,10 @@
 @media (max-width: 1200px) {
   .products {
     padding: 0;
+  }
+
+  .products__title {
+    padding: 0 var(--horizontal-padding);
   }
 
   .products .glider-track {

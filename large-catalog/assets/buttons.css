@@ -1,15 +1,14 @@
 .bq-button {
   display: inline-block;
 
+  font-weight: 700;
+  text-align: center;
+}
+
+.bq-button--solid {
   padding: 10px 20px;
 
   border-radius: 8px;
-
-  color: #000000;
-  background-color: #FFFFFF;
-
-  font-weight: 700;
-  text-align: center;
 
   text-decoration: none;
 }
