@@ -1,0 +1,28 @@
+{{ "product.css" | asset_url | stylesheet_tag }}
+
+<div class="product-gallery">
+  <div class="product-gallery__preview"></div>
+  <div class="product-gallery__items">
+    <div class="product-gallery__item"></div>
+    <div class="product-gallery__item"></div>
+    <div class="product-gallery__item"></div>
+  </div>
+</div>
+<div class="product-info">
+  <h1 class="product-info__title">{{ product.name }}</h1>
+  <p class="product-info__label">Variation</p>
+  {{ product_button }}
+</div>
+<div class="product-description">
+  <p class="product-description__label">Description</p>
+  {{ product.description }}
+</div>
+
+{% schema %}
+{
+  "name": "Product",
+  "tag": "section",
+  "class": "product",
+  "settings": []
+}
+{% endschema %}
