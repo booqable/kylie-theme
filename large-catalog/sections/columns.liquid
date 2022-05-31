@@ -1,0 +1,99 @@
+{{ "columns.css" | asset_url | stylesheet_tag }}
+{{ "post.css" | asset_url | stylesheet_tag }}
+{{ "buttons.css" | asset_url | stylesheet_tag }}
+
+{% for block in section.blocks %}
+  <div class="columns__column post">
+    {% if block.settings.image %}
+      <img data-src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image_alt }}" class="post__image{% if block.settings.image_border_radius == true %} post__image--border-radius{% endif %} lazyload">
+    {% endif %}
+    <div class="post__content">
+      {% if block.settings.title %}
+        <h3 class="post__title">{{ block.settings.title }}</h3>
+      {% endif %}
+      {% if block.settings.text %}
+        <div class="post__text">{{ block.settings.text }}</div>
+      {% endif %}
+      {% if block.settings.button_url %}
+        <a class="bq-button{% if block.settings.use_solid_button %} bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
+          color: {{ block.settings.label_color }};
+          {% if block.settings.use_solid_button %}
+            background-color: {{ block.settings.background_color }};
+          {% endif %}
+        ">
+          {{ block.settings.button }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Columns",
+  "tag": "section",
+  "class": "columns",
+  "settings": [],
+  "max_blocks": 9,
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        },
+        {
+          "id": "image_alt",
+          "type": "text",
+          "label": "Image alt"
+        },
+        {
+          "id": "image_border_radius",
+          "type": "checkbox",
+          "label": "Image round corners"
+        },
+        {
+          "id": "title",
+          "type": "text"
+        },
+        {
+          "id": "text",
+          "type": "contentEditor",
+          "label": "Text"
+        },
+        {
+          "id": "button",
+          "type": "text",
+          "label": "Button"
+        },
+        {
+          "id": "button_url",
+          "type": "url",
+          "label": "Button URL"
+        },
+        {
+          "id": "use_solid_button",
+          "type": "checkbox",
+          "label": "Use solid button",
+          "default": false
+        },
+        {
+          "id": "background_color",
+          "type": "color",
+          "label": "Button background color",
+          "default": "#ffffff"
+        },
+        {
+          "id": "label_color",
+          "type": "color",
+          "label": "Button label color",
+          "default": "#0c2747"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

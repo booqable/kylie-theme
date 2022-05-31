@@ -1,7 +1,7 @@
 {{ "hero.css" | asset_url | stylesheet_tag }}
 {{ "buttons.css" | asset_url | stylesheet_tag }}
 
-{% if section.settings.background_image %}
+{% if section.settings.background_image != "" %}
 <img
   data-src="{{ section.settings.background_image | image_url }}"
   alt="{{ section.settings.background_image_alt | default: "" }}"
@@ -16,9 +16,11 @@
       {% when "text" %}
         <p class="hero__text" style="color: {{ block.settings.color }};">{{ block.settings.text }}</p>
       {% when "button" %}
-        <a class="bq-button" href="{{ block.settings.url }}" style="
-          background-color: {{ block.settings.background_color }};
+        <a class="bq-button{% if block.settings.use_solid_button %} bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
           color: {{ block.settings.label_color }};
+          {% if block.settings.use_solid_button %}
+            background-color: {{ block.settings.background_color }};
+          {% endif %}
         ">
           {{ block.settings.text }}
         </a>
@@ -35,7 +37,8 @@
     {
       "type": "image_picker",
       "id": "background_image",
-      "label": "Background image"
+      "label": "Background image",
+      "default": ""
     }
   ],
   "max_blocks": 3,
@@ -92,16 +95,22 @@
           "label": "Link"
         },
         {
-          "type": "color",
-          "id": "background_color",
-          "default": "#FFFFFF",
-          "label": "Background color"
+          "id": "use_solid_button",
+          "type": "checkbox",
+          "label": "Use solid button",
+          "default": false
         },
         {
           "type": "color",
           "id": "label_color",
-          "default": "#000000",
-          "label": "Text color"
+          "default": "#0c2747",
+          "label": "Label color"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "default": "#ffffff",
+          "label": "Background color"
         }
       ]
     }

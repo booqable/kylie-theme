@@ -8,7 +8,7 @@ const initCarousels = () => {
       slidesToShow: "auto",
       slidesToScroll: 1,
       scrollLock: true,
-      itemWidth: 212,
+      itemWidth: 280,
       exactWidth: true,
       arrows: {
         prev,
@@ -27,7 +27,6 @@ const initCarousels = () => {
           settings: {
             slidesToShow: 4,
             slidesToScroll: 2,
-            itemWidth: 312,
           },
         },
       ],

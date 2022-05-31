@@ -29,7 +29,7 @@
               { "settings": { "title": "FAQ", "url": "faq" } }
             ]
           },
-          "logo": "booqable://assets/app_icon.png"
+          "logo": "booqable://assets/giropay.svg"
         },
         "disabled": null
       },

@@ -1,0 +1,41 @@
+.post {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+
+  max-width: var(--max-width);
+  width: 100%;
+
+  margin: 16px auto;
+}
+
+.post__image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+.post__image--border-radius {
+  border-radius: 8px;
+}
+
+.post__title {
+  font-size: 24px;
+  line-height: 32px;
+
+  font-weight: 600;
+
+  color: #0c2747;
+
+  margin-bottom: 8px;
+}
+
+.post__text {
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #0c2747;
+
+  margin-bottom: 16px;
+}
