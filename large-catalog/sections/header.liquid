@@ -1,9 +1,6 @@
 {{ "header.css" | asset_url | stylesheet_tag }}
 {{ "list-menu.css" | asset_url | stylesheet_tag }}
 
-{% assign desktop_menu = section.settings.menu.links %}
-{% assign mobile_menu = section.settings.menu.links %}
-
 <div class="header__wrapper">
   <a href="{{ routes.root_url }}" class="header__link">
     {% if section.settings.logo != null %}
@@ -18,29 +15,29 @@
   </a>
   <nav class="header__nav header__nav--desktop">
     <ul class="list-menu list-menu--horizontal">
-      {% for link in desktop_menu %}
+      {% for link in section.settings.menu.items %}
         <li class="list-menu__item">
-          <a href="{{ link.settings.url }}" class="header__nav-item">
-            {{ link.settings.title }}
-            {% if link.settings.links %}
+          <a href="{{ link.url }}" class="header__nav-item">
+            {{ link.title }}
+            {% if link.items_count > 0 %}
               <i class="fa-regular fa-chevron-down list-menu__item-caret"></i>
             {% endif %}
           </a>
-          {% if link.settings.links %}
+          {% if link.items_count > 0 %}
             <div class="list-submenu">
               <ul class="list-submenu__container">
-                {% for childlink in link.settings.links %}
+                {% for childlink in link.items %}
                   <li class="list-menu__item">
                     <a href="{{ childlink.url }}" class="header__nav-item">
                       {{ childlink.title }}
-                      {% if childlink.links %}
+                      {% if childlink.items_count > 0 %}
                         <i class="fa-regular fa-chevron-right list-menu__item-caret"></i>
                       {% endif %}
                     </a>
-                    {% if childlink.links %}
+                    {% if childlink.items_count > 0 %}
                       <div class="list-submenu">
                         <ul class="list-submenu__container">
-                          {% for grandchildlink in childlink.links %}
+                          {% for grandchildlink in childlink.items %}
                             <li class="list-menu__item">
                               <a href="{{ grandchildlink.url }}" class="header__nav-item">
                                 {{ grandchildlink.title }}
@@ -88,29 +85,29 @@
     </label>
     <div class="header__nav header__nav--mobile header-floating-menu__wrapper">
       <ul class="list-menu list-menu--vertical">
-        {% for link in mobile_menu %}
+        {% for link in section.settings.menu.items %}
           <li class="list-menu__item">
-            <a href="{{ link.settings.url }}" class="header__nav-item">
-              {{ link.settings.title }}
+            <a href="{{ link.url }}" class="header__nav-item">
+              {{ link.title }}
             </a>
-            {% if link.settings.links %}
+            {% if link.items_count > 0 %}
               <input type="checkbox" id="floating-child-{{ forloop.index }}">
               <label for="floating-child-{{ forloop.index }}">
                 <i class="fa-regular fa-angle-down list-menu__item-caret"></i>
               </label>
               <ul class="list-submenu">
-                {% for childlink in link.settings.links %}
+                {% for childlink in link.items %}
                   <li class="list-menu__item">
                     <a href="{{ childlink.url }}" class="header__nav-item">
                       {{ childlink.title }}
                     </a>
-                    {% if childlink.links %}
+                    {% if childlink.items_count > 0 %}
                       <input type="checkbox" id="floating-grandchild-{{ forloop.index }}">
                       <label for="floating-grandchild-{{ forloop.index }}">
                         <i class="fa-regular fa-angle-down list-menu__item-caret"></i>
                       </label>
                       <ul class="list-submenu">
-                        {% for grandchildlink in childlink.links %}
+                        {% for grandchildlink in childlink.items %}
                           <li class="list-menu__item">
                             <a href="{{ grandchildlink.url }}" class="header__nav-item">
                               {{ grandchildlink.title }}
@@ -140,6 +137,11 @@
       "type": "image_picker",
       "id": "logo",
       "label": "Logo image"
+    },
+    {
+      "type": "menu",
+      "id": "menu",
+      "label": "Menu"
     }
   ]
 }
