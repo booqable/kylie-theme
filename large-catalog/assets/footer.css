@@ -81,4 +81,8 @@
   .footer__nav {
     flex-flow: column nowrap;
   }
+
+  .footer__bottom {
+    text-align: center;
+  }
 }
