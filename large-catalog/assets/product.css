@@ -77,7 +77,53 @@
 }
 
 .product-gallery {
+  overflow: hidden;
+
+  position: relative;
+
   grid-row: 1 / 3;
+}
+
+.product-gallery__prev,
+.product-gallery__next {
+  position: absolute;
+  top: calc(50% - 80px);
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  background-color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+
+  cursor: pointer;
+}
+
+.product-gallery__prev.disabled,
+.product-gallery__next.disabled {
+  display: none;
+}
+
+.product-gallery__prev i,
+.product-gallery__next i {
+  font-size: 22px;
+
+  color: #0c2747;
+}
+
+.product-gallery__prev {
+  left: 5px;
+}
+
+.product-gallery__next {
+  right: 5px;
 }
 
 .product-description {
@@ -95,33 +141,55 @@
   margin-bottom: 8px;
 }
 
-/* For preview purposes -- START */
 .product-gallery__preview {
   height: 365px;
 
-  border-radius: 8px;
-
-  background-color: #d8dce0;
-
   margin-bottom: 16px;
+}
+
+.product-gallery__preview-inner,
+.product-gallery__preview-inner .glider-track {
+  height: 100%;
+}
+
+.product-gallery__preview img {
+  display: block;
+
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.product-gallery__preview-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-gallery__items {
   display: flex;
   align-items: center;
-
-  gap: 8px;
 }
 
-.product-gallery__item {
+.product-gallery__item-container {
   width: 64px;
-  height: 64px;
+  height: 64px !important;
+
+  margin-right: 8px;
 
   border-radius: 8px;
 
   background-color: #d8dce0;
+  border: 1px solid #d8dce0;
+
+  cursor: pointer;
 }
-/* For preview purposes -- END */
+
+@media (max-width: 1280px) {
+  .product-gallery__prev,
+  .product-gallery__next {
+    display: none;
+  }
+}
 
 @media (max-width: 810px) {
   .product {
@@ -157,13 +225,12 @@
   }
 
   .product-info
-    .booqable-component
+    .booqable-product-button
     .booqable-product-button-wrapper
-    .bq-variation-wrapper {
-    padding: 0;
-    margin: 0 var(--horizontal-padding);
+    .bq-variation {
+    margin: 0 var(--horizontal-padding) 20px !important;
 
-    width: calc(100vw - var(--horizontal-padding) * 2);
+    width: calc(100vw - var(--horizontal-padding) * 2) !important;
   }
 
   .product-description {
