@@ -20,14 +20,19 @@
   <title>Large catalog</title>
 </head>
 <body>
+
   {% section 'header' %}
+
   <main id="main">
     {{ content_for_layout }}
   </main>
+
   {% section 'footer' %}
 
   <script src="{{ "lazysizes.min.js" | asset_url }}" defer></script>
   <script src="{{ "glider.min.js" | asset_url }}" defer></script>
+  <script src="{{ "focus-point.min.js" | asset_url }}" defer></script>
   <script src="{{ "index.js" | asset_url }}" defer></script>
+  <script src="{{ "carousels.js" | asset_url }}" defer></script>
 </body>
 </html>
