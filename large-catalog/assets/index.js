@@ -1,66 +1,30 @@
-const initCarousels = () => {
-  document.querySelectorAll(".bq-carousel").forEach((carousel) => {
-    const inner = carousel.querySelector(".bq-carousel__inner");
-    const prev = carousel.querySelector(".bq-carousel__prev");
-    const next = carousel.querySelector(".bq-carousel__next");
+const initFocalImages = () => {
+  document.querySelectorAll(".focal-image").forEach((focalImage) => {
+    const x = focalImage.getAttribute("data-focal-x");
+    const y = focalImage.getAttribute("data-focal-y");
 
-    new Glider(inner, {
-      slidesToShow: "auto",
-      slidesToScroll: 1,
-      scrollLock: true,
-      itemWidth: 280,
-      exactWidth: true,
-      arrows: {
-        prev,
-        next,
+    new window.imageFocus.FocusedImage(focalImage, {
+      focus: {
+        x: parseFloat(x) || 0,
+        y: parseFloat(y) || 0,
       },
-      responsive: [
-        {
-          breakpoint: 810,
-          settings: {
-            slidesToShow: "auto",
-            slidesToScroll: 2,
-          },
-        },
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 2,
-          },
-        },
-      ],
     });
   });
-
-  const hideFFScrollBars = (e) => {
-    var scrollbarHeight = 17;
-    if (/firefox/i.test(navigator.userAgent)) {
-      if (window.innerWidth > 575) {
-        e.target.parentNode.style.height =
-          e.target.offsetHeight - scrollbarHeight + "px";
-      }
-    }
-  };
-
-  // Firefox hide scrollbar workaround
-  document.addEventListener("glider-loaded", hideFFScrollBars);
-  document.addEventListener("glider-refresh", hideFFScrollBars);
 };
 
 const handleHeaderLayout = () => {
-  const header = document.querySelector('header.header')
+  const header = document.querySelector("header.header");
   const headerHeight = header.getBoundingClientRect().height;
-  const contentContainer = document.querySelector('#main');
+  const contentContainer = document.querySelector("#main");
 
   if (headerHeight > 0) {
-    contentContainer.style.marginTop = headerHeight + 'px';
+    contentContainer.style.marginTop = headerHeight + "px";
   }
-}
+};
 
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Initializers
-  initCarousels();
+  initFocalImages();
 
   // Handlers
   handleHeaderLayout();
