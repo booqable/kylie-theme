@@ -1,11 +1,37 @@
 {{ "product.css" | asset_url | stylesheet_tag }}
 
 <div class="product-gallery">
-  <div class="product-gallery__preview"></div>
+  <div class="product-gallery__preview">
+    <div class="product-gallery__preview-inner">
+      {% for image in product.images %}
+        <div class="product-gallery__preview-item">
+          <img
+            data-src="{{ image.url | image_url }}"
+            alt=""
+            class="lazyload"
+          >
+        </div>
+      {% endfor %}
+    </div>
+    <div class="product-gallery__prev">
+      <i class="fa-light fa-arrow-left"></i>
+    </div>
+    <div class="product-gallery__next">
+      <i class="fa-light fa-arrow-right"></i>
+    </div>
+  </div>
   <div class="product-gallery__items">
-    <div class="product-gallery__item"></div>
-    <div class="product-gallery__item"></div>
-    <div class="product-gallery__item"></div>
+    {% for image in product.images %}
+      <div class="product-gallery__item-container">
+        <img
+          data-src="{{ image.url | image_url }}"
+          data-focal-x="{{ image.coordinates[0] }}"
+          data-focal-y="{{ image.coordinates[1] }}"
+          alt=""
+          class="focal-image lazyload"
+        >
+      </div>
+    {% endfor %}
   </div>
 </div>
 <div class="product-info">
