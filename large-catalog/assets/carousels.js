@@ -74,7 +74,7 @@ const initProductGallery = () => {
     exactWidth: true,
     itemWidth: 72,
     slidesToScroll: 1,
-    scrollLock: true,
+    scrollLock: true
   });
 
   thumbs.forEach((thumb) => {

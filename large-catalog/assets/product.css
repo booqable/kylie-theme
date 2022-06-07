@@ -87,7 +87,7 @@
 .product-gallery__prev,
 .product-gallery__next {
   position: absolute;
-  top: calc(50% - 80px);
+  top: 50%;
   transform: translateY(-50%);
 
   width: 40px;
@@ -142,6 +142,8 @@
 }
 
 .product-gallery__preview {
+  position: relative;
+
   height: 365px;
 
   margin-bottom: 16px;
