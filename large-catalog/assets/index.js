@@ -29,3 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Handlers
   handleHeaderLayout();
 });
+
+window.addEventListener('resize', () => {
+  // Handlers
+  handleHeaderLayout();
+})
