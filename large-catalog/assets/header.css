@@ -14,7 +14,7 @@
 
 .header__wrapper {
   display: grid;
-  grid-template-columns: max-content 1fr max-content 50px;
+  grid-template-columns: 1fr max-content 50px;
   align-items: center;
 
   max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
@@ -24,6 +24,10 @@
   padding: 12px var(--horizontal-padding);
 
   background-color: #ffffff;
+}
+
+.header__wrapper--with-menu {
+  grid-template-columns: max-content 1fr max-content 50px;
 }
 
 .header__link {
