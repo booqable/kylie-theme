@@ -10,10 +10,15 @@
   </a>
 {% endif %}
 <div class="collections__list">
-  {% for collection in section.blocks %}
+  {% for block in section.blocks %}
     <a href="#">
       <div class="collection">
-        <h3 class="collection__name">{{ collection.settings.name }}</h3>
+        <img
+          data-src="{{ block.settings.collection.image.url | image_url }}"
+          class="collection__image lazyload"
+          alt="{{ block.settings.collection.name }} collection image"
+        >
+        <h3 class="collection__name">{{ block.settings.collection.name }}</h3>
       </div>
     </a>
   {% endfor %}
@@ -44,10 +49,9 @@
       "name": "Collection",
       "settings": [
         {
-          "type": "text",
-          "id": "name",
-          "label": "Name",
-          "default": "Collection"
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
         }
       ]
     }
