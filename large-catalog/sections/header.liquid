@@ -1,7 +1,7 @@
 {{ "header.css" | asset_url | stylesheet_tag }}
 {{ "list-menu.css" | asset_url | stylesheet_tag }}
 
-<div class="header__wrapper">
+<div class="header__wrapper {% if section.settings.menu != blank %}header__wrapper--with-menu{% endif %}">
   <a href="{{ routes.root_url }}" class="header__link">
     {% if section.settings.logo != null %}
       <img

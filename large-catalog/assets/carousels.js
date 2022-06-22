@@ -1,13 +1,3 @@
-// Scrollbar hiding workaround for Firefox
-const hideFFScrollBars = (e) => {
-  var scrollbarHeight = 17;
-  if (/firefox/i.test(navigator.userAgent)) {
-    if (window.innerWidth > 575) {
-      e.target.parentNode.style.height = e.target.offsetHeight - scrollbarHeight + "px";
-    }
-  }
-};
-
 const initCarousels = () => {
   document.querySelectorAll(".bq-carousel").forEach((carousel) => {
     const inner = carousel.querySelector(".bq-carousel__inner");
@@ -42,10 +32,6 @@ const initCarousels = () => {
       ],
     });
   });
-
-  // Firefox hide scrollbar workaround
-  document.addEventListener("glider-loaded", hideFFScrollBars);
-  document.addEventListener("glider-refresh", hideFFScrollBars);
 };
 
 const initProductGallery = () => {
