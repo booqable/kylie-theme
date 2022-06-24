@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "collection": {
+      "type": "collection",
+      "blocks": {},
+      "block_order": [],
+      "settings": {},
+      "disabled": null
+    }
+  },
+  "order": ["collection"]
+}
