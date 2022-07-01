@@ -23,6 +23,10 @@
   gap: 32px;
 }
 
+.search-results.no-results {
+  display: block;
+}
+
 .search .bq-product {
   padding: 0 10px;
 }
