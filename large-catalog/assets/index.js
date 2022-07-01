@@ -12,6 +12,29 @@ const initFocalImages = () => {
   });
 };
 
+const initSearch = () => {
+  const search = document.querySelector("#search");
+  const url = new URL(window.location.href);
+  const input = search.querySelector("input");
+
+  if (url.searchParams.get("q")) {
+    input.value = url.searchParams.get("q");
+  }
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+
+    const value = input.value;
+
+    url.href = `${url.origin}/search${url.search}`;
+    url.searchParams.set("q", value);
+
+    window.location.href = url.href;
+  };
+
+  search.addEventListener("submit", handleSearchSubmit);
+};
+
 const handleHeaderLayout = () => {
   const header = document.querySelector("header.header");
   const headerHeight = header.getBoundingClientRect().height;
@@ -25,6 +48,7 @@ const handleHeaderLayout = () => {
 document.addEventListener("DOMContentLoaded", () => {
   // Initializers
   initFocalImages();
+  initSearch();
 
   // Handlers
   handleHeaderLayout();
