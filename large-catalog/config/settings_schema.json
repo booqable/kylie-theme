@@ -63,5 +63,16 @@
         "info": "https://vimeo.com/booqable"
       }
     ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "primary_color",
+        "label": "Primary color",
+        "info": "Primary color of the theme used for embeddable components"
+      }
+    ]
   }
 ]
