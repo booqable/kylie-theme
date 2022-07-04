@@ -40,7 +40,15 @@
   text-decoration: none;
 }
 
+.products .bq-product a:hover {
+  text-decoration: underline;
+}
+
 .products .bq-product__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 100%;
   height: 240px;
 
