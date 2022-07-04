@@ -2,17 +2,19 @@
 {{ "list-menu.css" | asset_url | stylesheet_tag }}
 
 <div class="header__wrapper {% if section.settings.menu != blank %}header__wrapper--with-menu{% endif %}">
-  <a href="{{ routes.root_url }}" class="header__link">
-    {% if section.settings.logo != null %}
-      <img
-        src="{{ section.settings.logo | image_url }}"
-        alt="{{ shop.name }}"
-        class="header__image-logo"
-      >
-    {% else %}
-      <h1 class="header__text-logo">{{ shop.name }}</h1>
-    {% endif %}
-  </a>
+  <div class="header__link-container">
+    <a href="{{ routes.root_url }}" class="header__link">
+      {% if section.settings.logo != null %}
+        <img
+          src="{{ section.settings.logo | image_url }}"
+          alt="{{ shop.name }}"
+          class="header__image-logo"
+        >
+      {% else %}
+        <h1 class="header__text-logo">{{ shop.name }}</h1>
+      {% endif %}
+    </a>
+  </div>
   {% if section.settings.menu != blank %}
     <nav class="header__nav header__nav--desktop">
       <ul class="list-menu list-menu--horizontal">
