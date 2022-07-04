@@ -1,9 +1,44 @@
+{{ "collection.css" | asset_url | stylesheet_tag }}
+{{ "cleanstate.css" | asset_url | stylesheet_tag }}
+
+{% if section.settings.show_collection_name %}
+  <h1 class="collection__title">{{ collection.name }}</h1>
+{% endif %}
+{% if collection.items_count > 0 %}
+  <div class="collection__items">
+    {% for item in collection.items %}
+      <div class="bq-product">
+        <div class="bq-product__image">
+          {% for image in item.images limit: 1 %}
+            <img data-src="{{ image.url | image_url }}" alt="" class="lazyload">
+          {% endfor %}
+        </div>
+        <a href="{{ item.url }}">
+          <h3 class="bq-product__name">{{ item.name }}</h3>
+        </a>
+        <p class="bq-product__duration">2 days</p>
+        <p class="bq-product__price">$24.99</p>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="cleanstate">
+    <p class="cleanstate__text">This collection has no items.</p>
+  </div>
+{% endif %}
+
 {% schema %}
 {
   "name": "Collection",
   "tag": "section",
   "class": "collection",
   "templates": ["collection"],
-  "settings": []
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_collection_name",
+      "label": "Show collection name"
+    }
+  ]
 }
 {% endschema %}
