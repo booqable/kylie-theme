@@ -16,6 +16,8 @@
   align-items: center;
 
   padding: 32px 0;
+
+  border-bottom: 1px solid #d8dce0;
 }
 
 .footer__menu .list-menu__item:not(:last-child) {
@@ -32,8 +34,14 @@
   text-decoration: none;
 }
 
+.footer__nav-item:hover {
+  text-decoration: underline;
+}
+
 .footer__bottom {
   text-align: right;
+
+  padding: 32px 0;
 }
 
 .footer__payment-methods {
@@ -57,10 +65,6 @@
 
 .footer__payment-methods i:not(:last-child) {
   margin-right: 8px;
-}
-
-.footer__social {
-  margin-top: 32px;
 }
 
 .footer__social .list-menu__item:not(:last-child) {

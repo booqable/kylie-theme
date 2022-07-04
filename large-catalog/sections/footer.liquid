@@ -1,77 +1,83 @@
 {{ "footer.css" | asset_url | stylesheet_tag }}
 
+<!-- Icons -->
 {% assign fa = "paypal,stripe" | split: "," %}
 {% assign svg = "p24,eps,bancontact,giropay" | split: "," %}
 
+<!-- Socials -->
+{% assign has_socials = settings.social_twitter_link != blank or settings.social_facebook_link != blank or settings.social_pinterest_link != blank or settings.social_pinterest_link != blank or settings.social_instagram_link != blank or settings.social_tiktok_link != blank or settings.social_tumblr_link != blank or settings.social_snapchat_link != blank or settings.social_youtube_link != blank or settings.social_vimeo_link != blank %}
+
 <div class="footer__content">
-  {% if section.settings.menu %}
+  {% if section.settings.menu != blank or section.settings.show_social_icons and has_socials %}
     <nav class="footer__nav">
-      <ul class="list-menu footer__menu">
-        {% for link in section.settings.menu.items %}
-          <li class="list-menu__item">
-            <a href="{{ link.url }}" class="footer__nav-item">{{ link.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-      {% if section.settings.show_social_icons %}
+      {% if section.settings.menu != blank %}
+        <ul class="list-menu footer__menu">
+          {% for link in section.settings.menu.items %}
+            <li class="list-menu__item">
+              <a href="{{ link.url }}" class="footer__nav-item">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if section.settings.show_social_icons and has_socials %}
         <ul class="list-menu footer__social">
-          {% if settings.social_twitter_link != null and settings.social_twitter_link != "" %}
+          {% if settings.social_twitter_link != blank %}
             <li class="list-menu__item">
               <a href="{{ settings.social_twitter_link }}" target="_blank" class="footer__social-item">
                 <i class="fa-brands fa-twitter"></i>
               </a>
             </li>
           {% endif %}
-          {% if settings.social_facebook_link != null and settings.social_facebook_link != "" %}
+          {% if settings.social_facebook_link != blank %}
             <li class="list-menu__item">
               <a href="{{ settings.social_facebook_link }}" target="_blank" class="footer__social-item">
                 <i class="fa-brands fa-facebook"></i>
               </a>
             </li>
           {% endif %}
-          {% if settings.social_pinterest_link != null and settings.social_pinterest_link != "" %}
+          {% if settings.social_pinterest_link != blank %}
             <li class="list-menu__item">
               <a href="{{ settings.social_pinterest_link }}" target="_blank" class="footer__social-item">
                 <i class="fa-brands fa-pinterest"></i>
               </a>
             </li>
           {% endif %}
-          {% if settings.social_instagram_link != null and settings.social_instagram_link != "" %}
+          {% if settings.social_instagram_link != blank %}
             <li class="list-menu__item">
               <a href="{{ settings.social_instagram_link }}" target="_blank" class="footer__social-item">
                 <i class="fa-brands fa-instagram"></i>
               </a>
             </li>
           {% endif %}
-          {% if settings.social_tiktok_link != null and settings.social_tiktok_link != "" %}
+          {% if settings.social_tiktok_link != blank %}
             <li class="list-menu__item">
               <a href="{{ settings.social_tiktok_link }}" target="_blank" class="footer__social-item">
                 <i class="fa-brands fa-tiktok"></i>
               </a>
             </li>
           {% endif %}
-          {% if settings.social_tumblr_link != null and settings.social_tumblr_link != "" %}
+          {% if settings.social_tumblr_link != blank %}
             <li class="list-menu__item">
               <a href="{{ settings.social_tumblr_link }}" target="_blank" class="footer__social-item">
                 <i class="fa-brands fa-tumblr"></i>
               </a>
             </li>
           {% endif %}
-          {% if settings.social_snapchat_link != null and settings.social_snapchat_link != "" %}
+          {% if settings.social_snapchat_link != blank %}
             <li class="list-menu__item">
               <a href="{{ settings.social_snapchat_link }}" target="_blank" class="footer__social-item">
                 <i class="fa-brands fa-snapchat"></i>
               </a>
             </li>
           {% endif %}
-          {% if settings.social_youtube_link != null and settings.social_youtube_link != "" %}
+          {% if settings.social_youtube_link != blank %}
             <li class="list-menu__item">
               <a href="{{ settings.social_youtube_link }}" target="_blank" class="footer__social-item">
                 <i class="fa-brands fa-youtube"></i>
               </a>
             </li>
           {% endif %}
-          {% if settings.social_vimeo_link != null and settings.social_vimeo_link != "" %}
+          {% if settings.social_vimeo_link != blank %}
             <li class="list-menu__item">
               <a href="{{ settings.social_vimeo_link }}" target="_blank" class="footer__social-item">
                 <i class="fa-brands fa-vimeo"></i>
@@ -83,7 +89,7 @@
     </nav>
   {% endif %}
   <div class="footer__bottom">
-    {% if section.settings.show_payment_icons %}
+    {% if section.settings.show_payment_icons and payment_methods.size > 0 %}
       <div class="footer__payment-methods">
         {% for provider in payment_methods %}
           {% if fa contains provider %}
