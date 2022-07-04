@@ -32,6 +32,10 @@
   margin-bottom: 24px;
 }
 
+.collections__show-more:hover {
+  text-decoration: underline;
+}
+
 .collections__show-more i {
   font-size: 14px;
 
@@ -46,6 +50,11 @@
 
 .collections__list a {
   text-decoration: none;
+}
+
+.collections__list a:hover {
+  text-decoration: underline;
+  text-decoration-color: #fff;
 }
 
 .collection {
