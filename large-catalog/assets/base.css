@@ -16,3 +16,7 @@
 
   color: #d8dce0;
 }
+
+.divider hr {
+  margin: 32px 0;
+}
