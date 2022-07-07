@@ -10,9 +10,9 @@
   font-size: 36px;
   line-height: 44px;
 
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 
-  color: #0c2747;
+  color: var(--color-typo);
 
   margin-bottom: 24px;
 }
@@ -68,18 +68,18 @@
   font-size: 20px;
   line-height: 28px;
 
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 
   margin-bottom: 8px;
 
-  color: #0c2747;
+  color: var(--color-typo);
 }
 
 .products .bq-product__duration {
   font-size: 16px;
   line-height: 24px;
 
-  color: #687687;
+  color: var(--color-dark-grey);
 
   margin: 0;
 }
@@ -88,9 +88,9 @@
   font-size: 16px;
   line-height: 24px;
 
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 
-  color: #0c2747;
+  color: var(--color-typo);
 
   margin: 0;
 }
@@ -115,7 +115,7 @@
 .products .bq-carousel__next i {
   font-size: 24px;
 
-  color: #0c2747;
+  color: var(--color-typo);
 }
 
 .products .bq-carousel__prev {

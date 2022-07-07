@@ -1,11 +1,55 @@
 :root {
+  /* Sizes */
   --max-width: 1216px;
   --horizontal-padding: 16px;
+  /* Colors */
+  --color-white: #ffffff;
+  --color-grey: #d8dce0;
+  --color-light-grey: #f3f8fd;
+  --color-dark-grey: #687687;
+  --color-typo: #0c2747;
+  --color-blue: #395db8;
+  /* Fonts */
+  --font-body: "Source Sans Pro", sans-serif;
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 }
 
-#main .booqable-component *:not(i) {
-  font-family: var(--bs-body-font-family);
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+*:not(i),
+*:not(i)::before,
+*:not(i)::after {
+  font-family: var(--font-body);
+}
+
+.bq-button {
+  display: inline-block;
+
+  font-weight: 700;
+  text-align: center;
+}
+
+.bq-button--solid {
+  padding: 10px 20px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+}
+
+.bq-button--solid:hover {
+  box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, 0.12);
+}
+
 
 .divider {
   max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);

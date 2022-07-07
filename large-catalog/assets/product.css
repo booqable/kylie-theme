@@ -14,9 +14,9 @@
   font-size: 24px;
   line-height: 32px;
 
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 
-  color: #0c2747;
+  color: var(--color-typo);
 
   margin-bottom: 8px;
 }
@@ -25,9 +25,9 @@
   font-size: 16px;
   line-height: 24px;
 
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 
-  color: #0c2747;
+  color: var(--color-typo);
 
   margin-bottom: 4px;
 }
@@ -54,7 +54,7 @@
   font-size: 14px;
   line-height: 20px;
 
-  color: #687687;
+  color: var(--color-dark-grey);
 }
 
 .product-info
@@ -65,15 +65,15 @@
   font-size: 24px;
   line-height: 32px;
 
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 
-  color: #0c2747;
+  color: var(--color-typo);
 
   margin: 0;
 }
 
 .product-info .booqable-component .booqable-product-button-wrapper .bq-button {
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .product-gallery {
@@ -95,7 +95,7 @@
 
   border-radius: 50%;
 
-  background-color: #ffffff;
+  background-color: var(--color-white);
 
   display: flex;
   align-items: center;
@@ -115,7 +115,7 @@
 .product-gallery__next i {
   font-size: 22px;
 
-  color: #0c2747;
+  color: var(--color-typo);
 }
 
 .product-gallery__prev {
@@ -134,9 +134,9 @@
   font-size: 20px;
   line-height: 28px;
 
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 
-  color: #0c2747;
+  color: var(--color-typo);
 
   margin-bottom: 8px;
 }
@@ -180,8 +180,8 @@
 
   border-radius: 8px;
 
-  background-color: #d8dce0;
-  border: 1px solid #d8dce0;
+  background-color: var(--color-grey);
+  border: 1px solid var(--color-grey);
 
   cursor: pointer;
 }
@@ -246,8 +246,8 @@
     right: 0;
     bottom: 0;
 
-    border-top: 1px solid #d8dce0;
-    background-color: #ffffff;
+    border-top: 1px solid var(--color-grey);
+    background-color: var(--color-white);
 
     padding: 16px;
   }

@@ -111,7 +111,7 @@
 }
 
 .list-menu--vertical > .list-menu__item:first-child {
-  border-top: 1px solid #d8dce0;
+  border-top: 1px solid var(--color-grey);
 }
 
 .list-submenu__container {
@@ -134,5 +134,5 @@
 }
 
 .list-menu--horizontal .list-submenu .list-menu__item:hover {
-  background-color: #f3f8fd;
+  background-color: var(--color-light-grey);
 }
