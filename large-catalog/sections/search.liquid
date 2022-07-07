@@ -1,7 +1,7 @@
 {{ "search.css" | asset_url | stylesheet_tag }}
 {{ "cleanstate.css" | asset_url | stylesheet_tag }}
 
-<h1 class="search__title">Search results</h1>
+<h1 class="search__title">Search results <span id="search__query"></span></h1>
 <div class="search-results {% if results_count == 0 %}no-results{% endif %}">
   {% if results_count == 0 %}
     <div class="cleanstate">
