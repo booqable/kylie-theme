@@ -1,6 +1,5 @@
 {{ "columns.css" | asset_url | stylesheet_tag }}
 {{ "post.css" | asset_url | stylesheet_tag }}
-{{ "buttons.css" | asset_url | stylesheet_tag }}
 
 <div class="columns__container columns__container--count-{{ section.settings.columns_count }}">
   {% for block in section.blocks %}
