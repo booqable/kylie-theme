@@ -14,19 +14,22 @@ const initFocalImages = () => {
 
 const initSearch = () => {
   const search = document.querySelector("#search");
+  const queryPlaceholder = document.querySelector("#search__query")
   const url = new URL(window.location.href);
   const input = search.querySelector("input");
 
-  if (url.searchParams.get("q")) {
+  if (!!url.searchParams.get("q")) {
     input.value = url.searchParams.get("q");
+    queryPlaceholder.innerHTML = `for "${url.searchParams.get("q")}"`;
   }
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
 
     const value = input.value;
+    const route = search.getAttribute("action");
 
-    url.href = `${url.origin}/search${url.search}`;
+    url.href = url.origin + route;
     url.searchParams.set("q", value);
 
     window.location.href = url.href;
@@ -54,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   handleHeaderLayout();
 });
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   // Handlers
   handleHeaderLayout();
-})
+});

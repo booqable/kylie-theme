@@ -1,7 +1,6 @@
 {{ "hero.css" | asset_url | stylesheet_tag }}
-{{ "buttons.css" | asset_url | stylesheet_tag }}
 
-{% if section.settings.background_image != "" %}
+{% if section.settings.background_image != blank %}
 <img
   data-src="{{ section.settings.background_image | image_url }}"
   alt="{{ section.settings.background_image_alt | default: "" }}"
@@ -37,8 +36,7 @@
     {
       "type": "image_picker",
       "id": "background_image",
-      "label": "Background image",
-      "default": ""
+      "label": "Background image"
     }
   ],
   "max_blocks": 3,

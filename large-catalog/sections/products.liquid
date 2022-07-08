@@ -7,12 +7,12 @@
   <div class="bq-carousel__inner">
     {% for product in section.blocks %}
       <div class="bq-product">
-        <div class="bq-product__image">
+        <a href="{{ product.url }}" class="bq-product__image">
           {% for image in product.settings.product.images limit: 1 %}
             <img data-src="{{ image.url | image_url }}" alt="" class="lazyload">
           {% endfor %}
-        </div>
-        <a href="/product/preview">
+        </a>
+        <a href="{{ product.url }}">
           <h3 class="bq-product__name">{{ product.settings.product.name }}</h3>
         </a>
         <p class="bq-product__duration">2 days</p>

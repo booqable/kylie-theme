@@ -4,14 +4,14 @@
   <h2 class="collections__title">{{ section.settings.title }}</h2>
 {% endif %}
 {% if section.settings.enable_show_more %}
-  <a href="#" class="collections__show-more">
+  <a href="{{ routes.collections_url }}" class="collections__show-more">
     Browse all collections
     <i class="fa-regular fa-chevron-right"></i>
   </a>
 {% endif %}
 <div class="collections__list">
   {% for block in section.blocks %}
-    <a href="#">
+    <a href="{{ block.setting.collection.url }}">
       <div class="collection">
         <img
           data-src="{{ block.settings.collection.image.url | image_url }}"

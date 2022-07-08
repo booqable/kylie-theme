@@ -10,9 +10,9 @@
   font-size: 36px;
   line-height: 44px;
 
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 
   text-align: center;
 
-  color: #0c2747;
+  color: var(--color-typo);
 }
