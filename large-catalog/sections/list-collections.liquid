@@ -1,0 +1,37 @@
+{{ "collections.css" | asset_url | stylesheet_tag }}
+
+{% if section.settings.title %}
+  <h2 class="collections__title">{{ section.settings.title }}</h2>
+{% endif %}
+<div class="collections__list">
+  {% for collection in collections %}
+    <a href="{{ collection.url }}">
+      <div class="collection">
+        <img
+          data-src="{{ collection.image.url | image_url }}"
+          class="collection__image lazyload"
+          alt="{{ collection.name }} collection image"
+        >
+        <h3 class="collection__name">{{ collection.name }}</h3>
+      </div>
+    </a>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "List collections",
+  "tag": "section",
+  "class": "collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Collections"
+    }
+  ],
+  "max_blocks": 15,
+  "blocks": []
+}
+{% endschema %}
