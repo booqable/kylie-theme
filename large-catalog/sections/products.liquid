@@ -6,18 +6,21 @@
 <div class="bq-carousel">
   <div class="bq-carousel__inner">
     {% for product in section.blocks %}
-      <div class="bq-product">
-        <a href="{{ product.url }}" class="bq-product__image">
-          {% for image in product.settings.product.images limit: 1 %}
-            <img data-src="{{ image.url | image_url }}" alt="" class="lazyload">
-          {% endfor %}
-        </a>
-        <a href="{{ product.url }}">
-          <h3 class="bq-product__name">{{ product.settings.product.name }}</h3>
-        </a>
-        <p class="bq-product__duration">2 days</p>
-        <p class="bq-product__price">$24.99</p>
-      </div>
+      {% if product.settings.product != blank %}
+        <div class="bq-product">
+          <a href="{{ product.url }}" class="bq-product__image">
+            {% for image in product.settings.product.images limit: 1 %}
+              <img data-src="{{ image.url | image_url }}" alt="" class="lazyload">
+            {% endfor %}
+          </a>
+          {{ product.settings.product | product_availability }}
+          <a href="{{ product.url }}">
+            <h3 class="bq-product__name">{{ product.settings.product.name }}</h3>
+          </a>
+          {{ product.settings.product | product_price_label }}
+          {{ product.settings.product | product_price }}
+        </div>
+      {% endif %}
     {% endfor %}
   </div>
   <div class="bq-carousel__prev">
