@@ -1,37 +1,38 @@
 {{ "product.css" | asset_url | stylesheet_tag }}
+{{ "carousels.css" | asset_url | stylesheet_tag }}
 
 <div class="product-gallery">
-  <div class="product-gallery__preview">
-    <div class="product-gallery__preview-inner">
+  <div class="product-gallery__preview carousel carousel--snap-center">
+    <div class="product-gallery__preview-inner carousel__inner">
       {% for image in product.images %}
-        <div class="product-gallery__preview-item">
+        <div class="product-gallery__preview-item carousel__item">
+          <img data-src="{{ image.url | image_url }}" alt="" class="lazyload">
+        </div>
+      {% endfor %}
+    </div>
+    <div class="carousel__controls">
+      <div class="carousel__control prev">
+        <i class="fa-light fa-arrow-left"></i>
+      </div>
+      <div class="carousel__control next">
+        <i class="fa-light fa-arrow-right"></i>
+      </div>
+    </div>
+  </div>
+  <div class="product-gallery__items carousel carousel--snap-center">
+    <div class="carousel__inner">
+      {% for image in product.images %}
+        <div class="product-gallery__item-container" data-index="{{ forloop.index0 }}">
           <img
             data-src="{{ image.url | image_url }}"
+            data-focal-x="{{ image.coordinates[0] }}"
+            data-focal-y="{{ image.coordinates[1] }}"
             alt=""
-            class="lazyload"
+            class="focal-image lazyload"
           >
         </div>
       {% endfor %}
     </div>
-    <div class="product-gallery__prev">
-      <i class="fa-light fa-arrow-left"></i>
-    </div>
-    <div class="product-gallery__next">
-      <i class="fa-light fa-arrow-right"></i>
-    </div>
-  </div>
-  <div class="product-gallery__items">
-    {% for image in product.images %}
-      <div class="product-gallery__item-container">
-        <img
-          data-src="{{ image.url | image_url }}"
-          data-focal-x="{{ image.coordinates[0] }}"
-          data-focal-y="{{ image.coordinates[1] }}"
-          alt=""
-          class="focal-image lazyload"
-        >
-      </div>
-    {% endfor %}
   </div>
 </div>
 <div class="product-info">

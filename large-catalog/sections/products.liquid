@@ -1,30 +1,33 @@
 {{ "products.css" | asset_url | stylesheet_tag }}
+{{ "carousels.css" | asset_url | stylesheet_tag }}
 
 {% if section.settings.title %}
   <h2 class="products__title">{{ section.settings.title }}</h2>
 {% endif %}
-<div class="bq-carousel">
-  <div class="bq-carousel__inner">
+<div class="carousel carousel--snap-{{ section.settings.snap }}">
+  <div class="carousel__inner">
     {% for product in section.blocks %}
-      <div class="bq-product">
-        <a href="{{ product.url }}" class="bq-product__image">
+      <div class="product carousel__item">
+        <a href="{{ product.url }}" class="product__image-container">
           {% for image in product.settings.product.images limit: 1 %}
-            <img data-src="{{ image.url | image_url }}" alt="" class="lazyload">
+            <img data-src="{{ image.url | image_url }}" alt="" class="product__image lazyload">
           {% endfor %}
         </a>
         <a href="{{ product.url }}">
-          <h3 class="bq-product__name">{{ product.settings.product.name }}</h3>
+          <h3 class="product__name">{{ product.settings.product.name }}</h3>
         </a>
-        <p class="bq-product__duration">2 days</p>
-        <p class="bq-product__price">$24.99</p>
+        <p class="product__duration">2 days</p>
+        <p class="product__price">$24.99</p>
       </div>
     {% endfor %}
   </div>
-  <div class="bq-carousel__prev">
-    <i class="fa-regular fa-arrow-left"></i>
-  </div>
-  <div class="bq-carousel__next">
-    <i class="fa-regular fa-arrow-right"></i>
+  <div class="carousel__controls">
+    <div class="carousel__control prev">
+      <i class="fa-regular fa-arrow-left"></i>
+    </div>
+    <div class="carousel__control next">
+      <i class="fa-regular fa-arrow-right"></i>
+    </div>
   </div>
 </div>
 
@@ -38,6 +41,26 @@
       "type": "text",
       "id": "title",
       "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "snap",
+      "label": "Carousel items alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
     }
   ],
   "max_blocks": 16,
