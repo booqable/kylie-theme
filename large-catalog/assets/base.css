@@ -9,8 +9,8 @@
   --color-dark-grey: #687687;
   --color-typo: #0c2747;
   --color-blue: #395db8;
-  --color-green: #00ad6f;
-  --color-red: #f53669;
+  --color-green: #8fcc40;
+  --color-red: #f85454;
   /* Fonts */
   --font-body: "Source Sans Pro", sans-serif;
   /* Font weights */
@@ -30,7 +30,7 @@
 *:not(i),
 *:not(i)::before,
 *:not(i)::after {
-  font-family: var(--font-body);
+  font-family: var(--font-body) !important;
 }
 
 .bq-button {

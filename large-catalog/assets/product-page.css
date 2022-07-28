@@ -72,6 +72,31 @@
   margin: 0;
 }
 
+.product-info
+  .booqable-component
+  .booqable-product-button-wrapper
+  span.bq-status {
+  display: inline-flex;
+  align-items: center;
+
+  font-size: 14px;
+  line-height: 20px;
+
+  font-weight: var(--font-weight-bold);
+
+  padding: 2px 12px;
+
+  color: var(--color-white);
+}
+
+.product-info
+  .booqable-component
+  .booqable-product-button-wrapper
+  span.bq-status
+  > span {
+  margin-right: 3px;
+}
+
 .product-info .booqable-component .booqable-product-button-wrapper .bq-button {
   font-weight: var(--font-weight-bold);
 }
