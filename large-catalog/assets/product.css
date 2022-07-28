@@ -104,4 +104,8 @@
     min-width: 280px;
     max-width: 280px;
   }
+
+  .product .product__image-container {
+    height: 320px;
+  }
 }
