@@ -37,13 +37,17 @@
 </div>
 <div class="product-info">
   <h1 class="product-info__title">{{ product.name }}</h1>
-  <p class="product-info__label">Variation</p>
+  {% if product.variants != blank %}
+    <p class="product-info__label">Variation</p>
+  {% endif %}
   {{ product_button }}
 </div>
-<div class="product-description">
-  <p class="product-description__label">Description</p>
-  {{ product.description }}
-</div>
+{% if product.description != blank %}
+  <div class="product-description">
+    <p class="product-description__label">Description</p>
+    {{ product.description }}
+  </div>
+{% endif %}
 
 {% schema %}
 {
