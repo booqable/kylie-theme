@@ -71,7 +71,8 @@
         "type": "color",
         "id": "primary_color",
         "label": "Primary color",
-        "info": "Primary color of the theme used for embeddable components"
+        "info": "Primary color of the theme used for embeddable components",
+        "default": "#395DB8"
       }
     ]
   }
