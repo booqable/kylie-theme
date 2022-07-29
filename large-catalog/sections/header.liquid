@@ -4,7 +4,7 @@
 <div class="header__wrapper {% if section.settings.menu != blank %}header__wrapper--with-menu{% endif %}">
   <div class="header__link-container">
     <a href="{{ routes.root_url }}" class="header__link">
-      {% if section.settings.logo != null %}
+      {% if section.settings.logo.url != null %}
         <img
           src="{{ section.settings.logo | image_url }}"
           alt="{{ shop.name }}"
