@@ -1,0 +1,31 @@
+<div class="spacer__inner spacer__inner--{{ section.settings.size }}"></div>
+
+{% schema %}
+{
+  "name": "Spacer",
+  "tag": "div",
+  "class": "spacer",
+  "settings": [
+    {
+      "type": "select",
+      "id": "size",
+      "label": "Size",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "sm"
+    }
+  ]
+}
+{% endschema %}
