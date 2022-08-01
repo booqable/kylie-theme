@@ -7,6 +7,16 @@
   class="lazyload hero__background"
 >
 {% endif %}
+{% if section.settings.overlay_enabled %}
+  <span class="hero__overlay" style="
+    {% if section.settings.overlay_color %}
+      background-color: {{ section.settings.overlay_color }};
+    {% endif %}
+    {% if section.settings.overlay_opacity %}
+      opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    {% endif %}
+  "></span>
+{% endif %}
 <div class="hero__inner">
   {% for block in section.blocks %}
     {% case block.type %}
@@ -37,6 +47,27 @@
       "type": "image_picker",
       "id": "background_image",
       "label": "Background image"
+    },
+    {
+      "type": "checkbox",
+      "id": "overlay_enabled",
+      "label": "Enable overlay",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "default": 60
     }
   ],
   "max_blocks": 3,
