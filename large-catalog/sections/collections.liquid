@@ -11,16 +11,18 @@
 {% endif %}
 <div class="collections__list">
   {% for block in section.blocks %}
-    <a href="{{ block.setting.collection.url }}">
-      <div class="collection">
-        <img
-          data-src="{{ block.settings.collection.image.url | image_url }}"
-          class="collection__image lazyload"
-          alt="{{ block.settings.collection.name }} collection image"
-        >
-        <h3 class="collection__name">{{ block.settings.collection.name }}</h3>
-      </div>
-    </a>
+    {% if block.settings.collection != blank %}
+      <a href="{{ block.setting.collection.url }}">
+        <div class="collection">
+          <img
+            data-src="{{ block.settings.collection.image.url | image_url }}"
+            class="collection__image lazyload"
+            alt="{{ block.settings.collection.name }} collection image"
+          >
+          <h3 class="collection__name">{{ block.settings.collection.name }}</h3>
+        </div>
+      </a>
+    {% endif %}
   {% endfor %}
 </div>
 

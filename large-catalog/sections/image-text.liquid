@@ -1,7 +1,7 @@
 {{ "image-text.css" | asset_url | stylesheet_tag }}
 
 <div class="image-text__inner">
-  {% if section.settings.background_image != blank %}
+  {% if section.settings.background_image.url != blank %}
     <img
       data-src="{{ section.settings.background_image | image_url }}"
       alt="{{ section.settings.background_image_alt | default: "" }}"

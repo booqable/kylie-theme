@@ -28,7 +28,14 @@
   scroll-snap-type: x mandatory;
   scroll-padding: 0 var(--horizontal-padding);
 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
   -webkit-overflow-scrolling: touch;
+}
+
+.carousel__inner::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel__item {

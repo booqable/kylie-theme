@@ -1,4 +1,4 @@
-{{ "product.css" | asset_url | stylesheet_tag }}
+{{ "product-page.css" | asset_url | stylesheet_tag }}
 {{ "carousels.css" | asset_url | stylesheet_tag }}
 
 <div class="product-gallery">
@@ -37,19 +37,23 @@
 </div>
 <div class="product-info">
   <h1 class="product-info__title">{{ product.name }}</h1>
-  <p class="product-info__label">Variation</p>
+  {% if product.variants.size > 1 %}
+    <p class="product-info__label">Variation</p>
+  {% endif %}
   {{ product_button }}
 </div>
-<div class="product-description">
-  <p class="product-description__label">Description</p>
-  {{ product.description }}
-</div>
+{% if product.description != blank %}
+  <div class="product-description">
+    <p class="product-description__label">Description</p>
+    {{ product.description }}
+  </div>
+{% endif %}
 
 {% schema %}
 {
   "name": "Product",
   "tag": "section",
-  "class": "product",
+  "class": "product-page",
   "templates": ["product"],
   "settings": []
 }
