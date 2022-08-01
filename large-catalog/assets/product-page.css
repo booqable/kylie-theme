@@ -215,7 +215,7 @@
 }
 
 @media (max-width: 810px) {
-  .product {
+  .product-page {
     gap: 32px;
   }
 
@@ -225,7 +225,7 @@
 }
 
 @media (max-width: 576px) {
-  .product {
+  .product-page {
     grid-template-columns: 1fr;
 
     padding: 24px 0;
