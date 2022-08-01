@@ -1,29 +1,36 @@
 {{ "search.css" | asset_url | stylesheet_tag }}
+{{ "product.css" | asset_url | stylesheet_tag }}
 {{ "cleanstate.css" | asset_url | stylesheet_tag }}
+{{ "pagination.css" | asset_url | stylesheet_tag }}
 
 <h1 class="search__title">Search results <span id="search__query"></span></h1>
-<div class="search-results {% if results_count == 0 %}no-results{% endif %}">
-  {% if results_count == 0 %}
-    <div class="cleanstate">
-      <p class="cleanstate__text">No results found.</p>
-    </div>
-  {% else %}
-    {% for result in results %}
-      <div class="bq-product">
-        <div class="bq-product__image">
-          {% for image in result.images limit: 1 %}
-            <img data-src="{{ image.url | image_url }}" alt="" class="lazyload">
-          {% endfor %}
-        </div>
-        <a href="{{ result.url }}">
-          <h3 class="bq-product__name">{{ result.name }}</h3>
-        </a>
-        <p class="bq-product__duration">2 days</p>
-        <p class="bq-product__price">$24.99</p>
+{% paginate results %}
+  <div class="search-results {% if results_count == 0 %}no-results{% endif %}">
+    {% if results_count == 0 %}
+      <div class="cleanstate">
+        <p class="cleanstate__text">No results found.</p>
       </div>
-    {% endfor %}
+    {% else %}
+      {% for result in results %}
+        {% assign image = result.images.first %}
+        <div class="product">
+          <a href="{{ result.url }}" class="product__image-container">{% if image != blank %}<img data-src="{{ image.url | image_url }}" alt="" class="product__image lazyload">{% endif %}</a>
+          {{ result | product_availability }}
+          <a href="{{ result.url }}">
+            <h3 class="product__name">{{ result.name }}</h3>
+          </a>
+          {{ result | product_price_label }}
+          {{ result | product_price }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+  {% if paginate.pages > 1 %}
+    <div class="pagination search__pagination">
+      {{ paginate | default_pagination }}
+    </div>
   {% endif %}
-</div>
+{% endpaginate %}
 
 {% schema %}
 {

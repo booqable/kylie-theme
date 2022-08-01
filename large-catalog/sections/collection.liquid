@@ -1,25 +1,34 @@
 {{ "collection.css" | asset_url | stylesheet_tag }}
 {{ "product.css" | asset_url | stylesheet_tag }}
 {{ "cleanstate.css" | asset_url | stylesheet_tag }}
+{{ "pagination.css" | asset_url | stylesheet_tag }}
 
 {% if section.settings.show_collection_name %}
   <h1 class="collection__title">{{ collection.name }}</h1>
 {% endif %}
 {% if collection.items_count > 0 %}
-  <div class="collection__items">
-    {% for item in collection.items %}
-      {% assign image = item.images.first %}
-      <div class="product">
-        <a href="{{ item.url }}" class="product__image-container"><img data-src="{{ image.url | image_url }}" alt="" class="product__image lazyload"></a>
-        {{ item | product_availability }}
-        <a href="{{ item.url }}">
-          <h3 class="product__name">{{ item.name }}</h3>
-        </a>
-        {{ item | product_price_label }}
-        {{ item | product_price }}
+  {% assign paginate_object = collection.items %}
+  {% paginate paginate_object %}
+    <div class="collection__items">
+      {% for item in paginate_object %}
+        {% assign image = item.images.first %}
+        <div class="product">
+          <a href="{{ item.url }}" class="product__image-container"><img data-src="{{ image.url | image_url }}" alt="" class="product__image lazyload"></a>
+          {{ item | product_availability }}
+          <a href="{{ item.url }}">
+            <h3 class="product__name">{{ item.name }}</h3>
+          </a>
+          {{ item | product_price_label }}
+          {{ item | product_price }}
+        </div>
+      {% endfor %}
+    </div>
+    {% if paginate.pages > 1 %}
+      <div class="pagination collection__pagination">
+        {{ paginate | default_pagination }}
       </div>
-    {% endfor %}
-  </div>
+    {% endif %}
+  {% endpaginate %}
 {% else %}
   <div class="cleanstate">
     <p class="cleanstate__text">This collection has no items.</p>
