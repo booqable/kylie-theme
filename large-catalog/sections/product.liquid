@@ -37,7 +37,7 @@
 </div>
 <div class="product-info">
   <h1 class="product-info__title">{{ product.name }}</h1>
-  {% if product.variants != blank %}
+  {% if product.variants.size > 1 %}
     <p class="product-info__label">Variation</p>
   {% endif %}
   {{ product_button }}
