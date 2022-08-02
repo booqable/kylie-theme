@@ -1,5 +1,18 @@
 {{ "hero.css" | asset_url | stylesheet_tag }}
 
+<style>
+  {% if section.settings.overlay_enabled %}
+    .hero__overlay {
+      {% if section.settings.overlay_color %}
+        background-color: {{ section.settings.overlay_color }};
+      {% endif %}
+      {% if section.settings.overlay_opacity %}
+        opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+      {% endif %}
+    }
+  {% endif %}
+</style>
+
 {% if section.settings.background_image.url != blank %}
 <img
   data-src="{{ section.settings.background_image | image_url }}"
@@ -8,14 +21,7 @@
 >
 {% endif %}
 {% if section.settings.overlay_enabled %}
-  <span class="hero__overlay" style="
-    {% if section.settings.overlay_color %}
-      background-color: {{ section.settings.overlay_color }};
-    {% endif %}
-    {% if section.settings.overlay_opacity %}
-      opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
-    {% endif %}
-  "></span>
+  <span class="hero__overlay"></span>
 {% endif %}
 <div class="hero__inner">
   {% for block in section.blocks %}
@@ -39,14 +45,18 @@
 
 {% schema %}
 {
-  "name": "Hero section",
+  "name": "Hero Section",
   "tag": "section",
   "class": "hero",
   "settings": [
     {
       "type": "image_picker",
       "id": "background_image",
-      "label": "Background image"
+      "label": "Background Image"
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
     },
     {
       "type": "checkbox",
@@ -57,7 +67,7 @@
     {
       "type": "color",
       "id": "overlay_color",
-      "label": "Overlay color",
+      "label": "Color",
       "default": "#000000"
     },
     {
@@ -66,7 +76,7 @@
       "max": 100,
       "step": 10,
       "id": "overlay_opacity",
-      "label": "Overlay opacity",
+      "label": "Opacity",
       "default": 60
     }
   ],
