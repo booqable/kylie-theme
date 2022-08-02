@@ -1,7 +1,6 @@
 {{ "collection.css" | asset_url | stylesheet_tag }}
 {{ "product.css" | asset_url | stylesheet_tag }}
 {{ "cleanstate.css" | asset_url | stylesheet_tag }}
-{{ "pagination.css" | asset_url | stylesheet_tag }}
 
 {% if section.settings.show_collection_name %}
   <h1 class="collection__title">{{ collection.name }}</h1>
@@ -24,8 +23,8 @@
       {% endfor %}
     </div>
     {% if paginate.pages > 1 %}
-      <div class="pagination collection__pagination">
-        {{ paginate | default_pagination }}
+      <div class="collection__pagination">
+        {% include "pagination" %}
       </div>
     {% endif %}
   {% endpaginate %}
