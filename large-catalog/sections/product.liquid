@@ -3,26 +3,29 @@
 
 <div class="product-gallery">
   <div class="product-gallery__preview carousel carousel--snap-center">
-    <div class="product-gallery__preview-inner carousel__inner">
+    <div class="product-gallery__preview-inner carousel__inner infinite-scroll">
       {% for image in product.images %}
         <div class="product-gallery__preview-item carousel__item">
           <img data-src="{{ image.url | image_url }}" alt="" class="lazyload">
         </div>
       {% endfor %}
     </div>
-    <div class="carousel__controls">
-      <div class="carousel__control prev">
-        <i class="fa-light fa-arrow-left"></i>
+    {% if product.images.size > 1 %}
+      <div class="carousel__controls">
+        <div class="carousel__control prev">
+          <i class="fa-light fa-arrow-left"></i>
+        </div>
+        <div class="carousel__control next">
+          <i class="fa-light fa-arrow-right"></i>
+        </div>
       </div>
-      <div class="carousel__control next">
-        <i class="fa-light fa-arrow-right"></i>
-      </div>
-    </div>
+    {% endif %}
   </div>
+  {% if product.images.size > 1 %}
   <div class="product-gallery__items carousel carousel--snap-center">
     <div class="carousel__inner">
       {% for image in product.images %}
-        <div class="product-gallery__item-container" data-index="{{ forloop.index0 }}">
+        <div class="product-gallery__item-container carousel__item" data-index="{{ forloop.index0 }}">
           <img
             data-src="{{ image.url | image_url }}"
             data-focal-x="{{ image.coordinates[0] }}"
@@ -34,6 +37,7 @@
       {% endfor %}
     </div>
   </div>
+  {% endif %}
 </div>
 <div class="product-info">
   <h1 class="product-info__title">{{ product.name }}</h1>
