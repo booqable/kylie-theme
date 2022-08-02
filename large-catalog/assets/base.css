@@ -42,12 +42,34 @@
   text-align: center;
 }
 
-.bq-button--solid {
-  padding: 10px 20px;
+.bq-button--size-sm {
+  font-size: 12px;
+}
 
+.bq-button--size-md {
+  font-size: 14px;
+}
+
+.bq-button--size-lg {
+  font-size: 16px;
+}
+
+.bq-button--solid {
   border-radius: 8px;
 
   text-decoration: none;
+}
+
+.bq-button--solid.bq-button--size-sm {
+  padding: 6px 12px;
+}
+
+.bq-button--solid.bq-button--size-md {
+  padding: 10px 20px;
+}
+
+.bq-button--solid.bq-button--size-lg {
+  padding: 14px 28px;
 }
 
 .bq-button--solid:hover {
