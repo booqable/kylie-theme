@@ -24,7 +24,7 @@
   {% if section.settings.overlay_enabled %}
     <span class="image-text__overlay"></span>
   {% endif %}
-  <div class="image-text__content">
+  <div class="image-text__content image-text__content--align-{{ section.settings.content_align }}">
     {% for block in section.blocks %}
       {% case block.type %}
         {% when "heading" %}
@@ -56,8 +56,27 @@
     {
       "type": "image_picker",
       "id": "background_image",
-      "label": "Background image",
-      "default": ""
+      "label": "Background image"
+    },
+    {
+      "type": "select",
+      "id": "content_align",
+      "label": "Content alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
     },
     {
       "type": "checkbox",

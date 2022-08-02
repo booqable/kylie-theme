@@ -57,9 +57,27 @@
 }
 
 .image-text__content {
+  display: flex;
+  flex-flow: column nowrap;
+
   position: relative;
 
   z-index: 1;
+}
+
+.image-text__content--align-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.image-text__content--align-center {
+  align-items: center;
+  text-align: center;
+}
+
+.image-text__content--align-right {
+  align-items: flex-end;
+  text-align: right;
 }
 
 .bq-button {
