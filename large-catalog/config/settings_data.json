@@ -16,9 +16,8 @@
         "blocks": {},
         "block_order": [],
         "settings": {
-          "menu": "",
-          "show_social_icons": true,
-          "show_payment_icons": true
+          "show_copyright": true,
+          "align_copyright": "right"
         },
         "disabled": null
       }
