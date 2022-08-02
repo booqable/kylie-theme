@@ -1,5 +1,18 @@
 {{ "image-text.css" | asset_url | stylesheet_tag }}
 
+<style>
+  {% if section.settings.overlay_enabled %}
+    .image-text__overlay {
+      {% if section.settings.overlay_color %}
+        background-color: {{ section.settings.overlay_color }};
+      {% endif %}
+      {% if section.settings.overlay_opacity %}
+        opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+      {% endif %}
+    }
+  {% endif %}
+</style>
+
 <div class="image-text__inner">
   {% if section.settings.background_image.url != blank %}
     <img
@@ -9,14 +22,7 @@
     >
   {% endif %}
   {% if section.settings.overlay_enabled %}
-    <span class="image-text__overlay" style="
-      {% if section.settings.overlay_color %}
-        background-color: {{ section.settings.overlay_color }};
-      {% endif %}
-      {% if section.settings.overlay_opacity %}
-        opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
-      {% endif %}
-    "></span>
+    <span class="image-text__overlay"></span>
   {% endif %}
   <div class="image-text__content">
     {% for block in section.blocks %}
@@ -26,7 +32,7 @@
         {% when "text" %}
           <p class="image-text__text" style="color: {{ block.settings.color }};">{{ block.settings.text }}</p>
         {% when "button" %}
-          <a class="bq-button{% if block.settings.use_solid_button %} bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
+          <a class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
             {% if block.settings.label_color %}
               color: {{ block.settings.label_color }};
             {% endif %}
@@ -145,6 +151,26 @@
           "id": "label_color",
           "default": "#000000",
           "label": "Label color"
+        },
+        {
+          "type": "select",
+          "id": "size",
+          "label": "Size",
+          "options": [
+            {
+              "value": "sm",
+              "label": "Small"
+            },
+            {
+              "value": "md",
+              "label": "Medium"
+            },
+            {
+              "value": "lg",
+              "label": "Large"
+            }
+          ],
+          "default": "md"
         }
       ]
     }
