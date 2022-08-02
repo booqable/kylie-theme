@@ -3,34 +3,26 @@
   width: 100%;
 
   margin: 16px auto;
-  padding: 0 var(--horizontal-padding);
 }
 
 .collection__title {
   font-size: 36px;
   line-height: 44px;
 
-  margin-bottom: 24px;
-
   font-weight: var(--font-weight-semibold);
 
   color: var(--color-typo);
+
+  margin-bottom: 24px;
+  padding: 0 var(--horizontal-padding);
 }
 
-.collection__items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(168px, 280px));
-  gap: 18px;
-}
-
-@media (min-width: 576px) {
-  .collection__items {
-    gap: 24px;
+@media (min-width: 820px) {
+  .collection {
+    padding: 0 var(--horizontal-padding);
   }
-}
 
-@media (min-width: 810px) {
-  .collection__items {
-    gap: 32px;
+  .collection__title {
+    padding: 0;
   }
 }
