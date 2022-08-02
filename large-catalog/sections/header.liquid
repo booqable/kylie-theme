@@ -10,6 +10,8 @@
           alt="{{ shop.name }}"
           class="header__image-logo"
         >
+      {% elsif section.settings.custom_title != blank %}
+        <h1 class="header__text-logo">{{ section.settings.custom_title }}</h1>
       {% else %}
         <h1 class="header__text-logo">{{ shop.name }}</h1>
       {% endif %}
@@ -143,7 +145,13 @@
     {
       "type": "image_picker",
       "id": "logo",
-      "label": "Logo image"
+      "label": "Header logo"
+    },
+    {
+      "type": "text",
+      "id": "custom_title",
+      "label": "Header custom title",
+      "description": "Note: Header logo always overrides this title"
     },
     {
       "type": "menu",
