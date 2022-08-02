@@ -6,7 +6,7 @@
   <h2 class="products__title">{{ section.settings.title }}</h2>
 {% endif %}
 <div class="carousel carousel--snap-{{ section.settings.snap }}">
-  <div class="carousel__inner">
+  <div class="carousel__inner {% if section.settings.infinite_scroll %}infinite-scroll{% endif %}">
     {% for product in section.blocks %}
       {% if product.settings.product != blank %}
         {% assign image = product.settings.product.images.first %}
@@ -44,9 +44,13 @@
       "label": "Title"
     },
     {
+      "type": "header",
+      "content": "Carousel"
+    },
+    {
       "type": "select",
       "id": "snap",
-      "label": "Carousel items alignment",
+      "label": "Items alignment",
       "options": [
         {
           "value": "start",
@@ -62,6 +66,11 @@
         }
       ],
       "default": "center"
+    },
+    {
+      "type": "checkbox",
+      "id": "infinite_scroll",
+      "label": "Infinite scroll"
     }
   ],
   "max_blocks": 16,
