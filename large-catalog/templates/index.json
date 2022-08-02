@@ -22,7 +22,8 @@
             "text": "Shop collection",
             "label_color": "#0c2747",
             "background_color": "#ffffff",
-            "use_solid_button": true
+            "use_solid_button": true,
+            "size": "md"
           },
           "disabled": null
         }
