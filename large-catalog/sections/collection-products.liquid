@@ -1,9 +1,9 @@
-{{ "collection.css" | asset_url | stylesheet_tag }}
+{{ "collection-products.css" | asset_url | stylesheet_tag }}
 {{ "product.css" | asset_url | stylesheet_tag }}
 {{ "carousels.css" | asset_url | stylesheet_tag }}
 
 {% if section.settings.title %}
-  <h2 class="collection__title">{{ section.settings.title }}</h2>
+  <h2 class="collection-products__title">{{ section.settings.title }}</h2>
 {% endif %}
 {% if section.settings.collection != blank %}
   <div class="carousel carousel--snap-{{ section.settings.snap }}">
@@ -38,7 +38,7 @@
 {
   "name": "Collection Products",
   "tag": "section",
-  "class": "collection",
+  "class": "collection-products",
   "settings": [
     {
       "type": "text",

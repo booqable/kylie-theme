@@ -57,7 +57,7 @@
   text-decoration-color: var(--color-white);
 }
 
-.collection {
+.collections .collection {
   display: flex;
   align-items: flex-end;
 
@@ -115,7 +115,7 @@
     gap: 16px;
   }
 
-  .collection {
+  .collections .collection {
     height: 305px;
   }
 }
@@ -125,7 +125,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .collection {
+  .collections .collection {
     height: 200px;
   }
 }
