@@ -1,12 +1,14 @@
 {
   "sections": {
-    "collection": {
-      "type": "collection",
+    "collection-page": {
+      "type": "collection-page",
       "blocks": {},
       "block_order": [],
-      "settings": {},
+      "settings": {
+        "show_collection_name": true
+      },
       "disabled": null
     }
   },
-  "order": ["collection"]
+  "order": ["collection-page"]
 }

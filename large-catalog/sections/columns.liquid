@@ -15,7 +15,7 @@
           <div class="post__text">{{ block.settings.text }}</div>
         {% endif %}
         {% if block.settings.button_url %}
-          <a class="bq-button{% if block.settings.use_solid_button %} bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
+          <a class="bq-button bq-button--size-{{ block.settings.button_size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
             color: {{ block.settings.label_color }};
             {% if block.settings.use_solid_button %}
               background-color: {{ block.settings.background_color }};
@@ -51,19 +51,26 @@
       "name": "Column",
       "settings": [
         {
+          "type": "header",
+          "content": "Image"
+        },
+        {
           "id": "image",
-          "type": "image_picker",
-          "label": "Image"
+          "type": "image_picker"
         },
         {
           "id": "image_alt",
           "type": "text",
-          "label": "Image alt"
+          "label": "Alternative text"
         },
         {
           "id": "image_border_radius",
           "type": "checkbox",
-          "label": "Image round corners"
+          "label": "Use round corners"
+        },
+        {
+          "type": "header",
+          "content": "Content"
         },
         {
           "id": "title",
@@ -76,14 +83,18 @@
           "label": "Text"
         },
         {
+          "type": "header",
+          "content": "Button"
+        },
+        {
           "id": "button",
           "type": "text",
-          "label": "Button"
+          "label": "Label"
         },
         {
           "id": "button_url",
           "type": "url",
-          "label": "Button URL"
+          "label": "URL"
         },
         {
           "id": "use_solid_button",
@@ -94,14 +105,34 @@
         {
           "id": "background_color",
           "type": "color",
-          "label": "Button background color",
+          "label": "Background color",
           "default": "#ffffff"
         },
         {
           "id": "label_color",
           "type": "color",
-          "label": "Button label color",
+          "label": "Label color",
           "default": "#0c2747"
+        },
+        {
+          "type": "select",
+          "id": "button_size",
+          "label": "Size",
+          "options": [
+            {
+              "value": "sm",
+              "label": "Small"
+            },
+            {
+              "value": "md",
+              "label": "Medium"
+            },
+            {
+              "value": "lg",
+              "label": "Large"
+            }
+          ],
+          "default": "md"
         }
       ]
     }

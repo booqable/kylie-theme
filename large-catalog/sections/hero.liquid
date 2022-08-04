@@ -1,11 +1,27 @@
 {{ "hero.css" | asset_url | stylesheet_tag }}
 
+<style>
+  {% if section.settings.overlay_enabled %}
+    .hero__overlay {
+      {% if section.settings.overlay_color %}
+        background-color: {{ section.settings.overlay_color }};
+      {% endif %}
+      {% if section.settings.overlay_opacity %}
+        opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+      {% endif %}
+    }
+  {% endif %}
+</style>
+
 {% if section.settings.background_image.url != blank %}
 <img
   data-src="{{ section.settings.background_image | image_url }}"
   alt="{{ section.settings.background_image_alt | default: "" }}"
   class="lazyload hero__background"
 >
+{% endif %}
+{% if section.settings.overlay_enabled %}
+  <span class="hero__overlay"></span>
 {% endif %}
 <div class="hero__inner">
   {% for block in section.blocks %}
@@ -15,7 +31,7 @@
       {% when "text" %}
         <p class="hero__text" style="color: {{ block.settings.color }};">{{ block.settings.text }}</p>
       {% when "button" %}
-        <a class="bq-button{% if block.settings.use_solid_button %} bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
+        <a class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
           color: {{ block.settings.label_color }};
           {% if block.settings.use_solid_button %}
             background-color: {{ block.settings.background_color }};
@@ -29,14 +45,39 @@
 
 {% schema %}
 {
-  "name": "Hero section",
+  "name": "Hero Section",
   "tag": "section",
   "class": "hero",
   "settings": [
     {
       "type": "image_picker",
       "id": "background_image",
-      "label": "Background image"
+      "label": "Background Image"
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "type": "checkbox",
+      "id": "overlay_enabled",
+      "label": "Enable overlay",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Color",
+      "default": "#000000"
+    },
+    {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "id": "overlay_opacity",
+      "label": "Opacity",
+      "default": 60
     }
   ],
   "max_blocks": 3,
@@ -109,6 +150,26 @@
           "id": "background_color",
           "default": "#ffffff",
           "label": "Background color"
+        },
+        {
+          "type": "select",
+          "id": "size",
+          "label": "Size",
+          "options": [
+            {
+              "value": "sm",
+              "label": "Small"
+            },
+            {
+              "value": "md",
+              "label": "Medium"
+            },
+            {
+              "value": "lg",
+              "label": "Large"
+            }
+          ],
+          "default": "md"
         }
       ]
     }

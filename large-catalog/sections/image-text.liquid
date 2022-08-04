@@ -1,5 +1,18 @@
 {{ "image-text.css" | asset_url | stylesheet_tag }}
 
+<style>
+  {% if section.settings.overlay_enabled %}
+    .image-text__overlay {
+      {% if section.settings.overlay_color %}
+        background-color: {{ section.settings.overlay_color }};
+      {% endif %}
+      {% if section.settings.overlay_opacity %}
+        opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+      {% endif %}
+    }
+  {% endif %}
+</style>
+
 <div class="image-text__inner">
   {% if section.settings.background_image.url != blank %}
     <img
@@ -9,16 +22,9 @@
     >
   {% endif %}
   {% if section.settings.overlay_enabled %}
-    <span class="image-text__overlay" style="
-      {% if section.settings.overlay_color %}
-        background-color: {{ section.settings.overlay_color }};
-      {% endif %}
-      {% if section.settings.overlay_opacity %}
-        opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 | default: 0.2 }};
-      {% endif %}
-    "></span>
+    <span class="image-text__overlay"></span>
   {% endif %}
-  <div class="image-text__content">
+  <div class="image-text__content image-text__content--align-{{ section.settings.content_align }}">
     {% for block in section.blocks %}
       {% case block.type %}
         {% when "heading" %}
@@ -26,7 +32,7 @@
         {% when "text" %}
           <p class="image-text__text" style="color: {{ block.settings.color }};">{{ block.settings.text }}</p>
         {% when "button" %}
-          <a class="bq-button{% if block.settings.use_solid_button %} bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
+          <a class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
             {% if block.settings.label_color %}
               color: {{ block.settings.label_color }};
             {% endif %}
@@ -43,31 +49,52 @@
 
 {% schema %}
 {
-  "name": "Image with text",
+  "name": "Image with Text",
   "tag": "section",
   "class": "image-text",
   "settings": [
     {
       "type": "image_picker",
       "id": "background_image",
-      "label": "Background image",
-      "default": ""
+      "label": "Background image"
+    },
+    {
+      "type": "select",
+      "id": "content_align",
+      "label": "Content alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
     },
     {
       "type": "checkbox",
       "id": "overlay_enabled",
-      "label": "Enable overlay"
+      "label": "Enable overlay",
+      "default": false
     },
     {
       "type": "color",
       "id": "overlay_color",
-      "label": "Overlay color"
+      "label": "Overlay color",
+      "default": "#000000"
     },
     {
-      "type": "range",
+      "type": "number",
       "min": 0,
       "max": 100,
-      "step": 1,
+      "step": 10,
       "id": "overlay_opacity",
       "label": "Overlay opacity",
       "default": 60
@@ -143,6 +170,26 @@
           "id": "label_color",
           "default": "#000000",
           "label": "Label color"
+        },
+        {
+          "type": "select",
+          "id": "size",
+          "label": "Size",
+          "options": [
+            {
+              "value": "sm",
+              "label": "Small"
+            },
+            {
+              "value": "md",
+              "label": "Medium"
+            },
+            {
+              "value": "lg",
+              "label": "Large"
+            }
+          ],
+          "default": "md"
         }
       ]
     }

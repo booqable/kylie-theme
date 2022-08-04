@@ -8,102 +8,43 @@
 {% assign has_socials = settings.social_twitter_link != blank or settings.social_facebook_link != blank or settings.social_pinterest_link != blank or settings.social_pinterest_link != blank or settings.social_instagram_link != blank or settings.social_tiktok_link != blank or settings.social_tumblr_link != blank or settings.social_snapchat_link != blank or settings.social_youtube_link != blank or settings.social_vimeo_link != blank %}
 
 <div class="footer__content">
-  {% if section.settings.menu != blank or section.settings.show_social_icons and has_socials %}
-    <nav class="footer__nav">
-      {% if section.settings.menu != blank %}
-        <ul class="list-menu footer__menu">
-          {% for link in section.settings.menu.items %}
-            <li class="list-menu__item">
-              <a href="{{ link.url }}" class="footer__nav-item">{{ link.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when "socials" %}
+        {% if has_socials %}
+          {% include "socials" %}
+        {% endif %}
+      {% when "menu" %}
+        <div class="footer__nav">
+          <ul class="list-menu footer__menu footer__menu--align-{{ block.settings.align }}">
+            {% for link in block.settings.menu.items %}
+              <li class="list-menu__item">
+                <a href="{{ link.url }}" class="footer__nav-item">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% when "payment_methods" %}
+        {% if payment_methods.size > 0 %}
+          <div class="footer__payment-methods footer__payment-methods--align-{{ block.settings.align }}">
+            {% for provider in payment_methods %}
+              {% if fa contains provider %}
+                <i class="fa-brands fa-cc-{{ provider }}"></i>
+              {% elsif svg contains provider %}
+                <img data-src="{{ provider | append: ".svg" | asset_url }}" class="lazyload">
+              {% endif %}
+            {% endfor %}
+          </div>
       {% endif %}
-      {% if section.settings.show_social_icons and has_socials %}
-        <ul class="list-menu footer__social">
-          {% if settings.social_twitter_link != blank %}
-            <li class="list-menu__item">
-              <a href="{{ settings.social_twitter_link }}" target="_blank" class="footer__social-item">
-                <i class="fa-brands fa-twitter"></i>
-              </a>
-            </li>
-          {% endif %}
-          {% if settings.social_facebook_link != blank %}
-            <li class="list-menu__item">
-              <a href="{{ settings.social_facebook_link }}" target="_blank" class="footer__social-item">
-                <i class="fa-brands fa-facebook"></i>
-              </a>
-            </li>
-          {% endif %}
-          {% if settings.social_pinterest_link != blank %}
-            <li class="list-menu__item">
-              <a href="{{ settings.social_pinterest_link }}" target="_blank" class="footer__social-item">
-                <i class="fa-brands fa-pinterest"></i>
-              </a>
-            </li>
-          {% endif %}
-          {% if settings.social_instagram_link != blank %}
-            <li class="list-menu__item">
-              <a href="{{ settings.social_instagram_link }}" target="_blank" class="footer__social-item">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-            </li>
-          {% endif %}
-          {% if settings.social_tiktok_link != blank %}
-            <li class="list-menu__item">
-              <a href="{{ settings.social_tiktok_link }}" target="_blank" class="footer__social-item">
-                <i class="fa-brands fa-tiktok"></i>
-              </a>
-            </li>
-          {% endif %}
-          {% if settings.social_tumblr_link != blank %}
-            <li class="list-menu__item">
-              <a href="{{ settings.social_tumblr_link }}" target="_blank" class="footer__social-item">
-                <i class="fa-brands fa-tumblr"></i>
-              </a>
-            </li>
-          {% endif %}
-          {% if settings.social_snapchat_link != blank %}
-            <li class="list-menu__item">
-              <a href="{{ settings.social_snapchat_link }}" target="_blank" class="footer__social-item">
-                <i class="fa-brands fa-snapchat"></i>
-              </a>
-            </li>
-          {% endif %}
-          {% if settings.social_youtube_link != blank %}
-            <li class="list-menu__item">
-              <a href="{{ settings.social_youtube_link }}" target="_blank" class="footer__social-item">
-                <i class="fa-brands fa-youtube"></i>
-              </a>
-            </li>
-          {% endif %}
-          {% if settings.social_vimeo_link != blank %}
-            <li class="list-menu__item">
-              <a href="{{ settings.social_vimeo_link }}" target="_blank" class="footer__social-item">
-                <i class="fa-brands fa-vimeo"></i>
-              </a>
-            </li>
-          {% endif %}
-        </ul>
-      {% endif %}
-    </nav>
-  {% endif %}
-  <div class="footer__bottom">
-    {% if section.settings.show_payment_icons and payment_methods.size > 0 %}
-      <div class="footer__payment-methods">
-        {% for provider in payment_methods %}
-          {% if fa contains provider %}
-            <i class="fa-brands fa-cc-{{ provider }}"></i>
-          {% elsif svg contains provider %}
-            <img data-src="{{ provider | append: ".svg" | asset_url }}" class="lazyload">
-          {% endif %}
-        {% endfor %}
+    {% endcase %}
+  {% endfor %}
+  {% if section.settings.show_copyright %}
+    <div class="footer__bottom">
+      <div class="footer__copyright footer__copyright--align-{{ section.settings.align_copyright }}">
+        &copy; {{ "now" | date: "%Y" }}, {{ shop.name }}
       </div>
-    {% endif %}
-    <div class="footer__copyright">
-      &copy; {{ "now" | date: "%Y" }}, {{ shop.name }}
     </div>
-  </div>
+  {% endif %}
 </div>
 
 {% schema %}
@@ -114,19 +55,163 @@
   "templates": [],
   "settings": [
     {
+      "type": "header",
+      "content": "Copyright"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_copyright",
+      "label": "Show copyright"
+    },
+    {
+      "type": "select",
+      "id": "align_copyright",
+      "label": "Align",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "socials",
+      "name": "Socials",
+      "settings": [
+        {
+          "type": "select",
+          "id": "align",
+          "label": "Align",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "header",
+          "content": "Icon"
+        },
+        {
+          "type": "select",
+          "id": "size",
+          "label": "Size",
+          "options": [
+            {
+              "value": "sm",
+              "label": "Small"
+            },
+            {
+              "value": "md",
+              "label": "Medium"
+            },
+            {
+              "value": "lg",
+              "label": "Large"
+            }
+          ],
+          "default": "md"
+        },
+        {
+          "type": "select",
+          "id": "spacing",
+          "label": "Spacing",
+          "options": [
+            {
+              "value": "sm",
+              "label": "Small"
+            },
+            {
+              "value": "md",
+              "label": "Medium"
+            },
+            {
+              "value": "lg",
+              "label": "Large"
+            }
+          ],
+          "default": "md"
+        }
+      ]
+    },
+    {
+      "type": "payment_methods",
+      "name": "Payment methods",
+      "settings": [
+        {
+          "type": "select",
+          "id": "align",
+          "label": "Align",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
+        }
+      ]
+    },
+    {
       "type": "menu",
       "id": "menu",
-      "label": "Menu"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_social_icons",
-      "label": "Show social media icons"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_payment_icons",
-      "label": "Show payment methods icons"
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "menu",
+          "id": "menu",
+          "label": "Menu"
+        },
+        {
+          "type": "select",
+          "id": "align",
+          "label": "Align",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
+        }
+      ]
     }
   ]
 }

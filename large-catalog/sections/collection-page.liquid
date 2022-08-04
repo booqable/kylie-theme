@@ -1,15 +1,14 @@
-{{ "collection.css" | asset_url | stylesheet_tag }}
+{{ "collection-page.css" | asset_url | stylesheet_tag }}
 {{ "product.css" | asset_url | stylesheet_tag }}
 {{ "cleanstate.css" | asset_url | stylesheet_tag }}
-{{ "pagination.css" | asset_url | stylesheet_tag }}
 
 {% if section.settings.show_collection_name %}
-  <h1 class="collection__title">{{ collection.name }}</h1>
+  <h1 class="collection-page__title">{{ collection.name }}</h1>
 {% endif %}
 {% if collection.items_count > 0 %}
   {% assign paginate_object = collection.items %}
   {% paginate paginate_object %}
-    <div class="collection__items">
+    <div class="collection-page__items">
       {% for item in paginate_object %}
         {% assign image = item.images.first %}
         <div class="product">
@@ -24,8 +23,8 @@
       {% endfor %}
     </div>
     {% if paginate.pages > 1 %}
-      <div class="pagination collection__pagination">
-        {{ paginate | default_pagination }}
+      <div class="collection-page__pagination">
+        {% include "pagination" %}
       </div>
     {% endif %}
   {% endpaginate %}
@@ -39,13 +38,14 @@
 {
   "name": "Collection",
   "tag": "section",
-  "class": "collection",
+  "class": "collection-page",
   "templates": ["collection"],
   "settings": [
     {
       "type": "checkbox",
       "id": "show_collection_name",
-      "label": "Show collection name"
+      "label": "Show collection name",
+      "default": true
     }
   ]
 }

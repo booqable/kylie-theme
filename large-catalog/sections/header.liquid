@@ -10,6 +10,8 @@
           alt="{{ shop.name }}"
           class="header__image-logo"
         >
+      {% elsif section.settings.custom_title != blank %}
+        <h1 class="header__text-logo">{{ section.settings.custom_title }}</h1>
       {% else %}
         <h1 class="header__text-logo">{{ shop.name }}</h1>
       {% endif %}
@@ -81,54 +83,56 @@
     {{ cart_button }}
     <i class="fa-regular fa-spinner-third fa-spin"></i>
   </div>
-  <div class="header-floating-menu">
-    <input type="checkbox" id="floating-menu-trigger">
-    <label for="floating-menu-trigger" class="header-floating-menu__trigger">
-      <i class="fa-regular fa-bars header-floating-menu__icon open"></i>
-      <i class="fa-regular fa-xmark header-floating-menu__icon close"></i>
-    </label>
-    <div class="header__nav header__nav--mobile header-floating-menu__wrapper">
-      <ul class="list-menu list-menu--vertical">
-        {% for link in section.settings.menu.items %}
-          <li class="list-menu__item">
-            <a href="{{ link.url }}" class="header__nav-item">
-              {{ link.title }}
-            </a>
-            {% if link.items_count > 0 %}
-              <input type="checkbox" id="floating-child-{{ forloop.index }}">
-              <label for="floating-child-{{ forloop.index }}">
-                <i class="fa-regular fa-angle-down list-menu__item-caret"></i>
-              </label>
-              <ul class="list-submenu">
-                {% for childlink in link.items %}
-                  <li class="list-menu__item">
-                    <a href="{{ childlink.url }}" class="header__nav-item">
-                      {{ childlink.title }}
-                    </a>
-                    {% if childlink.items_count > 0 %}
-                      <input type="checkbox" id="floating-grandchild-{{ forloop.index }}">
-                      <label for="floating-grandchild-{{ forloop.index }}">
-                        <i class="fa-regular fa-angle-down list-menu__item-caret"></i>
-                      </label>
-                      <ul class="list-submenu">
-                        {% for grandchildlink in childlink.items %}
-                          <li class="list-menu__item">
-                            <a href="{{ grandchildlink.url }}" class="header__nav-item">
-                              {{ grandchildlink.title }}
-                            </a>
-                          </li>
-                        {% endfor %}
-                      </ul>
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
+  {% if section.settings.menu != blank %}
+    <div class="header-floating-menu">
+      <input type="checkbox" id="floating-menu-trigger">
+      <label for="floating-menu-trigger" class="header-floating-menu__trigger">
+        <i class="fa-regular fa-bars header-floating-menu__icon open"></i>
+        <i class="fa-regular fa-xmark header-floating-menu__icon close"></i>
+      </label>
+      <div class="header__nav header__nav--mobile header-floating-menu__wrapper">
+        <ul class="list-menu list-menu--vertical">
+          {% for link in section.settings.menu.items %}
+            <li class="list-menu__item">
+              <a href="{{ link.url }}" class="header__nav-item">
+                {{ link.title }}
+              </a>
+              {% if link.items_count > 0 %}
+                <input type="checkbox" id="floating-child-{{ forloop.index }}">
+                <label for="floating-child-{{ forloop.index }}">
+                  <i class="fa-regular fa-angle-down list-menu__item-caret"></i>
+                </label>
+                <ul class="list-submenu">
+                  {% for childlink in link.items %}
+                    <li class="list-menu__item">
+                      <a href="{{ childlink.url }}" class="header__nav-item">
+                        {{ childlink.title }}
+                      </a>
+                      {% if childlink.items_count > 0 %}
+                        <input type="checkbox" id="floating-grandchild-{{ forloop.index }}">
+                        <label for="floating-grandchild-{{ forloop.index }}">
+                          <i class="fa-regular fa-angle-down list-menu__item-caret"></i>
+                        </label>
+                        <ul class="list-submenu">
+                          {% for grandchildlink in childlink.items %}
+                            <li class="list-menu__item">
+                              <a href="{{ grandchildlink.url }}" class="header__nav-item">
+                                {{ grandchildlink.title }}
+                              </a>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
-  </div>
+  {% endif %}
 </div>
 
 {% schema %}
@@ -141,7 +145,13 @@
     {
       "type": "image_picker",
       "id": "logo",
-      "label": "Logo image"
+      "label": "Header logo"
+    },
+    {
+      "type": "text",
+      "id": "custom_title",
+      "label": "Header custom title",
+      "description": "Note: Header logo always overrides this title"
     },
     {
       "type": "menu",

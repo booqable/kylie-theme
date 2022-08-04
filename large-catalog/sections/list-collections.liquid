@@ -1,5 +1,4 @@
 {{ "collections.css" | asset_url | stylesheet_tag }}
-{{ "pagination.css" | asset_url | stylesheet_tag }}
 
 {% if section.settings.title %}
   <h2 class="collections__title">{{ section.settings.title }}</h2>
@@ -20,23 +19,20 @@
     {% endfor %}
   </div>
   {% if paginate.pages > 1 %}
-    <div class="pagination collections__pagination">
-      {{ paginate | default_pagination }}
-    </div>
+    {% include "pagination" %}
   {% endif %}
 {% endpaginate %}
 
 {% schema %}
 {
-  "name": "List collections",
+  "name": "Collections List",
   "tag": "section",
   "class": "collections",
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": "Title",
-      "default": "Collections"
+      "label": "Title"
     }
   ],
   "max_blocks": 15,

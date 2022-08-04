@@ -1,11 +1,11 @@
-.products {
+.collection-products {
   max-width: calc(var(--max-width) + var(--horizontal-padding) * 2 + 10px);
   width: 100%;
 
   margin: 16px auto;
 }
 
-.products__title {
+.collection-products__title {
   font-size: 36px;
   line-height: 44px;
 
@@ -18,11 +18,11 @@
 }
 
 @media (min-width: 820px) {
-  .products {
+  .collection-products {
     padding: 0 var(--horizontal-padding);
   }
 
-  .products__title {
+  .collection-products__title {
     padding: 0;
   }
 }

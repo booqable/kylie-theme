@@ -1,7 +1,6 @@
 {{ "search.css" | asset_url | stylesheet_tag }}
 {{ "product.css" | asset_url | stylesheet_tag }}
 {{ "cleanstate.css" | asset_url | stylesheet_tag }}
-{{ "pagination.css" | asset_url | stylesheet_tag }}
 
 <h1 class="search__title">Search results <span id="search__query"></span></h1>
 {% paginate results %}
@@ -26,9 +25,7 @@
     {% endif %}
   </div>
   {% if paginate.pages > 1 %}
-    <div class="pagination search__pagination">
-      {{ paginate | default_pagination }}
-    </div>
+    {% include "pagination" %}
   {% endif %}
 {% endpaginate %}
 
