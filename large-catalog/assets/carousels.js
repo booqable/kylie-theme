@@ -60,41 +60,53 @@ const scrollTo = ({ inner, index }) => {
   });
 };
 
-const initCarousels = () => {
-  if (window.location.href.includes("product")) return;
-
+const handleWindowResize = () => {
   document.querySelectorAll(".carousel").forEach((carousel) => {
     const inner = carousel.querySelector(".carousel__inner");
     const innerWidth = inner.clientWidth;
     const itemCount = inner.querySelectorAll(".carousel__item")?.length || 0;
     const itemSize = inner.querySelector(".carousel__item")?.clientWidth || 0;
+    const withInfiniteScroll = inner.classList.contains("infinite-scroll");
 
     const prev = carousel.querySelector(".carousel__control.prev");
     const next = carousel.querySelector(".carousel__control.next");
 
-    if (innerWidth >= itemSize * itemCount) {
-      prev.classList.add("hidden");
-      next.classList.add("hidden");
+    if (!withInfiniteScroll && innerWidth >= itemSize * itemCount) {
+      prev?.classList.add("hidden");
+      next?.classList.add("hidden");
     }
 
-    if (innerWidth < itemSize * itemCount) {
-      prev.classList.remove("hidden");
-      next.classList.remove("hidden");
+    if (!withInfiniteScroll && innerWidth < itemSize * itemCount) {
+      prev?.classList.remove("hidden");
+      next?.classList.remove("hidden");
     }
 
-    prev.classList.add("hidden");
+    if (!withInfiniteScroll && inner.scrollLeft === 0) {
+      prev?.classList.add("hidden");
+    }
+  });
+};
 
-    prev.addEventListener("click", () =>
+const initCarousels = () => {
+  document.querySelectorAll(".carousel").forEach((carousel) => {
+    const inner = carousel.querySelector(".carousel__inner");
+
+    const prev = carousel.querySelector(".carousel__control.prev");
+    const next = carousel.querySelector(".carousel__control.next");
+
+    handleWindowResize()
+
+    prev?.addEventListener("click", () =>
       scrollToPrev({ inner, controls: { prev, next } })
     );
-    next.addEventListener("click", () =>
+    next?.addEventListener("click", () =>
       scrollToNext({ inner, controls: { prev, next } })
     );
   });
 };
 
 const initProductGallery = () => {
-  if (!window.location.href.includes("product")) return;
+  if (!window.location.href.includes("products")) return;
 
   const gallery = document.querySelector(".product-gallery");
 
@@ -110,6 +122,8 @@ const initProductGallery = () => {
   const thumbs = thumbsInner.querySelectorAll(
     ".product-gallery__item-container img"
   );
+
+  handleWindowResize()
 
   if (previewPrev && previewNext) {
     previewPrev.addEventListener("click", () =>
@@ -136,34 +150,6 @@ const initProductGallery = () => {
       });
     });
   }
-};
-
-const handleWindowResize = () => {
-  if (window.location.href.includes("product")) return;
-
-  document.querySelectorAll(".carousel").forEach((carousel) => {
-    const inner = carousel.querySelector(".carousel__inner");
-    const innerWidth = inner.clientWidth;
-    const itemCount = inner.querySelectorAll(".carousel__item")?.length || 0;
-    const itemSize = inner.querySelector(".carousel__item")?.clientWidth || 0;
-
-    const prev = carousel.querySelector(".carousel__control.prev");
-    const next = carousel.querySelector(".carousel__control.next");
-
-    if (innerWidth >= itemSize * itemCount) {
-      prev.classList.add("hidden");
-      next.classList.add("hidden");
-    }
-
-    if (innerWidth < itemSize * itemCount) {
-      prev.classList.remove("hidden");
-      next.classList.remove("hidden");
-    }
-
-    if (inner.scrollLeft === 0) {
-      prev.classList.add("hidden");
-    }
-  });
 };
 
 document.addEventListener("DOMContentLoaded", () => {
