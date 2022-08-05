@@ -22,14 +22,16 @@
       {% endif %}
     {% endfor %}
   </div>
-  <div class="carousel__controls">
-    <div class="carousel__control prev">
-      <i class="fa-regular fa-arrow-left"></i>
+  {% if section.blocks.size >= 1 and section.blocks.first.settings.product != blank %}
+    <div class="carousel__controls">
+      <div class="carousel__control prev">
+        <i class="fa-regular fa-arrow-left"></i>
+      </div>
+      <div class="carousel__control next">
+        <i class="fa-regular fa-arrow-right"></i>
+      </div>
     </div>
-    <div class="carousel__control next">
-      <i class="fa-regular fa-arrow-right"></i>
-    </div>
-  </div>
+  {% endif %}
 </div>
 
 {% schema %}
