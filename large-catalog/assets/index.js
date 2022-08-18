@@ -14,13 +14,11 @@ const initFocalImages = () => {
 
 const initSearch = () => {
   const search = document.querySelector("#search");
-  const queryPlaceholder = document.querySelector("#search__query")
   const url = new URL(window.location.href);
   const input = search.querySelector("input");
 
   if (!!url.searchParams.get("q")) {
     input.value = url.searchParams.get("q");
-    queryPlaceholder.innerHTML = `for "${url.searchParams.get("q")}"`;
   }
 
   const handleSearchSubmit = (e) => {
@@ -38,6 +36,17 @@ const initSearch = () => {
   search.addEventListener("submit", handleSearchSubmit);
 };
 
+const handleScrollIn = (target) => {
+  target.setAttribute("data-focus", "true");
+  target.scrollIntoView({ behavior: "smooth", block: "center" });
+};
+
+const handleRemoveFocus = () => {
+  document
+    .querySelectorAll("[data-focus]")
+    ?.forEach((node) => node.removeAttribute("data-focus"));
+};
+
 const handleHeaderLayout = () => {
   const header = document.querySelector("header.header");
   const headerHeight = header.getBoundingClientRect().height;
@@ -45,6 +54,37 @@ const handleHeaderLayout = () => {
 
   if (headerHeight > 0) {
     contentContainer.style.marginTop = headerHeight + "px";
+  }
+};
+
+const handleMessages = ({ type, data, isTrusted }) => {
+  if (type === "message" && !!data && isTrusted) {
+    handleRemoveFocus()
+
+    let target;
+
+    switch (data.type) {
+      case "out":
+        handleRemoveFocus();
+        break;
+      case "section":
+        target = document.querySelector(`#main #section-${data.id}`);
+
+        handleScrollIn(target);
+        break;
+      case "block":
+        target = document.querySelector(
+          `#main #section-${data.sectionId} #${data.id}`
+        );
+
+        handleScrollIn(target);
+        break;
+      case "footer":
+        target = document.querySelector("footer");
+
+        handleScrollIn(target);
+        break;
+    }
   }
 };
 
@@ -61,3 +101,5 @@ window.addEventListener("resize", () => {
   // Handlers
   handleHeaderLayout();
 });
+
+window.addEventListener("message", handleMessages);

@@ -17,6 +17,7 @@
         "block_order": [],
         "settings": {
           "show_copyright": true,
+          "show_powered_by": true,
           "align_copyright": "right"
         },
         "disabled": null

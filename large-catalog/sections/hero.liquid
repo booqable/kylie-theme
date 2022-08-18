@@ -27,11 +27,11 @@
   {% for block in section.blocks %}
     {% case block.type %}
       {% when "heading" %}
-        <h1 class="hero__title" style="color: {{ block.settings.color }};">{{ block.settings.text }}</h1>
+        <h1 id="{{ block.id }}" class="hero__title" style="color: {{ block.settings.color }};">{{ block.settings.text }}</h1>
       {% when "text" %}
-        <p class="hero__text" style="color: {{ block.settings.color }};">{{ block.settings.text }}</p>
+        <p id="{{ block.id }}" class="hero__text" style="color: {{ block.settings.color }};">{{ block.settings.text }}</p>
       {% when "button" %}
-        <a class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
+        <a id="{{ block.id }}" class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
           color: {{ block.settings.label_color }};
           {% if block.settings.use_solid_button %}
             background-color: {{ block.settings.background_color }};

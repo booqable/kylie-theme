@@ -109,3 +109,17 @@
 .spacer__inner--lg {
   padding: 32px 0;
 }
+
+.skeleton {
+  display: inline-flex;
+
+  background-color: var(--color-grey);
+
+  padding: 8px 0;
+
+  border-radius: 8px;
+}
+
+[data-focus="true"] {
+  box-shadow: 0 0 0 3px #395db899;
+}

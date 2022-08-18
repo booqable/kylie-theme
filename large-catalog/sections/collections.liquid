@@ -12,7 +12,7 @@
 <div class="collections__list">
   {% for block in section.blocks %}
     {% if block.settings.collection != blank %}
-      <a href="{{ block.setting.collection.url }}">
+      <a id="{{ block.id }}" href="{{ block.settings.collection.url }}">
         <div class="collection">
           <img
             data-src="{{ block.settings.collection.image.url | image_url }}"

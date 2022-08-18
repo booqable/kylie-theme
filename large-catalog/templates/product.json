@@ -1,12 +1,12 @@
 {
   "sections": {
-    "product": {
-      "type": "product",
+    "product-page": {
+      "type": "product-page",
       "blocks": {},
       "block_order": [],
       "settings": {},
       "disabled": null
     }
   },
-  "order": ["product"]
+  "order": ["product-page"]
 }
