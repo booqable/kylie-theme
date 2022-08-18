@@ -1,14 +1,13 @@
 {{ "search.css" | asset_url | stylesheet_tag }}
 {{ "product.css" | asset_url | stylesheet_tag }}
-{{ "cleanstate.css" | asset_url | stylesheet_tag }}
 
-<h1 class="search__title">Search results <span id="search__query"></span></h1>
+{% if results_count > 0 %}
+<h1 class="search__title">Search results for “{{ query }}”</h1>
+{% endif %}
 {% paginate results %}
   <div class="search-results {% if results_count == 0 %}no-results{% endif %}">
     {% if results_count == 0 %}
-      <div class="cleanstate">
-        <p class="cleanstate__text">No results found.</p>
-      </div>
+      {% include "cleanstate" %}
     {% else %}
       {% for result in results %}
         {% assign image = result.images.first %}

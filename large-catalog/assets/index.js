@@ -14,13 +14,11 @@ const initFocalImages = () => {
 
 const initSearch = () => {
   const search = document.querySelector("#search");
-  const queryPlaceholder = document.querySelector("#search__query")
   const url = new URL(window.location.href);
   const input = search.querySelector("input");
 
   if (!!url.searchParams.get("q")) {
     input.value = url.searchParams.get("q");
-    queryPlaceholder.innerHTML = `for "${url.searchParams.get("q")}"`;
   }
 
   const handleSearchSubmit = (e) => {
@@ -48,6 +46,30 @@ const handleHeaderLayout = () => {
   }
 };
 
+const handleMessages = ({ type, data, isTrusted }) => {
+  if (type === "message" && !!data && isTrusted) {
+    document
+      .querySelectorAll("[data-focus]")
+      ?.forEach((node) => node.removeAttribute("data-focus"));
+
+    let target;
+
+    switch (data.type) {
+      case "section":
+        target = document.querySelector("#main").children[data.index];
+
+        target.setAttribute("data-focus", "true");
+        target.scrollIntoView({ behavior: "smooth", block: "center" });
+        break;
+      case "footer":
+        target = document.querySelector(data.type);
+        target.setAttribute("data-focus", "true");
+        target.scrollIntoView({ behavior: "smooth", block: "center" });
+        break;
+    }
+  }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   // Initializers
   initFocalImages();
@@ -61,3 +83,5 @@ window.addEventListener("resize", () => {
   // Handlers
   handleHeaderLayout();
 });
+
+window.addEventListener("message", handleMessages);
