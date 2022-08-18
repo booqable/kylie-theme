@@ -10,7 +10,7 @@
     {% for product in section.blocks %}
       {% if product.settings.product != blank %}
         {% assign image = product.settings.product.images.first %}
-        <div class="product carousel__item">
+        <div id="{{ product.id }}" class="product carousel__item">
           <a href="{{ product.settings.product.url }}" class="product__image-container">{% if image != blank %}<img data-src="{{ image.url | image_url }}" alt="" class="product__image lazyload">{% endif %}</a>
           {{ product.settings.product | product_availability }}
           <a href="{{ product.settings.product.url }}">

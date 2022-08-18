@@ -3,7 +3,7 @@
 
 <div class="columns__container columns__container--count-{{ section.settings.columns_count }}">
   {% for block in section.blocks %}
-    <div class="columns__column post">
+    <div id="{{ block.id }}" class="columns__column post">
       {% if block.settings.image %}
         <img data-src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image_alt }}" class="post__image{% if block.settings.image_border_radius == true %} post__image--border-radius{% endif %} lazyload">
       {% endif %}

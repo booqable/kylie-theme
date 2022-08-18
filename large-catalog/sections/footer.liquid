@@ -15,7 +15,7 @@
           {% include "socials" %}
         {% endif %}
       {% when "menu" %}
-        <nav class="footer__nav">
+        <nav id="{{ block.id }}" class="footer__nav">
           <ul class="list-menu footer__menu footer__menu--align-{{ block.settings.align }}">
             {% for link in block.settings.menu.items %}
               <li class="list-menu__item">
@@ -26,7 +26,7 @@
         </nav>
       {% when "payment_methods" %}
         {% if payment_methods.size > 0 %}
-          <div class="footer__payment-methods footer__payment-methods--align-{{ block.settings.align }}">
+          <div id="{{ block.id }}" class="footer__payment-methods footer__payment-methods--align-{{ block.settings.align }}">
             {% for provider in payment_methods %}
               {% if fa contains provider %}
                 <i class="fa-brands fa-cc-{{ provider }}"></i>

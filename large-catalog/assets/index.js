@@ -36,6 +36,17 @@ const initSearch = () => {
   search.addEventListener("submit", handleSearchSubmit);
 };
 
+const handleScrollIn = (target) => {
+  target.setAttribute("data-focus", "true");
+  target.scrollIntoView({ behavior: "smooth", block: "center" });
+};
+
+const handleRemoveFocus = () => {
+  document
+    .querySelectorAll("[data-focus]")
+    ?.forEach((node) => node.removeAttribute("data-focus"));
+};
+
 const handleHeaderLayout = () => {
   const header = document.querySelector("header.header");
   const headerHeight = header.getBoundingClientRect().height;
@@ -48,23 +59,30 @@ const handleHeaderLayout = () => {
 
 const handleMessages = ({ type, data, isTrusted }) => {
   if (type === "message" && !!data && isTrusted) {
-    document
-      .querySelectorAll("[data-focus]")
-      ?.forEach((node) => node.removeAttribute("data-focus"));
+    handleRemoveFocus()
 
     let target;
 
     switch (data.type) {
+      case "out":
+        handleRemoveFocus();
+        break;
       case "section":
-        target = document.querySelector("#main").children[data.index];
+        target = document.querySelector(`#main #section-${data.id}`);
 
-        target.setAttribute("data-focus", "true");
-        target.scrollIntoView({ behavior: "smooth", block: "center" });
+        handleScrollIn(target);
+        break;
+      case "block":
+        target = document.querySelector(
+          `#main #section-${data.sectionId} #${data.id}`
+        );
+
+        handleScrollIn(target);
         break;
       case "footer":
-        target = document.querySelector(data.type);
-        target.setAttribute("data-focus", "true");
-        target.scrollIntoView({ behavior: "smooth", block: "center" });
+        target = document.querySelector("footer");
+
+        handleScrollIn(target);
         break;
     }
   }
