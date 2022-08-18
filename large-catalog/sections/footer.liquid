@@ -15,7 +15,7 @@
           {% include "socials" %}
         {% endif %}
       {% when "menu" %}
-        <div class="footer__nav">
+        <nav class="footer__nav">
           <ul class="list-menu footer__menu footer__menu--align-{{ block.settings.align }}">
             {% for link in block.settings.menu.items %}
               <li class="list-menu__item">
@@ -23,7 +23,7 @@
               </li>
             {% endfor %}
           </ul>
-        </div>
+        </nav>
       {% when "payment_methods" %}
         {% if payment_methods.size > 0 %}
           <div class="footer__payment-methods footer__payment-methods--align-{{ block.settings.align }}">
@@ -41,7 +41,7 @@
   {% if section.settings.show_copyright %}
     <div class="footer__bottom">
       <div class="footer__copyright footer__copyright--align-{{ section.settings.align_copyright }}">
-        &copy; {{ "now" | date: "%Y" }}, {{ shop.name }}
+        &copy; {{ "now" | date: "%Y" }}, {{ shop.name }}{% if section.settings.show_powered_by %} | Powered by Booqable{% endif %}        
       </div>
     </div>
   {% endif %}
@@ -62,6 +62,11 @@
       "type": "checkbox",
       "id": "show_copyright",
       "label": "Show copyright"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_powered_by",
+      "label": "Show Powered by Booqable"
     },
     {
       "type": "select",
