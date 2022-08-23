@@ -37,8 +37,8 @@ const initSearch = () => {
 };
 
 const handleScrollIn = (target) => {
-  target.setAttribute("data-focus", "true");
-  target.scrollIntoView({ behavior: "smooth", block: "center" });
+  target?.setAttribute("data-focus", "true");
+  target?.scrollIntoView({ behavior: "smooth", block: "center" });
 };
 
 const handleRemoveFocus = () => {
@@ -74,7 +74,7 @@ const handleMessages = ({ type, data, isTrusted }) => {
         break;
       case "block":
         target = document.querySelector(
-          `#main #section-${data.sectionId} #${data.id}`
+          `#section-${data.sectionId} #${data.id}`
         );
 
         handleScrollIn(target);
