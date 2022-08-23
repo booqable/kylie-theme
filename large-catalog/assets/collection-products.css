@@ -17,6 +17,13 @@
   padding: 0 var(--horizontal-padding);
 }
 
+.collection-products__cleanstate {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
 @media (min-width: 820px) {
   .collection-products {
     padding: 0 var(--horizontal-padding);

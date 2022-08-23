@@ -1,11 +1,16 @@
 {
+  "name": "Collection",
   "sections": {
     "collection-page": {
       "type": "collection-page",
       "blocks": {},
       "block_order": [],
       "settings": {
-        "show_collection_name": true
+        "show_collection_name": true,
+        "heading": "No products",
+        "text": "Unfortunately, we couldn’t find any products in this collection.",
+        "button_label": "Browse all products",
+        "label_color": "#FFFFFF"
       },
       "disabled": null
     }

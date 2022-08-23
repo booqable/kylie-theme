@@ -105,6 +105,13 @@
   text-align: center;
 }
 
+.collection-cleanstate {
+  display: flex;
+
+  width: 100%;
+  height: 400px;
+}
+
 @media (max-width: 1000px) {
   .collections__title {
     margin-bottom: 8px;
@@ -115,7 +122,7 @@
     gap: 16px;
   }
 
-  .collections .collection {
+  .collections .collection, .collection-cleanstate {
     height: 305px;
   }
 }
@@ -125,7 +132,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .collections .collection {
+  .collections .collection, .collection-cleanstate {
     height: 200px;
   }
 }
