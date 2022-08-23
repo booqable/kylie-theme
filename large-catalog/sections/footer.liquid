@@ -30,8 +30,17 @@
             {% for provider in payment_methods %}
               {% if fa contains provider %}
                 <i class="fa-brands fa-cc-{{ provider }}"></i>
-              {% elsif svg contains provider %}
-                <img data-src="{{ provider | append: ".svg" | asset_url }}" class="lazyload">
+              {% else %}
+                {% case provider %}
+                  {% when "p24" %}
+                    {% include "p24-icon" %}
+                  {% when "eps" %}
+                    {% include "eps-icon" %}
+                  {% when "bancontact" %}
+                    {% include "bancontact-icon" %}
+                  {% when "giropay" %}
+                    {% include "giropay-icon" %}
+                {% endcase %}
               {% endif %}
             {% endfor %}
           </div>

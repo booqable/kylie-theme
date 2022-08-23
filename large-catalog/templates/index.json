@@ -1,4 +1,5 @@
 {
+  "name": "Home",
   "sections": {
     "hero": {
       "type": "hero",
@@ -29,9 +30,7 @@
         }
       },
       "block_order": ["heading", "text", "button"],
-      "settings": {
-        "background_image": "booqable://assets/hero-default-bg.jpg"
-      },
+      "settings": {},
       "disabled": null
     }
   },
