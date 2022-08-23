@@ -1,19 +1,10 @@
 {{ "image-text.css" | asset_url | stylesheet_tag }}
 
-<style>
-  {% if section.settings.overlay_enabled %}
-    .image-text__overlay {
-      {% if section.settings.overlay_color %}
-        background-color: {{ section.settings.overlay_color }};
-      {% endif %}
-      {% if section.settings.overlay_opacity %}
-        opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
-      {% endif %}
-    }
-  {% endif %}
-</style>
-
-<div class="image-text__inner">
+<div class="image-text__inner" style="
+{% if section.settings.background_color %}
+  background-color: {{ section.settings.background_color }};
+{% endif %}
+">
   {% if section.settings.background_image.url != blank %}
     <img
       data-src="{{ section.settings.background_image | image_url }}"
@@ -22,7 +13,14 @@
     >
   {% endif %}
   {% if section.settings.overlay_enabled %}
-    <span class="image-text__overlay"></span>
+    <span class="image-text__overlay" style="
+    {% if section.settings.overlay_color %}
+      background-color: {{ section.settings.overlay_color }};
+    {% endif %}
+    {% if section.settings.overlay_opacity %}
+      opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    {% endif %}
+    "></span>
   {% endif %}
   <div class="image-text__content image-text__content--align-{{ section.settings.content_align }}">
     {% for block in section.blocks %}
@@ -54,9 +52,46 @@
   "class": "image-text",
   "settings": [
     {
+      "type": "header",
+      "content": "Background"
+    },
+    {
       "type": "image_picker",
       "id": "background_image",
       "label": "Background image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "type": "checkbox",
+      "id": "overlay_enabled",
+      "label": "Enable overlay",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Content"
     },
     {
       "type": "select",
@@ -77,27 +112,6 @@
         }
       ],
       "default": "left"
-    },
-    {
-      "type": "checkbox",
-      "id": "overlay_enabled",
-      "label": "Enable overlay",
-      "default": false
-    },
-    {
-      "type": "color",
-      "id": "overlay_color",
-      "label": "Overlay color",
-      "default": "#000000"
-    },
-    {
-      "type": "number",
-      "min": 0,
-      "max": 100,
-      "step": 10,
-      "id": "overlay_opacity",
-      "label": "Overlay opacity",
-      "default": 60
     }
   ],
   "max_blocks": 3,
@@ -115,7 +129,7 @@
         {
           "type": "color",
           "id": "color",
-          "default": "#000000",
+          "default": "#ffffff",
           "label": "Color"
         }
       ]
@@ -133,7 +147,7 @@
         {
           "type": "color",
           "id": "color",
-          "default": "#000000",
+          "default": "#ffffff",
           "label": "Color"
         }
       ]
@@ -157,7 +171,7 @@
           "id": "use_solid_button",
           "type": "checkbox",
           "label": "Use solid button",
-          "default": false
+          "default": true
         },
         {
           "type": "color",
@@ -168,7 +182,7 @@
         {
           "type": "color",
           "id": "label_color",
-          "default": "#000000",
+          "default": "#0c2747",
           "label": "Label color"
         },
         {

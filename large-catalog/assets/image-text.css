@@ -8,6 +8,8 @@
 
   position: relative;
 
+  background-color: var(--color-grey);
+
   max-width: 1216px;
 
   border-radius: 8px;
@@ -44,7 +46,7 @@
 
   margin: 12px 0;
 
-  max-width: 50%;
+  max-width: 75%;
 }
 
 .image-text__overlay {
