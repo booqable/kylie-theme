@@ -10,8 +10,8 @@
   </a>
 {% endif %}
 <div class="collections__list">
-  {% for block in section.blocks %}
-    {% if block.settings.collection != blank %}
+  {% if section.blocks.size >= 1 and section.blocks.first.settings.collection != blank %}
+    {% for block in section.blocks %}
       <a id="{{ block.id }}" href="{{ block.settings.collection.url }}">
         <div class="collection">
           <img
@@ -22,8 +22,12 @@
           <h3 class="collection__name">{{ block.settings.collection.name }}</h3>
         </div>
       </a>
-    {% endif %}
-  {% endfor %}
+    {% endfor %}
+  {% else %}
+    {% for block in (1..2) %}
+      <div id="{{ section.blocks.first.id }}" class="collection-cleanstate skeleton"></div>
+    {% endfor %}
+  {% endif %}
 </div>
 
 {% schema %}

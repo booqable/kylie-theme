@@ -1,32 +1,47 @@
 {{ "columns.css" | asset_url | stylesheet_tag }}
 {{ "post.css" | asset_url | stylesheet_tag }}
 
+{% assign column = section.blocks.first.settings %}
+{% assign column_exists = column.image != blank or column.title != blank or column.text != blank or column.button != blank %}
+
 <div class="columns__container columns__container--count-{{ section.settings.columns_count }}">
-  {% for block in section.blocks %}
-    <div id="{{ block.id }}" class="columns__column post">
-      {% if block.settings.image %}
-        <img data-src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image_alt }}" class="post__image{% if block.settings.image_border_radius == true %} post__image--border-radius{% endif %} lazyload">
-      {% endif %}
-      <div class="post__content">
-        {% if block.settings.title %}
-          <h3 class="post__title">{{ block.settings.title }}</h3>
+  {% if section.blocks.size >= 1 and column_exists %}
+    {% for block in section.blocks %}
+      <div id="{{ block.id }}" class="columns__column post">
+        {% if block.settings.image %}
+          <img data-src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image_alt }}" class="post__image{% if block.settings.image_border_radius == true %} post__image--border-radius{% endif %} lazyload">
         {% endif %}
-        {% if block.settings.text %}
-          <div class="post__text">{{ block.settings.text }}</div>
-        {% endif %}
-        {% if block.settings.button_url %}
-          <a class="bq-button bq-button--size-{{ block.settings.button_size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
-            color: {{ block.settings.label_color }};
-            {% if block.settings.use_solid_button %}
-              background-color: {{ block.settings.background_color }};
-            {% endif %}
-          ">
-            {{ block.settings.button }}
-          </a>
-        {% endif %}
+        <div class="post__content">
+          {% if block.settings.title %}
+            <h3 class="post__title">{{ block.settings.title }}</h3>
+          {% endif %}
+          {% if block.settings.text %}
+            <div class="post__text">{{ block.settings.text }}</div>
+          {% endif %}
+          {% if block.settings.button_url %}
+            <a class="bq-button bq-button--size-{{ block.settings.button_size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
+              color: {{ block.settings.label_color }};
+              {% if block.settings.use_solid_button %}
+                background-color: {{ block.settings.background_color }};
+              {% endif %}
+            ">
+              {{ block.settings.button }}
+            </a>
+          {% endif %}
+        </div>
       </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  {% else %}
+    {% for column in (1..2) %}
+      <div class="columns__column column-cleanstate">
+        <div class="column-cleanstate__image skeleton"></div>
+        <div class="column-cleanstate__title skeleton"></div>
+        {% for line in (1..4) %}
+          <div class="column-cleanstate__line column-cleanstate__line--{{ forloop.index }} skeleton"></div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  {% endif %}
 </div>
 
 {% schema %}
@@ -41,7 +56,7 @@
       "label": "Columns per row",
       "min": 1,
       "max": 3,
-      "default": 1
+      "default": 3
     }
   ],
   "max_blocks": 9,
@@ -112,7 +127,7 @@
           "id": "label_color",
           "type": "color",
           "label": "Label color",
-          "default": "#0c2747"
+          "default": "#0C2747"
         },
         {
           "type": "select",

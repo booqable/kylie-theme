@@ -1,10 +1,22 @@
 {{ "cleanstate.css" | asset_url | stylesheet_tag }}
 
 <div class="cleanstate">
-  <h2 class="cleanstate__title">Unfortunately, we couldn’t find any matches {% if query != blank %}for “{{ query }}”{% endif %}</h2>
-  <p class="cleanstate__description">
-    Please check if it’s spelled correctly or try searching for something else.<br />
-    You could also try browsing our products.
-  </p>
-  <a href="" class="bq-button bq-button--solid bq-button--size-md" style="background-color: {{ settings.primary_color }};">Browse products</a>
+  <h2 class="cleanstate__title">{{ section.settings.heading }}</h2>
+  <p class="cleanstate__description">{{ section.settings.text }}</p>
+  <a
+    href="{{ routes.all_products_collection_url }}"
+    class="bq-button bq-button--solid bq-button--size-md"
+    style="
+      background-color: {{ settings.primary_color }};
+
+      {% if section.settings.button_background %}
+        background-color: {{ section.settings.button_background }};
+      {% endif %}
+      {% if section.settings.label_color %}
+        color: {{ section.settings.label_color }};
+      {% endif %}
+    "
+  >
+    {{ section.settings.button_label }}
+  </a>
 </div>

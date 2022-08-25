@@ -1,4 +1,5 @@
 {
+  "name": "Search",
   "sections": {
     "date-location": {
       "type": "date-location",
@@ -11,7 +12,12 @@
       "type": "search",
       "blocks": {},
       "block_order": [],
-      "settings": {},
+      "settings": {
+        "heading": "Unfortunately, we couldn’t find any matches",
+        "text": "Please check if it’s spelled correctly or try searching for something else. You could also try browsing our products.",
+        "button_label": "Browse all products",
+        "label_color": "#FFFFFF"
+      },
       "disabled": null
     }
   },

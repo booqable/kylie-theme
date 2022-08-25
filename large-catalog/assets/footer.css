@@ -85,7 +85,7 @@
   font-size: 32px;
 }
 
-.footer__payment-methods img {
+.footer__payment-methods svg {
   max-height: 32px;
   max-width: 75px;
 }

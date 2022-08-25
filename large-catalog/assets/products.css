@@ -17,6 +17,13 @@
   padding: 0 var(--horizontal-padding);
 }
 
+.products__cleanstate {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
 @media (min-width: 820px) {
   .products {
     padding: 0 var(--horizontal-padding);
@@ -24,5 +31,13 @@
 
   .products__title {
     padding: 0;
+  }
+
+  .product__cleanstate {
+    width: 280px;
+  }
+
+  .product__cleanstate-image {
+    height: 320px;
   }
 }

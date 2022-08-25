@@ -1,18 +1,5 @@
 {{ "hero.css" | asset_url | stylesheet_tag }}
 
-<style>
-  {% if section.settings.overlay_enabled %}
-    .hero__overlay {
-      {% if section.settings.overlay_color %}
-        background-color: {{ section.settings.overlay_color }};
-      {% endif %}
-      {% if section.settings.overlay_opacity %}
-        opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
-      {% endif %}
-    }
-  {% endif %}
-</style>
-
 {% if section.settings.background_image.url != blank %}
 <img
   data-src="{{ section.settings.background_image | image_url }}"
@@ -21,9 +8,20 @@
 >
 {% endif %}
 {% if section.settings.overlay_enabled %}
-  <span class="hero__overlay"></span>
+  <span class="hero__overlay" style="
+  {% if section.settings.overlay_color %}
+    background-color: {{ section.settings.overlay_color }};
+  {% endif %}
+  {% if section.settings.overlay_opacity %}
+    opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+  {% endif %}
+  "></span>
 {% endif %}
-<div class="hero__inner">
+<div class="hero__inner" style="
+{% if section.settings.background_color %}
+  background-color: {{ section.settings.background_color }};
+{% endif %}
+">
   {% for block in section.blocks %}
     {% case block.type %}
       {% when "heading" %}
@@ -50,9 +48,18 @@
   "class": "hero",
   "settings": [
     {
+      "type": "header",
+      "content": "Background"
+    },
+    {
       "type": "image_picker",
       "id": "background_image",
-      "label": "Background Image"
+      "label": "Background image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
     },
     {
       "type": "header",
@@ -74,7 +81,6 @@
       "type": "number",
       "min": 0,
       "max": 100,
-      "step": 10,
       "id": "overlay_opacity",
       "label": "Opacity",
       "default": 60

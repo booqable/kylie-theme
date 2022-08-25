@@ -24,14 +24,23 @@
             {% endfor %}
           </ul>
         </nav>
-      {% when "payment_methods" %}
+      {% when "payment-methods" %}
         {% if payment_methods.size > 0 %}
           <div id="{{ block.id }}" class="footer__payment-methods footer__payment-methods--align-{{ block.settings.align }}">
             {% for provider in payment_methods %}
               {% if fa contains provider %}
                 <i class="fa-brands fa-cc-{{ provider }}"></i>
-              {% elsif svg contains provider %}
-                <img data-src="{{ provider | append: ".svg" | asset_url }}" class="lazyload">
+              {% else %}
+                {% case provider %}
+                  {% when "p24" %}
+                    {% include "p24-icon" %}
+                  {% when "eps" %}
+                    {% include "eps-icon" %}
+                  {% when "bancontact" %}
+                    {% include "bancontact-icon" %}
+                  {% when "giropay" %}
+                    {% include "giropay-icon" %}
+                {% endcase %}
               {% endif %}
             {% endfor %}
           </div>
@@ -161,7 +170,7 @@
       ]
     },
     {
-      "type": "payment_methods",
+      "type": "payment-methods",
       "name": "Payment methods",
       "settings": [
         {
