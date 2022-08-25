@@ -24,7 +24,7 @@
             {% endfor %}
           </ul>
         </nav>
-      {% when "payment_methods" %}
+      {% when "payment-methods" %}
         {% if payment_methods.size > 0 %}
           <div id="{{ block.id }}" class="footer__payment-methods footer__payment-methods--align-{{ block.settings.align }}">
             {% for provider in payment_methods %}
@@ -170,7 +170,7 @@
       ]
     },
     {
-      "type": "payment_methods",
+      "type": "payment-methods",
       "name": "Payment methods",
       "settings": [
         {
