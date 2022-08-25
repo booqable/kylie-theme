@@ -3,8 +3,8 @@
 {% if section.settings.title %}
   <h2 class="collections__title">{{ section.settings.title }}</h2>
 {% endif %}
-{% if collections.size > 0 %}
-  {% paginate collections %}
+{% paginate collections %}
+  {% if collections.size > 0 %}
     <div class="collections__list">
       {% for collection in collections %}
         <a href="{{ collection.url }}">
@@ -22,10 +22,10 @@
     {% if paginate.pages > 1 %}
       {% include "pagination" %}
     {% endif %}
-  {% endpaginate %}
-{% else %}
-  {% include "cleanstate" %}
-{% endif %}
+  {% else %}
+    {% include "cleanstate" %}
+  {% endif %}
+{% endpaginate %}
 
 {% schema %}
 {
