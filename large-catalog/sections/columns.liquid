@@ -8,7 +8,7 @@
   {% if section.blocks.size >= 1 and column_exists %}
     {% for block in section.blocks %}
       <div id="{{ block.id }}" class="columns__column post">
-        {% if block.settings.image %}
+        {% if block.settings.image.url != blank %}
           <img data-src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image_alt }}" class="post__image{% if block.settings.image_border_radius == true %} post__image--border-radius{% endif %} lazyload">
         {% endif %}
         <div class="post__content">
