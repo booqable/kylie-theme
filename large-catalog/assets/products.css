@@ -43,4 +43,8 @@
   .product__cleanstate-image {
     height: 320px;
   }
+
+  .products__cleanstate {
+    padding: 0;
+  }
 }

@@ -35,4 +35,8 @@
   .collection-products__title {
     padding: 0;
   }
+
+  .collection-products__cleanstate {
+    padding: 0;
+  }
 }
