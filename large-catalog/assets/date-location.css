@@ -6,6 +6,64 @@
   padding: 0 var(--horizontal-padding);
 }
 
+.date-location bq-date-picker::part(cleanstate) {
+  display: flex;
+  align-items: center;
+
+  padding: 12px 24px;
+
+  background-color: var(--color-blue);
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.date-location bq-date-picker::part(calendar-icon) {
+  max-width: 24px;
+  max-height: 24px;
+
+  width: 100%;
+
+  color: var(--color-white);
+
+  margin-right: 16px;
+}
+
+.date-location bq-date-picker::part(chevron-icon) {
+  max-height: 24px;
+  max-width: 12px;
+
+  width: 100%;
+
+  color: var(--color-white);
+}
+
+.date-location bq-date-picker::part(cleanstate-labels) {
+  width: 100%;
+
+  margin-right: 16px;
+}
+
+.date-location bq-date-picker::part(cleanstate-title) {
+  font-size: 18px;
+  line-height: 28px;
+
+  margin: 0;
+
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+}
+
+.date-location bq-date-picker::part(cleanstate-description) {
+  font-size: 16px;
+  line-height: 24px;
+
+  margin: 0;
+
+  color: var(--color-white);
+}
+
 .date-location bq-date-picker::part(wrapper) {
   display: grid;
   align-items: center;
@@ -109,12 +167,16 @@
   .date-location bq-date-picker::part(wrapper) {
     padding: 16px;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     background-color: var(--color-white);
 
     box-shadow: 0 1px 2px rgba(33, 59, 71, 0.12),
       0 4px 12px rgba(33, 59, 71, 0.12);
+  }
+
+  .date-location bq-date-picker::part(has-locations) {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .date-location bq-date-picker::part(pickup-section) {
@@ -131,7 +193,7 @@
     grid-row-end: initial;
   }
 
-  .date-location bq-date-picker::part(till-section) {
+  .date-location bq-date-picker::part(has-locations)::part(till-section) {
     border-right: 1px solid var(--color-border);
   }
 
