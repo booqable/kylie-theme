@@ -33,7 +33,7 @@
     {% endfor %}
   {% else %}
     {% for column in (1..2) %}
-      <div class="columns__column column-cleanstate">
+      <div id="{{ section.blocks.first.id }}" class="columns__column column-cleanstate">
         <div class="column-cleanstate__image skeleton"></div>
         <div class="column-cleanstate__title skeleton"></div>
         {% for line in (1..4) %}
