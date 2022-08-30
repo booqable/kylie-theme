@@ -14,15 +14,15 @@
 }
 
 .columns .columns__container--count-1 {
-  grid-template-columns: minmax(320px, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .columns .columns__container--count-2 {
-  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .columns .columns__container--count-3 {
-  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .columns .columns__column .post__image {
@@ -70,7 +70,7 @@
 
 @media (max-width: 810px) {
   .columns .columns__container {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
     gap: 24px;
   }
 }
