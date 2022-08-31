@@ -17,6 +17,12 @@
   color: var(--color-typo);
 }
 
+.collection-page__title .skeleton {
+  width: 175px;
+
+  padding: 16px 0;
+}
+
 .collection-page__items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(168px, 280px));

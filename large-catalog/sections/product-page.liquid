@@ -1,58 +1,62 @@
 {{ "product-page.css" | asset_url | stylesheet_tag }}
 {{ "carousels.css" | asset_url | stylesheet_tag }}
 
-<div class="product-gallery">
-  <div class="product-gallery__preview carousel carousel--snap-center">
-    <div class="product-gallery__preview-inner carousel__inner infinite-scroll">
-      {% for image in product.images %}
-        <div class="product-gallery__preview-item carousel__item">
-          <img data-src="{{ image.url | image_url }}" alt="" class="lazyload">
+{% if canonical_url contains "/1?" or canonical_url contains "/1#" %}
+  {% include "product-page-preview" %}
+{% else %}
+  <div class="product-gallery">
+    <div class="product-gallery__preview carousel carousel--snap-center">
+      <div class="product-gallery__preview-inner carousel__inner infinite-scroll">
+        {% for image in product.images %}
+          <div class="product-gallery__preview-item carousel__item">
+            <img data-src="{{ image.url | image_url }}" alt="" class="lazyload">
+          </div>
+        {% endfor %}
+      </div>
+      {% if product.images.size > 1 %}
+        <div class="carousel__controls">
+          <div class="carousel__control prev">
+            <i class="fa-light fa-arrow-left"></i>
+          </div>
+          <div class="carousel__control next">
+            <i class="fa-light fa-arrow-right"></i>
+          </div>
         </div>
-      {% endfor %}
+      {% endif %}
     </div>
     {% if product.images.size > 1 %}
-      <div class="carousel__controls">
-        <div class="carousel__control prev">
-          <i class="fa-light fa-arrow-left"></i>
-        </div>
-        <div class="carousel__control next">
-          <i class="fa-light fa-arrow-right"></i>
-        </div>
+    <div class="product-gallery__items carousel carousel--snap-center">
+      <div class="carousel__inner">
+        {% for image in product.images %}
+          <div class="product-gallery__item-container carousel__item" data-index="{{ forloop.index0 }}">
+            <img
+              data-src="{{ image.url | image_url }}"
+              data-focal-x="{{ image.coordinates[0] }}"
+              data-focal-y="{{ image.coordinates[1] }}"
+              alt=""
+              class="focal-image lazyload"
+            >
+          </div>
+        {% endfor %}
       </div>
+    </div>
     {% endif %}
   </div>
-  {% if product.images.size > 1 %}
-  <div class="product-gallery__items carousel carousel--snap-center">
-    <div class="carousel__inner">
-      {% for image in product.images %}
-        <div class="product-gallery__item-container carousel__item" data-index="{{ forloop.index0 }}">
-          <img
-            data-src="{{ image.url | image_url }}"
-            data-focal-x="{{ image.coordinates[0] }}"
-            data-focal-y="{{ image.coordinates[1] }}"
-            alt=""
-            class="focal-image lazyload"
-          >
-        </div>
-      {% endfor %}
-    </div>
+  <div class="product-info">
+    <h1 class="product-info__title">{{ product.name }}</h1>
+    {% if product.variants.size > 1 %}
+      <p class="product-info__label">Variation</p>
+    {% endif %}
+    {{ product_button }}
   </div>
-  {% endif %}
-</div>
-<div class="product-info">
-  <h1 class="product-info__title">{{ product.name }}</h1>
-  {% if product.variants.size > 1 %}
-    <p class="product-info__label">Variation</p>
-  {% endif %}
-  {{ product_button }}
-</div>
-{% if product.description != blank %}
-  <div class="product-description">
-    <p class="product-description__label">Description</p>
-    <div class="product-description__content-container">
-      {{ product.description }}
+  {% if product.description != blank %}
+    <div class="product-description">
+      <p class="product-description__label">Description</p>
+      <div class="product-description__content-container">
+        {{ product.description }}
+      </div>
     </div>
-  </div>
+  {% endif %}
 {% endif %}
 
 {% schema %}
