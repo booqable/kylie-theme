@@ -83,6 +83,8 @@
 .date-location bq-date-picker::part(pickup-section),
 .date-location bq-date-picker::part(till-section),
 .date-location bq-date-picker::part(return-section) {
+  text-align: left;
+
   padding: 0 12px;
 }
 
