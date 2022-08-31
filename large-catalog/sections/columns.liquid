@@ -21,7 +21,7 @@
             <div class="post__text">{{ block.settings.text }}</div>
           {% endif %}
           {% if block.settings.button_url %}
-            <a class="bq-button bq-button--size-{{ block.settings.button_size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
+            <a class="bq-button bq-button--size-{{ block.settings.button_size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.button_url }}" style="
               color: {{ block.settings.label_color }};
               {% if block.settings.use_solid_button %}
                 background-color: {{ block.settings.background_color }};
