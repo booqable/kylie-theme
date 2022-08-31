@@ -1,4 +1,5 @@
 {{ "image-banner.css" | asset_url | stylesheet_tag }}
+{{ "date-location.css" | asset_url | stylesheet_tag }}
 
 <div
   class="image-banner__wrapper {% if section.settings.fluid_width %}image-banner__wrapper--fluid-width{% endif %}"
@@ -49,7 +50,9 @@
             {{ block.settings.text }}
           </a>
         {% when "date-picker" %}
-          <bq-date-picker data-primary-color="{{ settings.primary_color }}"></bq-date-picker>
+          <div class="date-location">
+            <bq-date-picker data-primary-color="{{ settings.primary_color }}"></bq-date-picker>
+          </div>
       {% endcase %}
     {% endfor %}
   </div>

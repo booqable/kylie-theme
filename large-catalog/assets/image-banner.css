@@ -134,12 +134,16 @@
   font-size: 22px;
 }
 
-.bq-button {
+.image-banner .bq-button {
   margin: 12px 0;
 
   position: relative;
 
   z-index: 1;
+}
+
+.image-banner .date-location {
+  padding: 0;
 }
 
 @media (min-width: 576px) {
