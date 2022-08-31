@@ -4,6 +4,10 @@
   max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
   width: 100%;
 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   margin: 0 auto;
   padding: 0 var(--horizontal-padding);
 }
@@ -47,10 +51,13 @@
 .image-banner__inner {
   position: relative;
 
-  background-color: var(--color-grey);
-
   max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
   width: 100%;
+
+  background-color: var(--color-grey);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   border-radius: 8px;
 
@@ -144,6 +151,10 @@
 
 .image-banner .date-location {
   padding: 0;
+
+  position: relative;
+
+  z-index: 1;
 }
 
 @media (min-width: 576px) {

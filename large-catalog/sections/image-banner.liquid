@@ -1,53 +1,87 @@
 {{ "image-banner.css" | asset_url | stylesheet_tag }}
 {{ "date-location.css" | asset_url | stylesheet_tag }}
 
-<div
-  class="image-banner__wrapper {% if section.settings.fluid_width %}image-banner__wrapper--fluid-width{% endif %}"
-  style="
-  {% if section.settings.background_color and section.settings.fluid_width %}
-    background-color: {{ section.settings.background_color }};
-  {% endif %}
-  "
->
-  <div
-    class="image-banner__inner image-banner__inner--align-{{ section.settings.content_align }} image-banner__inner--spacing-{{ section.settings.vertical_spacing }}"
-    style="
-    {% if section.settings.background_color %}
+<style>
+  {% if section.settings.background_color != blank and section.settings.fluid_width == true %}
+    .image-banner-{{ section.key }}.image-banner__wrapper {
       background-color: {{ section.settings.background_color }};
+    }
+  {% endif %}
+
+  {% if section.settings.background_color != blank %}
+    .image-banner-{{ section.key }}.image-banner__inner {
+      background-color: {{ section.settings.background_color }};
+    }
+  {% endif %}
+
+  {% if section.settings.background_image.url != blank %}
+    {% if section.settings.fluid_width == true %}
+      .image-banner-{{ section.key }}.image-banner__wrapper {
+        background-image: url({{ section.settings.background_image.url | image_url }});
+      }
+
+      .image-banner-{{ section.key }}.image-banner__inner {
+        background-color: transparent;
+      }
+    {% else %}
+      .image-banner-{{ section.key}}.image-banner__wrapper {
+        background-color: transparent;
+      }
+
+      .image-banner-{{ section.key }}.image-banner__inner {
+        background-image: url({{ section.settings.background_image.url | image_url }});
+      }
     {% endif %}
-    "
-  >
-    {% if section.settings.background_image.url != blank %}
-      <img
-        data-src="{{ section.settings.background_image | image_url }}"
-        alt="{{ section.settings.background_image_alt | default: "" }}"
-        class="lazyload image-banner__background"
-      >
-    {% endif %}
+  {% endif %}
+
+  {% if section.settings.overlay_color %}
+    .image-banner-{{ section.key }}.image-banner__overlay {
+      background-color: {{ section.settings.overlay_color }};
+    }
+  {% endif %}
+
+  {% if section.settings.overlay_opacity %}
+    .image-banner-{{ section.key }}.image-banner__overlay {
+      opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    }
+  {% endif %}
+
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when "heading" %}
+        .image-banner-{{ section.key }}.image-banner__title {
+          color: {{ block.settings.color }};
+        }
+      {% when "text" %}
+        .image-banner-{{ section.key }}.image-banner__text {
+          color: {{ block.settings.color }};
+        }
+      {% when "button" %}
+        .image-banner-{{ section.key }}.bq-button {
+          color: {{ block.settings.label_color }};
+
+          {% if block.settings.use_solid_button %}
+            background-color: {{ block.settings.background_color }};
+          {% endif %}
+        }
+    {% endcase %}
+  {% endfor %}
+</style>
+
+<div class="image-banner-{{ section.key }} image-banner__wrapper {% if section.settings.fluid_width %}image-banner__wrapper--fluid-width{% endif %}">
+  <div class="image-banner-{{ section.key }} image-banner__inner image-banner__inner--align-{{ section.settings.content_align }} image-banner__inner--spacing-{{ section.settings.vertical_spacing }}">
     {% if section.settings.overlay_enabled %}
-      <span class="image-banner__overlay" style="
-      {% if section.settings.overlay_color %}
-        background-color: {{ section.settings.overlay_color }};
-      {% endif %}
-      {% if section.settings.overlay_opacity %}
-        opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
-      {% endif %}
-      "></span>
+      <span class="image-banner-{{ section.key }} image-banner__overlay"></span>
     {% endif %}
     {% for block in section.blocks %}
       {% case block.type %}
         {% when "heading" %}
-          <h1 id="{{ block.id }}" class="image-banner__title image-banner__title--size-{{ block.settings.size }}" style="color: {{ block.settings.color }};">{{ block.settings.text }}</h1>
+          <h1 id="{{ block.id }}" class="image-banner-{{ section.key }} image-banner__title image-banner__title--size-{{ block.settings.size }}">{{ block.settings.text | escape }}</h1>
         {% when "text" %}
-          <p id="{{ block.id }}" class="image-banner__text image-banner__text--size-{{ block.settings.size }}" style="color: {{ block.settings.color }};">{{ block.settings.text }}</p>
+          <p id="{{ block.id }}" class="image-banner-{{ section.key }} image-banner__text image-banner__text--size-{{ block.settings.size }}">{{ block.settings.text | escape }}</p>
         {% when "button" %}
-          <a id="{{ block.id }}" class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
-            color: {{ block.settings.label_color }};
-            {% if block.settings.use_solid_button %}
-              background-color: {{ block.settings.background_color }};
-            {% endif %}
-          ">
-            {{ block.settings.text }}
+          <a id="{{ block.id }}" class="image-banner-{{ section.key }} bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}">
+            {{ block.settings.text | escape }}
           </a>
         {% when "date-picker" %}
           <div class="date-location">
