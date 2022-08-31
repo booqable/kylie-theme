@@ -2,7 +2,9 @@
 {{ "post.css" | asset_url | stylesheet_tag }}
 
 {% assign column = section.blocks.first.settings %}
-{% assign column_exists = column.image.url != blank or column.title != blank or column.text != blank or column.button != blank %}
+{% if column.image.url != blank or column.title != blank or column.text != blank or column.button != blank %}
+  {% assign column_exists = true %}
+{% endif %}
 
 <div class="columns__container columns__container--count-{{ section.settings.columns_count }}">
   {% if section.blocks.size >= 1 and column_exists %}

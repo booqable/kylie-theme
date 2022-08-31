@@ -1,4 +1,4 @@
-.product, .product-cleanstate {
+.product, .carousel .product-cleanstate {
   min-width: 196px;
   max-width: 196px;
 }
@@ -99,8 +99,11 @@
   margin: 0;
 }
 
-.product__cleanstate {
-  width: 196px;
+.product-cleanstate {
+  max-width: 320px;
+  min-width: 196px;
+
+  width: 100%;
 }
 
 [class^="product-cleanstate__"] {
@@ -135,7 +138,7 @@
 }
 
 @media (min-width: 820px) {
-  .product, .product-cleanstate {
+  .product, .carousel .product-cleanstate {
     min-width: 280px;
     max-width: 280px;
   }

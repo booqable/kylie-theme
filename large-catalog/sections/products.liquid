@@ -2,38 +2,73 @@
 {{ "product.css" | asset_url | stylesheet_tag }}
 {{ "carousels.css" | asset_url | stylesheet_tag }}
 
+{% if section.settings.collection != blank %}
+  {% assign data = section.settings.collection.items %}
+  {% if section.settings.collection.items_count > 0 %}
+    {% assign data_exists = true %}
+  {% else %}
+    {% assign data_exists = false %}
+  {% endif %}
+  {% assign data_type = "collection" %}
+{% else %}
+  {% assign data = section.blocks %}
+  {% if data.size > 0 and data.first.settings.product != blank %}
+    {% assign data_exists = true %}
+  {% else %}
+    {% assign data_exists = false %}
+  {% endif %}
+  {% assign data_type = "blocks" %}
+{% endif %}
+
 {% if section.settings.title %}
   <h2 class="products__title">{{ section.settings.title }}</h2>
 {% endif %}
-{% if section.blocks.size >= 1 and section.blocks.first.settings.product != blank %}
-  <div class="carousel carousel--snap-{{ section.settings.snap }}">
-    <div class="carousel__inner {% if section.settings.infinite_scroll %}infinite-scroll{% endif %}">
-      {% for product in section.blocks %}
-        {% if product.settings.product != blank %}
-          {% assign image = product.settings.product.images.first %}
-          <div id="{{ product.id }}" class="product carousel__item">
-            <a href="{{ product.settings.product.url }}" class="product__image-container">{% if image != blank %}<img data-src="{{ image.url | image_url }}" alt="" class="product__image lazyload">{% endif %}</a>
-            {{ product.settings.product | product_availability }}
-            <a href="{{ product.settings.product.url }}">
-              <h3 class="product__name">{{ product.settings.product.name }}</h3>
+{% if data_exists %}
+  {% if section.settings.use_carousel %}
+    <div class="carousel carousel--snap-{{ section.settings.snap }}">
+      <div class="carousel__inner {% if section.settings.infinite_scroll %}infinite-scroll{% endif %}">
+  {% else %}
+    <div class="products__inner">
+  {% endif %}
+      {% for item in data %}
+        {% case data_type %}
+          {% when "collection" %}
+            {% assign product = item %}
+          {% when "blocks" %}
+            {% assign product = item.settings.product %}
+        {% endcase %}
+        {% if product != blank %}
+          {% assign image = product.images.first %}
+          <div id="{{ product.id }}" class="product {% if section.settings.use_carousel %}carousel__item{% endif %}">
+            <a href="{{ product.url }}" class="product__image-container">{% if image != blank %}<img data-src="{{ image.url | image_url }}" alt="" class="product__image lazyload">{% endif %}</a>
+            {{ product | product_availability }}
+            <a href="{{ product.url }}">
+              <h3 class="product__name">{{ product.name }}</h3>
             </a>
-            {{ product.settings.product | product_price_label }}
-            {{ product.settings.product | product_price }}
+            {{ product | product_price_label }}
+            {{ product | product_price }}
+          </div>
+        {% else %}
+          <div class="product-cleanstate {% if section.settings.use_carousel %}carousel__item{% endif %}">
+            <div class="product-cleanstate__image skeleton"></div>
+            <div class="product-cleanstate__availability skeleton"></div>
+            <div class="product-cleanstate__name skeleton"></div>
+            <div class="product-cleanstate__price skeleton"></div>
           </div>
         {% endif %}
       {% endfor %}
     </div>
-    {% if section.blocks.size >= 1 and section.blocks.first.settings.product != blank %}
-      <div class="carousel__controls">
-        <div class="carousel__control prev">
-          <i class="fa-regular fa-arrow-left"></i>
-        </div>
-        <div class="carousel__control next">
-          <i class="fa-regular fa-arrow-right"></i>
+    {% if section.settings.use_carousel %}
+        <div class="carousel__controls">
+          <div class="carousel__control prev">
+            <i class="fa-regular fa-arrow-left"></i>
+          </div>
+          <div class="carousel__control next">
+            <i class="fa-regular fa-arrow-right"></i>
+          </div>
         </div>
       </div>
     {% endif %}
-  </div>
 {% else %}
   <div class="products__cleanstate">
     {% for block in (1..3) %}
@@ -50,17 +85,38 @@
 {% schema %}
 {
   "name": "Products",
+  "description": "Display products from a collection or individually in a list or carousel layout.",
   "tag": "section",
   "class": "products",
   "settings": [
+    {
+      "type": "header",
+      "content": "General"
+    },
     {
       "type": "text",
       "id": "title",
       "label": "Title"
     },
     {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection",
+      "info": "Note: Collection will take over products block."
+    },
+    {
       "type": "header",
       "content": "Carousel"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_carousel",
+      "label": "Use carousel"
+    },
+    {
+      "type": "checkbox",
+      "id": "infinite_scroll",
+      "label": "Infinite scroll"
     },
     {
       "type": "select",
@@ -81,11 +137,6 @@
         }
       ],
       "default": "center"
-    },
-    {
-      "type": "checkbox",
-      "id": "infinite_scroll",
-      "label": "Infinite scroll"
     }
   ],
   "max_blocks": 16,
