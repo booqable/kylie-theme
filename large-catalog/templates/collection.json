@@ -13,7 +13,17 @@
         "label_color": "#FFFFFF"
       },
       "disabled": null
+    },
+    "date-picker": {
+      "type": "date-picker",
+      "blocks": {},
+      "block_order": [],
+      "settings": {},
+      "disabled": null
     }
   },
-  "order": ["collection-page"]
+  "order": [
+    "date-picker",
+    "collection-page"
+  ]
 }

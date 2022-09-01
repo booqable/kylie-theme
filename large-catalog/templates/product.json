@@ -7,7 +7,17 @@
       "block_order": [],
       "settings": {},
       "disabled": null
+    },
+    "date-picker": {
+      "type": "date-picker",
+      "blocks": {},
+      "block_order": [],
+      "settings": {},
+      "disabled": null
     }
   },
-  "order": ["product-page"]
+  "order": [
+    "date-picker",
+    "product-page"
+  ]
 }
