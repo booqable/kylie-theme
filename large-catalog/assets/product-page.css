@@ -98,6 +98,20 @@
 .product-info
   .booqable-component
   .booqable-product-button-wrapper
+  span.bq-status.bq-available {
+  background-color: var(--color-green) !important;
+}
+
+.product-info
+  .booqable-component
+  .booqable-product-button-wrapper
+  span.bq-status.bq-unavailable {
+  background-color: var(--color-red) !important;
+}
+
+.product-info
+  .booqable-component
+  .booqable-product-button-wrapper
   span.bq-status
   > span {
   margin-right: 3px;
