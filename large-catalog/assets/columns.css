@@ -8,21 +8,10 @@
 
 .columns .columns__container {
   display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
 
-  gap: 32px;
-}
-
-.columns .columns__container--count-1 {
-  grid-template-columns: 1fr;
-}
-
-.columns .columns__container--count-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.columns .columns__container--count-3 {
-  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
 .columns .columns__column .post__image {
@@ -68,15 +57,26 @@
   width: 25%;
 }
 
-@media (max-width: 810px) {
+@media (min-width: 576px) {
   .columns .columns__container {
-    grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
-    gap: 24px;
+    gap: 24px
+  }
+
+  .columns .columns__container--count-1 {
+    grid-template-columns: 1fr;
+  }
+  
+  .columns .columns__container--count-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .columns .columns__container--count-3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 576px) {
+@media (min-width: 810px) {
   .columns .columns__container {
-    gap: 18px
+    gap: 32px
   }
 }

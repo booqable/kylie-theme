@@ -1,38 +1,5 @@
 {
   "name": "Home",
-  "sections": {
-    "hero": {
-      "type": "hero",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": { "text": "Hire from us", "color": "#ffffff" },
-          "disabled": null
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Tell something about your company, describe what you do and what makes you unique.",
-            "color": "#ffffff"
-          },
-          "disabled": null
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "text": "Shop collection",
-            "label_color": "#0c2747",
-            "background_color": "#ffffff",
-            "use_solid_button": true,
-            "size": "md"
-          },
-          "disabled": null
-        }
-      },
-      "block_order": ["heading", "text", "button"],
-      "settings": {},
-      "disabled": null
-    }
-  },
-  "order": ["hero"]
+  "sections": {},
+  "order": []
 }

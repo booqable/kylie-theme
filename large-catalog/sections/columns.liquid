@@ -2,7 +2,9 @@
 {{ "post.css" | asset_url | stylesheet_tag }}
 
 {% assign column = section.blocks.first.settings %}
-{% assign column_exists = column.image.url != blank or column.title != blank or column.text != blank or column.button != blank %}
+{% if column.image.url != blank or column.title != blank or column.text != blank or column.button != blank %}
+  {% assign column_exists = true %}
+{% endif %}
 
 <div class="columns__container columns__container--count-{{ section.settings.columns_count }}">
   {% if section.blocks.size >= 1 and column_exists %}
@@ -19,7 +21,7 @@
             <div class="post__text">{{ block.settings.text }}</div>
           {% endif %}
           {% if block.settings.button_url %}
-            <a class="bq-button bq-button--size-{{ block.settings.button_size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" style="
+            <a class="bq-button bq-button--size-{{ block.settings.button_size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.button_url }}" style="
               color: {{ block.settings.label_color }};
               {% if block.settings.use_solid_button %}
                 background-color: {{ block.settings.background_color }};
@@ -47,6 +49,7 @@
 {% schema %}
 {
   "name": "Columns",
+  "description": "Display content in a single or multi-column layout.",
   "tag": "section",
   "class": "columns",
   "settings": [

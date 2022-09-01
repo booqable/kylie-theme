@@ -1,15 +1,37 @@
-<div class="spacer__inner spacer__inner--{{ section.settings.size }}"></div>
+<div class="spacer__inner spacer__inner--{{ section.settings.size }}">
+  {% if section.settings.use_hr %}
+    <hr {% if section.settings.hr_color != blank %}style="color: {{ section.settings.hr_color }};"{% endif %}>
+  {% endif %}
+</div>
 
 {% schema %}
 {
   "name": "Spacer",
+  "description": "Display a spacing between sections, optionally with a horizontal ruler.",
   "tag": "div",
   "class": "spacer",
   "settings": [
     {
+      "type": "header",
+      "content": "Horizontal ruler"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_hr",
+      "label": "Use horizontal ruler"
+    },
+    {
+      "type": "color",
+      "id": "hr_color",
+      "label": "Color"
+    },
+    {
+      "type": "header",
+      "content": "Size"
+    },
+    {
       "type": "select",
       "id": "size",
-      "label": "Size",
       "options": [
         {
           "value": "sm",
