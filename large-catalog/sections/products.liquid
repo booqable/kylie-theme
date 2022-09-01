@@ -40,8 +40,10 @@
     </div>
   {% else %}
     {% if section.settings.use_pagination and data_type == "collection" %}
-      {% paginate data by 12 %}
-        <div class="products__inner use-paginate per-{{ section.settings.paginate_per }}">
+      {% assign per_page = section.settings.paginate_per | times: 1 %}
+      {% assign key = section.key %}
+      {% paginate data by per_page page_param: key %}
+        <div class="products__inner">
           {% include "products-inner" %}
         </div>
         {% if paginate.pages > 1 %}
@@ -87,7 +89,7 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection",
-      "info": "Note: Collection will take over products blocks"
+      "info": "Note: Collection will take importance over \"Product\" blocks"
     },
     {
       "type": "header",
@@ -97,7 +99,7 @@
       "type": "checkbox",
       "id": "use_pagination",
       "label": "Paginate products",
-      "info": "Note: Not applicable for 'Product' blocks"
+      "info": "Note: Not applicable for \"Product\" blocks"
     },
     {
       "type": "number",
