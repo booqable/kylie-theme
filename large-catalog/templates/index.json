@@ -33,18 +33,12 @@
             "url": "booqable://collections/all"
           },
           "disabled": null
-        },
-        "date-picker": {
-          "type": "date-picker",
-          "settings": {},
-          "disabled": true
         }
       },
       "block_order": [
         "heading",
         "text",
-        "button",
-        "date-picker"
+        "button"
       ],
       "settings": {
         "fluid_width": true,
