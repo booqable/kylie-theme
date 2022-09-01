@@ -102,7 +102,23 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection",
-      "info": "Note: Collection will take over products block."
+      "info": "Note: Collection will take over products blocks"
+    },
+    {
+      "type": "header",
+      "content": "Pagination"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_pagination",
+      "label": "Paginate products",
+      "info": "Note: Not applicable for 'Product' blocks"
+    },
+    {
+      "type": "number",
+      "id": "paginate_per",
+      "label": "Products per page",
+      "default": 12
     },
     {
       "type": "header",
@@ -111,7 +127,8 @@
     {
       "type": "checkbox",
       "id": "use_carousel",
-      "label": "Use carousel"
+      "label": "Use carousel",
+      "info": "Note: Not applicable when pagination enabled"
     },
     {
       "type": "checkbox",
