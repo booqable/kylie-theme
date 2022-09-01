@@ -13,7 +13,17 @@
         "label_color": "#FFFFFF"
       },
       "disabled": null
+    },
+    "date-location": {
+      "type": "date-location",
+      "blocks": {},
+      "block_order": [],
+      "settings": {},
+      "disabled": null
     }
   },
-  "order": ["collection-page"]
+  "order": [
+    "date-location",
+    "collection-page"
+  ]
 }

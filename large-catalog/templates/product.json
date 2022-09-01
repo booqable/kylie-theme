@@ -7,7 +7,17 @@
       "block_order": [],
       "settings": {},
       "disabled": null
+    },
+    "date-location": {
+      "type": "date-location",
+      "blocks": {},
+      "block_order": [],
+      "settings": {},
+      "disabled": null
     }
   },
-  "order": ["product-page"]
+  "order": [
+    "date-location",
+    "product-page"
+  ]
 }
