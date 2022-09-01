@@ -84,7 +84,7 @@
             {{ block.settings.text | escape }}
           </a>
         {% when "date-picker" %}
-          <div class="date-location">
+          <div id="{{ block.id }}" class="date-location">
             <bq-date-picker data-primary-color="{{ settings.primary_color }}"></bq-date-picker>
           </div>
       {% endcase %}
