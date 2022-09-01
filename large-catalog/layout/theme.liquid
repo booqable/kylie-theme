@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% if page_description %}<meta name="description" content="{{ page_description }}" >{% endif %}
+
   {% comment %} Fonts links {% endcomment %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +16,7 @@
   {% comment %} Font Awesome {% endcomment %}
   <script src="https://kit.fontawesome.com/ff3b3de2b5.js" crossorigin="anonymous"></script>
   {{ content_for_header }}
-  <title>Large catalog</title>
+  <title>{% if page_title -%}{{ page_title }}{%- else -%}{{ shop.name }}{%- endif %}</title>
 </head>
 <body>
 
