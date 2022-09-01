@@ -27,48 +27,33 @@
   {% if section.settings.use_carousel %}
     <div class="carousel carousel--snap-{{ section.settings.snap }}">
       <div class="carousel__inner {% if section.settings.infinite_scroll %}infinite-scroll{% endif %}">
-  {% else %}
-    <div class="products__inner">
-  {% endif %}
-      {% for item in data %}
-        {% case data_type %}
-          {% when "collection" %}
-            {% assign product = item %}
-          {% when "blocks" %}
-            {% assign product = item.settings.product %}
-        {% endcase %}
-        {% if product != blank %}
-          {% assign image = product.images.first %}
-          <div id="{{ product.id }}" class="product {% if section.settings.use_carousel %}carousel__item{% endif %}">
-            <a href="{{ product.url }}" class="product__image-container">{% if image != blank %}<img data-src="{{ image.url | image_url }}" alt="" class="product__image lazyload">{% endif %}</a>
-            {{ product | product_availability }}
-            <a href="{{ product.url }}">
-              <h3 class="product__name">{{ product.name }}</h3>
-            </a>
-            {{ product | product_price_label }}
-            {{ product | product_price }}
-          </div>
-        {% else %}
-          <div class="product-cleanstate {% if section.settings.use_carousel %}carousel__item{% endif %}">
-            <div class="product-cleanstate__image skeleton"></div>
-            <div class="product-cleanstate__availability skeleton"></div>
-            <div class="product-cleanstate__name skeleton"></div>
-            <div class="product-cleanstate__price skeleton"></div>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-    {% if section.settings.use_carousel %}
-        <div class="carousel__controls">
-          <div class="carousel__control prev">
-            <i class="fa-regular fa-arrow-left"></i>
-          </div>
-          <div class="carousel__control next">
-            <i class="fa-regular fa-arrow-right"></i>
-          </div>
+        {% include "products-inner" %}
+      </div>
+      <div class="carousel__controls">
+        <div class="carousel__control prev">
+          <i class="fa-regular fa-arrow-left"></i>
+        </div>
+        <div class="carousel__control next">
+          <i class="fa-regular fa-arrow-right"></i>
         </div>
       </div>
+    </div>
+  {% else %}
+    {% if section.settings.use_pagination and data_type == "collection" %}
+      {% paginate data by 12 %}
+        <div class="products__inner use-paginate per-{{ section.settings.paginate_per }}">
+          {% include "products-inner" %}
+        </div>
+        {% if paginate.pages > 1 %}
+          {% include "pagination" %}
+        {% endif %}
+      {% endpaginate %}
+    {% else %}
+      <div class="products__inner">
+        {% include "products-inner" %}
+      </div>
     {% endif %}
+  {% endif %}
 {% else %}
   <div class="products__cleanstate">
     {% for block in (1..3) %}
