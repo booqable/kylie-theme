@@ -51,8 +51,8 @@
       },
       "disabled": false
     },
-    "date-location": {
-      "type": "date-location",
+    "date-picker": {
+      "type": "date-picker",
       "blocks": {},
       "block_order": [],
       "settings": {},
@@ -71,7 +71,7 @@
   },
   "order": [
     "image-banner",
-    "date-location",
+    "date-picker",
     "products"
   ]
 }

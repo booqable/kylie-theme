@@ -13,8 +13,8 @@
       },
       "disabled": null
     },
-    "date-location": {
-      "type": "date-location",
+    "date-picker": {
+      "type": "date-picker",
       "blocks": {},
       "block_order": [],
       "settings": {},
@@ -22,7 +22,7 @@
     }
   },
   "order": [
-    "date-location",
+    "date-picker",
     "list-collections"
   ]
 }
