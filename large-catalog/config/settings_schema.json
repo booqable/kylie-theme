@@ -6,6 +6,32 @@
     "theme_author": "Booqable"
   },
   {
+    "name": "General",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "primary_color",
+        "label": "Primary color",
+        "info": "Primary color of the theme used for embeddable components",
+        "default": "#395DB8"
+      },
+      {
+        "type": "header",
+        "content": "Images"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_focal_images",
+        "label": "Use focal images",
+        "info": "Display point focused images for products instead of full sized"
+      }
+    ]
+  },
+  {
     "name": "Social media",
     "settings": [
       {
@@ -61,18 +87,6 @@
         "id": "social_vimeo_link",
         "label": "Vimeo",
         "info": "https://vimeo.com/booqable"
-      }
-    ]
-  },
-  {
-    "name": "Colors",
-    "settings": [
-      {
-        "type": "color",
-        "id": "primary_color",
-        "label": "Primary color",
-        "info": "Primary color of the theme used for embeddable components",
-        "default": "#395DB8"
       }
     ]
   }

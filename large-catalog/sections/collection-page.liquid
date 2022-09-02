@@ -15,7 +15,7 @@
         {% for item in paginate_object %}
           {% assign image = item.images.first %}
           <div class="product">
-            <a href="{{ item.url }}" class="product__image-container"><img data-src="{{ image.url | image_url }}" alt="" class="product__image lazyload"></a>
+            <a href="{{ item.url }}" class="product__image-container"><img data-src="{{ image.url | image_url }}" {% if settings.use_focal_images %}data-focal-x="{{ image.coordinates[0]}}" data-focal-y="{{ image.coordinates[1] }}"{% endif %} alt="" class="{% if settings.use_focal_images %}focal-image{% else %}product__image{% endif %} lazyload"></a>
             {{ item | product_availability }}
             <a href="{{ item.url }}">
               <h3 class="product__name">{{ item.name }}</h3>
