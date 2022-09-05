@@ -41,7 +41,7 @@
         "button"
       ],
       "settings": {
-        "background_image": "https://cdn3.booqable.com/logo-small.svg",
+        "background_image": "",
         "fluid_width": true,
         "overlay_enabled": true,
         "overlay_color": "#D9E3F0",
