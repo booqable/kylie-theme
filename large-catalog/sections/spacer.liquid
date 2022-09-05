@@ -1,6 +1,14 @@
-<div class="spacer__inner spacer__inner--{{ section.settings.size }}">
+<style>
+  .section-{{ section.key }} hr {
+    {% if section.settings.hr_color != blank %}
+      color: {{ section.settings.hr_color }};
+    {% endif %}
+  }
+</style>
+
+<div class="spacer-{{ section.key }} spacer__inner spacer__inner--{{ section.settings.size }}">
   {% if section.settings.use_hr %}
-    <hr {% if section.settings.hr_color != blank %}style="color: {{ section.settings.hr_color }};"{% endif %}>
+    <hr>
   {% endif %}
 </div>
 
