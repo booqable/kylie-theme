@@ -64,7 +64,146 @@
       "block_order": [],
       "settings": {
         "collection": "all",
-        "snap": "center"
+        "snap": "center",
+        "paginate_per": 12,
+        "use_carousel": true,
+        "title": "Featured products"
+      },
+      "disabled": null
+    },
+    "image-banner_478138": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Image with text",
+            "color": "#FFFFFF",
+            "size": "md"
+          },
+          "disabled": null
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Add some text to tell a story, explain how renting with your company works, or to let your potential customers know about the value you offer. Use this space however you like and fill it with whatever you want.",
+            "color": "#FFFFFF",
+            "size": "sm"
+          },
+          "disabled": null
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "text": "Button label",
+            "use_solid_button": true,
+            "label_color": "#0c2747",
+            "background_color": "#ffffff",
+            "size": "md"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "background_image": "booqable://assets/background-abstract-alt.jpeg",
+        "fluid_width": false,
+        "overlay_enabled": true,
+        "overlay_color": "#000000",
+        "vertical_spacing": "sm",
+        "overlay_opacity": "40",
+        "content_align": "left"
+      },
+      "disabled": null
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "use_hr": true,
+        "hr_color": "#F1F1F1",
+        "size": "md"
+      },
+      "disabled": null
+    },
+    "spacer_988332": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "use_hr": true,
+        "hr_color": "#F1F1F1",
+        "size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_868256": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "md"
+      },
+      "disabled": null
+    },
+    "columns": {
+      "type": "columns",
+      "blocks": {
+        "column": {
+          "type": "column",
+          "settings": {
+            "image_border_radius": true,
+            "text": "<p>Add some text to tell a story, explain how renting with your company works, or to let your potential customers know about the value you offer. Use this space however you like and fill it with whatever you want.</p>",
+            "button_size": "md",
+            "background_color": "#ffffff",
+            "label_color": "#0C2747",
+            "title": "Column 1",
+            "image": "booqable://assets/background-mountains.jpeg",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_242972": {
+          "type": "column",
+          "settings": {
+            "image_border_radius": true,
+            "text": "<p>Add some text to tell a story, explain how renting with your company works, or to let your potential customers know about the value you offer. Use this space however you like and fill it with whatever you want.</p>",
+            "button_size": "md",
+            "background_color": "#ffffff",
+            "label_color": "#0C2747",
+            "title": "Column 2",
+            "image": "booqable://assets/background-mountains.jpeg",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_535502": {
+          "type": "column",
+          "settings": {
+            "image_border_radius": true,
+            "text": "<p>Add some text to tell a story, explain how renting with your company works, or to let your potential customers know about the value you offer. Use this space however you like and fill it with whatever you want.</p>",
+            "button_size": "md",
+            "background_color": "#ffffff",
+            "label_color": "#0C2747",
+            "title": "Column 3",
+            "image": "booqable://assets/background-mountains.jpeg",
+            "use_solid_button": false
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "column",
+        "column_242972",
+        "column_535502"
+      ],
+      "settings": {
+        "columns_count": 3
       },
       "disabled": null
     }
@@ -72,6 +211,11 @@
   "order": [
     "image-banner",
     "date-picker",
-    "products"
+    "columns",
+    "spacer",
+    "products",
+    "spacer_988332",
+    "image-banner_478138",
+    "spacer_868256"
   ]
 }
