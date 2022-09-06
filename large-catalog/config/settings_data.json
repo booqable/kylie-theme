@@ -6,15 +6,26 @@
         "blocks": {},
         "block_order": [],
         "settings": {
-          "menu": "",
+          "menu": "main-menu",
           "logo": ""
         },
         "disabled": null
       },
       "footer": {
         "type": "footer",
-        "blocks": {},
-        "block_order": [],
+        "blocks": {
+          "menu": {
+            "type": "menu",
+            "settings": {
+              "menu": "main-menu",
+              "align": "center"
+            },
+            "disabled": null
+          }
+        },
+        "block_order": [
+          "menu"
+        ],
         "settings": {
           "show_copyright": true,
           "show_powered_by": true,
