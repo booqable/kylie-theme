@@ -1,0 +1,224 @@
+.list-menu__item [id^="sidebar-navigation-menu-child-"], .list-menu__item [id^="sidebar-navigation-menu-grandchild-"] {
+  display: none;
+}
+
+.list-menu__item [id^="sidebar-navigation-menu-child-"]:checked ~ .list-submenu, .list-menu__item [id^="sidebar-navigation-menu-grandchild-"]:checked ~ .list-submenu {
+  max-height: 100vh;
+
+  transition: max-height 200ms;
+}
+
+.list-menu__item [id^="sidebar-navigation-menu-child-"]:checked + label .list-menu__item-caret, .list-menu__item [id^="sidebar-navigation-menu-grandchild-"]:checked + label .list-menu__item-caret {
+  transform: rotate(180deg);
+
+  transition: transform 150ms;
+}
+
+#sidebar-toggle {
+  display: none;
+}
+
+#sidebar-toggle:checked ~ .sidebar-navigation {
+  visibility: visible;
+
+  opacity: 1;
+
+  transition: visibility 0s linear 0s, opacity 150ms;
+}
+
+#sidebar-toggle:checked ~ .sidebar-navigation .sidebar-navigation__wrapper {
+  top: 30px;
+
+  transition: top 250ms;
+}
+
+.sidebar-navigation {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  visibility: hidden;
+  opacity: 0;
+
+  z-index: 1000;
+
+  background-color: var(--color-backdrop);
+
+  transition: visibility 0s linear 250ms, opacity 150ms;
+}
+
+.sidebar-navigation__wrapper {
+  position: relative;
+
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: calc(100vh - 30px);
+
+  background-color: var(--color-white);
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  transition: top 250ms;
+}
+
+.sidebar-navigation__header {
+  padding-left: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar-navigation__close {
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-navigation__close i {
+  font-size: 16px;
+
+  color: var(--color-typo);
+}
+
+.sidebar-navigation__title {
+  font-size: 18px;
+  line-height: 28px;
+
+  font-weight: var(--font-weight-semibold);
+
+  color: var(--color-typo);
+}
+
+.sidebar-navigation-menu:not(:first-child) {
+  padding: 16px 0;
+}
+
+.sidebar-navigation .list-menu > .list-menu__item:first-child {
+  border-top: none;
+}
+
+.sidebar-navigation .list-menu > .list-menu__item {
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.sidebar-navigation .list-menu__item {
+  display: block;
+
+  padding: 12px var(--horizontal-padding);
+}
+
+.sidebar-navigation .list-menu__item-caret {
+  margin-left: 8px;
+
+  font-size: 14px;
+}
+
+.sidebar-navigation .list-submenu .list-menu__item-caret {
+  margin-left: auto;
+}
+
+.sidebar-navigation .list-submenu__container {
+  background-color: var(--color-white);
+}
+
+.sidebar-navigation .list-menu .list-menu__item-caret {
+  margin: 0 16px;
+}
+
+.sidebar-navigation .list-submenu .sidebar-navigation-menu__link {
+  font-weight: var(--font-weight-regular);
+}
+
+.sidebar-navigation-menu__link {
+  font-size: 16px;
+  line-height: 24px;
+
+  font-weight: var(--font-weight-semibold);
+
+  color: var(--color-typo);
+
+  text-decoration: none;
+}
+
+.sidebar-navigation-menu__link:hover {
+  text-decoration: underline;
+}
+.header__nav .list-menu--vertical .sidebar-navigation-menu__link {
+  display: block;
+
+  padding: 12px var(--horizontal-padding);
+}
+.list-submenu__container .sidebar-navigation-menu__link {
+  display: flex;
+  align-items: center;
+
+  padding: 12px var(--horizontal-padding);
+
+  font-weight: var(--font-weight-regular);
+}
+
+.header__nav .list-submenu .sidebar-navigation-menu__link {
+  font-weight: var(--font-weight-regular);
+}
+
+@media (min-width: 576px) {
+  .sidebar-toggle {
+    display: none;
+  }
+
+  .sidebar-navigation {
+    display: block;
+
+    position: relative;
+
+    top: initial;
+    left: initial;
+    right: initial;
+    bottom: initial;
+
+    width: 100%;
+    height: auto;
+
+    background-color: var(--color-white);
+
+    visibility: visible;
+    opacity: 1;
+
+    pointer-events: all;
+  }
+
+  .sidebar-navigation .list-menu > .list-menu__item:first-child {
+    border-top: none;
+  }
+
+  .sidebar-navigation__wrapper { 
+    top: initial;
+    left: initial;
+    right: initial;
+    bottom: initial;
+  
+    height: auto;
+  
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .sidebar-navigation__header {
+    display: none;
+  }
+}

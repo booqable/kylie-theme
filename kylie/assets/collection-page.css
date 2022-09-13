@@ -6,6 +6,11 @@
   padding: 0 var(--horizontal-padding);
 }
 
+.collection-page__wrapper--with-sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 .collection-page__title {
   font-size: 36px;
   line-height: 44px;
@@ -33,10 +38,19 @@
   .collection-page__items {
     gap: 24px;
   }
+
+  .collection-page__wrapper--with-sidebar {
+    grid-template-columns: 220px 1fr;
+    gap: 20px;
+  }
 }
 
 @media (min-width: 810px) {
   .collection-page__items {
     gap: 32px;
+  }
+
+  .collection-page__wrapper--with-sidebar {
+    grid-template-columns: 280px 1fr;
   }
 }
