@@ -1,4 +1,8 @@
-{% assign base_url = request_fullpath | strip %}
+{% if preview %}
+  {% assign current_url = request_fullpath | strip %}
+{% else %}
+  {% assign current_url = request_path | strip %}
+{% endif %}
 
 <div class="collection-page__wrapper {% if section.blocks.size > 0 %}collection-page__wrapper--with-sidebar{% endif %}">
   <div class="collection-page__sidebar-navigation">

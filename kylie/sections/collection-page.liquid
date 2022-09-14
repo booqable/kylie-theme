@@ -2,7 +2,11 @@
 {{ "product.css" | asset_url | stylesheet_tag }}
 {{ "cleanstate.css" | asset_url | stylesheet_tag }}
 
-{% assign current_url = request_fullpath | strip %}
+{% if preview %}
+  {% assign current_url = request_fullpath | strip %}
+{% else %}
+  {% assign current_url = request_path | strip %}
+{% endif %}
 
 {% if canonical_url contains "/1?" or canonical_url contains "/1#" %}
   {% include "collection-page-preview" %}
