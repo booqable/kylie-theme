@@ -20,6 +20,13 @@
             {% for link in block.settings.menu.items %}
               <li class="list-menu__item">
                 <a href="{{ link.url }}" class="footer__nav-item">{{ link.title }}</a>
+                {% if link.items_count > 0 %}
+                  <div class="list-menu list-menu--vertical footer__submenu">
+                    {% for childlink in link.items %}
+                      <a href="{{ childlink.url }}" class="footer__nav-subitem">{{ childlink.title }}</a>
+                    {% endfor %}
+                  </div>
+                {% endif %}
               </li>
             {% endfor %}
           </ul>
@@ -203,7 +210,8 @@
         {
           "type": "menu",
           "id": "menu",
-          "label": "Menu"
+          "label": "Menu",
+          "info": "Only 1 level of submenu is supported."
         },
         {
           "type": "select",
