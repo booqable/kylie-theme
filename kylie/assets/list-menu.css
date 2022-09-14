@@ -49,6 +49,7 @@
 
 .list-submenu {
   visibility: hidden;
+  pointer-events: none;
 
   padding: 0;
   margin: 0;
@@ -88,6 +89,7 @@
 
 .list-menu--horizontal .list-menu__item:hover > .list-submenu {
   visibility: visible;
+  pointer-events: all;
 
   opacity: 1;
   transform: translateY(0) translateX(0);
@@ -99,6 +101,7 @@
   grid-column: 1 / 3;
 
   visibility: visible;
+  pointer-events: all;
 
   overflow: hidden;
   max-height: 0vh;

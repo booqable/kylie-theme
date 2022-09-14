@@ -227,6 +227,7 @@
 
 .header-floating-menu__wrapper {
   visibility: hidden;
+  pointer-events: none;
 
   position: absolute;
   top: 100%;
@@ -307,6 +308,7 @@
     opacity: 0;
     transform: scale(0.92);
     visibility: hidden;
+    pointer-events: none;
     transition: visibility 0s linear 300ms, opacity 300ms linear 50ms,
       transform 250ms;
 
@@ -326,6 +328,7 @@
 
   .header-search #floating-search:checked ~ .header-search__wrapper {
     visibility: visible;
+    pointer-events: all;
 
     opacity: 1;
     transform: scale(1);
@@ -343,6 +346,7 @@
     #floating-menu-trigger:checked
     ~ .header-floating-menu__wrapper {
     visibility: visible;
+    pointer-events: all;
 
     opacity: 1;
     transform: translateY(0);
