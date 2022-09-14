@@ -2,17 +2,28 @@
 {{ "product.css" | asset_url | stylesheet_tag }}
 {{ "cleanstate.css" | asset_url | stylesheet_tag }}
 
+{% assign current_url = request_fullpath | strip %}
+
 {% if canonical_url contains "/1?" or canonical_url contains "/1#" %}
   {% include "collection-page-preview" %}
 {% else %}
   <div class="collection-page__wrapper {% if section.blocks.size > 0 %}collection-page__wrapper--with-sidebar{% endif %}">
-    {% if section.blocks.size > 0 %}
-      {% include "sidebar-navigation" %}
-    {% endif %}
-    <div class="collection-page__inner">
-      {% if section.settings.show_collection_name %}
-        <h1 class="collection-page__title">{{ collection.name }}</h1>
+    <div class="collection-page__sidebar-navigation">
+      {% if section.blocks.size > 0 %}
+        {% render "sidebar-navigation", menus: section.blocks, sticky: section.settings.sticky_sidebar, mode: "desktop", current_url: current_url %}
       {% endif %}
+    </div>
+    <div class="collection-page__inner">
+      <div class="collection-page__header">
+        {% if section.settings.show_collection_name %}
+          <h1 class="collection-page__title">{{ collection.name }}</h1>
+        {% endif %}
+        <div class="collection-page__sidebar-navigation--mobile">
+          {% if section.blocks.size > 0 %}
+            {% render "sidebar-navigation", menus: section.blocks, sticky: section.settings.sticky_sidebar, mode: "mobile" %}
+          {% endif %}
+        </div>
+      </div>
       {% if collection.items_count > 0 %}
         {% assign paginate_object = collection.items %}
         {% paginate paginate_object %}
@@ -20,7 +31,7 @@
             {% for item in paginate_object %}
               {% assign image = item.images.first %}
               <div class="product">
-                <a href="{{ item.url }}" class="product__image-container"><img data-src="{{ image.url | image_url }}" {% if settings.use_focal_images %}data-focal-x="{{ image.coordinates[0]}}" data-focal-y="{{ image.coordinates[1] }}"{% endif %} alt="" class="{% if settings.use_focal_images %}focal-image{% else %}product__image{% endif %} lazyload"></a>
+                <a href="{{ item.url }}" class="product__image-container">{% if image != blank %}<img data-src="{{ image.url | image_url }}" {% if settings.use_focal_images %}data-focal-x="{{ image.coordinates[0]}}" data-focal-y="{{ image.coordinates[1] }}"{% endif %} alt="" class="{% if settings.use_focal_images %}focal-image{% else %}product__image{% endif %} lazyload">{% endif %}</a>
                 {{ item | product_availability }}
                 <a href="{{ item.url }}">
                   <h3 class="product__name">{{ item.name }}</h3>
@@ -62,6 +73,15 @@
     },
     {
       "type": "header",
+      "content": "Sidebar"
+    },
+    {
+      "type": "checkbox",
+      "id": "sticky_sidebar",
+      "label": "Enable sticky sidebar"
+    },
+    {
+      "type": "header",
       "content": "Cleanstate"
     },
     {
@@ -97,6 +117,11 @@
       "type": "sidebar-menu",
       "name": "Menu",
       "settings": [
+        {
+          "id": "title",
+          "label": "Title",
+          "type": "text"
+        },
         {
           "id": "menu",
           "label": "Menu",
