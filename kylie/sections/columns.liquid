@@ -8,16 +8,13 @@
 
 <style>
   {% for block in section.blocks %}
-    {% case block.type %}
-      {% when "button" %}
-        .columns-{{ section.key }} .bq-button {
-          color: {{ block.settings.label_color }};
+    .columns-{{ section.key }} #{{ block.id }} .bq-button {
+      color: {{ block.settings.label_color }};
 
-          {% if block.settings.use_solid_button %}
-            background-color: {{ block.settings.background_color }};
-          {% endif %}
-        }
-    {% endcase %}
+      {% if block.settings.use_solid_button %}
+        background-color: {{ block.settings.background_color }};
+      {% endif %}
+    }
   {% endfor %}
 </style>
 
