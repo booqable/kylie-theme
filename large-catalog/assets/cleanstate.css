@@ -24,6 +24,8 @@
   color: var(--color-typo);
 
   margin-bottom: 32px;
+
+  white-space: pre;
 }
 
 @media (min-width: 576px) {
