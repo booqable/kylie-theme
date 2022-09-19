@@ -40,7 +40,7 @@
 
 .collection-page__items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(168px, 280px));
+  grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
   gap: 18px;
   justify-content: center;
 }
@@ -76,5 +76,11 @@
 
   .collection-page__wrapper--with-sidebar {
     grid-template-columns: 280px 1fr;
+  }
+}
+
+@media (min-width: 576px) {
+  .collection-page__items {
+    justify-content: start;
   }
 }
