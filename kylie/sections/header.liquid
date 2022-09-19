@@ -12,6 +12,12 @@
         >
       {% elsif section.settings.custom_title != blank %}
         <h1 class="header__text-logo">{{ section.settings.custom_title }}</h1>
+      {% elsif shop.logo_url != blank %}
+        <img
+          src="{{ shop.logo_url }}"
+          alt="{{ shop.name }}"
+          class="header__image-logo"
+        >
       {% else %}
         <h1 class="header__text-logo">{{ shop.name }}</h1>
       {% endif %}
