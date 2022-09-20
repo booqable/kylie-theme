@@ -275,6 +275,10 @@
   object-fit: contain;
 }
 
+.product-gallery__preview .carousel__inner {
+  padding: 0;
+}
+
 .product-gallery__items .carousel__inner {
   gap: 8px;
 
