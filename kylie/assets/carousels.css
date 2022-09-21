@@ -80,6 +80,8 @@
 
 .carousel__control.hidden {
   visibility: hidden;
+
+  pointer-events: none;
 }
 
 .carouse__control i {

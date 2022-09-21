@@ -17,6 +17,8 @@
   border-radius: 8px;
 
   cursor: pointer;
+
+  min-height: 56px;
 }
 
 .date-location bq-date-picker::part(calendar-icon) {
