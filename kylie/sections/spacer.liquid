@@ -1,6 +1,8 @@
 <style>
   .spacer-{{ section.key }} hr {
-    {% if section.settings.hr_color != blank %}
+    color: var(--color-border);
+
+    {% if section.settings.hr_color %}
       color: {{ section.settings.hr_color }};
     {% endif %}
   }

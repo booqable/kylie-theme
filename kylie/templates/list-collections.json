@@ -8,8 +8,7 @@
       "settings": {
         "heading": "No collections",
         "text": "Unfortunately, we couldn’t find any collections.",
-        "button_label": "Browse all products",
-        "label_color": "#FFFFFF"
+        "button_label": "Browse all products"
       },
       "disabled": null
     },

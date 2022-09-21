@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
 
-  background-color: var(--color-white);
+  background-color: var(--color-background-secondary);
   z-index: 1000;
 }
 
@@ -23,7 +23,7 @@
   margin: 0 auto;
   padding: 12px var(--horizontal-padding);
 
-  background-color: var(--color-white);
+  background-color: var(--color-background-secondary);
 }
 
 .header__wrapper--with-menu {
@@ -37,7 +37,7 @@
 .header__link {
   text-decoration: none;
 
-  color: var(--color-typo);
+  color: var(--color-heading);
 }
 
 .header__text-logo {
@@ -60,7 +60,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-typo);
+  color: var(--color-heading);
 
   text-decoration: none;
 }
@@ -80,7 +80,7 @@
 }
 
 .header__nav .list-menu--vertical > .list-menu__item {
-  border-bottom: 1px solid var(--color-grey);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .header__nav .list-menu--vertical .header__nav-item {
@@ -100,7 +100,7 @@
 }
 
 .header__nav .list-submenu__container {
-  background-color: var(--color-white);
+  background-color: var(--color-background-secondary);
 }
 
 .header__nav--mobile .list-menu .list-menu__item-caret {
@@ -153,13 +153,15 @@
 .header-search__input {
   padding: 8px 12px 8px 44px;
 
-  border: 1px solid var(--color-grey);
+  border: 1px solid var(--color-border);
   border-radius: 20px;
 
   font-size: 16px;
   line-height: 24px;
 
-  color: var(--color-typo);
+  color: var(--color-body);
+
+  background-color: var(--color-background-secondary);
 
   min-width: 230px;
   width: 100%;
@@ -168,11 +170,11 @@
 .header-search__input:focus {
   outline: none;
 
-  border-color: var(--color-blue);
+  border-color: var(--color-accent);
 }
 
 .header-search__input::placeholder {
-  color: var(--color-dark-grey);
+  color: var(--color-body-alternative);
 }
 
 .header-search__icon {
@@ -181,7 +183,7 @@
   width: 16px;
   height: 16px;
 
-  color: var(--color-typo);
+  color: var(--color-body);
 }
 
 .header-search__wrapper .header-search__icon.close {
@@ -207,7 +209,7 @@
 }
 
 .header-cart .bq-icon-cart::before {
-  color: var(--color-typo);
+  color: var(--color-body);
 
   font-weight: 300;
 }
@@ -241,7 +243,7 @@
 
   height: 100vh;
 
-  background-color: var(--color-white);
+  background-color: var(--color-background-secondary);
 }
 
 .bq-cart {
@@ -303,7 +305,7 @@
     left: 0;
     right: 0;
 
-    background-color: var(--color-white);
+    background-color: var(--color-background-secondary);
 
     opacity: 0;
     transform: scale(0.92);

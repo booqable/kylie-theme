@@ -12,7 +12,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-typo);
+  color: var(--color-heading);
 
   margin-bottom: 16px;
 }
@@ -25,7 +25,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-blue);
+  color: var(--color-heading);
 
   text-decoration: none;
 
@@ -69,7 +69,7 @@
 
   border-radius: 8px;
 
-  background-color: var(--color-light-grey);
+  background-color: var(--color-placeholder);
 }
 
 .collection__image {

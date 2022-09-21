@@ -9,10 +9,19 @@
 <style>
   {% for block in section.blocks %}
     .columns-{{ section.key }} #{{ block.id }} .bq-button {
-      color: {{ block.settings.label_color }};
+      color: var(--color-body);
 
       {% if block.settings.use_solid_button %}
+        background-color: var(--color-accent);
+        color: var(--color-accent-label);
+      {% endif %}
+
+      {% if block.settings.use_solid_button and block.settings.background_color != blank %}
         background-color: {{ block.settings.background_color }};
+      {% endif %}
+
+      {% if block.settings.label_color != blank %}
+        color: {{ block.settings.label_color }};
       {% endif %}
     }
   {% endfor %}
@@ -130,14 +139,12 @@
         {
           "id": "background_color",
           "type": "color",
-          "label": "Background color",
-          "default": "#ffffff"
+          "label": "Background color"
         },
         {
           "id": "label_color",
           "type": "color",
-          "label": "Label color",
-          "default": "#0C2747"
+          "label": "Label color"
         },
         {
           "type": "select",

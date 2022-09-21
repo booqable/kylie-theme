@@ -25,7 +25,7 @@
 .pagination span a {
   display: inline-block;
 
-  color: var(--color-typo);
+  color: var(--color-body);
 
   padding: 10px 15px;
 
@@ -37,16 +37,16 @@
 .pagination .page:not(.current):hover,
 .pagination .prev:not([data-enabled="false"]):hover,
 .pagination .next:not([data-enabled="false"]):hover {
-  background-color: var(--color-light-grey);
+  box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, 0.12);
 }
 
 .pagination .current {
   position: relative;
 
-  background-color: var(--color-blue-alt);
-  border-color: var(--color-blue-alt);
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
 
-  color: var(--color-white);
+  color: var(--color-accent-label);
 
   z-index: 1;
 }

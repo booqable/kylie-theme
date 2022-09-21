@@ -50,18 +50,35 @@
     {% case block.type %}
       {% when "heading" %}
         .image-banner-{{ section.key }} .image-banner__title {
-          color: {{ block.settings.color }};
+          color: var(--color-heading);
+
+          {% if block.settings.color != blank %}
+            color: {{ block.settings.color }};
+          {% endif %}
         }
       {% when "text" %}
         .image-banner-{{ section.key }} .image-banner__text {
-          color: {{ block.settings.color }};
+          color: var(--color-body);
+
+          {% if block.settings.color != blank %}
+            color: {{ block.settings.color }};
+          {% endif %}
         }
       {% when "button" %}
         .image-banner-{{ section.key }} .bq-button {
-          color: {{ block.settings.label_color }};
+          color: var(--color-body);
 
           {% if block.settings.use_solid_button %}
+            background-color: var(--color-accent);
+            color: var(--color-accent-label);
+          {% endif %}
+
+          {% if block.settings.use_solid_button and block.settings.background_color != blank %}
             background-color: {{ block.settings.background_color }};
+          {% endif %}
+
+          {% if block.settings.label_color != blank %}
+            color: {{ block.settings.label_color }};
           {% endif %}
         }
     {% endcase %}
@@ -207,7 +224,6 @@
         {
           "type": "color",
           "id": "color",
-          "default": "#000000",
           "label": "Color"
         },
         {
@@ -294,13 +310,11 @@
         {
           "type": "color",
           "id": "label_color",
-          "default": "#0c2747",
           "label": "Label color"
         },
         {
           "type": "color",
           "id": "background_color",
-          "default": "#ffffff",
           "label": "Background color"
         },
         {

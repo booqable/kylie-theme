@@ -8,7 +8,6 @@
           "type": "heading",
           "settings": {
             "text": "404",
-            "color": "#000000",
             "size": "lg"
           },
           "disabled": null
@@ -17,7 +16,6 @@
           "type": "text",
           "settings": {
             "text": "Oops, the page you're looking for does not exist.",
-            "color": "#000000",
             "size": "md"
           },
           "disabled": null
@@ -28,8 +26,6 @@
             "text": "Go to Homepage",
             "url": "booqable://root/",
             "use_solid_button": true,
-            "label_color": "#0c2747",
-            "background_color": "#ffffff",
             "size": "md"
           },
           "disabled": null

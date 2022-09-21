@@ -29,7 +29,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-typo);
+  color: var(--color-heading);
 }
 
 .collection-page__title .skeleton {

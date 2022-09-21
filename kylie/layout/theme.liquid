@@ -17,6 +17,20 @@
   <script src="https://kit.fontawesome.com/ff3b3de2b5.js" crossorigin="anonymous"></script>
   {{ content_for_header }}
   <title>{% if page_title -%}{{ page_title }}{%- else -%}{{ shop.name }}{%- endif %}</title>
+  <style>
+    :root {
+      --color-primary: {{ settings.primary_color }};
+      --color-background-primary: {{ settings.background_primary_color }};
+      --color-background-secondary: {{ settings.background_secondary_color }};
+      --color-accent: {{ settings.accent_color }};
+      --color-accent-label: {{ settings.accent_label_color }};
+      --color-heading: {{ settings.heading_color }};
+      --color-body: {{ settings.body_color }};
+      --color-body-alternative: {{ settings.body_alternative_color }};
+      --color-border: {{ settings.border_color }};
+      --color-placeholder: {{ settings.placeholder_color }}
+    }
+  </style>
 </head>
 <body>
 

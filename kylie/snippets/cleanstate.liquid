@@ -2,7 +2,8 @@
 
 <style>
   .cleanstate-{{ section.key }} .bq-button {
-    background-color: {{ settings.primary_color }};
+    background-color: var(--color-accent);
+    color: var(--color-accent-label);
 
     {% if section.settings.button_background %}
       background-color: {{ section.settings.button_background }};
