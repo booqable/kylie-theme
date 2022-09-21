@@ -105,6 +105,19 @@
 .product-info
   .booqable-component
   .booqable-product-button-wrapper
+  .bq-variation,
+.product-info
+  .booqable-component
+  .booqable-product-button-wrapper
+  .bq-quantity {
+  background-color: var(--color-background-secondary) !important;
+  color: var(--color-body) !important;
+  border: 1px solid var(--color-border) !important;
+}
+
+.product-info
+  .booqable-component
+  .booqable-product-button-wrapper
   span.bq-status.bq-unavailable {
   background-color: var(--color-red) !important;
 }

@@ -76,7 +76,7 @@
         "id": "placeholder_color",
         "label": "Placeholder",
         "info": "Color used for products and collections without images",
-        "default": "#F3F8FD"
+        "default": "#D8DCE0"
       }
     ]
   },
