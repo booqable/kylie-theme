@@ -9,11 +9,13 @@
       {% for collection in collections %}
         <a href="{{ collection.url }}">
           <div class="collection">
-            <img
-              data-src="{{ collection.image.url | image_url }}"
-              class="collection__image lazyload"
-              alt="{{ collection.name }} collection image"
-            >
+            {% if collection.image.url != blank %}
+              <img
+                data-src="{{ collection.image.url | image_url }}"
+                class="collection__image lazyload"
+                alt="{{ collection.name }} collection image"
+              >
+            {% endif %}
             <h3 class="collection__name">{{ collection.name }}</h3>
           </div>
         </a>
