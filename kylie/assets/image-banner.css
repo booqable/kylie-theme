@@ -126,6 +126,8 @@
 
   position: relative;
 
+  white-space: pre;
+
   z-index: 1;
 }
 

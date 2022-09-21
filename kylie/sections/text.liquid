@@ -4,10 +4,11 @@
     color: {{ section.settings.color }};
     font-weight: {{ section.settings.weight }};
     text-align: {{ section.settings.align }};
+    white-space: pre;
   }
 </style>
 
-<{{ section.settings.tag}} class="text-{{ section.key }}">
+<{{ section.settings.tag }} class="text-{{ section.key }}">
   {{ section.settings.text }}
 </{{ section.settings.tag }}>
 
