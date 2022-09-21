@@ -91,6 +91,8 @@ const initCarousels = () => {
   document.querySelectorAll(".carousel").forEach((carousel) => {
     const inner = carousel.querySelector(".carousel__inner");
 
+    inner.addEventListener('scroll', handleWindowResize)
+
     const prev = carousel.querySelector(".carousel__control.prev");
     const next = carousel.querySelector(".carousel__control.next");
 
