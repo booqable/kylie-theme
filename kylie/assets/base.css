@@ -8,6 +8,7 @@
   --color-red: #f85454;
   --color-backdrop: #0c2747b3;
   /* Fonts */
+  --font-heading: "Source Sans Pro", sans-serif;
   --font-body: "Source Sans Pro", sans-serif;
   /* Font weights */
   --font-weight-regular: 400;
@@ -27,14 +28,15 @@
 *:not(i),
 *:not(i)::before,
 *:not(i)::after {
-  font-family: var(--font-body) !important;
+  font-family: var(--font-body);
 }
 
 body {
   background-color: var(--color-background-primary);
 }
 
-h1, h2, h3, h4, h5, h6 {
+* h1, * h2, * h3, * h4, * h5, * h6 {
+  font-family: var(--font-heading);
   color: var(--color-heading);
 }
 

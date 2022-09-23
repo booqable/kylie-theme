@@ -17,6 +17,7 @@
   font-weight: var(--font-weight-semibold);
 
   color: var(--color-heading);
+  font-family: var(--font-heading);
 
   margin-bottom: 8px;
 }
@@ -74,6 +75,7 @@
   font-weight: var(--font-weight-semibold);
 
   color: var(--color-heading);
+  font-family: var(--font-heading);
 
   margin: 0;
 }

@@ -46,6 +46,7 @@
   margin-bottom: 4px;
 
   color: var(--color-heading);
+  font-family: var(--font-heading);
 }
 
 .product bq-product-availability {
@@ -95,6 +96,7 @@
   font-weight: var(--font-weight-bold);
 
   color: var(--color-heading);
+  font-family: var(--font-heading);
 
   margin: 0;
 }

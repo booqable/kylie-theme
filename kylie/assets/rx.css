@@ -1,0 +1,287 @@
+.rx-content ul {
+  list-style: disc;
+}
+
+.rx-content ol {
+  list-style: decimal;
+}
+
+.rx-content {
+  font-family: "proxima-nova", "Roboto", sans-serif, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5; }
+  .rx-content h1 + *, .rx-content h2 + *, .rx-content h3 + *, .rx-content h4 + *, .rx-content h5 + *, .rx-content h6 + * {
+    margin-top: 12px; }
+  .rx-content p + h2, .rx-content ul + h2, .rx-content ol + h2, .rx-content blockquote + h2, .rx-content figure + h2, .rx-content pre + h2, .rx-content table + h2, .rx-content dl + h2, .rx-content address + h2 {
+    margin-top: 24px; }
+  .rx-content p + h3, .rx-content ul + h3, .rx-content ol + h3, .rx-content blockquote + h3, .rx-content figure + h3, .rx-content pre + h3, .rx-content table + h3, .rx-content dl + h3, .rx-content address + h3 {
+    margin-top: 24px; }
+  .rx-content p + h4, .rx-content ul + h4, .rx-content ol + h4, .rx-content blockquote + h4, .rx-content figure + h4, .rx-content pre + h4, .rx-content table + h4, .rx-content dl + h4, .rx-content address + h4 {
+    margin-top: 24px; }
+  .rx-content p + h5, .rx-content ul + h5, .rx-content ol + h5, .rx-content blockquote + h5, .rx-content figure + h5, .rx-content pre + h5, .rx-content table + h5, .rx-content dl + h5, .rx-content address + h5 {
+    margin-top: 24px; }
+  .rx-content p + h6, .rx-content ul + h6, .rx-content ol + h6, .rx-content blockquote + h6, .rx-content figure + h6, .rx-content pre + h6, .rx-content table + h6, .rx-content dl + h6, .rx-content address + h6 {
+    margin-top: 24px; }
+  .rx-content p + *, .rx-content ul + *, .rx-content ol + *, .rx-content blockquote + *, .rx-content figure + *, .rx-content pre + *, .rx-content table + *, .rx-content dl + *, .rx-content address + * {
+    margin-top: 16px; }
+  .rx-content div + * {
+    margin-top: 24px; }
+  .rx-content h1 + h2 {
+    margin-top: 24px; }
+  .rx-content h2 + h3 {
+    margin-top: 24px; }
+  .rx-content h3 + h4 {
+    margin-top: 24px; }
+  .rx-content h4 + h5 {
+    margin-top: 24px; }
+  .rx-content h5 + h6 {
+    margin-top: 24px; }
+  .rx-content a,
+  .rx-content a:hover,
+  .rx-content a:focus {
+    color: #2b80ff; }
+  .rx-content p {
+    font-size: 16px;
+    line-height: 1.5; }
+  .rx-content h1,
+  .rx-content h2,
+  .rx-content h3,
+  .rx-content h4,
+  .rx-content h5,
+  .rx-content h6 {
+    font-family: inherit;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000B1D;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.01em; }
+    .rx-content h1 a,
+    .rx-content h1 a:focus,
+    .rx-content h1 a:hover,
+    .rx-content h2 a,
+    .rx-content h2 a:focus,
+    .rx-content h2 a:hover,
+    .rx-content h3 a,
+    .rx-content h3 a:focus,
+    .rx-content h3 a:hover,
+    .rx-content h4 a,
+    .rx-content h4 a:focus,
+    .rx-content h4 a:hover,
+    .rx-content h5 a,
+    .rx-content h5 a:focus,
+    .rx-content h5 a:hover,
+    .rx-content h6 a,
+    .rx-content h6 a:focus,
+    .rx-content h6 a:hover {
+      color: inherit;
+      text-decoration: none; }
+  .rx-content h1 {
+    font-size: 40px;
+    line-height: 1.2; }
+  .rx-content h2 {
+    font-size: 24px;
+    line-height: 1.3; }
+  .rx-content h3 {
+    font-size: 21px;
+    line-height: 1.5; }
+  .rx-content ul,
+  .rx-content ol {
+    margin-left: 26px; }
+  .rx-content li {
+    font-size: 16px;
+    line-height: 1.5; }
+  .rx-content li li {
+    font-size: 1em; }
+  .rx-content dt, .rx-content dd {
+    font-size: 16px;
+    line-height: 1.5; }
+  .rx-content dt {
+    font-weight: bold; }
+  .rx-content dd + dt {
+    margin-top: 0.25em; }
+  .rx-content pre {
+    overflow: auto;
+    white-space: pre;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 90%;
+    line-height: 1.5;
+    color: #262F3F;
+    background-color: #F5F5F6;
+    padding: 1em; }
+  .rx-content pre code {
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: 100%;
+    display: block;
+    line-height: inherit; }
+  .rx-content blockquote {
+    color: #262F3F;
+    font-style: italic;
+    font-weight: normal;
+    padding: 0;
+    background: transparent; }
+    .rx-content blockquote p {
+      color: #262F3F;
+      font-size: 125%;
+      line-height: 1.5; }
+    .rx-content blockquote p + p {
+      margin-top: 4px; }
+  .rx-content blockquote cite,
+  .rx-content figcaption cite {
+    font-style: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(38, 47, 63, 0.7); }
+  .rx-content caption {
+    text-align: left;
+    font-style: normal; }
+  .rx-content table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    empty-cells: show; }
+  .rx-content td,
+  .rx-content th {
+    text-align: left;
+    vertical-align: top;
+    font-size: 95%;
+    line-height: 1.5;
+    padding: 0.75em;
+    border: 1px solid rgba(217, 219, 221, 0.5); }
+  .rx-content th {
+    font-weight: normal; }
+  .rx-content thead th {
+    font-weight: bold; }
+  .rx-content address {
+    font-style: normal; }
+  .rx-content dfn,
+  .rx-content abbr {
+    font-size: 95%; }
+  .rx-content time,
+  .rx-content cite,
+  .rx-content small,
+  .rx-content var,
+  .rx-content samp,
+  .rx-content kbd,
+  .rx-content code {
+    font-size: 85%; }
+  .rx-content sup,
+  .rx-content sub {
+    font-size: 65%; }
+  .rx-content var,
+  .rx-content code,
+  .rx-content kbd,
+  .rx-content samp {
+    display: inline-block;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-style: normal;
+    line-height: 1;
+    color: rgba(0, 11, 29, 0.85);
+    vertical-align: baseline; }
+  .rx-content samp,
+  .rx-content kbd,
+  .rx-content code {
+    border-radius: 2px; }
+  .rx-content kbd {
+    border: 1px solid rgba(0, 11, 29, 0.15);
+    padding: .2em .4em; }
+  .rx-content code {
+    position: relative;
+    top: -1px;
+    border: 1px solid transparent;
+    background-color: #F5F5F6;
+    padding: .2em .4em .2em; }
+  .rx-content mark {
+    background-color: yellow;
+    color: black; }
+  .rx-content b,
+  .rx-content strong {
+    font-weight: 600; }
+  .rx-content dfn[title],
+  .rx-content abbr[title] {
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
+    cursor: help; }
+  .rx-content cite {
+    font-style: italic; }
+  .rx-content sub,
+  .rx-content sup {
+    line-height: 1;
+    margin-left: 2px; }
+  .rx-content sub {
+    vertical-align: sub; }
+  .rx-content sup {
+    vertical-align: super; }
+  .rx-content figure > img,
+  .rx-content figure > iframe,
+  .rx-content figure > pre,
+  .rx-content figure > div {
+    vertical-align: middle; }
+  .rx-content figure figcaption {
+    display: block;
+    font-style: normal;
+    margin-top: 0.25em;
+    font-size: 12px;
+    line-height: 1.5; }
+  .rx-content .embed-responsive {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0; }
+    .rx-content .embed-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+  .rx-content hr {
+    position: relative;
+    line-height: 1;
+    background: none;
+    border: none;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    height: 10px; }
+    .rx-content hr:before {
+      content: '';
+      position: absolute;
+      top: 50%; }
+    .rx-content hr:before {
+      width: 100%;
+      max-width: 100%;
+      margin-top: -0.5px;
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: rgba(217, 219, 221, 0.6); }
+  .rx-content .align-right {
+    text-align: right; }
+  .rx-content .align-center {
+    text-align: center; }
+  .rx-content .align-justify {
+    text-align: justify; }
+  .rx-content div.align-center img,
+  .rx-content p.align-center img,
+  .rx-content figure.align-center img {
+    max-width: 80%; }
+  .rx-content div.align-center figcaption,
+  .rx-content p.align-center figcaption,
+  .rx-content figure.align-center figcaption {
+    text-align: center; }
+  .rx-content .float-left {
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    max-width: 200px; }
+  .rx-content .float-right {
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    max-width: 200px; }

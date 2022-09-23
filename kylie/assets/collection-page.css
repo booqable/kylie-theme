@@ -30,6 +30,7 @@
   font-weight: var(--font-weight-semibold);
 
   color: var(--color-heading);
+  font-family: var(--font-heading);
 }
 
 .collection-page__title .skeleton {

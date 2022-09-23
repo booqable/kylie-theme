@@ -53,7 +53,7 @@ const handleHeaderLayout = () => {
   const contentContainer = document.querySelector("#main");
 
   if (headerHeight > 0) {
-    contentContainer.style.marginTop = (headerHeight + 20) + "px";
+    contentContainer.style.marginTop = headerHeight + "px";
   }
 };
 

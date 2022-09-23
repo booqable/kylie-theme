@@ -11,6 +11,7 @@
   font-weight: var(--font-weight-semibold);
 
   color: var(--color-heading);
+  font-weight: var(--font-heading);
 
   margin-bottom: 8px;
 }
