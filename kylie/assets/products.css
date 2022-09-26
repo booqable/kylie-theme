@@ -52,6 +52,10 @@
     padding: 0 var(--horizontal-padding);
   }
 
+  .products .carousel__inner {
+    padding: 0;
+  }
+
   .products__title {
     padding: 0;
   }
