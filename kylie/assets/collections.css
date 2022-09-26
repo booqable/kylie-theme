@@ -12,8 +12,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-heading);
-  font-family: var(--font-heading);
+  color: var(--color-primary-foreground);
 
   margin-bottom: 16px;
 }
@@ -26,8 +25,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-heading);
-  font-family: var(--font-heading);
+  color: var(--color-primary-foreground);
 
   text-decoration: none;
 

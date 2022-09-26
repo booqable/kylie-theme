@@ -34,7 +34,7 @@
 .sidebar-navigation {
   position: relative;
 
-  background-color: var(--color-background-primary);
+  background-color: var(--color-primary-background);
 }
 
 .sidebar-navigation--sticky {
@@ -66,7 +66,7 @@
 .sidebar-navigation__close i {
   font-size: 16px;
 
-  color: var(--color-body);
+  color: var(--color-primary-foreground);
 }
 
 .sidebar-navigation__title {
@@ -75,8 +75,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-heading);
-  font-family: var(--font-heading);
+  color: var(--color-primary-foreground);
 }
 
 .sidebar-navigation-menu__title {
@@ -87,8 +86,7 @@
 
   margin-bottom: 12px;
 
-  color: var(--color-heading);
-  font-family: var(--font-heading);
+  color: var(--color-primary-foreground);
 }
 
 .sidebar-navigation-menu:not(:first-child) {
@@ -110,7 +108,7 @@
 }
 
 .sidebar-navigation .list-submenu__container {
-  background-color: var(--color-background-primary);
+  background-color: var(--color-primary-background);
 }
 
 .sidebar-navigation .list-menu .list-menu__item-caret {
@@ -129,13 +127,13 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-body);
+  color: var(--color-primary-foreground);
 
   text-decoration: none;
 }
 
 .sidebar-navigation-menu__link--current {
-  color: var(--color-accent);
+  color: var(--color-accent-background);
 }
 
 .sidebar-navigation-menu__link--current i {
@@ -206,7 +204,7 @@
     cursor: pointer;
 
     font-weight: var(--font-weight-bold);
-    color: var(--color-body);
+    color: var(--color-primary-foreground);
   }
 
   .sidebar-navigation {
@@ -241,7 +239,7 @@
 
     height: calc(100vh - 30px);
 
-    background-color: var(--color-background-secondary);
+    background-color: var(--color-white);
 
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;

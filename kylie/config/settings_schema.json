@@ -10,73 +10,44 @@
     "settings": [
       {
         "type": "color",
-        "id": "primary_color",
-        "label": "Primary",
-        "info": "Primary color of the theme used for embeddable components",
+        "id": "accent_background_color",
+        "label": "Accent background color",
+        "info": "Background for solid buttons, date picker, and shopping cart",
         "default": "#395DB8"
       },
       {
         "type": "color",
-        "id": "background_primary_color",
-        "label": "Background primary",
-        "info": "Background color of the pages",
+        "id": "accent_foreground_color",
+        "label": "Accent foreground color",
+        "info": "For text used on top of accent background color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "color",
+        "id": "primary_background_color",
+        "label": "Primary background color",
+        "info": "Primary background color for your store",
         "default": "#FFFFFF"
       },
       {
         "type": "color",
-        "id": "background_secondary_color",
-        "label": "Background secondary",
-        "info": "Background color of the header",
-        "default": "#FFFFFF"
+        "id": "primary_foreground_color",
+        "label": "Primary foreground color",
+        "info": "For text used on top of primary background color",
+        "default": "#0C2747"
+      },
+      {
+        "type": "divider"
       },
       {
         "type": "color",
-        "id": "accent_color",
-        "label": "Accent",
-        "info": "Accent color for solid button background",
+        "id": "link_color",
+        "label": "Link color",
+        "info": "Used for text links and non-solid buttons",
         "default": "#395DB8"
-      },
-      {
-        "type": "color",
-        "id": "accent_label_color",
-        "label": "Accent label",
-        "info": "Accent color for solid button label",
-        "default": "#FFFFFF"
-      },
-      {
-        "type": "color",
-        "id": "heading_color",
-        "label": "Heading",
-        "info": "Color used for headers",
-        "default": "#0C2747"
-      },
-      {
-        "type": "color",
-        "id": "body_color",
-        "label": "Body",
-        "info": "Color used for texts",
-        "default": "#0C2747"
-      },
-      {
-        "type": "color",
-        "id": "body_alternative_color",
-        "label": "Body alternative",
-        "info": "Color used for palceholder and secondary texts",
-        "default": "#687687"
-      },
-      {
-        "type": "color",
-        "id": "border_color",
-        "label": "Border",
-        "info": "Color used for borders",
-        "default": "#DDE1E3"
-      },
-      {
-        "type": "color",
-        "id": "placeholder_color",
-        "label": "Placeholder",
-        "info": "Color used for products and collections without images",
-        "default": "#D8DCE0"
       }
     ]
   },

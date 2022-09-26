@@ -65,7 +65,7 @@
 
   grid-template-columns: repeat(2, 1fr);
 
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-white);
 
   padding: 8px 0;
 
@@ -115,8 +115,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-heading);
-  font-family: var(--font-heading);
+  color: var(--color-primary-foreground);
 
   margin: 0;
 }
@@ -137,7 +136,7 @@
 
   font-weight: var(--font-weight-regular);
 
-  color: var(--color-body);
+  color: var(--color-primary-foreground);
 
   margin: 0;
 }
@@ -156,7 +155,7 @@
 
   font-weight: var(--font-weight-regular);
 
-  color: var(--color-body-alternative);
+  color: var(--color-primary-foreground-alternative);
 
   margin: 0;
 }
@@ -167,7 +166,7 @@
 
     grid-template-columns: repeat(2, 1fr);
 
-    background-color: var(--color-background-secondary);
+    background-color: var(--color-white);
 
     box-shadow: 0 1px 2px rgba(33, 59, 71, 0.12),
       0 4px 12px rgba(33, 59, 71, 0.12);

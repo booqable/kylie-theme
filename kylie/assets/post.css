@@ -21,8 +21,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-heading);
-  font-family: var(--font-heading);
+  color: var(--color-primary-foreground);
 
   margin-bottom: 8px;
 }
@@ -31,7 +30,7 @@
   font-size: 16px;
   line-height: 24px;
 
-  color: var(--color-body);
+  color: var(--color-primary-foreground);
 
   margin-bottom: 16px;
 }

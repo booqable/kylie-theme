@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
 
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-white);
   z-index: 1000;
 }
 
@@ -23,7 +23,7 @@
   margin: 0 auto;
   padding: 12px var(--horizontal-padding);
 
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-white);
 }
 
 .header__wrapper--with-menu {
@@ -37,8 +37,7 @@
 .header__link {
   text-decoration: none;
 
-  color: var(--color-heading);
-  font-family: var(--font-heading);
+  color: var(--color-primary-foreground);
 }
 
 .header__text-logo {
@@ -61,8 +60,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-heading);
-  font-family: var(--font-heading);
+  color: var(--color-primary-foreground);
 
   text-decoration: none;
 }
@@ -102,7 +100,7 @@
 }
 
 .header__nav .list-submenu__container {
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-white);
 }
 
 .header__nav--mobile .list-menu .list-menu__item-caret {
@@ -161,9 +159,9 @@
   font-size: 16px;
   line-height: 24px;
 
-  color: var(--color-body);
+  color: var(--color-primary-foreground);
 
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-white);
 
   min-width: 230px;
   width: 100%;
@@ -172,11 +170,11 @@
 .header-search__input:focus {
   outline: none;
 
-  border-color: var(--color-accent);
+  border-color: var(--color-accent-background);
 }
 
 .header-search__input::placeholder {
-  color: var(--color-body-alternative);
+  color: var(--color-primary-foreground-alternative);
 }
 
 .header-search__icon {
@@ -185,7 +183,7 @@
   width: 16px;
   height: 16px;
 
-  color: var(--color-body);
+  color: var(--color-primary-foreground);
 }
 
 .header-search__wrapper .header-search__icon.close {
@@ -211,7 +209,7 @@
 }
 
 .header-cart .bq-icon-cart::before {
-  color: var(--color-body);
+  color: var(--color-primary-foreground);
 
   font-weight: 300;
 }
@@ -245,7 +243,7 @@
 
   height: 100vh;
 
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-white);
 }
 
 .bq-cart {
@@ -307,7 +305,7 @@
     left: 0;
     right: 0;
 
-    background-color: var(--color-background-secondary);
+    background-color: var(--color-white);
 
     opacity: 0;
     transform: scale(0.92);

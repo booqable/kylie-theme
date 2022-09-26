@@ -25,7 +25,7 @@
 .pagination span a {
   display: inline-block;
 
-  color: var(--color-body);
+  color: var(--color-primary-foreground);
 
   padding: 10px 15px;
 
@@ -43,10 +43,10 @@
 .pagination .current {
   position: relative;
 
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
+  background-color: var(--color-accent-background);
+  border-color: var(--color-accent-background);
 
-  color: var(--color-accent-label);
+  color: var(--color-accent-foreground);
 
   z-index: 1;
 }

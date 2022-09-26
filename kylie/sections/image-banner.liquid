@@ -50,7 +50,7 @@
     {% case block.type %}
       {% when "heading" %}
         .image-banner-{{ section.key }} .image-banner__title {
-          color: var(--color-heading);
+          color: var(--color-primary-foreground);
 
           {% if block.settings.color != blank %}
             color: {{ block.settings.color }};
@@ -58,7 +58,7 @@
         }
       {% when "text" %}
         .image-banner-{{ section.key }} .image-banner__text {
-          color: var(--color-body);
+          color: var(--color-primary-foreground);
 
           {% if block.settings.color != blank %}
             color: {{ block.settings.color }};
@@ -66,11 +66,11 @@
         }
       {% when "button" %}
         .image-banner-{{ section.key }} .bq-button {
-          color: var(--color-body);
+          color: var(--color-primary-foreground);
 
           {% if block.settings.use_solid_button %}
-            background-color: var(--color-accent);
-            color: var(--color-accent-label);
+            background-color: var(--color-accent-background);
+            color: var(--color-accent-foreground);
           {% endif %}
 
           {% if block.settings.use_solid_button and block.settings.background_color != blank %}

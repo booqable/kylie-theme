@@ -10,8 +10,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-heading);
-  font-weight: var(--font-heading);
+  color: var(--color-primary-foreground);
 
   margin-bottom: 8px;
 }
@@ -22,7 +21,7 @@
 
   font-weight: var(--font-weight-regular);
 
-  color: var(--color-body);
+  color: var(--color-primary-foreground);
 
   margin-bottom: 32px;
 
