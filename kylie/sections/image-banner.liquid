@@ -49,7 +49,7 @@
   {% for block in section.blocks %}
     {% case block.type %}
       {% when "heading" %}
-        .image-banner-{{ section.key }} .image-banner__title {
+        .image-banner-{{ section.key }} #{{ block.id }}{
           color: var(--color-primary-foreground);
 
           {% if block.settings.color != blank %}
@@ -57,7 +57,7 @@
           {% endif %}
         }
       {% when "text" %}
-        .image-banner-{{ section.key }} .image-banner__text {
+        .image-banner-{{ section.key }} #{{ block.id }} {
           color: var(--color-primary-foreground);
 
           {% if block.settings.color != blank %}
@@ -65,7 +65,7 @@
           {% endif %}
         }
       {% when "button" %}
-        .image-banner-{{ section.key }} .bq-button {
+        .image-banner-{{ section.key }} #{{ block.id }} {
           color: var(--color-primary-foreground);
 
           {% if block.settings.use_solid_button %}
