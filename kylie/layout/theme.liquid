@@ -17,10 +17,10 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
   {% endif %}
   {% if settings.heading_font != blank %}
-    <link rel="stylesheet" href="{{ settings.heading_font }}">
+    {{ settings.heading_font | font_link }}
   {% endif %}
   {% if settings.body_font != blank %}
-    <link rel="stylesheet" href="{{ settings.body_font }}">
+    {{ settings.body_font | font_link }}
   {% endif %}
   {% comment %} Color palette related styles {% endcomment %}
   <style>
@@ -35,10 +35,10 @@
       --color-border: {{ settings.primary_foreground_color | append: "66" }};
 
       {% if settings.heading_font != blank %}
-        --font-heading: {{ settings.heading_font | font_name }};
+        --font-heading: {{ settings.heading_font.family }}, {{ settings.heading_font.fallback_families }};
       {% endif %}
       {% if settings.body_font != blank %}
-        --font-body: {{ settings.body_font | font_name }};
+        --font-body: {{ settings.body_font.family }}, {{ settings.body_font.fallback_families }};
       {% endif %}
     }
   </style>
