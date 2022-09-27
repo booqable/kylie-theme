@@ -10,7 +10,7 @@
     "settings": [
       {
         "type": "color",
-        "id": "accent_background_color",
+        "id": "primary_color",
         "label": "Accent background color",
         "info": "Background for solid buttons, date picker, and shopping cart",
         "default": "#395DB8"

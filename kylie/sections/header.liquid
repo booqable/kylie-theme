@@ -1,6 +1,29 @@
 {{ "header.css" | asset_url | stylesheet_tag }}
 {{ "list-menu.css" | asset_url | stylesheet_tag }}
 
+<style>
+  {% if section.settings.background_color != blank %}
+    .header,
+    .header__wrapper,
+    .header__nav .list-submenu__container,
+    .header-search__input,
+    .header-floating-menu__wrapper,
+    .header-search__wrapper {
+      background-color: {{ section.settings.background_color }};
+    }
+  {% endif %}
+
+  {% if section.settings.foreground_color != blank %}
+  .header__link,
+  .header__nav-item,
+  .header-search__input,
+  .header-search__icon,
+  .header-cart .bq-icon-cart::before {
+    color: {{ section.settings.foreground_color }};
+  }
+  {% endif %}
+</style>
+
 <div class="header__wrapper {% if section.settings.menu != blank %}header__wrapper--with-menu{% endif %}">
   <div class="header__link-container">
     <a href="{{ routes.root_url }}" class="header__link">
@@ -149,6 +172,10 @@
   "templates": [],
   "settings": [
     {
+      "type": "header",
+      "content": "Content"
+    },
+    {
       "type": "image_picker",
       "id": "logo",
       "label": "Logo"
@@ -163,6 +190,22 @@
       "type": "menu",
       "id": "menu",
       "label": "Menu"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "placeholder": "Default"
+    },
+    {
+      "type": "color",
+      "id": "foreground_color",
+      "label": "Foreground color",
+      "placeholder": "Default"
     }
   ]
 }

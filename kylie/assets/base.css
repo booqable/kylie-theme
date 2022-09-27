@@ -7,6 +7,7 @@
   --color-green: #8fcc40;
   --color-red: #f85454;
   --color-backdrop: #0c2747b3;
+  --color-typo: #0c2747;
   /* Fonts */
   --font-heading: "Source Sans Pro", sans-serif;
   --font-body: "Source Sans Pro", sans-serif;
@@ -36,12 +37,16 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+  font-family: var(--font-heading) !important;
   color: var(--color-primary-foreground);
 }
 
 p {
   color: var(--color-primary-foreground);
+}
+
+input {
+  font-family: sans-serif;
 }
 
 .bq-button {

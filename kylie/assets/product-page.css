@@ -60,7 +60,9 @@
   font-size: 14px;
   line-height: 20px;
 
-  color: var(--color-primary-foreground-alternative);
+  font-family: var(--font-body);
+
+  color: var(--color-placeholder);
 }
 
 .product-info
@@ -71,7 +73,7 @@
   font-size: 24px;
   line-height: 32px;
 
-  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-body);
 
   color: var(--color-primary-foreground);
 
@@ -81,14 +83,19 @@
 .product-info
   .booqable-component
   .booqable-product-button-wrapper
-  span.bq-status {
+  span.bq-status,
+.product-info
+  .booqable-component
+  .booqable-product-button-wrapper
+  span.bq-status
+  span {
   display: inline-flex;
   align-items: center;
 
   font-size: 14px;
   line-height: 20px;
 
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-body);
 
   padding: 2px 12px;
 
@@ -99,7 +106,15 @@
   .booqable-component
   .booqable-product-button-wrapper
   span.bq-status.bq-available {
-  background-color: var(--color-green) !important;
+  background-color: var(--color-green);
+}
+
+.product-info
+  .booqable-component
+  .booqable-product-button-wrapper
+  .bq-button
+  span {
+  font-family: var(--font-body);
 }
 
 .product-info
@@ -110,16 +125,16 @@
   .booqable-component
   .booqable-product-button-wrapper
   .bq-quantity {
-  background-color: var(--color-white) !important;
-  color: var(--color-primary-foreground) !important;
-  border: 1px solid var(--color-border) !important;
+  background-color: var(--color-white);
+  color: var(--color-typo);
+  border: 1px solid var(--color-border);
 }
 
 .product-info
   .booqable-component
   .booqable-product-button-wrapper
   span.bq-status.bq-unavailable {
-  background-color: var(--color-red) !important;
+  background-color: var(--color-red);
 }
 
 .product-info
@@ -134,7 +149,9 @@
   .booqable-component
   .booqable-product-button-wrapper
   [class*="AvailabilityLink"] {
-  color: var(--color-primary-foreground) !important;
+  color: var(--color-primary-foreground);
+
+  font-family: var(--font-body);
 }
 
 .product-info .booqable-component .booqable-product-button-wrapper .bq-button {
