@@ -222,6 +222,10 @@
   align-items: center;
 }
 
+.bq-cart-button__line-count {
+  color: var(--color-accent-foreground) !important;
+}
+
 .header-cart .booqable-cart-button:not(:empty) + i {
   display: none;
 }

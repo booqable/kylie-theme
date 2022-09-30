@@ -72,7 +72,9 @@
 .pagination .deco,
 .pagination .current {
   padding: 10px 15px;
+}
 
+.pagination .deco {
   color: var(--color-primary-foreground)
 }
 

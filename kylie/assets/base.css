@@ -33,7 +33,12 @@ body {
   background-color: var(--color-primary-background);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading) !important;
   color: var(--color-primary-foreground);
 }
@@ -46,7 +51,10 @@ input {
   font-family: sans-serif;
 }
 
-.bq-sidebar-head *, .bq-branded.bq-title, .bq-poweredby-container .button-group * {
+.bq-sidebar-head *,
+.bq-branded.bq-title,
+.bq-poweredby-container .button-group *,
+.bq-selected-dates .bq-branded {
   color: var(--color-accent-foreground) !important;
 }
 

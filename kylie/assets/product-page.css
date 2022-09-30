@@ -83,11 +83,7 @@
 .product-info
   .booqable-component
   .booqable-product-button-wrapper
-  span.bq-status,
-.product-info
-  .booqable-component
-  .booqable-product-button-wrapper
-  span.bq-status
+  .bq-status
   span {
   display: inline-flex;
   align-items: center;
@@ -98,8 +94,6 @@
   font-family: var(--font-body);
 
   padding: 2px 12px;
-
-  color: var(--color-primary-foreground);
 }
 
 .product-info
