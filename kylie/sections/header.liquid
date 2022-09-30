@@ -14,13 +14,30 @@
   {% endif %}
 
   {% if section.settings.foreground_color != blank %}
-  .header__link,
-  .header__nav-item,
-  .header-search__input,
-  .header-search__icon,
-  .header-cart .bq-icon-cart::before {
-    color: {{ section.settings.foreground_color }};
-  }
+    .header__text-logo,
+    .header__nav-item,
+    .header-search__input,
+    .header-search__icon,
+    .header-cart .bq-icon-cart::before,
+    .header-floating-menu__icon {
+      color: {{ section.settings.foreground_color }};
+    }
+
+    .header-search__input {
+      border-color: {{ section.settings.foreground_color }};
+    }
+
+    .header-search__input::placeholder {
+      color: {{ section.settings.foreground_color | append: "B3"  }};
+    }
+
+    .header-search__input:focus {
+      border-color: {{ section.settings.foreground_color }};
+    }
+
+    .header__nav-item:hover {
+      text-decoration-color: {{ section.settings.foreground_color }};
+    }
   {% endif %}
 </style>
 

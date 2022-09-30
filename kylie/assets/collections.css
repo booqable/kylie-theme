@@ -34,6 +34,7 @@
 
 .collections__show-more:hover {
   text-decoration: underline;
+  text-decoration-color: var(--color-primary-foreground);
 }
 
 .collections__show-more i {

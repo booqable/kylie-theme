@@ -72,8 +72,10 @@
 .pagination .deco,
 .pagination .current {
   padding: 10px 15px;
+
+  color: var(--color-primary-foreground)
 }
 
 .pagination span[data-enabled="false"] a {
-  color: rgba(12, 39, 71, 0.4);
+  color: var(--color-placeholder);
 }

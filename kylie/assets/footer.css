@@ -61,6 +61,7 @@
 
 .footer__nav-item:hover {
   text-decoration: underline;
+  text-decoration-color: var(--color-primary-foreground);
 }
 
 .footer__bottom {

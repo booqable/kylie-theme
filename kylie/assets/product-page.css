@@ -62,7 +62,7 @@
 
   font-family: var(--font-body);
 
-  color: var(--color-placeholder);
+  color: var(--color-placeholder) !important;
 }
 
 .product-info
@@ -115,6 +115,8 @@
   .bq-button
   span {
   font-family: var(--font-body);
+
+  color: var(--color-accent-foreground);
 }
 
 .product-info

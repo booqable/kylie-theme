@@ -37,6 +37,7 @@
 
 .search .bq-product a:hover {
   text-decoration: underline;
+  text-decoration-color: var(--color-primary-foreground);
 }
 
 .search .bq-product__image {

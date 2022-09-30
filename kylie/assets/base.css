@@ -46,6 +46,10 @@ input {
   font-family: sans-serif;
 }
 
+.bq-sidebar-head *, .bq-branded.bq-title, .bq-poweredby-container .button-group * {
+  color: var(--color-accent-foreground) !important;
+}
+
 .bq-button {
   display: inline-block;
 
