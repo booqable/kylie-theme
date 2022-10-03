@@ -9,6 +9,7 @@
 
 .product a:hover {
   text-decoration: underline;
+  text-decoration-color: var(--color-primary-foreground);
 }
 
 .product .product__image-container {
@@ -25,7 +26,7 @@
 }
 
 .product .product__image-container:empty {
-  background-color: var(--color-grey);
+  background-color: var(--color-placeholder);
 }
 
 .product .product__image {
@@ -45,7 +46,7 @@
 
   margin-bottom: 4px;
 
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 }
 
 .product bq-product-availability {
@@ -81,7 +82,7 @@
   font-size: 16px;
   line-height: 24px;
 
-  color: var(--color-dark-grey);
+  color: var(--color-placeholder);
 
   margin: 0;
 }
@@ -94,7 +95,7 @@
 
   font-weight: var(--font-weight-bold);
 
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 
   margin: 0;
 }

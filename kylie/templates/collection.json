@@ -9,8 +9,7 @@
         "show_collection_name": true,
         "heading": "No products",
         "text": "Unfortunately, we couldn’t find any products in this collection.",
-        "button_label": "Browse all products",
-        "label_color": "#FFFFFF"
+        "button_label": "Browse all products"
       },
       "disabled": null
     },

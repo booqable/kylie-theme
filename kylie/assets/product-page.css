@@ -16,7 +16,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 
   margin-bottom: 8px;
 }
@@ -33,7 +33,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 
   margin-bottom: 4px;
 }
@@ -60,7 +60,9 @@
   font-size: 14px;
   line-height: 20px;
 
-  color: var(--color-dark-grey);
+  font-family: var(--font-body);
+
+  color: var(--color-placeholder) !important;
 }
 
 .product-info
@@ -71,9 +73,9 @@
   font-size: 24px;
   line-height: 32px;
 
-  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-body);
 
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 
   margin: 0;
 }
@@ -81,32 +83,54 @@
 .product-info
   .booqable-component
   .booqable-product-button-wrapper
-  span.bq-status {
+  .bq-status
+  span {
   display: inline-flex;
   align-items: center;
 
   font-size: 14px;
   line-height: 20px;
 
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-body);
 
   padding: 2px 12px;
-
-  color: var(--color-white);
 }
 
 .product-info
   .booqable-component
   .booqable-product-button-wrapper
   span.bq-status.bq-available {
-  background-color: var(--color-green) !important;
+  background-color: var(--color-green);
+}
+
+.product-info
+  .booqable-component
+  .booqable-product-button-wrapper
+  .bq-button
+  span {
+  font-family: var(--font-body);
+
+  color: var(--color-accent-foreground);
+}
+
+.product-info
+  .booqable-component
+  .booqable-product-button-wrapper
+  .bq-variation,
+.product-info
+  .booqable-component
+  .booqable-product-button-wrapper
+  .bq-quantity {
+  background-color: var(--color-white);
+  color: var(--color-typo);
+  border: 1px solid var(--color-border);
 }
 
 .product-info
   .booqable-component
   .booqable-product-button-wrapper
   span.bq-status.bq-unavailable {
-  background-color: var(--color-red) !important;
+  background-color: var(--color-red);
 }
 
 .product-info
@@ -115,6 +139,15 @@
   span.bq-status
   > span {
   margin-right: 3px;
+}
+
+.product-info
+  .booqable-component
+  .booqable-product-button-wrapper
+  [class*="AvailabilityLink"] {
+  color: var(--color-primary-foreground);
+
+  font-family: var(--font-body);
 }
 
 .product-info .booqable-component .booqable-product-button-wrapper .bq-button {
@@ -187,7 +220,7 @@
 .product-gallery__next i {
   font-size: 22px;
 
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 }
 
 .product-gallery__prev {
@@ -208,7 +241,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 
   margin-bottom: 8px;
 }
@@ -256,14 +289,16 @@
   justify-content: center;
   align-items: center;
 
+  background-color: var(--color-white);
+
+  border-radius: 8px;
+
   min-width: 100%;
   height: 100%;
 }
 
 .product-gallery__preview-item:empty {
-  background-color: var(--color-grey);
-
-  border-radius: 8px;
+  background-color: var(--color-placeholder);
 }
 
 .product-gallery__preview img {
@@ -291,8 +326,8 @@
 
   border-radius: 8px;
 
-  background-color: var(--color-grey);
-  border: 1px solid var(--color-grey);
+  background-color: var(--color-placeholder);
+  border: 1px solid var(--color-border);
 
   cursor: pointer;
 }
@@ -318,7 +353,7 @@
 
   .product-button {
     padding: 0 var(--horizontal-padding);
-  
+
     margin-bottom: 16px;
   }
 
@@ -356,8 +391,8 @@
     right: 0;
     bottom: 0;
 
-    border-top: 1px solid var(--color-grey);
-    background-color: var(--color-white);
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-background);
 
     padding: 16px;
   }

@@ -10,7 +10,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 
   margin-bottom: 8px;
 }
@@ -21,11 +21,11 @@
 
   font-weight: var(--font-weight-regular);
 
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 
   margin-bottom: 32px;
 
-  white-space: pre;
+  word-break: break-all;
 }
 
 @media (min-width: 576px) {

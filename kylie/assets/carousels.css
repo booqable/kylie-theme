@@ -87,7 +87,7 @@
 .carouse__control i {
   font-size: 24px;
 
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 }
 
 @media (min-width: 820px) {

@@ -9,10 +9,19 @@
 <style>
   {% for block in section.blocks %}
     .columns-{{ section.key }} #{{ block.id }} .bq-button {
-      color: {{ block.settings.label_color }};
+      color: var(--color-primary-foreground);
 
       {% if block.settings.use_solid_button %}
+        background-color: var(--color-accent-background);
+        color: var(--color-accent-foreground);
+      {% endif %}
+
+      {% if block.settings.use_solid_button and block.settings.background_color != blank %}
         background-color: {{ block.settings.background_color }};
+      {% endif %}
+
+      {% if block.settings.label_color != blank %}
+        color: {{ block.settings.label_color }};
       {% endif %}
     }
   {% endfor %}
@@ -30,7 +39,7 @@
             <h3 class="post__title">{{ block.settings.title }}</h3>
           {% endif %}
           {% if block.settings.text %}
-            <div class="post__text">{{ block.settings.text }}</div>
+            <div class="bq-content rx-content post__text">{{ block.settings.text }}</div>
           {% endif %}
           {% if block.settings.button_url %}
             <a class="bq-button bq-button--size-{{ block.settings.button_size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.button_url }}">
@@ -131,13 +140,13 @@
           "id": "background_color",
           "type": "color",
           "label": "Background color",
-          "default": "#ffffff"
+          "placeholder": "Default"
         },
         {
           "id": "label_color",
           "type": "color",
           "label": "Label color",
-          "default": "#0C2747"
+          "placeholder": "Default"
         },
         {
           "type": "select",

@@ -11,7 +11,7 @@
 
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 
   margin-bottom: 24px;
   padding: 0 var(--horizontal-padding);
@@ -50,6 +50,10 @@
 @media (min-width: 820px) {
   .products {
     padding: 0 var(--horizontal-padding);
+  }
+
+  .products .carousel__inner {
+    padding: 0;
   }
 
   .products__title {

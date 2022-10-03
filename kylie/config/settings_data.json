@@ -7,7 +7,9 @@
         "block_order": [],
         "settings": {
           "menu": "main-menu",
-          "logo": ""
+          "logo": "",
+          "background_color": "",
+          "foreground_color": ""
         },
         "disabled": null
       },

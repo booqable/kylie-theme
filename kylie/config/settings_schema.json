@@ -6,23 +6,73 @@
     "theme_author": "Booqable"
   },
   {
-    "name": "General",
+    "name": "Colors",
     "settings": [
-      {
-        "type": "header",
-        "content": "Colors"
-      },
       {
         "type": "color",
         "id": "primary_color",
-        "label": "Primary color",
-        "info": "Primary color of the theme used for embeddable components",
+        "label": "Accent background color",
+        "info": "Background for solid buttons, date picker, and shopping cart",
         "default": "#395DB8"
       },
       {
-        "type": "header",
-        "content": "Images"
+        "type": "color",
+        "id": "accent_foreground_color",
+        "label": "Accent foreground color",
+        "info": "For text used on top of accent background color",
+        "default": "#FFFFFF"
       },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "color",
+        "id": "primary_background_color",
+        "label": "Primary background color",
+        "info": "Primary background color for your store",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "primary_foreground_color",
+        "label": "Primary foreground color",
+        "info": "For text used on top of primary background color",
+        "default": "#0C2747"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "color",
+        "id": "link_color",
+        "label": "Link color",
+        "info": "Used for text links and non-solid buttons",
+        "default": "#395DB8"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Heading",
+        "info": "Font used for headers",
+        "default": "source-sans-pro"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_font",
+        "label": "Body",
+        "info": "Font used for texts",
+        "default": "source-sans-pro"
+      }
+    ]
+  },
+  {
+    "name": "Images",
+    "settings": [
       {
         "type": "checkbox",
         "id": "use_focal_images",

@@ -8,7 +8,6 @@
           "type": "heading",
           "settings": {
             "text": "How it works",
-            "color": "#FFFFFF",
             "size": "md"
           },
           "disabled": null
@@ -19,10 +18,10 @@
       ],
       "settings": {
         "fluid_width": false,
-        "overlay_enabled": false,
-        "overlay_color": "#000000",
+        "overlay_enabled": true,
+        "overlay_color": "#D9E3F0",
         "vertical_spacing": "sm",
-        "overlay_opacity": "10",
+        "overlay_opacity": "40",
         "content_align": "center",
         "background_image": "booqable://assets/background-abstract.jpeg"
       },
@@ -33,11 +32,7 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "text": "Question 1?",
-        "tag": "h2",
-        "color": "#0c2747",
-        "size": "24",
-        "weight": "600",
+        "text": "<h2>Question 1?</h2>",
         "align": "left"
       },
       "disabled": null
@@ -48,8 +43,7 @@
       "block_order": [],
       "settings": {
         "size": "md",
-        "use_hr": true,
-        "hr_color": "#F1F1F1"
+        "use_hr": true
       },
       "disabled": null
     },
@@ -58,11 +52,7 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquet, nulla ut gravida imperdiet, urna mi maximus quam, id auctor felis est in massa. Nulla vel tellus ac mauris interdum porttitor non nec leo. Fusce at lacus at risus placerat gravida at nec massa. Sed dapibus bibendum ante ac tincidunt. Nullam vel risus tortor. Duis dictum dapibus dui, sit amet accumsan metus venenatis in. Vestibulum vel lorem ac nisl condimentum mattis ac dapibus ligula. Cras mattis, lectus id condimentum sagittis, est tortor posuere sem, et posuere magna sapien in est. Duis tristique accumsan nulla, scelerisque dignissim leo facilisis eget. Aliquam urna eros, venenatis sed tincidunt ac, pulvinar nec leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris suscipit imperdiet lacus, eu lacinia purus fringilla et. Suspendisse potenti. Fusce urna lorem, tincidunt ut elementum vel, molestie ultrices justo.",
-        "tag": "p",
-        "color": "#0c2747",
-        "size": "16",
-        "weight": "400",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquet, nulla ut gravida imperdiet, urna mi maximus quam, id auctor felis est in massa. Nulla vel tellus ac mauris interdum porttitor non nec leo. Fusce at lacus at risus placerat gravida at nec massa. Sed dapibus bibendum ante ac tincidunt. Nullam vel risus tortor. Duis dictum dapibus dui, sit amet accumsan metus venenatis in. Vestibulum vel lorem ac nisl condimentum mattis ac dapibus ligula. Cras mattis, lectus id condimentum sagittis, est tortor posuere sem, et posuere magna sapien in est. Duis tristique accumsan nulla, scelerisque dignissim leo facilisis eget. Aliquam urna eros, venenatis sed tincidunt ac, pulvinar nec leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris suscipit imperdiet lacus, eu lacinia purus fringilla et. Suspendisse potenti. Fusce urna lorem, tincidunt ut elementum vel, molestie ultrices justo.</p>",
         "align": "left"
       },
       "disabled": null
@@ -72,11 +62,7 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "text": "Question 2?",
-        "tag": "h2",
-        "color": "#0c2747",
-        "size": "24",
-        "weight": "600",
+        "text": "<h2>Question 2?</h2>",
         "align": "left"
       },
       "disabled": null
@@ -86,11 +72,7 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquet, nulla ut gravida imperdiet, urna mi maximus quam, id auctor felis est in massa. Nulla vel tellus ac mauris interdum porttitor non nec leo. Fusce at lacus at risus placerat gravida at nec massa. Sed dapibus bibendum ante ac tincidunt. Nullam vel risus tortor. Duis dictum dapibus dui, sit amet accumsan metus venenatis in. Vestibulum vel lorem ac nisl condimentum mattis ac dapibus ligula. Cras mattis, lectus id condimentum sagittis, est tortor posuere sem, et posuere magna sapien in est. Duis tristique accumsan nulla, scelerisque dignissim leo facilisis eget. Aliquam urna eros, venenatis sed tincidunt ac, pulvinar nec leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris suscipit imperdiet lacus, eu lacinia purus fringilla et. Suspendisse potenti. Fusce urna lorem, tincidunt ut elementum vel, molestie ultrices justo.",
-        "tag": "p",
-        "color": "#0c2747",
-        "size": "16",
-        "weight": "400",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquet, nulla ut gravida imperdiet, urna mi maximus quam, id auctor felis est in massa. Nulla vel tellus ac mauris interdum porttitor non nec leo. Fusce at lacus at risus placerat gravida at nec massa. Sed dapibus bibendum ante ac tincidunt. Nullam vel risus tortor. Duis dictum dapibus dui, sit amet accumsan metus venenatis in. Vestibulum vel lorem ac nisl condimentum mattis ac dapibus ligula. Cras mattis, lectus id condimentum sagittis, est tortor posuere sem, et posuere magna sapien in est. Duis tristique accumsan nulla, scelerisque dignissim leo facilisis eget. Aliquam urna eros, venenatis sed tincidunt ac, pulvinar nec leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris suscipit imperdiet lacus, eu lacinia purus fringilla et. Suspendisse potenti. Fusce urna lorem, tincidunt ut elementum vel, molestie ultrices justo.</p>",
         "align": "left"
       },
       "disabled": null

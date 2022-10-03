@@ -4,19 +4,10 @@
   --horizontal-padding: 16px;
   /* Colors */
   --color-white: #ffffff;
-  --color-grey: #d8dce0;
-  --color-light-grey: #f3f8fd;
-  --color-dark-grey: #687687;
-  --color-border: #dde1e3;
-  --color-typo: #0c2747;
-  --color-blue: #395db8;
-  --color-blue-alt: #177ffc;
   --color-green: #8fcc40;
   --color-red: #f85454;
-  --color-shadow: #213b47;
-  --color-backdrop: rgba(12, 39, 71, 0.7);
-  /* Fonts */
-  --font-body: "Source Sans Pro", sans-serif;
+  --color-backdrop: #0c2747b3;
+  --color-typo: #0c2747;
   /* Font weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -35,7 +26,36 @@
 *:not(i),
 *:not(i)::before,
 *:not(i)::after {
-  font-family: var(--font-body) !important;
+  font-family: var(--font-body);
+}
+
+body {
+  background-color: var(--color-primary-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading) !important;
+  color: var(--color-primary-foreground);
+}
+
+p {
+  color: var(--color-primary-foreground);
+}
+
+input {
+  font-family: sans-serif;
+}
+
+.bq-sidebar-head *,
+.bq-branded.bq-title,
+.bq-poweredby-container .button-group *,
+.bq-selected-dates .bq-branded {
+  color: var(--color-accent-foreground) !important;
 }
 
 .bq-button {
@@ -90,7 +110,7 @@
 .divider .divider__inner {
   margin: 32px 0;
 
-  border-top: 1px solid var(--color-grey);
+  border-top: 1px solid var(--color-border);
 }
 
 .spacer {
@@ -103,6 +123,7 @@
 
 .spacer hr {
   border-style: solid;
+  border-bottom: none;
 }
 
 .spacer__inner--sm {
@@ -120,7 +141,7 @@
 .skeleton {
   display: inline-flex;
 
-  background-color: var(--color-grey);
+  background-color: var(--color-placeholder);
 
   padding: 8px 0;
 

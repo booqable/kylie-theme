@@ -1,6 +1,46 @@
 {{ "header.css" | asset_url | stylesheet_tag }}
 {{ "list-menu.css" | asset_url | stylesheet_tag }}
 
+<style>
+  {% if section.settings.background_color != blank %}
+    .header,
+    .header__wrapper,
+    .header__nav .list-submenu__container,
+    .header-search__input,
+    .header-floating-menu__wrapper,
+    .header-search__wrapper {
+      background-color: {{ section.settings.background_color }};
+    }
+  {% endif %}
+
+  {% if section.settings.foreground_color != blank %}
+    .header__text-logo,
+    .header__nav-item,
+    .header-search__input,
+    .header-search__icon,
+    .header-cart .bq-icon-cart::before,
+    .header-floating-menu__icon {
+      color: {{ section.settings.foreground_color }};
+    }
+
+    .header-search__input {
+      border-color: {{ section.settings.foreground_color }};
+    }
+
+    .header-search__input::placeholder {
+      color: {{ section.settings.foreground_color | append: "B3"  }};
+    }
+
+    .header-search__input:focus {
+      border-color: {{ section.settings.foreground_color }};
+    }
+
+    .header__nav-item:hover {
+      text-decoration-color: {{ section.settings.foreground_color }};
+    }
+  {% endif %}
+</style>
+
 <div class="header__wrapper {% if section.settings.menu != blank %}header__wrapper--with-menu{% endif %}">
   <div class="header__link-container">
     <a href="{{ routes.root_url }}" class="header__link">
@@ -149,20 +189,40 @@
   "templates": [],
   "settings": [
     {
+      "type": "header",
+      "content": "Content"
+    },
+    {
       "type": "image_picker",
       "id": "logo",
-      "label": "Header logo"
+      "label": "Logo"
     },
     {
       "type": "text",
       "id": "custom_title",
-      "label": "Header custom title",
+      "label": "Custom title",
       "description": "Note: Header logo always overrides this title"
     },
     {
       "type": "menu",
       "id": "menu",
       "label": "Menu"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "placeholder": "Default"
+    },
+    {
+      "type": "color",
+      "id": "foreground_color",
+      "label": "Foreground color",
+      "placeholder": "Default"
     }
   ]
 }

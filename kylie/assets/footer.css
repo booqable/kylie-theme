@@ -7,7 +7,7 @@
 }
 
 .footer__content {
-  border-top: 1px solid var(--color-grey);
+  border-top: 1px solid var(--color-border);
 }
 
 .footer__nav {
@@ -45,7 +45,7 @@
   line-height: 24px;
   font-weight: var(--font-weight-semibold);
 
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 
   text-decoration: none;
 }
@@ -54,13 +54,14 @@
   font-size: 16px;
   line-height: 24px;
 
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 
   text-decoration: none;
 }
 
 .footer__nav-item:hover {
   text-decoration: underline;
+  text-decoration-color: var(--color-primary-foreground);
 }
 
 .footer__bottom {
@@ -99,7 +100,7 @@
 }
 
 .footer__payment-methods i {
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 
   font-size: 32px;
 }
@@ -142,7 +143,7 @@
 }
 
 .footer__social-item {
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 }
 
 .footer__social--size-sm {
@@ -158,7 +159,7 @@
 }
 
 .footer__copyright {
-  color: var(--color-typo);
+  color: var(--color-primary-foreground);
 }
 
 @media (max-width: 576px) {
