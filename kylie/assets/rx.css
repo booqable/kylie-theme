@@ -7,7 +7,7 @@
 }
 
 .bq-content.rx-content {
-  font-family: "Roboto", sans-serif, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Roboto", BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5; }
   .bq-content.rx-content h1 + *, .bq-content.rx-content h2 + *, .bq-content.rx-content h3 + *, .bq-content.rx-content h4 + *, .bq-content.rx-content h5 + *, .bq-content.rx-content h6 + * {
