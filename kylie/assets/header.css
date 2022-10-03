@@ -30,10 +30,6 @@
   grid-template-columns: max-content 1fr max-content 50px;
 }
 
-.header__link-container {
-  padding-right: 20px;
-}
-
 .header__link {
   text-decoration: none;
 
@@ -68,6 +64,10 @@
 .header__nav-item:hover {
   text-decoration: underline;
   text-decoration-color: var(--color-primary-foreground);
+}
+
+.header__nav--desktop {
+  padding: 0 20px;
 }
 
 .header__nav .list-menu--horizontal > .list-menu__item:not(:last-child) {
