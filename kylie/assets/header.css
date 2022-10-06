@@ -378,4 +378,8 @@
 
     transition: visibility 0s linear 0s, opacity 300ms, transform 250ms;
   }
+
+  .header__image-logo {
+    max-width: 100%;
+  }
 }
