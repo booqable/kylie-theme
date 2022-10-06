@@ -126,8 +126,7 @@
     </div>
   </div>
   <div class="header-cart">
-    {{ cart_button }}
-    <i class="fa-regular fa-spinner-third fa-spin"></i>
+    <bq-cart-button data-primary-color="{{ settings.primary_color }}"></bq-cart-button>
   </div>
   {% if section.settings.menu != blank %}
     <div class="header-floating-menu">

@@ -222,6 +222,36 @@
   align-items: center;
 }
 
+bq-cart-button::part(cart-icon) {
+  position: relative;
+
+  display: inline-block;
+  width: 24px;
+
+  cursor: pointer;
+}
+
+bq-cart-button::part(cart-icon):hover {
+  opacity: 0.6;
+}
+
+bq-cart-button::part(cart-lines) {
+  position: absolute;
+
+  left: 65%;
+  top: -12px;
+
+  font-size: 13px;
+
+  text-align: center;
+  line-height: 13px;
+
+  padding: 3px 6px;
+  border-radius: 30px;
+
+  z-index: 1;
+}
+
 .bq-cart-button__line-count {
   color: var(--color-accent-foreground) !important;
 }
