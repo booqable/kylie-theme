@@ -26,7 +26,7 @@
 }
 
 .product .product__image-container:empty {
-  background-color: var(--color-placeholder);
+  background-color: var(--color-image-placeholder);
 }
 
 .product .product__image {
