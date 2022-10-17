@@ -4,16 +4,11 @@
 {% assign fa = "paypal,stripe" | split: "," %}
 {% assign svg = "p24,eps,bancontact,giropay" | split: "," %}
 
-<!-- Socials -->
-{% assign has_socials = settings.social_twitter_link != blank or settings.social_facebook_link != blank or settings.social_pinterest_link != blank or settings.social_pinterest_link != blank or settings.social_instagram_link != blank or settings.social_tiktok_link != blank or settings.social_tumblr_link != blank or settings.social_snapchat_link != blank or settings.social_youtube_link != blank or settings.social_vimeo_link != blank %}
-
 <div class="footer__content">
   {% for block in section.blocks %}
     {% case block.type %}
       {% when "socials" %}
-        {% if has_socials %}
-          {% include "socials" %}
-        {% endif %}
+        {% include "socials" %}
       {% when "menu" %}
         <nav id="{{ block.id }}" class="footer__nav">
           <ul class="list-menu footer__menu footer__menu--align-{{ block.settings.align }}">
