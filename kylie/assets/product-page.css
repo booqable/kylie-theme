@@ -392,7 +392,7 @@
     bottom: 0;
 
     border-top: 1px solid var(--color-border);
-    background-color: var(--color-background);
+    background-color: var(--color-primary-background);
 
     padding: 16px;
   }
