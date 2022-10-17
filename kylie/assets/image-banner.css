@@ -15,7 +15,7 @@
 .image-banner__wrapper--fluid-width {
   max-width: 100%;
 
-  background-color: var(--color-placeholder);
+  background-color: var(--color-image-placeholder);
 
   padding: 0;
 }
@@ -54,7 +54,7 @@
   max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
   width: 100%;
 
-  background-color: var(--color-placeholder);
+  background-color: var(--color-image-placeholder);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

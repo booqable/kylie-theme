@@ -70,7 +70,7 @@
 
   border-radius: 8px;
 
-  background-color: var(--color-placeholder);
+  background-color: var(--color-image-placeholder);
 }
 
 .collection__image {

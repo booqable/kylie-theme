@@ -40,13 +40,12 @@
 
 .collection-page__items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
   justify-content: center;
 }
 
 .collection-page__items .product {
-  min-width: none;
   max-width: none;
 }
 
@@ -55,11 +54,17 @@
     display: block;
   }
 
+  .collection-page__items .product {
+    max-width: 320px;
+  }
+
   .collection-page__sidebar-navigation--mobile {
     display: none;
   }
 
   .collection-page__items {
+    justify-content: start;
+
     gap: 24px;
   }
 
@@ -76,11 +81,5 @@
 
   .collection-page__wrapper--with-sidebar {
     grid-template-columns: 280px 1fr;
-  }
-}
-
-@media (min-width: 576px) {
-  .collection-page__items {
-    justify-content: start;
   }
 }

@@ -298,7 +298,7 @@
 }
 
 .product-gallery__preview-item:empty {
-  background-color: var(--color-placeholder);
+  background-color: var(--color-image-placeholder);
 }
 
 .product-gallery__preview img {
@@ -326,7 +326,7 @@
 
   border-radius: 8px;
 
-  background-color: var(--color-placeholder);
+  background-color: var(--color-image-placeholder);
   border: 1px solid var(--color-border);
 
   cursor: pointer;

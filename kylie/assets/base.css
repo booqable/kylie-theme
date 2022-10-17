@@ -141,7 +141,7 @@ input {
 .skeleton {
   display: inline-flex;
 
-  background-color: var(--color-placeholder);
+  background-color: var(--color-image-placeholder);
 
   padding: 8px 0;
 
