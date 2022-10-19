@@ -375,9 +375,16 @@
     .booqable-product-button
     .booqable-product-button-wrapper
     .bq-variation {
-    margin: 0 var(--horizontal-padding) 20px !important;
+    margin-bottom: 20px !important;
 
     width: calc(100vw - var(--horizontal-padding) * 2) !important;
+  }
+
+  .product-info
+    .booqable-product-button
+    .booqable-product-button-wrapper
+    .fa-angle-down {
+    right: calc(10px + var(--horizontal-padding));
   }
 
   .product-description {
