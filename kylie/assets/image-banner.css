@@ -141,6 +141,12 @@
   font-size: 22px;
 }
 
+.image-banner__button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .image-banner .bq-button {
   margin: 12px 0;
 
