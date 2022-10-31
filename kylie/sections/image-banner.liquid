@@ -97,9 +97,11 @@
         {% when "text" %}
           <p id="{{ block.id }}" class="image-banner__text image-banner__text--size-{{ block.settings.size }}">{{ block.settings.text | escape }}</p>
         {% when "button" %}
-          <a id="{{ block.id }}" class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}">
-            {{ block.settings.text | escape }}
-          </a>
+          <div class="image-banner__button-container">
+            <a id="{{ block.id }}" class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}">
+              {{ block.settings.text | escape }}
+            </a>
+          </div>
         {% when "date-picker" %}
           <div id="{{ block.id }}" class="date-location">
             <bq-date-picker data-primary-color="{{ settings.primary_color }}"></bq-date-picker>
