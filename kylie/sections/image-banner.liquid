@@ -97,8 +97,8 @@
         {% when "text" %}
           <p id="{{ block.id }}" class="image-banner__text image-banner__text--size-{{ block.settings.size }}">{{ block.settings.text | escape }}</p>
         {% when "button" %}
-          <div class="image-banner__button-container">
-            <a id="{{ block.id }}" class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}">
+          <div class="image-banner__button-container image-banner__button-container--align-{{ section.settings.content_align }}">
+            <a id="{{ block.id }}" class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" {% if block.settings.use_new_tab %}target="_blank"{% endif %}>
               {{ block.settings.text | escape }}
             </a>
           </div>
@@ -308,10 +308,15 @@
           "label": "Link"
         },
         {
+          "id": "use_new_tab",
+          "type": "checkbox",
+          "label": "Open in a new tab"
+        },
+        {
           "id": "use_solid_button",
           "type": "checkbox",
           "label": "Use solid button",
-          "default": false
+          "default": true
         },
         {
           "type": "color",
