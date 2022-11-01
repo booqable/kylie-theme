@@ -9,7 +9,8 @@
           "menu": "main-menu",
           "logo": "",
           "background_color": "",
-          "foreground_color": ""
+          "foreground_color": "",
+          "search_placeholder": "Search products"
         },
         "disabled": null
       },
