@@ -61,7 +61,7 @@ const scrollTo = ({ inner, index }) => {
 };
 
 const handleWindowResize = () => {
-  document.querySelectorAll(".carousel").forEach((carousel) => {
+  document.querySelectorAll(".carousel")?.forEach((carousel) => {
     const inner = carousel.querySelector(".carousel__inner");
     const innerWidth = inner.clientWidth;
     const itemCount = inner.querySelectorAll(".carousel__item")?.length || 0;
@@ -88,7 +88,7 @@ const handleWindowResize = () => {
 };
 
 const initCarousels = () => {
-  document.querySelectorAll(".carousel").forEach((carousel) => {
+  document.querySelectorAll(".carousel")?.forEach((carousel) => {
     const inner = carousel.querySelector(".carousel__inner");
 
     inner.addEventListener('scroll', handleWindowResize)
