@@ -291,7 +291,7 @@
 
   background-color: var(--color-white);
 
-  border-radius: 8px;
+  border-radius: var(--border-radius-sm);
 
   min-width: 100%;
   height: 100%;
@@ -305,9 +305,10 @@
   display: block;
 
   height: 100%;
-  width: 100%;
+  max-width: 100%;
+  width: auto;
 
-  object-fit: contain;
+  border-radius: var(--border-radius-sm);
 }
 
 .product-gallery__preview .carousel__inner {
@@ -324,7 +325,7 @@
   min-width: 64px;
   height: 64px;
 
-  border-radius: 8px;
+  border-radius: var(--border-radius-sm);
 
   background-color: var(--color-image-placeholder);
   border: 1px solid var(--color-border);
