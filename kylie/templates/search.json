@@ -15,7 +15,8 @@
       "settings": {
         "heading": "Unfortunately, we couldn’t find any matches",
         "text": "Please check if it’s spelled correctly or try searching for something else. You could also try browsing our products.",
-        "button_label": "Browse all products"
+        "button_label": "Browse all products",
+        "search_results_title": "Search results for"
       },
       "disabled": null
     }
