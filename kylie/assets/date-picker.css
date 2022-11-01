@@ -131,13 +131,6 @@
   margin: 0;
 }
 
-.date-location bq-date-picker::part(from-label),
-.date-location bq-date-picker::part(till-label),
-.date-location bq-date-picker::part(pickup-label),
-.date-location bq-date-picker::part(return-label) {
-  display: none;
-}
-
 .date-location bq-date-picker::part(from-value),
 .date-location bq-date-picker::part(till-value),
 .date-location bq-date-picker::part(pickup-value),
