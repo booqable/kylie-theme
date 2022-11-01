@@ -83,8 +83,7 @@
 .product-info
   .booqable-component
   .booqable-product-button-wrapper
-  .bq-status
-  span {
+  .bq-status {
   display: inline-flex;
   align-items: center;
 
@@ -92,8 +91,6 @@
   line-height: 20px;
 
   font-family: var(--font-body);
-
-  padding: 2px 12px;
 }
 
 .product-info
@@ -301,11 +298,16 @@
   background-color: var(--color-image-placeholder);
 }
 
+.product-gallery__preview {
+  border-radius: var(--border-radius-sm);
+
+  overflow: hidden;
+}
+
 .product-gallery__preview img {
   display: block;
 
   height: 100%;
-  max-width: 100%;
   width: auto;
 
   border-radius: var(--border-radius-sm);
