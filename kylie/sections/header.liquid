@@ -2,7 +2,7 @@
 {{ "list-menu.css" | asset_url | stylesheet_tag }}
 
 <style>
-  {% if section.settings.background_color.blank != true %}
+  {% if section.settings.background_color != blank %}
     .header,
     .header__wrapper,
     .header__nav .list-submenu__container,
@@ -13,7 +13,7 @@
     }
   {% endif %}
 
-  {% if section.settings.foreground_color.blank != true %}
+  {% if section.settings.foreground_color != blank %}
     .header__text-logo,
     .header__nav-item,
     .header-search__input,

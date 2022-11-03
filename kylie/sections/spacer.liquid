@@ -2,7 +2,7 @@
   .spacer-{{ section.key }} hr {
     color: var(--color-border);
 
-    {% if section.settings.hr_color.blank != true %}
+    {% if section.settings.hr_color != blank %}
       color: {{ section.settings.hr_color }};
     {% endif %}
   }

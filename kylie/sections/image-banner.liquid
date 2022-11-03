@@ -2,13 +2,13 @@
 {{ "date-picker.css" | asset_url | stylesheet_tag }}
 
 <style>
-  {% if section.settings.background_color.blank != true and section.settings.fluid_width == true %}
+  {% if section.settings.background_color != blank and section.settings.fluid_width == true %}
     .image-banner-{{ section.key }}.image-banner__wrapper {
       background-color: {{ section.settings.background_color }};
     }
   {% endif %}
 
-  {% if section.settings.background_color.blank != true %}
+  {% if section.settings.background_color != blank %}
     .image-banner-{{ section.key }} .image-banner__inner {
       background-color: {{ section.settings.background_color }};
     }
@@ -34,7 +34,7 @@
     {% endif %}
   {% endif %}
 
-  {% if section.settings.overlay_color.blank != true %}
+  {% if section.settings.overlay_color != blank %}
     .image-banner-{{ section.key }} .image-banner__overlay {
       background-color: {{ section.settings.overlay_color }};
     }
@@ -52,7 +52,7 @@
         .image-banner-{{ section.key }} #{{ block.id }}{
           color: var(--color-primary-foreground);
 
-          {% if block.settings.color.blank != true %}
+          {% if block.settings.color != blank %}
             color: {{ block.settings.color }};
           {% endif %}
         }
@@ -60,7 +60,7 @@
         .image-banner-{{ section.key }} #{{ block.id }} {
           color: var(--color-primary-foreground);
 
-          {% if block.settings.color.blank != true %}
+          {% if block.settings.color != blank %}
             color: {{ block.settings.color }};
           {% endif %}
         }
@@ -73,11 +73,11 @@
             color: var(--color-accent-foreground);
           {% endif %}
 
-          {% if block.settings.use_solid_button and block.settings.background_color.blank != true %}
+          {% if block.settings.use_solid_button and block.settings.background_color != blank %}
             background-color: {{ block.settings.background_color }};
           {% endif %}
 
-          {% if block.settings.label_color.blank != true %}
+          {% if block.settings.label_color != blank %}
             color: {{ block.settings.label_color }};
           {% endif %}
         }
