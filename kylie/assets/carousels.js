@@ -61,15 +61,17 @@ const scrollTo = ({ inner, index }) => {
 };
 
 const handleWindowResize = () => {
-  document.querySelectorAll(".carousel")?.forEach((carousel) => {
-    const inner = carousel.querySelector(".carousel__inner");
+  document.querySelectorAll(".carousel").forEach((node) => {
+    if (!node) return
+
+    const inner = node.querySelector(".carousel__inner");
     const innerWidth = inner.clientWidth;
-    const itemCount = inner.querySelectorAll(".carousel__item")?.length || 0;
+    const itemCount = inner.querySelectorAll(".carousel__item").length;
     const itemSize = inner.querySelector(".carousel__item")?.clientWidth || 0;
     const withInfiniteScroll = inner.classList.contains("infinite-scroll");
 
-    const prev = carousel.querySelector(".carousel__control.prev");
-    const next = carousel.querySelector(".carousel__control.next");
+    const prev = node.querySelector(".carousel__control.prev");
+    const next = node.querySelector(".carousel__control.next");
 
     if (!withInfiniteScroll && innerWidth >= itemSize * itemCount) {
       prev?.classList.add("hidden");
@@ -88,13 +90,15 @@ const handleWindowResize = () => {
 };
 
 const initCarousels = () => {
-  document.querySelectorAll(".carousel")?.forEach((carousel) => {
-    const inner = carousel.querySelector(".carousel__inner");
+  document.querySelectorAll(".carousel").forEach((node) => {
+    if (!node) return
+
+    const inner = node.querySelector(".carousel__inner");
 
     inner.addEventListener('scroll', handleWindowResize)
 
-    const prev = carousel.querySelector(".carousel__control.prev");
-    const next = carousel.querySelector(".carousel__control.next");
+    const prev = node.querySelector(".carousel__control.prev");
+    const next = node.querySelector(".carousel__control.next");
 
     handleWindowResize()
 
