@@ -12,7 +12,16 @@
       {% for result in results %}
         {% assign image = result.images.first %}
         <div class="product">
-          <a href="{{ result.url }}" class="product__image-container">{% if image != blank %}<img data-src="{{ image.url | image_url }}" {% if settings.use_focal_images %}data-focal-x="{{ image.coordinates[0]}}" data-focal-y="{{ image.coordinates[1] }}"{% endif %} alt="" class="{% if settings.use_focal_images %}focal-image{% else %}product__image{% endif %} lazyload">{% endif %}</a>
+          <a href="{{ result.url }}" class="product__image-container">{% if image.url != blank %}{{ image.url | image_tag:
+            loading: 'lazy',
+            class: 'product__image',
+            alt: result.name,
+            widths: '600, 750',
+            sizes: '(max-width: 490px) 750px, 600px',
+            use_focal: settings.use_focal_images,
+            focal_x: image.coordinates[0],
+            focal_y: image.coordinates[1]
+          }}{% endif %}</a>
           {{ result | product_availability }}
           <a href="{{ result.url }}">
             <h3 class="product__name">{{ result.name }}</h3>

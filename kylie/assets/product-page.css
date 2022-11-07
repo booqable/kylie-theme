@@ -305,6 +305,7 @@
 }
 
 .product-gallery__preview img {
+  position: relative;
   display: block;
 
   height: 100%;

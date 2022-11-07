@@ -8,7 +8,16 @@
   {% if product != blank %}
     {% assign image = product.images.first %}
     <div id="{{ product.id }}" class="product {% if section.settings.use_carousel %}carousel__item{% endif %}">
-      <a href="{{ product.url }}" class="product__image-container">{% if image != blank %}<img data-src="{{ image.url | image_url }}" {% if settings.use_focal_images %}data-focal-x="{{ image.coordinates[0]}}" data-focal-y="{{ image.coordinates[1] }}"{% endif %} alt="" class="{% if settings.use_focal_images %}focal-image{% else %}product__image{% endif %} lazyload">{% endif %}</a>
+      <a href="{{ product.url }}" class="product__image-container">{% if image != blank %}{{ image.url | image_tag:
+        loading: 'lazy',
+        class: 'product__image',
+        widths: '500, 700',
+        sizes: '(max-width: 490px) 700px, 500px',
+        use_focal: settings.use_focal_images,
+        focal_x: image.coordinates[0],
+        focal_y: image.coordinates[1],
+        alt: product.name
+      }}{% endif %}</a>
       {{ product | product_availability }}
       <a href="{{ product.url }}">
         <h3 class="product__name">{{ product.name }}</h3>

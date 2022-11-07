@@ -9,7 +9,11 @@
       <div class="product-gallery__preview-inner carousel__inner infinite-scroll">
         {% for image in product.images %}
           <div class="product-gallery__preview-item carousel__item">
-            <img data-src="{{ image.url | image_url }}" alt="" class="lazyload">
+            {{ image.url | image_tag:
+              class: 'lazyload',
+              widths: '600, 700, 800',
+              sizes: '(max-width: 576px) 600px, (max-width: 876px) 700px, 800px',
+            }}
           </div>
         {% endfor %}
       </div>
@@ -29,13 +33,13 @@
       <div class="carousel__inner">
         {% for image in product.images %}
           <div class="product-gallery__item-container carousel__item" data-index="{{ forloop.index0 }}">
-            <img
-              data-src="{{ image.url | image_url }}"
-              data-focal-x="{{ image.coordinates[0] }}"
-              data-focal-y="{{ image.coordinates[1] }}"
-              alt=""
-              class="focal-image lazyload"
-            >
+            {{ image.url | image_tag:
+              loading: 'lazy',
+              use_focal: true,
+              focal_x: image.coordinates[0],
+              focal_y: image.coordinates[1],
+              widths: '150'
+            }}
           </div>
         {% endfor %}
       </div>
