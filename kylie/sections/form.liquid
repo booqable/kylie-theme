@@ -29,15 +29,15 @@
 {% form 'contact' %}
   <div class="form__sender-name">
     <label class="form__label" for="name">{{ section.settings.name_label }}</label>
-    <input id="name" class="form__field form__field--{{ section.key }}" type="text" placeholder="{{ section.settings.name_placeholder }}" required>
+    <input id="name" name="name" title="{{ section.settings.name_label }}" class="form__field form__field--{{ section.key }}" type="text" placeholder="{{ section.settings.name_placeholder }}" required>
   </div>
   <div class="form__sender-email">
     <label class="form__label" for="email">{{ section.settings.email_label }}</label>
-    <input type="email" class="form__field form__field--{{ section.key }}" placeholder="{{ section.settings.email_placeholder }}" required>
+    <input type="email" name="email" title="{{ section.settings.email_label }}" class="form__field form__field--{{ section.key }}" placeholder="{{ section.settings.email_placeholder }}" required>
   </div>
   <div class="form__message">
     <label class="form__label" for="message">{{ section.settings.message_label }}</label>
-    <textarea id="message" class="form__textarea form__textarea--{{ section.key }}" rows="5" required></textarea>
+    <textarea id="message" name="message" title="{{ section.settings.message_label }}" class="form__textarea form__textarea--{{ section.key }}" rows="5" required></textarea>
   </div>
   <div class="form__submit">
     <button class="bq-button bq-button--size-lg bq-button--solid bq-button--{{ section.key }}" type="submit">{{ section.settings.button_label }}</button>
