@@ -60,6 +60,10 @@ input {
 }
 
 .bq-button {
+  border: none;
+
+  cursor: pointer;
+
   display: inline-block;
 
   font-weight: var(--font-weight-bold);
