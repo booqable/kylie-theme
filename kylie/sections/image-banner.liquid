@@ -34,13 +34,13 @@
     {% endif %}
   {% endif %}
 
-  {% if section.settings.overlay_color %}
+  {% if section.settings.overlay_color != blank %}
     .image-banner-{{ section.key }} .image-banner__overlay {
       background-color: {{ section.settings.overlay_color }};
     }
   {% endif %}
 
-  {% if section.settings.overlay_opacity %}
+  {% if section.settings.overlay_opacity != blank %}
     .image-banner-{{ section.key }} .image-banner__overlay {
       opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
     }
@@ -97,9 +97,11 @@
         {% when "text" %}
           <p id="{{ block.id }}" class="image-banner__text image-banner__text--size-{{ block.settings.size }}">{{ block.settings.text | escape }}</p>
         {% when "button" %}
-          <a id="{{ block.id }}" class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}">
-            {{ block.settings.text | escape }}
-          </a>
+          <div class="image-banner__button-container image-banner__button-container--align-{{ section.settings.content_align }}">
+            <a id="{{ block.id }}" class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" {% if block.settings.use_new_tab %}target="_blank"{% endif %}>
+              {{ block.settings.text | escape }}
+            </a>
+          </div>
         {% when "date-picker" %}
           <div id="{{ block.id }}" class="date-location">
             <bq-date-picker data-primary-color="{{ settings.primary_color }}"></bq-date-picker>
@@ -306,10 +308,15 @@
           "label": "Link"
         },
         {
+          "id": "use_new_tab",
+          "type": "checkbox",
+          "label": "Open in a new tab"
+        },
+        {
           "id": "use_solid_button",
           "type": "checkbox",
           "label": "Use solid button",
-          "default": false
+          "default": true
         },
         {
           "type": "color",

@@ -43,7 +43,7 @@
       {% endif %}
     }
   </style>
-  <title>{% if page_title -%}{{ page_title }}{%- else -%}{{ shop.name }}{%- endif %}</title>
+  <title>{% if page_title %}{{ page_title }}{% else %}{{ shop.name }}{% endif %}</title>
 </head>
 <body>
 

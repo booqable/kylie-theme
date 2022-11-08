@@ -2,7 +2,7 @@
   {
     "name": "theme_info",
     "theme_name": "Kylie",
-    "theme_version": "0.0.1",
+    "theme_version": "0.1.0",
     "theme_author": "Booqable"
   },
   {
@@ -77,7 +77,8 @@
         "type": "checkbox",
         "id": "use_focal_images",
         "label": "Use focal images",
-        "info": "Display point focused images for products instead of full sized"
+        "info": "Display point focused images for products instead of full sized",
+        "default": true
       }
     ]
   },

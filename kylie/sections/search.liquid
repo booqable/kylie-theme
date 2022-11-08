@@ -2,7 +2,7 @@
 {{ "product.css" | asset_url | stylesheet_tag }}
 
 {% if results_count > 0 %}
-<h1 class="search__title">Search results for “{{ query }}”</h1>
+<h1 class="search__title">{{ section.settings.search_results_title }} “{{ query }}”</h1>
 {% endif %}
 {% paginate results %}
   <div class="search-results {% if results_count == 0 %}no-results{% endif %}">
@@ -34,6 +34,16 @@
   "tag": "section",
   "class": "search",
   "settings": [
+    {
+      "type": "header",
+      "content": "Translations"
+    },
+    {
+      "type": "text",
+      "id": "search_results_title",
+      "label": "Search results title",
+      "default": "Search results for"
+    },
     {
       "type": "header",
       "content": "Cleanstate"

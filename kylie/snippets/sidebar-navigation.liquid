@@ -3,14 +3,14 @@
 {% if mode == "mobile" %}
   <input type="checkbox" id="sidebar-toggle">
   <label for="sidebar-toggle" class="sidebar-toggle-element">
-    Menu
+    {{ toggle }}
   </label>
 {% endif %}
 <div class="sidebar-navigation {% if sticky == true %}sidebar-navigation--sticky{% endif %}">
   <div class="sidebar-navigation__wrapper">
     {% if mode == "mobile" %}
       <div class="sidebar-navigation__header">
-        <h2 class="sidebar-navigation__title">Menu</h2>
+        <h2 class="sidebar-navigation__title">{{ toggle }}</h2>
         <label for="sidebar-toggle">
           <div class="sidebar-navigation__close">
             <i class="fa-regular fa-xmark"></i>

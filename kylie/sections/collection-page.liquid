@@ -24,7 +24,7 @@
         {% endif %}
         <div class="collection-page__sidebar-navigation--mobile">
           {% if section.blocks.size > 0 %}
-            {% render "sidebar-navigation", menus: section.blocks, sticky: section.settings.sticky_sidebar, mode: "mobile" %}
+            {% render "sidebar-navigation", menus: section.blocks, sticky: section.settings.sticky_sidebar, mode: "mobile", toggle: section.settings.sidebar_toggle %}
           {% endif %}
         </div>
       </div>
@@ -83,6 +83,12 @@
       "type": "checkbox",
       "id": "sticky_sidebar",
       "label": "Enable sticky sidebar"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_toggle",
+      "label": "Menu toggle label",
+      "default": "Menu"
     },
     {
       "type": "header",

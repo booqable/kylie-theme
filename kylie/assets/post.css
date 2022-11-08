@@ -12,7 +12,7 @@
 }
 
 .post__image--border-radius {
-  border-radius: 8px;
+  border-radius: var(--border-radius-sm);
 }
 
 .post__title {
