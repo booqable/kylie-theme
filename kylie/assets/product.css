@@ -20,7 +20,7 @@
   width: 100%;
   height: 240px;
 
-  border-radius: 12px;
+  border-radius: var(--border-radius-md);
 
   margin-bottom: 8px;
 }
@@ -65,7 +65,7 @@
 .product bq-product-availability::part(availability-container) {
   padding: 2px 12px;
 
-  border-radius: 12px;
+  border-radius: var(--border-radius-md);
 }
 
 .product bq-product-availability::part(available) {
@@ -114,7 +114,7 @@
 .product-cleanstate__image {
   height: 240px;
 
-  border-radius: 12px;
+  border-radius: var(--border-radius-md);
 
   margin-bottom: 8px;
 }

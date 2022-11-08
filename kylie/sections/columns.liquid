@@ -42,7 +42,7 @@
             <div class="bq-content rx-content post__text">{{ block.settings.text }}</div>
           {% endif %}
           {% if block.settings.button_url %}
-            <a class="bq-button bq-button--size-{{ block.settings.button_size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.button_url }}">
+            <a class="bq-button bq-button--size-{{ block.settings.button_size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.button_url }}" {% if block.settings.use_new_tab %}target="_blank"{% endif %}>
               {{ block.settings.button }}
             </a>
           {% endif %}
@@ -131,10 +131,15 @@
           "label": "URL"
         },
         {
+          "id": "use_new_tab",
+          "type": "checkbox",
+          "label": "Open in a new tab"
+        },
+        {
           "id": "use_solid_button",
           "type": "checkbox",
           "label": "Use solid button",
-          "default": false
+          "default": true
         },
         {
           "id": "background_color",

@@ -59,7 +59,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  border-radius: 8px;
+  border-radius: var(--border-radius-sm);
 
   overflow: hidden;
 
@@ -139,6 +139,23 @@
 
 .image-banner__text--size-lg {
   font-size: 22px;
+}
+
+.image-banner__button-container {
+  display: flex;
+  align-items: center;
+}
+
+.image-banner__button-container--align-left {
+  justify-content: flex-start;
+}
+
+.image-banner__button-container--align-center {
+  justify-content: center;
+}
+
+.image-banner__button-container--align-right {
+  justify-content: flex-end;
 }
 
 .image-banner .bq-button {

@@ -2,6 +2,9 @@
   /* Sizes */
   --max-width: 1216px;
   --horizontal-padding: 16px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
   /* Colors */
   --color-white: #ffffff;
   --color-green: #8fcc40;
@@ -48,7 +51,6 @@ p {
 }
 
 input {
-  all: unset;
   font-family: sans-serif;
 }
 
@@ -83,7 +85,7 @@ input {
 }
 
 .bq-button--solid {
-  border-radius: 8px;
+  border-radius: var(--border-radius-sm);
 
   text-decoration: none;
 }
@@ -150,7 +152,7 @@ input {
 
   padding: 8px 0;
 
-  border-radius: 8px;
+  border-radius: var(--border-radius-sm);
 }
 
 .text {
