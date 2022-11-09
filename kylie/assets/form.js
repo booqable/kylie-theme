@@ -1,15 +1,5 @@
-const forms = document.querySelectorAll("form");
+// const forms = document.querySelectorAll("form");
 
-const handleSubmit = ({ event, form }) => {
-  event.preventDefault();
-
-  const formData = new FormData(form);
-
-  const data = Object.fromEntries(formData);
-
-  console.log(data);
+const handleSubmit = (token) => {
+  console.log(token)
 };
-
-forms.forEach((form) => {
-  form.addEventListener("submit", (e) => handleSubmit({ event: e, form }));
-});

@@ -12,6 +12,7 @@
   {{ "rx.css" | asset_url | stylesheet_tag }}
   {% comment %} Fonts {% endcomment %}
   <script src="https://kit.fontawesome.com/ff3b3de2b5.js" crossorigin="anonymous"></script>
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
   {{ content_for_header }}
   {% if settings.heading_font != blank or settings.body_font != blank %}
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -59,6 +60,6 @@
   <script src="{{ "focus-point.min.js" | asset_url }}" defer></script>
   <script src="{{ "index.js" | asset_url }}" defer></script>
   <script src="{{ "carousels.js" | asset_url }}" defer></script>
-  <script src="{{ "form.js" | asset_url }}" defer></script>
+  {%- comment -%} <script src="{{ "form.js" | asset_url }}" defer></script> {%- endcomment -%}
 </body>
 </html>

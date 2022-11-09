@@ -23,26 +23,40 @@
   {% endif %}
 </style>
 
-{% if section.settings.title != blank %}
-  <h2 class="form__title">{{ section.settings.title }}</h2>
-{% endif %}
-{% form 'contact' %}
-  <div class="form__sender-name">
-    <label class="form__label" for="name">{{ section.settings.name_label }}</label>
-    <input id="name" name="name" title="{{ section.settings.name_label }}" class="form__field form__field--{{ section.key }}" type="text" placeholder="{{ section.settings.name_placeholder }}" required>
-  </div>
-  <div class="form__sender-email">
-    <label class="form__label" for="email">{{ section.settings.email_label }}</label>
-    <input type="email" name="email" title="{{ section.settings.email_label }}" class="form__field form__field--{{ section.key }}" placeholder="{{ section.settings.email_placeholder }}" required>
-  </div>
-  <div class="form__message">
-    <label class="form__label" for="message">{{ section.settings.message_label }}</label>
-    <textarea id="message" name="message" title="{{ section.settings.message_label }}" class="form__textarea form__textarea--{{ section.key }}" rows="5" required></textarea>
-  </div>
-  <div class="form__submit">
-    <button class="bq-button bq-button--size-lg bq-button--solid bq-button--{{ section.key }}" type="submit">{{ section.settings.button_label }}</button>
-  </div>
-{% endform %}
+<div id="{{ section.key }}" class="form__inner">
+  {% if section.settings.title != blank %}
+    <h2 class="form__title">{{ section.settings.title }}</h2>
+  {% endif %}
+  {% form 'contact' %}
+    <div class="form__sender-name">
+      <label class="form__label" for="name">{{ section.settings.name_label }}</label>
+      <input id="name" name="name" title="{{ section.settings.name_label }}" class="form__field form__field--{{ section.key }}" type="text" placeholder="{{ section.settings.name_placeholder }}" required>
+    </div>
+    <div class="form__sender-email">
+      <label class="form__label" for="email">{{ section.settings.email_label }}</label>
+      <input type="email" name="email" title="{{ section.settings.email_label }}" class="form__field form__field--{{ section.key }}" placeholder="{{ section.settings.email_placeholder }}" required>
+    </div>
+    <div class="form__message">
+      <label class="form__label" for="message">{{ section.settings.message_label }}</label>
+      <textarea id="message" name="message" title="{{ section.settings.message_label }}" class="form__textarea form__textarea--{{ section.key }}" rows="5" required></textarea>
+    </div>
+    <div class="form__submit">
+      <button
+        class="h-captcha bq-button bq-button--size-lg bq-button--solid bq-button--{{ section.key }}"
+        data-sitekey="a095e1de-ca39-4be8-a651-035e60a3ed95"
+        data-callback="handleSubmit"
+      >
+        {{ section.settings.button_label }}
+      </button>
+    </div>
+  {% endform %}
+</div>
+
+<script type="text/javascript">
+  function handleSubmit(token) {
+    console.log(token)
+  }
+</script>
 
 {% schema %}
 {
