@@ -11,6 +11,9 @@
     {% else %}
       {% for result in results %}
         {% assign image = result.images.first %}
+        {% if settings.use_focal_images %}
+          {% assign focal = image.coordinates %}
+        {% endif %}
         <div class="product">
           <a href="{{ result.url }}" class="product__image-container">{% if image.url != blank %}{{ image.url | image_tag:
             loading: 'lazy',
@@ -18,9 +21,7 @@
             alt: result.name,
             widths: '600, 750',
             sizes: '(max-width: 490px) 750px, 600px',
-            use_focal: settings.use_focal_images,
-            focal_x: image.coordinates[0],
-            focal_y: image.coordinates[1]
+            focal: focal
           }}{% endif %}</a>
           {{ result | product_availability }}
           <a href="{{ result.url }}">

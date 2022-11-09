@@ -32,12 +32,11 @@
     <div class="product-gallery__items carousel carousel--snap-center">
       <div class="carousel__inner">
         {% for image in product.images %}
+          {% assign focal = image.coordinates %}
           <div class="product-gallery__item-container carousel__item" data-index="{{ forloop.index0 }}">
             {{ image.url | image_tag:
               loading: 'lazy',
-              use_focal: true,
-              focal_x: image.coordinates[0],
-              focal_y: image.coordinates[1],
+              focal: focal,
               widths: '150'
             }}
           </div>

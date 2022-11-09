@@ -7,15 +7,16 @@
   {% endcase %}
   {% if product != blank %}
     {% assign image = product.images.first %}
+    {% if settings.use_focal_images %}
+      {% assign focal = image.coordinates %}
+    {% endif %}
     <div id="{{ product.id }}" class="product {% if section.settings.use_carousel %}carousel__item{% endif %}">
       <a href="{{ product.url }}" class="product__image-container">{% if image != blank %}{{ image.url | image_tag:
         loading: 'lazy',
         class: 'product__image',
         widths: '500, 700',
         sizes: '(max-width: 490px) 700px, 500px',
-        use_focal: settings.use_focal_images,
-        focal_x: image.coordinates[0],
-        focal_y: image.coordinates[1],
+        focal: focal,
         alt: product.name
       }}{% endif %}</a>
       {{ product | product_availability }}
