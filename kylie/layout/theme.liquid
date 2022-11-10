@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ locale }}">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,6 +44,13 @@
     }
   </style>
   <title>{% if page_title %}{{ page_title }}{% else %}{{ shop.name }}{% endif %}</title>
+
+  {% if page_title %}<meta property="og:title" content="{{ page_title }}" />{% endif %}
+  {% if page_description %}<meta property="og:description" content="{{ page_description }}" />{% endif %}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ shop.name }}">
+  <meta property="og:url" content="{{ canonical_url }}" />
+  <meta property="og:locale" content="{{ locale }}" />
 </head>
 <body>
 
