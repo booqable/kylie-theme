@@ -106,6 +106,10 @@ input {
   box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, 0.12);
 }
 
+.bq-button.error {
+  background-color: var(--color-red);
+}
+
 .divider {
   max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
   width: 100%;
