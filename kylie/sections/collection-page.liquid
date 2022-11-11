@@ -34,8 +34,18 @@
           <div class="collection-page__items">
             {% for item in paginate_object %}
               {% assign image = item.images.first %}
+              {% if settings.use_focal_images %}
+                {% assign focal = image.coordinates %}
+              {% endif %}
               <div class="product">
-                <a href="{{ item.url }}" class="product__image-container">{% if image != blank %}<img data-src="{{ image.url | image_url }}" {% if settings.use_focal_images %}data-focal-x="{{ image.coordinates[0]}}" data-focal-y="{{ image.coordinates[1] }}"{% endif %} alt="" class="{% if settings.use_focal_images %}focal-image{% else %}product__image{% endif %} lazyload">{% endif %}</a>
+                <a href="{{ item.url }}" class="product__image-container">{% if image != blank %}{{ image.url | image_tag:
+                  loading: 'lazy',
+                  class: 'product__image',
+                  widths: '500, 700',
+                  sizes: '(max-width: 489px) 700px, 500px',
+                  focal: focal,
+                  alt: item.name
+                }}{% endif %}</a>
                 {{ item | product_availability }}
                 <a href="{{ item.url }}">
                   <h3 class="product__name">{{ item.name }}</h3>

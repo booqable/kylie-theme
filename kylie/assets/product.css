@@ -29,7 +29,7 @@
   background-color: var(--color-image-placeholder);
 }
 
-.product .product__image {
+.product .product__image:not(.focal-image) {
   display: block;
 
   max-width: 100%;

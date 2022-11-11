@@ -14,26 +14,6 @@
     }
   {% endif %}
 
-  {% if section.settings.background_image.url != blank %}
-    {% if section.settings.fluid_width == true %}
-      .image-banner-{{ section.key }}.image-banner__wrapper {
-        background-image: url({{ section.settings.background_image.url | image_url }});
-      }
-
-      .image-banner-{{ section.key }} .image-banner__inner {
-        background-color: transparent;
-      }
-    {% else %}
-      .image-banner-{{ section.key}}.image-banner__wrapper {
-        background-color: transparent;
-      }
-
-      .image-banner-{{ section.key }} .image-banner__inner {
-        background-image: url({{ section.settings.background_image.url | image_url }});
-      }
-    {% endif %}
-  {% endif %}
-
   {% if section.settings.overlay_color != blank %}
     .image-banner-{{ section.key }} .image-banner__overlay {
       background-color: {{ section.settings.overlay_color }};
@@ -86,7 +66,21 @@
 </style>
 
 <div class="image-banner-{{ section.key }} image-banner__wrapper {% if section.settings.fluid_width %}image-banner__wrapper--fluid-width{% endif %}">
+  {% if section.settings.background_image.url != blank and section.settings.fluid_width == true %}
+    {{ section.settings.background_image.url | image_tag:
+      loading: 'lazy',
+      class: 'image-banner__background',
+      widths: '900, 1400, 2500'
+    }}
+  {% endif %}
   <div class="image-banner__inner image-banner__inner--align-{{ section.settings.content_align }} image-banner__inner--spacing-{{ section.settings.vertical_spacing }}">
+    {% if section.settings.background_image.url != blank and section.settings.fluid_width == false %}
+      {{ section.settings.background_image.url | image_tag:
+        loading: 'lazy',
+        class: 'image-banner__background',
+        widths: '700, 900, 1400'
+      }}
+    {% endif %}
     {% if section.settings.overlay_enabled %}
       <span class="image-banner__overlay"></span>
     {% endif %}
