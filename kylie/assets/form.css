@@ -15,7 +15,7 @@
   width: 100%;
 }
 
-.form form {
+.form__inner form {
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -101,13 +101,21 @@
   display: none;
 }
 
+.form__submit button {
+  width: 100%;
+}
+
 @media (min-width: 810px) {
-  .form form {
+  .form__inner form {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 24px;
   }
 
   .form__message, .form__submit, .form__error {
     grid-column: span 2;
+  }
+
+  .form__submit button {
+    width: auto;
   }
 }

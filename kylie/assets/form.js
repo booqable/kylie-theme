@@ -21,7 +21,7 @@ const handleFetchSuccess = ({ form, initialHTML }) => {
 const handleFetchError = ({ form, initialHTML, errors }) => {
   // Selectors
   const submitButton = form.querySelector("button[type=submit]");
-  const errorsContainer = form.querySelector('.form__error');
+  const errorsContainer = form.querySelector(".form__error");
 
   // Making submit button display error
   submitButton.classList.add("error");
@@ -52,7 +52,7 @@ const handleSubmit = ({ event, form }) => {
       .then((token) => {
         // Selectors
         const errorsFields = form.querySelectorAll(".error");
-        const errorsContainer = form.querySelector('.form__error');
+        const errorsContainer = form.querySelector(".form__error");
         const submitButton = form.querySelector("button[type=submit]");
         const initialHTML = submitButton.innerHTML;
 
@@ -79,13 +79,18 @@ const handleSubmit = ({ event, form }) => {
           },
         };
 
-        fetch("/api/4/forms", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        })
+        fetch(
+          window.booqableOptions?.apiURL
+            ? `${window.booqableOptions?.apiURL}/api/4/forms`
+            : "/api/4/forms",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          }
+        )
           .then((response) => response.json())
           .then((data) => {
             if (data.errors) {
