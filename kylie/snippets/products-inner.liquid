@@ -23,8 +23,10 @@
       <a href="{{ product.url }}">
         <h3 class="product__name">{{ product.name }}</h3>
       </a>
-      {{ product | product_price_label }}
-      {{ product | product_price }}
+      {% if pricing_enabled and product.price_type != "none" %}
+        {{ product | product_price_label }}
+        {{ product | product_price }}
+      {% endif %}
     </div>
   {% else %}
     <div class="product-cleanstate {% if section.settings.use_carousel %}carousel__item{% endif %}">

@@ -50,8 +50,10 @@
                 <a href="{{ item.url }}">
                   <h3 class="product__name">{{ item.name }}</h3>
                 </a>
-                {{ item | product_price_label }}
-                {{ item | product_price }}
+                {% if pricing_enabled and item.price_type != "none" %}
+                  {{ item | product_price_label }}
+                  {{ item | product_price }}
+                {% endif %}
               </div>
             {% endfor %}
           </div>
