@@ -32,7 +32,28 @@
     {% for block in section.blocks %}
       <div id="{{ block.id }}" class="columns__column post">
         {% if block.settings.image.url != blank %}
-          <img data-src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image_alt }}" class="post__image{% if block.settings.image_border_radius == true %} post__image--border-radius{% endif %} lazyload">
+          {% if block.settings.image_border_radius == true %}
+            {% assign class = "post__image post__image--border-radius" %}
+          {% else %}
+            {% assign class = "post__image" %}
+          {% endif %}
+          {% case section.settings.columns_count %}
+            {% when 1 %}
+              {% assign widths = '700, 900, 1400' %}
+            {% when 2 %}
+              {% assign widths = '700, 900' %}
+              {% assign sizes = '(max-width: 576px) 900px, 700px' %}
+            {% when 3 %}
+              {% assign widths = '500, 700, 900' %}
+              {% assign sizes = '(max-width: 576px) 900px, (max-width: 810px) 700px, 500px' %}
+          {% endcase %}
+          {{ block.settings.image.url | image_tag:
+            loading: 'lazy',
+            widths: widths,
+            sizes: sizes,
+            class: class,
+            alt: block.settings.image_alt
+          }}
         {% endif %}
         <div class="post__content">
           {% if block.settings.title %}

@@ -10,11 +10,13 @@
         <a href="{{ collection.url }}">
           <div class="collection">
             {% if collection.image.url != blank %}
-              <img
-                data-src="{{ collection.image.url | image_url }}"
-                class="collection__image lazyload"
-                alt="{{ collection.name }} collection image"
-              >
+              {% assign alt = collection.name | append: ' collection image' %}
+              {{ collection.image.url | image_tag:
+                loading: 'lazy',
+                class: 'collection__image',
+                alt: alt,
+                widths: '576, 810'
+              }}
             {% endif %}
             <h3 class="collection__name">{{ collection.name }}</h3>
           </div>
