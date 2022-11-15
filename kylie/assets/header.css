@@ -184,15 +184,21 @@
   width: 12px;
   border-radius: 50%;
   background-color: var(--color-primary-foreground);
-  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg)
+    no-repeat 50% 50%;
   background-size: contain;
   opacity: 0;
   pointer-events: none;
 }
 
 .header-search__input:focus::-webkit-search-cancel-button {
-  opacity: .3;
+  opacity: 0.3;
   pointer-events: all;
+}
+
+.header-search__input:-webkit-autofill,
+.header-search__input:autofill {
+  background-color: var(--color-white);
 }
 
 .header-search__icon {
