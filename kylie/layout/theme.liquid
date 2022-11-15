@@ -68,7 +68,7 @@
     <meta property="og:url" content="{{ product.url }}" />
 
     {% assign image = product.images.first %}
-    {% if image != blank %}
+    {% if image.url != blank %}
       <meta property="og:image" content="{{ image.url | image_url }}">
       <meta property="og:image:secure_url" content="{{ image.url | image_url }}">
       <meta property="og:image:alt" content="{{ product.name }}">
