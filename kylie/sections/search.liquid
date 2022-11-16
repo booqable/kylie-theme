@@ -27,10 +27,8 @@
           <a href="{{ result.url }}">
             <h3 class="product__name">{{ result.name }}</h3>
           </a>
-          {% if pricing_enabled and result.price_type != "none" %}
-            {{ result | product_price_label }}
-            {{ result | product_price }}
-          {% endif %}
+          {{ result | product_price_label }}
+          {{ result | product_price }}
         </div>
       {% endfor %}
     {% endif %}
