@@ -77,8 +77,7 @@
         "type": "checkbox",
         "id": "use_focal_images",
         "label": "Use focal images",
-        "info": "Display point focused images for products instead of full sized",
-        "default": true
+        "info": "Display point focused images for products instead of full sized"
       }
     ]
   },
