@@ -26,7 +26,10 @@
 <script>
   function onSubmit(token) {
     const form = document.querySelector('#{{ section.key }} form');
+    const button = form.querySelector('.bq-button--submit');
     const fields = form.querySelectorAll('input, textarea');
+
+    button.innerHTML = '<i class="fa-regular fa-spinner-third fa-spin"></i>'
 
     fields.forEach(function(field) {
       if (field.name === 'form[type]') return
@@ -42,32 +45,66 @@
   <h2 class="form__title">{{ section.settings.title }}</h2>
   {% form 'contact' %}
     <div class="form__sender-name">
-      <label class="form__label" for="name">{{ section.settings.name_label }}</label>
-      <input id="name" name="author" title="{{ section.settings.name_label }}" class="form__field {% if form.errors.author %}error{% endif %}" type="text" placeholder="{{ section.settings.name_placeholder | append: ' *'  }}">
+      <label class="form__label" for="author">{{ section.settings.name_label }}</label>
+      <input
+        id="author"
+        name="author"
+        title="{{ section.settings.name_label }}"
+        class="form__field {% if form.errors.author %}error{% endif %}"
+        type="text"
+        placeholder="{{ section.settings.name_placeholder | append: ' *'  }}"
+        {% if form.errors != blank %}
+          value="{{ form.author }}"
+        {% endif %}
+      >
       {% if form.errors.author %}
         <p class="form__error">{{ form.errors.author }}</p>
       {% endif %}
     </div>
     <div class="form__sender-email">
       <label class="form__label" for="email">{{ section.settings.email_label }}</label>
-      <input type="email" name="email" title="{{ section.settings.email_label }}" class="form__field {% if form.errors.email %}error{% endif %}" placeholder="{{ section.settings.email_placeholder | append: ' *'  }}">
+      <input
+        type="email"
+        name="email"
+        title="{{ section.settings.email_label }}"
+        class="form__field {% if form.errors.email %}error{% endif %}"
+        placeholder="{{ section.settings.email_placeholder | append: ' *'  }}"
+        {% if form.errors != blank %}
+          value="{{ form.email }}"
+        {% endif %}
+      >
       {% if form.errors.email %}
         <p class="form__error">{{ form.errors.email }}</p>
       {% endif %}
     </div>
     <div class="form__message">
-      <label class="form__label" for="message">{{ section.settings.message_label }}</label>
-      <textarea id="message" name="body" title="{{ section.settings.message_label }}" class="form__textarea {% if form.errors.message %}error{% endif %}" rows="5"></textarea>
-      {% if form.errors.message %}
-        <p class="form__error">{{ form.errors.message }}</p>
+      <label class="form__label" for="body">{{ section.settings.message_label }}</label>
+      <textarea 
+        id="body" 
+        name="body" 
+        title="{{ section.settings.message_label }}" 
+        class="form__textarea {% if form.errors.body %}error{% endif %}" 
+        rows="5"
+      >{% if form.errors != blank %}{{ form.body | strip }}{% endif %}</textarea>
+      {% if form.errors.body %}
+        <p class="form__error">{{ form.errors.body }}</p>
       {% endif %}
     </div>
-    {% if form.posted_successfully %}
-      Your form posted successfully
-    {% endif %}
+    <div class="form__info">
+      {% if form.posted_successfully %}
+        <p class="success">
+          <i class="fa-solid fa-circle-check"></i> {{ section.settings.success_message }}
+        </p>
+      {% endif %}
+      {% if form.errors != blank %}
+        <p class="error">
+          <i class="fa-solid fa-circle-exclamation"></i> {{ section.settings.error_message }}
+        </p>
+      {% endif %}
+    </div>
     <div class="form__submit">
       <button
-        class="g-recaptcha bq-button bq-button--size-lg bq-button--solid bq-button--{{ section.key }}"
+        class="g-recaptcha bq-button bq-button--size-lg bq-button--solid bq-button--{{ section.key }} bq-button--submit"
         data-sitekey="6Le5IfYiAAAAABxzCgFGGxw3_fLo8-99otZn_NlQ"
         data-callback="onSubmit"
         data-action="submit"
