@@ -27,15 +27,8 @@
   function onSubmit(token) {
     const form = document.querySelector('#{{ section.key }} form');
     const button = form.querySelector('.bq-button--submit');
-    const fields = form.querySelectorAll('input, textarea');
 
     button.innerHTML = '<i class="fa-regular fa-spinner-third fa-spin"></i>'
-
-    fields.forEach(function(field) {
-      if (field.name === 'form[type]') return
-
-      field.name = `form[${field.name}]`;
-    });
 
     form.submit();
   };
@@ -48,7 +41,7 @@
       <label class="form__label" for="author">{{ section.settings.name_label }}</label>
       <input
         id="author"
-        name="author"
+        name="form[author]"
         title="{{ section.settings.name_label }}"
         class="form__field {% if form.errors.author %}error{% endif %}"
         type="text"
@@ -64,8 +57,9 @@
     <div class="form__sender-email">
       <label class="form__label" for="email">{{ section.settings.email_label }}</label>
       <input
+        id="email"
         type="email"
-        name="email"
+        name="form[email]"
         title="{{ section.settings.email_label }}"
         class="form__field {% if form.errors.email %}error{% endif %}"
         placeholder="{{ section.settings.email_placeholder | append: ' *'  }}"
@@ -81,7 +75,7 @@
       <label class="form__label" for="body">{{ section.settings.message_label }}</label>
       <textarea 
         id="body" 
-        name="body" 
+        name="form[body]" 
         title="{{ section.settings.message_label }}" 
         class="form__textarea {% if form.errors.body %}error{% endif %}" 
         rows="5"
