@@ -79,15 +79,6 @@
   resize: vertical;
 }
 
-.form__error {
-  font-size: 16px;
-  line-height: 20px;
-
-  color: var(--color-red);
-
-  margin-bottom: 12px;
-}
-
 .form__info p {
   display: flex;
   align-items: center;

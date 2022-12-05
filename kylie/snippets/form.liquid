@@ -23,20 +23,6 @@
   {% endif %}
 </style>
 
-<script>
-  function onSubmit(token) {
-    const form = document.querySelector('#{{ section.key }} form');
-    const button = form.querySelector('.bq-button--submit');
-    const captcha = form.querySelector('.g-recaptcha-response');
-
-    captcha.name = 'form[g-recaptcha-response]';
-
-    button.innerHTML = '<i class="fa-regular fa-spinner-third fa-spin"></i>'
-
-    form.submit();
-  };
-</script>
-
 <div id="{{ section.key }}" class="form__inner">
   <h2 class="form__title">{{ section.settings.title }}</h2>
   {% form 'contact' %}
@@ -53,9 +39,6 @@
           value="{{ form.author }}"
         {% endif %}
       >
-      {% if form.errors.author %}
-        <p class="form__error">{{ form.errors.author }}</p>
-      {% endif %}
     </div>
     <div class="form__sender-email">
       <label class="form__label" for="email">{{ section.settings.email_label }}</label>
@@ -70,9 +53,6 @@
           value="{{ form.email }}"
         {% endif %}
       >
-      {% if form.errors.email %}
-        <p class="form__error">{{ form.errors.email }}</p>
-      {% endif %}
     </div>
     <div class="form__message">
       <label class="form__label" for="body">{{ section.settings.message_label }}</label>
@@ -83,9 +63,6 @@
         class="form__textarea {% if form.errors.body %}error{% endif %}" 
         rows="5"
       >{% if form.errors != blank %}{{ form.body | strip }}{% endif %}</textarea>
-      {% if form.errors.body %}
-        <p class="form__error">{{ form.errors.body }}</p>
-      {% endif %}
     </div>
     <div class="form__info">
       {% if form.posted_successfully %}
@@ -101,10 +78,7 @@
     </div>
     <div class="form__submit">
       <button
-        class="g-recaptcha bq-button bq-button--size-lg bq-button--solid bq-button--{{ section.key }} bq-button--submit"
-        data-sitekey="6Le5IfYiAAAAABxzCgFGGxw3_fLo8-99otZn_NlQ"
-        data-callback="onSubmit"
-        data-action="submit"
+        class="bq-button bq-button--size-lg bq-button--solid bq-button--{{ section.key }} bq-button--submit"
       >
         {{ section.settings.button_label }}
       </button>
