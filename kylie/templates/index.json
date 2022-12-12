@@ -164,7 +164,7 @@
             "button_size": "md",
             "title": "Column 2",
             "image": "booqable://assets/background-mountains.jpeg",
-            "use_solid_button": false
+            "use_solid_button": true
           },
           "disabled": null
         },
@@ -176,7 +176,7 @@
             "button_size": "md",
             "title": "Column 3",
             "image": "booqable://assets/background-mountains.jpeg",
-            "use_solid_button": false
+            "use_solid_button": true
           },
           "disabled": null
         }

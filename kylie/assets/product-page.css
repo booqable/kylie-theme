@@ -97,7 +97,7 @@
   .booqable-component
   .booqable-product-button-wrapper
   span.bq-status.bq-available {
-  background-color: var(--color-green);
+  background-color: var(--color-green) !important;
 }
 
 .product-info
@@ -127,7 +127,7 @@
   .booqable-component
   .booqable-product-button-wrapper
   span.bq-status.bq-unavailable {
-  background-color: var(--color-red);
+  background-color: var(--color-red) !important;
 }
 
 .product-info
