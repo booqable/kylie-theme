@@ -41,25 +41,31 @@ const handleScrollIn = (target) => {
   target?.scrollIntoView({ behavior: "smooth", block: "center" });
 };
 
+const handleScroll = () => {
+  const header = document.querySelector("header");
+  const headerHeight = header.getBoundingClientRect().height;
+  const contentContainer = document.querySelector("#main");
+
+  if (window.scrollY > 0) {
+    header.classList.add("fixed");
+    contentContainer.style.marginTop = `${headerHeight}px`;
+  }
+
+  if (window.scrollY === 0) {
+    header.classList.remove("fixed");
+    contentContainer.style.marginTop = 0;
+  }
+};
+
 const handleRemoveFocus = () => {
   document
     .querySelectorAll("[data-focus]")
     ?.forEach((node) => node.removeAttribute("data-focus"));
 };
 
-const handleHeaderLayout = () => {
-  const header = document.querySelector("header.header");
-  const headerHeight = header.getBoundingClientRect().height;
-  const contentContainer = document.querySelector("#main");
-
-  if (headerHeight > 0) {
-    contentContainer.style.marginTop = headerHeight + "px";
-  }
-};
-
 const handleMessages = ({ type, data, isTrusted }) => {
   if (type === "message" && !!data && isTrusted) {
-    handleRemoveFocus()
+    handleRemoveFocus();
 
     let target;
 
@@ -92,14 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initializers
   initFocalImages();
   initSearch();
-
-  // Handlers
-  handleHeaderLayout();
 });
 
-window.addEventListener("resize", () => {
-  // Handlers
-  handleHeaderLayout();
-});
-
+window.addEventListener("scroll", handleScroll);
 window.addEventListener("message", handleMessages);
