@@ -1,15 +1,15 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
 
   background-color: var(--color-primary-background);
   z-index: 1000;
 }
 
-.header + main {
-  margin-top: 55px;
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .header__wrapper {
