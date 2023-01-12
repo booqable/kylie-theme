@@ -27,37 +27,37 @@
   <h2 class="form__title">{{ section.settings.title }}</h2>
   {% form 'contact' %}
     <div class="form__sender-name">
-      <label class="form__label" for="author">{{ section.settings.name_label }}</label>
+      <label class="form__label" for="author">{{ section.settings.name_label | append: ' *'  }}</label>
       <input
         id="author"
         name="form[author]"
         title="{{ section.settings.name_label }}"
         class="form__field {% if form.errors.author %}error{% endif %}"
         type="text"
-        placeholder="{{ section.settings.name_placeholder | append: ' *'  }}"
+        placeholder="{{ section.settings.name_placeholder }}"
         {% if form.errors != blank %}
           value="{{ form.author }}"
         {% endif %}
       >
     </div>
     <div class="form__sender-email">
-      <label class="form__label" for="email">{{ section.settings.email_label }}</label>
+      <label class="form__label" for="email">{{ section.settings.email_label | append: ' *'  }}</label>
       <input
         id="email"
         type="email"
         name="form[email]"
         title="{{ section.settings.email_label }}"
         class="form__field {% if form.errors.email %}error{% endif %}"
-        placeholder="{{ section.settings.email_placeholder | append: ' *'  }}"
+        placeholder="{{ section.settings.email_placeholder }}"
         {% if form.errors != blank %}
           value="{{ form.email }}"
         {% endif %}
       >
     </div>
     <div class="form__message">
-      <label class="form__label" for="body">{{ section.settings.message_label }}</label>
+      <label class="form__label" for="body">{{ section.settings.message_label | append: ' *'  }}</label>
       <textarea 
-        id="body" 
+        id="body"
         name="form[body]" 
         title="{{ section.settings.message_label }}" 
         class="form__textarea {% if form.errors.body %}error{% endif %}" 
