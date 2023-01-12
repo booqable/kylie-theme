@@ -76,7 +76,7 @@
 .form__textarea {
   margin-bottom: 16px;
 
-  resize: vertical;
+  resize: none;
 }
 
 .form__info p {
@@ -176,10 +176,6 @@
   overflow: hidden;
 
   margin: 0 auto;
-}
-
-.form__inner--with-image {
-  padding-bottom: 75px;
 }
 
 .form__inner--grid {
@@ -344,12 +340,6 @@
 
   .form__inner--spacing-lg {
     padding: 60px var(--horizontal-padding);
-  }
-
-  .form__inner--with-image.form__inner--spacing-sm,
-  .form__inner--with-image.form__inner--spacing-md,
-  .form__inner--with-image.form__inner--spacing-lg {
-    padding-bottom: 75px;
   }
 }
 
