@@ -62,6 +62,10 @@ input {
 }
 
 .bq-button {
+  border: none;
+
+  cursor: pointer;
+
   display: inline-block;
 
   font-weight: var(--font-weight-bold);
@@ -100,6 +104,10 @@ input {
 
 .bq-button--solid:hover {
   box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, 0.12);
+}
+
+.bq-button.error {
+  background-color: var(--color-red);
 }
 
 .divider {
@@ -162,4 +170,8 @@ input {
 
 [data-focus="true"] {
   box-shadow: 0 0 0 3px #395db899;
+}
+
+.grecaptcha-badge {
+  z-index: 9999;
 }
