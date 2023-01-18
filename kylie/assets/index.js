@@ -42,11 +42,18 @@ const handleScrollIn = (target) => {
 };
 
 const handleScroll = () => {
+  const previewBar = document.querySelector(".preview-bar__container");
+
   const header = document.querySelector("header");
-  const headerHeight = header.getBoundingClientRect().height;
   const contentContainer = document.querySelector("#main");
 
+  let headerHeight = header.getBoundingClientRect().height;
+
   if (window.scrollY > 0) {
+    if (previewBar) {
+      headerHeight += previewBar.getBoundingClientRect().height;
+    }
+
     header.classList.add("fixed");
     contentContainer.style.marginTop = `${headerHeight}px`;
   }
