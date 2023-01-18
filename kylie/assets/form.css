@@ -2,8 +2,6 @@
 .form__inner {
   max-width: 725px;
   width: 100%;
-
-  margin-bottom: 100%;
 }
 
 .form__inner form {
@@ -114,7 +112,8 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  margin: 0 auto 100%;
+  margin: 0 auto;
+  margin-bottom: 550px;
 }
 
 .form__wrapper--with-image {
@@ -300,7 +299,7 @@
   width: calc(100% - 32px);
 
   top: 100%;
-  transform: translateY(-50px);
+  transform: translateY(-25px);
 
   background-color: var(--color-white);
 
@@ -330,6 +329,10 @@
 }
 
 @media (min-width: 576px) {
+  .form__form {
+    transform: translateY(-50px);
+  }
+
   .form__inner--spacing-sm {
     padding: 30px var(--horizontal-padding);
   }
