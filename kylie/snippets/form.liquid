@@ -46,7 +46,7 @@
         id="email"
         type="email"
         name="form[email]"
-        pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/"
+        pattern="/^\S+@([\w-]+\.)+[\w-]{2,16}$/"
         title="{{ section.settings.email_label }}"
         class="form__field {% if form.errors.email %}error{% endif %}"
         placeholder="{{ section.settings.email_placeholder }}"
