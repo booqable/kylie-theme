@@ -46,7 +46,8 @@
         id="email"
         type="email"
         name="form[email]"
-        title="{{ section.settings.email_label }}"
+        pattern="^([a-z0-9!#$%&'*+/=?^_`{|}~-])+@([\w-]+\.)+[\w-]{2,16}$"
+        title="(e.g. mail@domain.com)"
         class="form__field {% if form.errors.email %}error{% endif %}"
         placeholder="{{ section.settings.email_placeholder }}"
         {% if form.errors != blank %}
