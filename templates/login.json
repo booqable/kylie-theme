@@ -1,0 +1,11 @@
+{
+  "name": "Login",
+  "sections": {
+    "login-form": {
+      "type": "login-form",
+      "blocks": {},
+      "settings": {}
+    }
+  },
+  "order": ["login-form"]
+}
