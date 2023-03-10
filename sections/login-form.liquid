@@ -1,16 +1,22 @@
-<h1>User log in</h1>
+<h1>User log in new</h1>
+
+{%- if alert -%}
+  <h2 style="color: red;">OMG {{ alert }}!</h2>
+{%- endif -%}
+
+
 <form class="new_shop_next_user" id="new_shop_next_user" action="{{ canonical_url }}" accept-charset="UTF-8" method="post">
 
   <input type="hidden" name="authenticity_token" value="{{ form_authenticity_token }}" autocomplete="off">
 
   <div class="field">
     <label for="shop_next_user_email">Email</label><br>
-    <input autofocus="autofocus" autocomplete="email" type="email" name="shop_next_user[email]" id="shop_next_user_email">
+    <input value="{{ form.email }}" autofocus="autofocus" autocomplete="email" type="email" name="shop_next_user[email]" id="shop_next_user_email">
   </div>
 
   <div class="field">
     <label for="shop_next_user_password">Password</label><br>
-    <input autocomplete="current-password" type="password" name="shop_next_user[password]" id="shop_next_user_password">
+    <input value="{{ form.password }}" autocomplete="current-password" type="password" name="shop_next_user[password]" id="shop_next_user_password">
   </div>
 
     <div class="field">
