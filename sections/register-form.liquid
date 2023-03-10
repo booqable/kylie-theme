@@ -1,0 +1,25 @@
+<h1>User registration</h1>
+<form class="new_shop_next_user" id="new_shop_next_user" action="{{ canonical_url }}" accept-charset="UTF-8" method="post">
+
+  <input type="hidden" name="authenticity_token" value="{{ form_authenticity_token }}" autocomplete="off">
+
+  <div class="field">
+    <label for="shop_next_user_email">Email</label><br>
+    <input autofocus="autofocus" autocomplete="email" type="email" name="shop_next_user[email]" id="shop_next_user_email">
+  </div>
+
+  <div class="field">
+    <label for="shop_next_user_password">Password</label>
+<br>
+    <input autocomplete="new-password" type="password" name="shop_next_user[password]" id="shop_next_user_password">
+  </div>
+
+  <div class="field">
+    <label for="shop_next_user_password_confirmation">Password confirmation</label><br>
+    <input autocomplete="new-password" type="password" name="shop_next_user[password_confirmation]" id="shop_next_user_password_confirmation">
+  </div>
+
+  <div class="actions">
+    <input type="submit" name="commit" value="Sign up" data-disable-with="Sign up">
+  </div>
+</form>
