@@ -1,0 +1,11 @@
+{
+  "name": "Activate account",
+  "sections": {
+    "register-form": {
+      "type": "activate-account",
+      "blocks": {},
+      "settings": {}
+    }
+  },
+  "order": ["activate-account"]
+}

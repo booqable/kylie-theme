@@ -1,0 +1,14 @@
+<form class="new_shop_next_user" id="new_shop_next_user" action="{{ canonical_url }}" accept-charset="UTF-8" method="post">
+
+  <input type="hidden" name="authenticity_token" value="{{ form_authenticity_token }}" autocomplete="off">
+  
+  <div class="field">
+    <label for="shop_next_user_email">Email</label><br>
+    <input autofocus="autofocus" autocomplete="email" type="email" name="shop_next_user[email]" id="shop_next_user_email">
+  </div>
+
+  <div class="actions">
+    <input type="submit" name="commit" value="Resend confirmation instructions" data-disable-with="Resend confirmation instructions">
+  </div>
+
+</form>
