@@ -41,13 +41,29 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: var(--font-heading) !important;
+h6,
+p,
+ul,
+ol,
+li,
+span,
+b,
+i {
   color: var(--color-primary-foreground);
 }
 
-p {
-  color: var(--color-primary-foreground);
+/* Overriding redactor implementation of separator */
+hr::before, hr::after {
+  border-top-color: var(--color-border) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading) !important;
 }
 
 input {

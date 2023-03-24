@@ -251,6 +251,8 @@
 
 .product-description__content-container {
   line-height: 1.5;
+
+  color: var(--color-primary-foreground);
 }
 
 .product-description__content-item {
