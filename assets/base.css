@@ -54,8 +54,7 @@ i {
 
 /* Overriding redactor implementation of separator */
 hr::before, hr::after {
-  border-top-color: var(--color-border);
-  border-bottom-color: var(--color-border);
+  border-top-color: var(--color-border) !important;
 }
 
 h1,
