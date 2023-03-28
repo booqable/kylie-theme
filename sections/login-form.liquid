@@ -1,30 +1,39 @@
-<h1>User log in new</h1>
+{{ "login.css" | asset_url | stylesheet_tag }}
 
-{%- if alert -%}
-  <h2 style="color: red;">OMG {{ alert }}!</h2>
-{%- endif -%}
+<div class="bq-login">
+  <h3 class="bq-login-title">Log in</h3>
 
+  {%- if alert -%}
+    <h2 style="color: red;">OMG {{ alert }}!</h2>
+  {%- endif -%}
 
-<form class="new_shop_next_user" id="new_shop_next_user" action="{{ canonical_url }}" accept-charset="UTF-8" method="post">
+  <form class="new_shop_next_user" id="new_shop_next_user" action="{{ canonical_url }}" accept-charset="UTF-8" method="post">
 
-  <input type="hidden" name="authenticity_token" value="{{ form_authenticity_token }}" autocomplete="off">
+    <input type="hidden" name="authenticity_token" value="{{ form_authenticity_token }}" autocomplete="off">
 
-  <div class="field">
-    <label for="shop_next_user_email">Email</label><br>
-    <input value="{{ form.email }}" autofocus="autofocus" autocomplete="email" type="email" name="shop_next_user[email]" id="shop_next_user_email">
-  </div>
-
-  <div class="field">
-    <label for="shop_next_user_password">Password</label><br>
-    <input value="{{ form.password }}" autocomplete="current-password" type="password" name="shop_next_user[password]" id="shop_next_user_password">
-  </div>
-
-    <div class="field">
-      <input name="shop_next_user[remember_me]" type="hidden" value="0" autocomplete="off"><input type="checkbox" value="1" name="shop_next_user[remember_me]" id="shop_next_user_remember_me">
-      <label for="shop_next_user_remember_me">Remember me</label>
+    <div class="bq-field">
+      <label for="shop_next_user_email" class="bq-login__label">Email</label>
+      <input value="{{ form.email }}" class="bq-login__input" placeholder=" " autofocus="autofocus" autocomplete="email" type="email" name="shop_next_user[email]" id="shop_next_user_email">
     </div>
 
-  <div class="actions">
-    <input type="submit" name="commit" value="Log in" data-disable-with="Log in">
-  </div>
-</form>
+    <div class="bq-field">
+      <label for="shop_next_user_password" class="bq-login__label">Password</label>
+      <input value="{{ form.password }}" class="bq-login__input" placeholder=" " autocomplete="current-password" type="password" name="shop_next_user[password]" id="shop_next_user_password">
+    </div>
+
+    <div class="bq-h-margin-bottom-24">
+      <a href="" class="bq-link">Forgot your password?</a>
+    </div>
+
+    <div class="bq-h-margin-bottom-24">
+      <input type="submit" class="bq-button bq-button--login" name="commit" value="Log in" data-disable-with="Log in">
+    </div>
+
+    <hr class="bq-separator" />
+
+    <a href="" class="bq-button bq-button--secondary bq-h-margin-bottom-24">Create an account</a>
+
+    <a href="" class="bq-button bq-button--minimal">Continue as guest</a>
+
+  </form>
+</div>

@@ -1,5 +1,6 @@
 {
   "name": "Login",
+  "layout": "session",
   "sections": {
     "login-form": {
       "type": "login-form",
