@@ -76,11 +76,10 @@
 }
 
 .bq-login__input:focus {
+  line-height: 36px;
+  padding: 8px 7px;
   border-color: var(--color-primary);
   border-width: 2px;
-}
-
-.bq-field {
 }
 
 .bq-separator {
