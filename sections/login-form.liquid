@@ -3,10 +3,6 @@
 <div class="bq-login">
   <h3 class="bq-login-title">Log in</h3>
 
-  {%- if alert -%}
-    <h2 style="color: red;">OMG {{ alert }}!</h2>
-  {%- endif -%}
-
   <form class="new_shop_next_user" id="new_shop_next_user" action="{{ canonical_url }}" accept-charset="UTF-8" method="post">
 
     <input type="hidden" name="authenticity_token" value="{{ form_authenticity_token }}" autocomplete="off">
@@ -24,6 +20,10 @@
     <div class="bq-h-margin-bottom-24">
       <a href="" class="bq-link">Forgot your password?</a>
     </div>
+
+    {%- if alert -%}
+      <div class="bq-alert">{{ alert }}</div>
+    {%- endif -%}
 
     <div class="bq-h-margin-bottom-24">
       <input type="submit" class="bq-button bq-button--login" name="commit" value="Log in" data-disable-with="Log in">

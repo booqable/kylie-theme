@@ -97,3 +97,8 @@
 .bq-h-margin-bottom-24 {
   margin-bottom: 24px;
 }
+
+.bq-alert {
+  color: var(--color-red);
+  margin-bottom: 24px;
+}
