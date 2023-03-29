@@ -76,6 +76,7 @@
 }
 
 .bq-login__input:focus {
+  outline: none;
   line-height: 36px;
   padding: 8px 7px;
   border-color: var(--color-primary);
