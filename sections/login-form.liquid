@@ -18,7 +18,7 @@
     </div>
 
     <div class="h-margin-bottom--24">
-      <a href="" class="account__link">Forgot your password?</a>
+      <a href="{{ routes.reset_password_url }}" class="account__link">Forgot your password?</a>
     </div>
 
     {%- if alert -%}
@@ -31,7 +31,7 @@
 
     <hr class="account__separator" />
 
-    <a href="" class="account__button account__button--secondary h-margin-bottom--24">Create an account</a>
+    <a href="{{ routes.register_url }}" class="account__button account__button--secondary h-margin-bottom--24">Create an account</a>
 
     <a href="" class="account__button account__button--minimal">Continue as guest</a>
 
