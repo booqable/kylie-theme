@@ -1,46 +1,46 @@
-.bq-login {
+.account {
   margin: 0 auto;
   width: 400px;
   padding: 0 16px;
 }
 
-.bq-login-title {
+.account__title {
   font-size: 24px;
   line-height: 32px;
 }
 
-.bq-button--login {
-  background-color: var(--color-primary);
-  border-radius: var(--border-radius-sm);
-  color: white;
+.account__button {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
   font-size: 16px;
   line-height: 24px;
   padding: 12px 0px;
   width: 100%;
 }
 
-.bq-button--secondary {
+.account__button--primary {
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  color: white;
+}
+
+.account__button--secondary {
   border: 1px solid var(--color-primary);
   border-radius: var(--border-radius-sm);
   color: black;
   text-decoration: none;
-  font-size: 16px;
-  line-height: 24px;
-  padding: 12px 0px;
-  width: 100%;
 }
 
-.bq-button--minimal {
+.account__button--minimal {
   color: var(--color-primary);
   font-weight: normal;
   text-decoration: none;
-  font-size: 16px;
-  line-height: 24px;
-  padding: 12px 0px;
-  width: 100%;
 }
 
-.bq-login__label {
+.account__label {
   position: relative;
   top: 8px;
   background-color: white;
@@ -54,18 +54,18 @@
   transition-duration: 300ms;
 }
 
-.bq-login__label:has(+ input:focus) {
+.account__label:has(+ input:focus) {
   color: var(--color-primary);
 }
 
-.bq-login__label:not(:has(+ input:focus)):has(+ input:placeholder-shown)  {
+.account__label:not(:has(+ input:focus)):has(+ input:placeholder-shown)  {
   top: 37px;
   background-color: transparent;
   color: var(--color-grey-dark);
   font-size: 16px;
 }
 
-.bq-login__input {
+.account__input {
   width: 100%;
   line-height: 38px;
   padding: 8px;
@@ -75,7 +75,7 @@
   font-size: 16px;
 }
 
-.bq-login__input:focus {
+.account__input:focus {
   outline: none;
   line-height: 36px;
   padding: 8px 7px;
@@ -83,22 +83,22 @@
   border-width: 2px;
 }
 
-.bq-separator {
+.account__separator {
   border: none;
   border-bottom: 1px solid #D8DCE0;
   margin-bottom: 24px;
 }
 
-.bq-link {
+.account__link {
   color: var(--color-primary);
   text-decoration: none;
 }
 
-.bq-h-margin-bottom-24 {
+.account__alert {
+  color: var(--color-red);
   margin-bottom: 24px;
 }
 
-.bq-alert {
-  color: var(--color-red);
+.h-margin-bottom--24 {
   margin-bottom: 24px;
 }
