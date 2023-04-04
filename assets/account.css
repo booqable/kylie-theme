@@ -9,6 +9,20 @@
   line-height: 32px;
 }
 
+.account__title--2 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  color: var(--color-typo);
+}
+
 .account__button {
   border: none;
   cursor: pointer;
@@ -101,4 +115,22 @@
 
 .h-margin-bottom--24 {
   margin-bottom: 24px;
+}
+
+.h-margin-bottom--16 {
+  margin-bottom: 16px;
+}
+
+
+.breadcrumbs {
+  color: var(--color-primary);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.breadcrumbs__chevron {
+  margin-right: 8px;
 }

@@ -7,12 +7,12 @@
 
     <input type="hidden" name="authenticity_token" value="{{ form_authenticity_token }}" autocomplete="off">
 
-    <div class="bq-field">
+    <div>
       <label for="shop_next_user_email" class="account__label">Email</label>
       <input value="{{ form.email }}" class="account__input" placeholder=" " autofocus="autofocus" autocomplete="email" type="email" name="shop_next_user[email]" id="shop_next_user_email">
     </div>
 
-    <div class="bq-field">
+    <div>
       <label for="shop_next_user_password" class="account__label">Password</label>
       <input value="{{ form.password }}" class="account__input" placeholder=" " autocomplete="current-password" type="password" name="shop_next_user[password]" id="shop_next_user_password">
     </div>
