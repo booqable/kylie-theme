@@ -17,7 +17,7 @@
       <input value="{{ form.password }}" class="account__input" placeholder=" " autocomplete="current-password" type="password" name="shop_next_user[password]" id="shop_next_user_password">
     </div>
 
-    <div class="h-margin-bottom--24">
+    <div class="account__divider">
       <a href="{{ routes.reset_password_url }}" class="account__link">Forgot your password?</a>
     </div>
 
@@ -25,13 +25,13 @@
       <div class="account__alert">{{ alert }}</div>
     {%- endif -%}
 
-    <div class="h-margin-bottom--24">
+    <div class="account__divider">
       <input type="submit" class="account__button account__button--primary" name="commit" value="Log in" data-disable-with="Log in">
     </div>
 
     <hr class="account__separator" />
 
-    <a href="{{ routes.register_url }}" class="account__button account__button--secondary h-margin-bottom--24">Create an account</a>
+    <a href="{{ routes.register_url }}" class="account__button account__button--secondary account__divider">Create an account</a>
 
     <a href="" class="account__button account__button--minimal">Continue as guest</a>
 

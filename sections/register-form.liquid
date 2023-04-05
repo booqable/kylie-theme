@@ -2,7 +2,7 @@
 
 <div class="account">
   <h3 class="account__title">Create an account</h3>
-  <div class="h-margin-bottom--24">
+  <div class="account__divider">
     Already have an account?
     <a class="account__link" href="{{ routes.login_url }}">
       Log in
@@ -28,12 +28,12 @@
       <input autocomplete="new-password" class="account__input" type="password" name="shop_next_user[password]" id="shop_next_user_password">
     </div>
 
-    <div class="h-margin-bottom--24">
+    <div class="account__divider">
       <label for="shop_next_user_password_confirmation" class="account__label">Password confirmation</label>
       <input autocomplete="new-password" class="account__input" type="password" name="shop_next_user[password_confirmation]" id="shop_next_user_password_confirmation">
     </div>
   
-    <div class="h-margin-bottom--24">
+    <div class="account__divider">
       <label class="account__static-label">Account type</label>
     
       <div class="account-type-options">
@@ -49,7 +49,7 @@
       </div>
     </div>
 
-    <div class="h-margin-bottom--16">
+    <div class="account__divider--small">
       <input type="checkbox" name="shop_next_user[agreement_accepted]" id="shop_next_user_agreement_accepted" value="true">
       <label for="shop_next_user_agreement_accepted">
         I agree to the <a class="account__link" href="https://booqable.com/agreement" target="_blank">Terms and Agreements</a>
