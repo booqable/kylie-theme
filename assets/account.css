@@ -134,6 +134,16 @@
   border-width: 2px;
 }
 
+.account__input--error {
+  border-color: var(--color-danger-base);
+  background-color: var(--color-danger-background);
+}
+
+.account__error-message {
+  font-size: 14px;
+  color: var(--color-danger-dark);
+}
+
 .account__separator {
   border: none;
   border-bottom: 1px solid #D8DCE0;

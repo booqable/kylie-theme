@@ -15,22 +15,26 @@
 
     <div class="field">
       <label for="shop_next_user_name" class="account__label">Full name</label>
-      <input autofocus="autofocus" class="account__input" autocomplete="name" type="name" name="shop_next_user[name]" id="shop_next_user_name">
+      <input value="{{ form.name }}" autofocus="autofocus" class="account__input {% if form.errors.name %}account__input--error{% endif %}" autocomplete="name" type="name" name="shop_next_user[name]" id="shop_next_user_name">
+      <div class="account__error-message">{{ form.errors.name }}</div>
     </div>
 
     <div>
       <label for="shop_next_user_email" class="account__label">Email</label>
-      <input autofocus="autofocus" class="account__input" autocomplete="email" type="email" name="shop_next_user[email]" id="shop_next_user_email">
+      <input value="{{ form.email }}" autofocus="autofocus" class="account__input {% if form.errors.email %}account__input--error{% endif %}" autocomplete="email" type="email" name="shop_next_user[email]" id="shop_next_user_email">
+      <div class="account__error-message">{{ form.errors.email }}</div>
     </div>
 
     <div>
       <label for="shop_next_user_password" class="account__label">Password</label>
-      <input autocomplete="new-password" class="account__input" type="password" name="shop_next_user[password]" id="shop_next_user_password">
+      <input autocomplete="new-password" class="account__input {% if form.errors.password %}account__input--error{% endif %}" type="password" name="shop_next_user[password]" id="shop_next_user_password">
+      <div class="account__error-message">{{ form.errors.password }}</div>
     </div>
 
     <div class="account__divider">
       <label for="shop_next_user_password_confirmation" class="account__label">Password confirmation</label>
-      <input autocomplete="new-password" class="account__input" type="password" name="shop_next_user[password_confirmation]" id="shop_next_user_password_confirmation">
+      <input autocomplete="new-password" class="account__input {% if form.errors.password_confirmation %}account__input--error{% endif %}" type="password" name="shop_next_user[password_confirmation]" id="shop_next_user_password_confirmation">
+      <div class="account__error-message">{{ form.errors.password_confirmation }}</div>
     </div>
   
     <div class="account__divider">
@@ -38,19 +42,21 @@
     
       <div class="account-type-options">
         <div class="account-type-options__first-option">
-          <input type="radio" name="shop_next_user[legal_type]" id="shop_next_user_legal_type_person" value="person">
+          <input type="radio" name="shop_next_user[legal_type]" id="shop_next_user_legal_type_person" value="person" {% if form.legal_type == 'person'%}checked{% endif %}>
           <label class="account__static-label" for="shop_next_user_legal_type_person">Private</label>
         </div>
         
         <div>
-          <input type="radio" name="shop_next_user[legal_type]" id="shop_next_user_legal_type_commercial" value="commercial">
+          <input type="radio" name="shop_next_user[legal_type]" id="shop_next_user_legal_type_commercial" value="commercial" {% if form.legal_type == 'commercial'%}checked{% endif %}>
           <label class="account__static-label" for="shop_next_user_legal_type_commercial">Company</label>
         </div>
       </div>
+      <div class="account__error-message">{{ form.errors.customer }}</div>
+
     </div>
 
     <div class="account__divider--small">
-      <input type="checkbox" name="shop_next_user[agreement_accepted]" id="shop_next_user_agreement_accepted" value="true">
+      <input type="checkbox" name="shop_next_user[agreement_accepted]" id="shop_next_user_agreement_accepted" value="true" checked>
       <label for="shop_next_user_agreement_accepted">
         I agree to the <a class="account__link" href="https://booqable.com/agreement" target="_blank">Terms and Agreements</a>
       </label>
