@@ -1,7 +1,8 @@
 {
   "name": "Activate account",
+  "layout": "session",
   "sections": {
-    "register-form": {
+    "activate-account": {
       "type": "activate-account",
       "blocks": {},
       "settings": {}

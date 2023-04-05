@@ -1,5 +1,18 @@
-<h1>Account confirmed</h1>
+{{ "account.css" | asset_url | stylesheet_tag }}
 
-<div>Your account has been confirmed. You can now log in and continue using the website.</div>
+<div class="account">
 
-<button>View cart</button>
+  <div class="account__title-icon">
+    <i class="fa-solid fa-badge-check breadcrumbs__chevron"></i> 
+  </div>
+
+  <h3 class="account__title account__title--centered">  
+    Account confirmed
+  </h3>
+
+  <div class="description description--centered">
+    Your account has been confirmed. You can now log in and continue using the website.
+  </div>
+
+  <a href="{{ routes.cart_url }}" class="account__button account__button--primary">View cart</a>
+</div>

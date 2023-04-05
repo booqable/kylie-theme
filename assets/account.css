@@ -7,6 +7,7 @@
 .account__title {
   font-size: 20px;
   line-height: 28px;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 375px) {
@@ -23,11 +24,19 @@
   }  
 }
 
+.account__title--centered {
+  text-align: center;
+}
+
 .description {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 24px;
   color: var(--color-typo);
+}
+
+.description--centered {
+  text-align: center;;
 }
 
 .account__button {
@@ -40,6 +49,7 @@
   line-height: 24px;
   padding: 12px 0px;
   width: 100%;
+  text-decoration: none;
 }
 
 .account__button--primary {
@@ -158,4 +168,17 @@
 
 .account__link {
   color: var(--color-primary);
+}
+
+.account__title-icon {
+  text-align: center;
+  color: var(--color-primary);
+  font-size: 32px;
+  margin-left: 0 auto 16px;
+}
+
+@media screen and (min-width: 375px) {
+  .account__title-icon {
+    font-size: 40px;
+  }
 }
