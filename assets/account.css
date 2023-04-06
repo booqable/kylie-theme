@@ -81,13 +81,13 @@
 .account__button--minimal {
   color: var(--color-primary);
   font-weight: normal;
-  text-decoration: none;
-}
+  text-decoration: none;}
 
-.account__label {
+
+.account-fieldset__label {
   position: relative;
   top: 8px;
-  background-color: white;
+  background:  linear-gradient(0deg, white 0%, white 44%, transparent 44%);
   left: 16px;
   color: var(--color-grey-dark);
 
@@ -98,25 +98,34 @@
   transition-duration: 300ms;
 }
 
-.account__label:has(+ input:focus) {
+.account-fieldset__label:has(+ input:focus) {
   color: var(--color-primary);
 }
 
-.account__label:not(:has(+ input:focus)):has(+ input:placeholder-shown)  {
+.account-fieldset__label:not(:has(+ input:focus)):has(+ input:placeholder-shown)  {
   top: 37px;
   background-color: transparent;
   color: var(--color-grey-dark);
   font-size: 16px;
 }
 
-.account__static-label {
+.account-fieldset--error .account-fieldset__label {
+  background:  linear-gradient(0deg, var(--color-danger-background) 0%, var(--color-danger-background) 44%, transparent 44%);
+  color: var(--color-danger-dark);
+}
+
+.account-fieldset__static-label, .account-fieldset__radio-label {
   color: var(--color-typo);
   font-size: 16px;
   line-height: 24px;
   padding: 0 2px;
 }
 
-.account__input {
+.account-fieldset--error .account-fieldset__static-label {
+  color: var(--color-danger-dark); 
+}
+
+.account-fieldset__input{
   width: 100%;
   line-height: 38px;
   padding: 8px;
@@ -126,7 +135,7 @@
   font-size: 16px;
 }
 
-.account__input:focus {
+.account-fieldset__input:focus {
   outline: none;
   line-height: 36px;
   padding: 8px 7px;
@@ -134,7 +143,7 @@
   border-width: 2px;
 }
 
-.account__input--error {
+.account-fieldset--error .account-fieldset__input {
   border-color: var(--color-danger-base);
   background-color: var(--color-danger-background);
 }
