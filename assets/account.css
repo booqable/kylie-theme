@@ -165,8 +165,21 @@
 }
 
 .account__alert {
-  color: var(--color-red);
+  padding: 12px 16px;
   margin-bottom: 24px;
+  border-radius: 8px;
+}
+
+.account__alert--info {
+  color: var(--color-typo);
+  background-color: var(--color-blue-background);
+  border: 1px solid var(--color-primary);
+}
+
+.account__alert--danger {
+  color: var(--color-danger-dark);
+  background-color: var(--color-danger-background);
+  border: 1px solid var(--color-danger-base);
 }
 
 .account__divider {
