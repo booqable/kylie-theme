@@ -100,7 +100,7 @@
   color: var(--color-primary);
 }
 
-.account-fieldset__label:not(:has(+ input:focus)):has(+ input:placeholder-shown)  {
+.account-fieldset__label:not(:has(+ input:focus)):has(+ input:placeholder-shown) {
   background-color: transparent;
   color: var(--color-grey-dark);
   font-size: 16px;

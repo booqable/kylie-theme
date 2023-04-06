@@ -15,25 +15,25 @@
 
     <div class="{% if form.errors.name %}account-fieldset--error{% endif %}">
       <label for="shop_next_user_name" class="account-fieldset__label">Full name</label>
-      <input value="{{ form.name }}" autofocus="autofocus" class="account-fieldset__input" autocomplete="name" type="name" name="shop_next_user[name]" id="shop_next_user_name">
+      <input value="{{ form.name }}" placeholder=" " autofocus="autofocus" class="account-fieldset__input" autocomplete="name" type="name" name="shop_next_user[name]" id="shop_next_user_name">
       <div class="account__error-message">{{ form.errors.name }}</div>
     </div>
 
     <div class="{% if form.errors.email %}account-fieldset--error{% endif %}">
       <label for="shop_next_user_email" class="account-fieldset__label">Email</label>
-      <input value="{{ form.email }}" autofocus="autofocus" class="account-fieldset__input" autocomplete="email" type="email" name="shop_next_user[email]" id="shop_next_user_email">
+      <input value="{{ form.email }}" placeholder=" " autofocus="autofocus" class="account-fieldset__input" autocomplete="email" type="email" name="shop_next_user[email]" id="shop_next_user_email">
       <div class="account__error-message">{{ form.errors.email }}</div>
     </div>
 
     <div class="{% if form.errors.password %}account-fieldset--error{% endif %}">
       <label for="shop_next_user_password" class="account-fieldset__label">Password</label>
-      <input autocomplete="new-password" class="account-fieldset__input" type="password" name="shop_next_user[password]" id="shop_next_user_password">
+      <input autocomplete="new-password" placeholder=" " class="account-fieldset__input" type="password" name="shop_next_user[password]" id="shop_next_user_password">
       <div class="account__error-message">{{ form.errors.password }}</div>
     </div>
 
     <div class="{% if form.errors.password_confirmation %}account-fieldset--error{% endif %} account__divider">
       <label for="shop_next_user_password_confirmation" class="account-fieldset__label">Password confirmation</label>
-      <input autocomplete="new-password" class="account-fieldset__input" type="password" name="shop_next_user[password_confirmation]" id="shop_next_user_password_confirmation">
+      <input autocomplete="new-password" placeholder=" " class="account-fieldset__input" type="password" name="shop_next_user[password_confirmation]" id="shop_next_user_password_confirmation">
       <div class="account__error-message">{{ form.errors.password_confirmation }}</div>
     </div>
   
