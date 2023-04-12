@@ -42,12 +42,12 @@
     
       <div class="account-type-options">
         <div class="account-type-options__first-option">
-          <input type="radio" name="shop_next_user[legal_type]" id="shop_next_user_legal_type_person" value="person" {% if form.legal_type == 'person'%}checked{% endif %}>
+          <input type="radio" name="shop_next_user[legal_type]" id="shop_next_user_legal_type_person" value="person" {% if form.legal_type == 'person' %}checked{% endif %}>
           <label class="account-fieldset__radio-label" for="shop_next_user_legal_type_person">Private</label>
         </div>
         
         <div>
-          <input type="radio" name="shop_next_user[legal_type]" id="shop_next_user_legal_type_commercial" value="commercial" {% if form.legal_type == 'commercial'%}checked{% endif %}>
+          <input type="radio" name="shop_next_user[legal_type]" id="shop_next_user_legal_type_commercial" value="commercial" {% if form.legal_type == 'commercial' %}checked{% endif %}>
           <label class="account-fieldset__radio-label" for="shop_next_user_legal_type_commercial">Company</label>
         </div>
       </div>
@@ -55,10 +55,11 @@
     </div>
 
     <div class="account__divider--small">
-      <input type="checkbox" name="shop_next_user[agreement_accepted]" id="shop_next_user_agreement_accepted" value="true" checked>
+      <input type="checkbox" name="shop_next_user[agreement_accepted]" id="shop_next_user_agreement_accepted" value="true" {% if form.agreement_accepted %}checked{% endif %}>
       <label for="shop_next_user_agreement_accepted">
         I agree to the <a class="account__link" href="https://booqable.com/agreement" target="_blank">Terms and Agreements</a>
       </label>
+      <div class="account__error-message">{{ form.errors.agreement_accepted }}</div>
     </div>
 
     {%- if alert -%}
