@@ -25,7 +25,7 @@
 
 <div id="{{ section.key }}" class="form__inner">
   <h2 class="form__title">{{ section.settings.title }}</h2>
-  <form id="contact" action="#contact" class="recaptcha-form" method="post" name="contact">
+  {% form 'contact' %}
     <div class="form__sender-name">
       <label class="form__label" for="author">{{ section.settings.name_label | append: ' *'  }}</label>
       <input
@@ -84,5 +84,5 @@
         {{ section.settings.button_label }}
       </button>
     </div>
-  </form>
+  {% endform %}
 </div>
