@@ -3,10 +3,10 @@
 <div class="account">
 
   <div class="account__title-icon">
-    <i class="fa-solid fa-badge-check breadcrumbs__chevron"></i> 
+    <i class="fa-solid fa-badge-check breadcrumbs__chevron"></i>
   </div>
 
-  <h3 class="account__title account__title--centered">  
+  <h3 class="account__title account__title--centered">
     Account confirmed
   </h3>
 
@@ -16,3 +16,10 @@
 
   <a href="{{ routes.cart_url }}" class="account__button account__button--primary">View cart</a>
 </div>
+
+{% schema %}
+  {
+    "name": "Activate account",
+    "settings": []
+  }
+{% endschema %}
