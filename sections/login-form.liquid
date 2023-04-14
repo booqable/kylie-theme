@@ -3,18 +3,42 @@
 <div class="account">
   <h3 class="account__title">Log in</h3>
 
-  <form class="new_shop_next_user" id="new_shop_next_user" action="{{ canonical_url }}" accept-charset="UTF-8" method="post">
+  <form
+    class="new_shop_next_user"
+    id="new_shop_next_user"
+    action="{{ canonical_url }}"
+    accept-charset="UTF-8"
+    method="post">
 
-    <input type="hidden" name="authenticity_token" value="{{ form_authenticity_token }}" autocomplete="off">
+    <input
+      type="hidden"
+      name="authenticity_token"
+      value="{{ form_authenticity_token }}"
+      autocomplete="off">
 
     <div>
       <label for="shop_next_user_email" class="account-fieldset__label">Email</label>
-      <input value="{{ form.email }}" class="account-fieldset__input" placeholder=" " autofocus="autofocus" autocomplete="email" type="email" name="shop_next_user[email]" id="shop_next_user_email">
+      <input
+        value="{{ form.email }}"
+        class="account-fieldset__input"
+        placeholder=" "
+        autofocus="autofocus"
+        autocomplete="email"
+        type="email"
+        name="shop_next_user[email]"
+        id="shop_next_user_email">
     </div>
 
     <div>
       <label for="shop_next_user_password" class="account-fieldset__label">Password</label>
-      <input value="{{ form.password }}" class="account-fieldset__input" placeholder=" " autocomplete="current-password" type="password" name="shop_next_user[password]" id="shop_next_user_password">
+      <input
+        value="{{ form.password }}"
+        class="account-fieldset__input"
+        placeholder=" "
+        autocomplete="current-password"
+        type="password"
+        name="shop_next_user[password]"
+        id="shop_next_user_password">
     </div>
 
     <div class="account__divider">
@@ -26,7 +50,12 @@
     {%- endif -%}
 
     <div class="account__divider">
-      <input type="submit" class="account__button account__button--primary" name="commit" value="Log in" data-disable-with="Log in">
+      <input
+        type="submit"
+        class="account__button account__button--primary"
+        name="commit"
+        value="Log in"
+        data-disable-with="Log in">
     </div>
 
     <hr class="account__separator" />
