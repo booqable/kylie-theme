@@ -45,21 +45,23 @@
     </div>
     {% endif %}
   </div>
-  <div class="product-info">
-    <h1 class="product-info__title">{{ product.name }}</h1>
-    {% if product.variants.size > 1 %}
-      <p class="product-info__label">{{ section.settings.variation_label }}</p>
-    {% endif %}
-    {{ product_button }}
-  </div>
-  {% if product.description != blank %}
-    <div class="product-description">
-      <p class="product-description__label">{{ section.settings.description_label }}</p>
-      <div class="product-description__content-container bq-content rx-content">
-        {{ product.description }}
-      </div>
+  <div class="product-details">
+    <div class="product-info">
+      <h1 class="product-info__title">{{ product.name }}</h1>
+      {% if product.variants.size > 1 %}
+        <p class="product-info__label">{{ section.settings.variation_label }}</p>
+      {% endif %}
+      {{ product_button }}
     </div>
-  {% endif %}
+    {% if product.description != blank %}
+      <div class="product-description">
+        <p class="product-description__label">{{ section.settings.description_label }}</p>
+        <div class="product-description__content-container bq-content rx-content">
+          {{ product.description }}
+        </div>
+      </div>
+    {% endif %}
+  </div>
 {% endif %}
 
 {% schema %}

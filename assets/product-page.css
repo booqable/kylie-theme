@@ -1,13 +1,21 @@
 .product-page {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 40px 130px;
+  display: flex;
+  gap: 32px;
 
   max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
   width: 100%;
 
   margin: 0 auto;
   padding: 24px var(--horizontal-padding);
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1 0.9 auto;
+
+  gap: 32px;
 }
 
 .product-info__title {
@@ -80,10 +88,7 @@
   margin: 0;
 }
 
-.product-info
-  .booqable-component
-  .booqable-product-button-wrapper
-  .bq-status {
+.product-info .booqable-component .booqable-product-button-wrapper .bq-status {
   display: inline-flex;
   align-items: center;
 
@@ -98,6 +103,14 @@
   .booqable-product-button-wrapper
   span.bq-status.bq-available {
   background-color: var(--color-green) !important;
+}
+
+.product-info
+  .booqable-component
+  .booqable-product-button-wrapper
+  span.bq-status
+  > span {
+  color: var(--color-white) !important;
 }
 
 .product-info
@@ -128,14 +141,6 @@
   .booqable-product-button-wrapper
   span.bq-status.bq-unavailable {
   background-color: var(--color-red) !important;
-}
-
-.product-info
-  .booqable-component
-  .booqable-product-button-wrapper
-  span.bq-status
-  > span {
-  margin-right: 3px;
 }
 
 .product-info
@@ -181,9 +186,9 @@
 .product-gallery {
   overflow: hidden;
 
-  position: relative;
+  flex: 1 1 auto;
 
-  grid-row: 1 / 3;
+  position: relative;
 }
 
 .product-gallery__prev,
@@ -226,10 +231,6 @@
 
 .product-gallery__next {
   right: 5px;
-}
-
-.product-description {
-  grid-column: 2 / 3;
 }
 
 .product-description__label {
@@ -343,33 +344,23 @@
 
 @media (max-width: 810px) {
   .product-page {
-    gap: 32px;
+    flex-direction: column;
   }
 
-  .product-description {
-    grid-column: 1 / 3;
+  .booqable-component .booqable-product-button-wrapper .bq-status {
+    margin: 0;
   }
 }
 
 @media (max-width: 576px) {
   .product-page {
-    grid-template-columns: 1fr;
-
     padding: 24px 0;
-
-    gap: 0;
   }
 
   .product-button {
     padding: 0 var(--horizontal-padding);
 
     margin-bottom: 16px;
-  }
-
-  .product-gallery {
-    grid-row: auto;
-
-    margin-bottom: 32px;
   }
 
   .product-info__title,
@@ -394,10 +385,6 @@
     .booqable-product-button-wrapper
     .fa-angle-down {
     right: calc(10px + var(--horizontal-padding));
-  }
-
-  .product-description {
-    grid-column: auto;
   }
 
   .product-info .bq-control {
