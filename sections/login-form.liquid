@@ -3,19 +3,7 @@
 <div class="account">
   <h3 class="account__title">Log in</h3>
 
-  <form
-    class="new_shop_next_user"
-    id="new_shop_next_user"
-    action="{{ canonical_url }}"
-    accept-charset="UTF-8"
-    method="post">
-
-    <input
-      type="hidden"
-      name="authenticity_token"
-      value="{{ form_authenticity_token }}"
-      autocomplete="off">
-
+  {% form 'login' %}
     <div>
       <label for="shop_next_user_email" class="account-fieldset__label">Email</label>
       <input
@@ -64,7 +52,7 @@
 
     <a href="" class="account__button account__button--minimal">Continue as guest</a>
 
-  </form>
+  {% endform %}
 </div>
 
 {% schema %}
