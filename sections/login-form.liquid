@@ -5,7 +5,7 @@
 
   {% form 'login' %}
     <div>
-      <label for="shop_next_user_email" class="account-fieldset__label">Email</label>
+      <label for="user_email" class="account-fieldset__label">Email</label>
       <input
         value="{{ form.email }}"
         class="account-fieldset__input"
@@ -13,20 +13,20 @@
         autofocus="autofocus"
         autocomplete="email"
         type="email"
-        name="shop_next_user[email]"
-        id="shop_next_user_email">
+        name="user[email]"
+        id="user_email">
     </div>
 
     <div>
-      <label for="shop_next_user_password" class="account-fieldset__label">Password</label>
+      <label for="user_password" class="account-fieldset__label">Password</label>
       <input
         value="{{ form.password }}"
         class="account-fieldset__input"
         placeholder=" "
         autocomplete="current-password"
         type="password"
-        name="shop_next_user[password]"
-        id="shop_next_user_password">
+        name="user[password]"
+        id="user_password">
     </div>
 
     <div class="account__divider">
