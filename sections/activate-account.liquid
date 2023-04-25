@@ -7,19 +7,41 @@
   </div>
 
   <h3 class="account__title account__title--centered">
-    Account confirmed
+    {{ section.settings.title }}
   </h3>
 
   <div class="description description--centered">
-    Your account has been confirmed. You can now log in and continue using the website.
+    {{ section.settings.description }}
   </div>
 
-  <a href="{{ routes.cart_url }}" class="account__button account__button--primary">View cart</a>
+  <a href="{{ routes.cart_url }}" class="account__button account__button--primary">
+    {{ section.settings.view_cart }}
+  </a>
 </div>
 
 {% schema %}
   {
     "name": "Activate account",
-    "settings": []
+    "settings": [
+      {
+        "type": "header",
+        "content": "Translations"
+      }, {
+        "id": "title",
+        "type": "text",
+        "label": "Title",
+        "default": "Account confirmed"
+      }, {
+        "id": "description",
+        "type": "text",
+        "label": "Description",
+        "default": "Your account has been confirmed. You can now log in and continue using the website."
+      }, {
+        "id": "view_cart",
+        "type": "text",
+        "label": "View cart",
+        "default": "View cart"
+      }
+    ]
   }
 {% endschema %}
