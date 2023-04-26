@@ -207,7 +207,7 @@
   width: 16px;
   height: 16px;
 
-  color: var(--color-primary-foreground);
+  color: var(--color-typo);
 }
 
 .header-search__wrapper .header-search__icon.close {

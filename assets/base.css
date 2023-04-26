@@ -46,9 +46,8 @@ p,
 ul,
 ol,
 li,
-span,
 b,
-i {
+i:not([class*="fa-"]) {
   color: var(--color-primary-foreground);
 }
 
@@ -68,6 +67,7 @@ h6 {
 
 input {
   font-family: sans-serif;
+  color: var(--color-typo);
 }
 
 .bq-sidebar-head *,
