@@ -5,45 +5,7 @@
   {% include "product-page-preview" %}
 {% else %}
   <div class="product-gallery">
-    <div class="product-gallery__preview carousel carousel--snap-center">
-      <div class="product-gallery__preview-inner carousel__inner infinite-scroll">
-        {% for image in product.images %}
-          <div class="product-gallery__preview-item carousel__item">
-            {{ image.url | image_tag:
-              class: 'lazyload',
-              widths: '600, 700, 800',
-              sizes: '(max-width: 576px) 600px, (max-width: 876px) 700px, 800px',
-            }}
-          </div>
-        {% endfor %}
-      </div>
-      {% if product.images.size > 1 %}
-        <div class="carousel__controls">
-          <div class="carousel__control prev">
-            <i class="fa-light fa-arrow-left"></i>
-          </div>
-          <div class="carousel__control next">
-            <i class="fa-light fa-arrow-right"></i>
-          </div>
-        </div>
-      {% endif %}
-    </div>
-    {% if product.images.size > 1 %}
-    <div class="product-gallery__items carousel carousel--snap-center">
-      <div class="carousel__inner">
-        {% for image in product.images %}
-          {% assign focal = image.coordinates %}
-          <div class="product-gallery__item-container carousel__item" data-index="{{ forloop.index0 }}">
-            {{ image.url | image_tag:
-              loading: 'lazy',
-              focal: focal,
-              widths: '150'
-            }}
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-    {% endif %}
+    <bq-product-gallery product-id="{{ product.id }}" product-type="{{ product.type }}" enable-thumbnails="true" enable-controls="true"></bq-product-gallery>
   </div>
   <div class="product-details">
     <div class="product-info">
@@ -51,7 +13,13 @@
       {% if product.variants.size > 1 %}
         <p class="product-info__label">{{ section.settings.variation_label }}</p>
       {% endif %}
-      {{ product_button }}
+      {{ product | bundle_items }}
+      {{ product | product_variations }}
+      {{ product | product_price_label }}
+      {{ product | product_price }}
+      {{ product | product_availability }}
+      {{ product | availability_calendar }}
+      {{ product | product_button }}
     </div>
     {% if product.description != blank %}
       <div class="product-description">
