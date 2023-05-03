@@ -1,5 +1,6 @@
 .product-page {
   display: flex;
+  justify-content: space-between;
   gap: 32px;
 
   max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
@@ -13,7 +14,7 @@
   display: flex;
   flex-direction: column;
 
-  flex: 1 1 40%;
+  flex: 0 0 40%;
 
   gap: 32px;
 }
@@ -186,7 +187,7 @@
 .product-gallery {
   overflow: hidden;
 
-  flex: 1 1 60%;
+  flex: 0 0 50%;
 
   position: relative;
 }
@@ -341,10 +342,6 @@
 }
 
 @media (max-width: 810px) {
-  .product-page {
-    flex-direction: column;
-  }
-
   .booqable-component .booqable-product-button-wrapper .bq-status {
     margin: 0;
   }
@@ -352,6 +349,8 @@
 
 @media (max-width: 576px) {
   .product-page {
+    flex-direction: column;
+
     padding: 24px 0;
   }
 
@@ -362,7 +361,6 @@
   }
 
   .product-info__title,
-  .product-info__label,
   .product-info .bq-actions > *,
   .product-gallery,
   .product-description {

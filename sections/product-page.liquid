@@ -10,16 +10,18 @@
   <div class="product-details">
     <div class="product-info">
       <h1 class="product-info__title">{{ product.name }}</h1>
-      {% if product.variants.size > 1 %}
-        <p class="product-info__label">{{ section.settings.variation_label }}</p>
-      {% endif %}
-      {{ product | bundle_items }}
-      {{ product | product_variations }}
-      {{ product | product_price_label }}
-      {{ product | product_price }}
-      {{ product | product_availability }}
-      {{ product | availability_calendar }}
-      {{ product | product_button }}
+      <div class="product-button">
+        {% if product.variants.size > 1 %}
+          <p class="product-info__label">{{ section.settings.variation_label }}</p>
+        {% endif %}
+        {{ product | bundle_items }}
+        {{ product | product_variations }}
+        {{ product | product_price_label }}
+        {{ product | product_price }}
+        {{ product | product_availability }}
+        {{ product | availability_calendar }}
+        {{ product | product_button }}
+      </div>
     </div>
     {% if product.description != blank %}
       <div class="product-description">
