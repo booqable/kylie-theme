@@ -232,7 +232,7 @@
   color: var(--color-accent-foreground) !important;
 }
 
-.header-cart .booqable-cart-button:not(:empty) + i {
+.header-cart bq-mini-cart[initialized="true"] + i {
   display: none;
 }
 
