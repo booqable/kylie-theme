@@ -70,7 +70,7 @@
 
   font-family: var(--font-body);
 
-  color: var(--color-placeholder) !important;
+  color: var(--color-primary-foreground-lightened) !important;
 }
 
 .product-info
