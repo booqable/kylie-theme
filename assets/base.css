@@ -11,6 +11,7 @@
   --color-red: #f85454;
   --color-backdrop: #0c2747b3;
   --color-typo: #0c2747;
+  --color-placeholder: #0c2747b3;
   /* Font weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -34,21 +35,6 @@
 
 body {
   background-color: var(--color-primary-background);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-li,
-b,
-i:not([class*="fa-"]) {
-  color: var(--color-primary-foreground);
 }
 
 /* Overriding redactor implementation of separator */
