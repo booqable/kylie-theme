@@ -23,9 +23,9 @@
     .header__nav-item,
     .header-search__input,
     .header-search__icon,
-    .header-cart .bq-icon-cart::before,
     .header-floating-menu__icon,
-    .header__nav .list-menu__item .list-menu__item-caret {
+    .header__nav .list-menu__item .list-menu__item-caret,
+    .header-cart .fa-spinner-third {
       color: {{ section.settings.foreground_color }};
     }
 
@@ -43,6 +43,10 @@
 
     .header__nav-item:hover {
       text-decoration-color: {{ section.settings.foreground_color }};
+    }
+
+    .header-cart bq-mini-cart {
+      --cart-icon-color: {{ section.settings.foreground_color }};
     }
   {% endif %}
 </style>

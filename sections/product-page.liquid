@@ -18,8 +18,10 @@
         {{ product | product_variations_select }}
         {{ product | product_price_label }}
         {{ product | product_price }}
-        {{ product | product_availability }}
-        {{ product | availability_calendar }}
+        <div class="product-info__availability-container">
+          {{ product | product_availability }}
+          {{ product | availability_calendar }}
+        </div>
         {{ product | product_button }}
       </div>
     </div>
