@@ -75,6 +75,19 @@ bq-product-variations-select {
 
 bq-product-availability {
   font-family: var(--font-body);
+
+  color: var(--color-white);
+
+  font-size: 14px;
+  line-height: 20px;
+
+  font-weight: var(--font-weight-semibold);
+}
+
+bq-product-availability::part(availability-container) {
+  padding: 5px 12px;
+
+  border-radius: var(--border-radius-lg);
 }
 
 bq-product-availability::part(available) {

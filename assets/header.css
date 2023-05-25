@@ -240,12 +240,6 @@
   color: var(--color-primary-foreground);
 }
 
-.header-cart bq-mini-cart {
-  --cart-icon-color: var(--color-primary-foreground);
-  --cart-lines-background-color: var(--color-accent-background);
-  --cart-lines-color: var(--color-accent-foreground);
-}
-
 .header-cart .bq-icon-cart::before {
   color: var(--color-primary-foreground);
 

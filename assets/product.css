@@ -55,7 +55,7 @@
   font-size: 14px;
   line-height: 20px;
 
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
 
   margin-bottom: 8px;
 
@@ -63,9 +63,9 @@
 }
 
 .product bq-product-availability::part(availability-container) {
-  padding: 2px 12px;
+  padding: 5px 12px;
 
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-lg);
 }
 
 .product bq-product-availability::part(available) {
