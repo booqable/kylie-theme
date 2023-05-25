@@ -5,7 +5,11 @@
   {% include "product-page-preview" %}
 {% else %}
   <div class="product-gallery">
-    <bq-product-gallery product-id="{{ product.id }}" product-type="{{ product.type }}" enable-thumbnails="true" enable-controls="true"></bq-product-gallery>
+    {{ product | product_gallery: 
+      enable_thumbnails: true,
+      enable_controls: true,
+      infinite_scroll: true
+    }}
   </div>
   <div class="product-details">
     <div class="product-info">
