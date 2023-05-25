@@ -322,6 +322,10 @@
     display: block;
   }
 
+  .header-search__icon {
+    color: var(--color-primary-foreground);
+  }
+
   .header-search__wrapper {
     display: flex;
     align-items: center;
