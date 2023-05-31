@@ -240,7 +240,7 @@
 
     height: calc(100vh - 30px);
 
-    background-color: var(--color-white);
+    background-color: var(--color-primary-background);
 
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
