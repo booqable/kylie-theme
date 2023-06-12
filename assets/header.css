@@ -102,6 +102,9 @@
 
 .header__nav .list-submenu__container {
   background-color: var(--color-primary-background);
+
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
 }
 
 .header__nav--mobile .list-menu .list-menu__item-caret {
