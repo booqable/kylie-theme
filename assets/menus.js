@@ -33,8 +33,4 @@ const handleMenuClicks = (e) => {
 
 document.addEventListener("click", handleMenuClicks);
 
-const links = document.querySelectorAll("a");
-
-links.forEach((link) => {
-  link.addEventListener("click", handleCollapseMenus);
-});
+addEventListener("beforeunload", handleCollapseMenus);
