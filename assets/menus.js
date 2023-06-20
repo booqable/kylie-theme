@@ -1,15 +1,40 @@
-const triggers = document.querySelectorAll(".list-menu__item:has(.list-submenu)");
+let target;
+let menu;
 
-const handleMeasure = (e) => {
-  const submenu = e.target.querySelector(".list-submenu");
+const handleCollapseMenus = () => {
+  if (target) {
+    target.checked = false;
 
-  const { y, height } = submenu.getBoundingClientRect();
+    menu.querySelectorAll('input[type="checkbox"]').forEach((toggle) => {
+      toggle.checked = false;
+    });
 
-  if (y + height > window.innerHeight) {
-    submenu.classList.add("list-submenu--bottom");
+    target = null;
+    menu = null;
   }
 };
 
-triggers.forEach((trigger) => {
-  trigger.addEventListener("mouseenter", handleMeasure);
+const handleMenuClicks = (e) => {
+  if (e.target.tagName === "LABEL") return;
+
+  if (e.target.type === "checkbox" && e.target.hasAttribute("data-toggle")) {
+    if (target || menu) {
+      handleCollapseMenus();
+    } else {
+      target = e.target;
+      menu = e.target.parentNode.querySelector(".header__nav-submenu");
+    }
+  }
+
+  if (target && !target?.contains(e.target) && !menu?.contains(e.target)) {
+    handleCollapseMenus();
+  }
+};
+
+document.addEventListener("click", handleMenuClicks);
+
+const links = document.querySelectorAll("a");
+
+links.forEach((link) => {
+  link.addEventListener("click", handleCollapseMenus);
 });
