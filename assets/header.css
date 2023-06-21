@@ -111,6 +111,8 @@
 
   overflow-y: auto;
 
+  z-index: 100;
+
   transition: visibility 0ms, opacity 200ms, transform 150ms;
 }
 
