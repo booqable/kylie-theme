@@ -15,18 +15,25 @@ const handleCollapseMenus = () => {
 };
 
 const handleMenuClicks = (e) => {
-  if (e.target.tagName === "LABEL") return;
+  if (e.target.tagName !== "INPUT" && e.target.type !== "checkbox") return;
 
-  if (e.target.type === "checkbox" && e.target.hasAttribute("data-toggle")) {
-    if (target || menu) {
+  if (e.target.hasAttribute("data-toggle")) {
+    // Target is the same, so we are collapsing menu and not re-assigning target
+    if (target === e.target) {
       handleCollapseMenus();
-    } else {
-      target = e.target;
-      menu = e.target.parentNode.querySelector(".header__nav-submenu");
+      return;
     }
+
+    // Target is different, so we are collapsing previous menu and re-assigning target
+    if (target) {
+      handleCollapseMenus();
+    }
+
+    target = e.target;
+    menu = e.target.parentNode.querySelector(".header__nav-submenu");
   }
 
-  if (target && !target?.contains(e.target) && !menu?.contains(e.target)) {
+  if (!target?.contains(e.target) && !menu?.contains(e.target)) {
     handleCollapseMenus();
   }
 };
