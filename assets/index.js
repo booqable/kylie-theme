@@ -1,5 +1,17 @@
+let timeout
+
 const initFocalImages = () => {
-  if (!window.imageFocus) return;
+  if (!window.imageFocus) {
+    if (timeout) clearTimeout(timeout)
+
+    timeout = setTimeout(() => {
+      initFocalImages();
+    }, 10);
+
+    return;
+  }
+
+  clearTimeout(timeout)
 
   document.querySelectorAll(".focal-image").forEach((focalImage) => {
     const x = focalImage.getAttribute("data-focal-x");
