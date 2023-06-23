@@ -1,14 +1,30 @@
+let timeout
+
 const initFocalImages = () => {
+  if (!window.imageFocus) {
+    if (timeout) clearTimeout(timeout)
+
+    timeout = setTimeout(() => {
+      initFocalImages();
+    }, 10);
+
+    return;
+  }
+
+  clearTimeout(timeout)
+
   document.querySelectorAll(".focal-image").forEach((focalImage) => {
     const x = focalImage.getAttribute("data-focal-x");
     const y = focalImage.getAttribute("data-focal-y");
 
-    new window.imageFocus.FocusedImage(focalImage, {
+    new window.imageFocus(focalImage, {
       focus: {
         x: parseFloat(x) || 0,
         y: parseFloat(y) || 0,
       },
     });
+
+    focalImage.style.opacity = 1;
   });
 };
 
@@ -103,8 +119,12 @@ const handleMessages = ({ type, data, isTrusted }) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Initializers
-  initFocalImages();
   initSearch();
+  initFocalImages();
+});
+
+document.addEventListener("image-focus:load", () => {
+  initFocalImages();
 });
 
 window.addEventListener("scroll", handleScroll);
