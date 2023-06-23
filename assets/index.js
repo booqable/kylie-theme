@@ -5,7 +5,7 @@ const initFocalImages = () => {
     const x = focalImage.getAttribute("data-focal-x");
     const y = focalImage.getAttribute("data-focal-y");
 
-    new window.imageFocus.FocusedImage(focalImage, {
+    new window.imageFocus(focalImage, {
       focus: {
         x: parseFloat(x) || 0,
         y: parseFloat(y) || 0,
