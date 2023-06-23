@@ -1,4 +1,6 @@
 const initFocalImages = () => {
+  if (!window.imageFocus) return;
+
   document.querySelectorAll(".focal-image").forEach((focalImage) => {
     const x = focalImage.getAttribute("data-focal-x");
     const y = focalImage.getAttribute("data-focal-y");
@@ -9,6 +11,8 @@ const initFocalImages = () => {
         y: parseFloat(y) || 0,
       },
     });
+
+    focalImage.style.opacity = 1;
   });
 };
 
@@ -103,8 +107,12 @@ const handleMessages = ({ type, data, isTrusted }) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Initializers
-  initFocalImages();
   initSearch();
+  initFocalImages();
+});
+
+document.addEventListener("image-focus:load", () => {
+  initFocalImages();
 });
 
 window.addEventListener("scroll", handleScroll);
