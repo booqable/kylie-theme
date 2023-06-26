@@ -466,8 +466,6 @@
 @media (max-width: 762px) {
   .header__wrapper {
     grid-template-columns: 1fr repeat(2, 50px);
-
-    height: 60px;
   }
 
   .header__wrapper--with-menu {
