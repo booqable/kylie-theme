@@ -1,17 +1,19 @@
-let timeout
+let focalImageTimeout;
+let previewBarTimeout;
+let tryCount = 0;
 
 const initFocalImages = () => {
   if (!window.imageFocus) {
-    if (timeout) clearTimeout(timeout)
+    if (focalImageTimeout) clearTimeout(focalImageTimeout);
 
-    timeout = setTimeout(() => {
+    focalImageTimeout = setTimeout(() => {
       initFocalImages();
     }, 10);
 
     return;
   }
 
-  clearTimeout(timeout)
+  clearTimeout(focalImageTimeout);
 
   document.querySelectorAll(".focal-image").forEach((focalImage) => {
     const x = focalImage.getAttribute("data-focal-x");
@@ -50,6 +52,35 @@ const initSearch = () => {
   };
 
   search.addEventListener("submit", handleSearchSubmit);
+};
+
+const handleSetMobileMenuHeight = () => {
+  if (window.innerWidth > 762) return;
+
+  let totalHeight = 0;
+
+  const previewBar = document.querySelector(".preview-bar__container");
+
+  if (!previewBar && tryCount < 5) {
+    tryCount += 1;
+
+    if (previewBarTimeout) clearTimeout(previewBarTimeout);
+
+    previewBarTimeout = setTimeout(() => {
+      handleSetMobileMenuHeight();
+    }, 100);
+
+    return;
+  }
+
+  const header = document.querySelector(".header__wrapper");
+  const menu = document.querySelector(".header-floating-menu__wrapper");
+
+  totalHeight =
+    header.getBoundingClientRect().height +
+    (previewBar?.getBoundingClientRect().height ?? 0);
+
+  menu.style.height = `calc(100vh - ${totalHeight}px)`;
 };
 
 const handleScrollIn = (target) => {
@@ -121,10 +152,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initializers
   initSearch();
   initFocalImages();
+  handleSetMobileMenuHeight();
 });
 
-document.addEventListener("image-focus:load", () => {
-  initFocalImages();
+window.addEventListener("resize", () => {
+  handleSetMobileMenuHeight();
 });
 
 window.addEventListener("scroll", handleScroll);
