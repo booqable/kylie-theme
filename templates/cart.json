@@ -1,46 +1,6 @@
 {
   "name": "Cart",
   "sections": {
-    "image-banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "text": "Welcome to cart page",
-            "size": "lg"
-          },
-          "disabled": null
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "{{ cart.id }}",
-            "size": "md"
-          },
-          "disabled": null
-        },
-        "text_578411": {
-          "type": "text",
-          "settings": {
-            "text": "{{ cart.starts_at }} - {{ cart.stops_at }}",
-            "size": "md"
-          },
-          "disabled": null
-        }
-      },
-      "block_order": ["heading", "text", "text_578411"],
-      "settings": {
-        "fluid_width": true,
-        "overlay_enabled": true,
-        "overlay_color": "#D9E3F0",
-        "vertical_spacing": "lg",
-        "overlay_opacity": "40",
-        "content_align": "center",
-        "background_image": "booqable://assets/background-abstract.jpeg"
-      },
-      "disabled": false
-    },
     "date-picker": {
       "type": "date-picker",
       "blocks": {},
@@ -55,5 +15,5 @@
       "settings": {}
     }
   },
-  "order": ["image-banner", "date-picker", "cart"]
+  "order": ["date-picker", "cart"]
 }
