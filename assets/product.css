@@ -35,7 +35,7 @@
   transition: filter 150ms ease;
 }
 
-.product .product__image-container:has(.lazyloaded) img {
+.product .product__image-container img.lazyloaded {
   filter: blur(0);
 }
 
