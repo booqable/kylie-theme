@@ -70,8 +70,6 @@ bq-product-variations-select {
   display: flex;
   align-items: center;
 
-  gap: 8px;
-
   padding: 15px 0;
 }
 
@@ -84,6 +82,10 @@ bq-product-availability {
   line-height: 20px;
 
   font-weight: var(--font-weight-semibold);
+}
+
+bq-product-availability[visible="true"] {
+  margin-right: 8px;
 }
 
 bq-product-availability::part(availability-container) {
