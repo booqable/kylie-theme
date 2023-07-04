@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://kit.fontawesome.com/ff3b3de2b5.js" crossorigin="anonymous"></script>
+  {{ content_for_header }}
+  {% if settings.heading_font != blank or settings.body_font != blank %}
+    <link rel="preconnect" href="https://fonts.bunny.net">
+  {% endif %}
+  {% if settings.heading_font != blank %}
+    {{ settings.heading_font | font_link }}
+  {% endif %}
+  {% if settings.body_font != blank %}
+    {{ settings.body_font | font_link }}
+  {% endif %}
+  {% comment %} Color palette related styles {% endcomment %}
+  <style>
+    :root {
+      --color-accent-background: {% if settings.primary_color != blank %}{{ settings.primary_color }}{% else %}{{ branding_color }}{% endif %};
+      --color-accent-foreground: {{ settings.accent_foreground_color }};
+      --color-primary-background: {{ settings.primary_background_color }};
+      --color-primary-foreground: {{ settings.primary_foreground_color }};
+      --color-link: {{ settings.link_color }};
+      --color-placeholder: {{ settings.primary_foreground_color | append: "B3" }};
+      --color-image-placeholder: {{ settings.primary_foreground_color | append: "1A" }};
+      --color-body-alternative: {{ settings.primary_foreground_color | append: "99" }};
+      --color-border: {{ settings.primary_foreground_color | append: "66" }};
+
+      {% if settings.heading_font != blank %}
+        --font-heading: {{ settings.heading_font.family }}, {{ settings.heading_font.fallback_families }};
+      {% endif %}
+      {% if settings.body_font != blank %}
+        --font-body: {{ settings.body_font.family }}, {{ settings.body_font.fallback_families }};
+      {% endif %}
+    }
+  </style>
+</head>
+<body>
+  {{ content_for_layout }}
+
+  {{ content_for_body }}
+</body>
+</html>
