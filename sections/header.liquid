@@ -72,6 +72,7 @@
     <nav class="header__nav header__nav--desktop">
       <ul class="list-menu list-menu--horizontal">
         {% for link in section.settings.menu.items %}
+          {% assign parent_index = forloop.index %}
           <li class="header__nav-item">
             <a href="{{ link.url }}" class="header__nav-link">
               <span>
@@ -92,8 +93,8 @@
                       </span>
                     </a>
                     {% if childlink.items_count > 0 %}
-                      <input type="checkbox" id="header__nav-grandchild-{{ forloop.index }}">
-                      <label for="header__nav-grandchild-{{ forloop.index }}">
+                      <input type="checkbox" id="header__nav-{{ parent_index }}-grandchild-{{ forloop.index }}">
+                      <label for="header__nav-{{ parent_index }}-grandchild-{{ forloop.index }}">
                         <i class="fa-regular fa-angle-down header__nav-item-caret"></i>
                       </label>
                       <ul class="header__nav-submenu">
