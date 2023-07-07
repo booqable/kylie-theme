@@ -1,43 +1,11 @@
-{{ "product-page.css" | asset_url | stylesheet_tag }}
-{{ "carousels.css" | asset_url | stylesheet_tag }}
-
 {% if canonical_url contains "/1?" or canonical_url contains "/1#" %}
   {% include "product-page-preview" %}
 {% else %}
-  <div class="product-gallery">
-    {{ product | product_gallery: 
-      enable_thumbnails: true,
-      enable_controls: true,
-      infinite_scroll: true
-    }}
-  </div>
-  <div class="product-details">
-    <div class="product-info">
-      <h1 class="product-info__title">{{ product.name }}</h1>
-      <div class="product-button">
-        {% if product.variants.size > 1 %}
-          <p class="product-info__label">{{ section.settings.variation_label }}</p>
-        {% endif %}
-        {{ product | bundle_items }}
-        {{ product | product_variations_select }}
-        {{ product | product_price_label }}
-        {{ product | product_price }}
-        <div class="product-info__availability-container">
-          {{ product | product_availability }}
-          {{ product | availability_calendar }}
-        </div>
-        {{ product | product_button }}
-      </div>
-    </div>
-    {% if product.description != blank %}
-      <div class="product-description">
-        <p class="product-description__label">{{ section.settings.description_label }}</p>
-        <div class="product-description__content-container bq-content rx-content">
-          {{ product.description }}
-        </div>
-      </div>
-    {% endif %}
-  </div>
+  {% if enabled_features contains "shop/cart" %}
+    {% include "product-page-next" %}
+  {% else %}
+    {% include "product-page-legacy" %}
+  {% endif %}
 {% endif %}
 
 {% schema %}

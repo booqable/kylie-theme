@@ -1,7 +1,14 @@
+{% if enabled_features contains "shop/cart" %}
+  {{ "product-page-next.css" | asset_url | stylesheet_tag }}
+{% else %}
+  {{ "product-page-legacy.css" | asset_url | stylesheet_tag }}
+{% endif %}
+{{ "carousels.css" | asset_url | stylesheet_tag }}
+
 <div class="product-gallery">
   <div class="product-gallery__preview carousel carousel--snap-center">
     <div class="product-gallery__preview-inner carousel__inner infinite-scroll">
-      {% for i in (1..5) %}
+      {% for i in (1..3) %}
         <div class="product-gallery__preview-item carousel__item"></div>
       {% endfor %}
     </div>
@@ -16,7 +23,7 @@
   </div>
   <div class="product-gallery__items carousel carousel--snap-center">
     <div class="carousel__inner">
-      {% for i in (1..5) %}
+      {% for i in (1..3) %}
         <div class="product-gallery__item-container carousel__item"></div>
       {% endfor %}
     </div>

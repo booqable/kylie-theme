@@ -92,8 +92,11 @@
   <script src="{{ "lazysizes.min.js" | asset_url }}" defer></script>
   <script src="{{ "focus-point.min.js" | asset_url }}" defer></script>
   <script src="{{ "index.js" | asset_url }}" defer></script>
-  <script src="{{ "carousels.js" | asset_url }}" defer></script>
   <script src="{{ "menus.js" | asset_url }}" defer></script>
+
+  {% unless enabled_features contains "shop-cart" %}
+    <script src="{{ "carousels.js" | asset_url }}" defer></script>
+  {% endunless %}
 
   {{ content_for_body }}
 
