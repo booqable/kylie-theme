@@ -1,4 +1,4 @@
-{% if enabled_features contains "shop/cart" %}
+{% if enabled_features contains "next_product_page" %}
   {{ "product-page-next.css" | asset_url | stylesheet_tag }}
 {% else %}
   {{ "product-page-legacy.css" | asset_url | stylesheet_tag }}
