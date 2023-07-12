@@ -29,6 +29,16 @@
   background-color: var(--color-image-placeholder);
 }
 
+.product .product__image-container img {
+  filter: blur(4px);
+
+  transition: filter 150ms ease;
+}
+
+.product .product__image-container img.lazyloaded {
+  filter: blur(0);
+}
+
 .product .product__image:not(.focal-image) {
   display: block;
 
