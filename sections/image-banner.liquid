@@ -97,8 +97,14 @@
             </a>
           </div>
         {% when "date-picker" %}
+          {% if settings.primary_color != blank %}
+            {% assign color = settings.primary_color %}
+          {% else %}
+            {% assign color = branding_color %}
+          {% endif %}
+
           <div id="{{ block.id }}" class="date-location">
-            <bq-date-picker data-primary-color="{{ settings.primary_color }}"></bq-date-picker>
+            {% render "date-picker", branding_color: color %}
           </div>
       {% endcase %}
     {% endfor %}
