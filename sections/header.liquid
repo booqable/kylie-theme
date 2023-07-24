@@ -24,12 +24,10 @@
     .header__nav-item,
     .header-search__input,
     .header-search__icon,
-    .header-cart .bq-icon-cart::before,
     .header-floating-menu__icon,
     .header__nav .list-menu__item .list-menu__item-caret,
-    .header__nav .header__nav-item-caret,
-    .header__nav .header__nav-link {
-      color: {{ section.settings.foreground_color }} !important;
+    .header-cart .fa-spinner-third {
+      color: {{ section.settings.foreground_color }};
     }
 
     .header-search__input {
@@ -42,6 +40,10 @@
 
     .header-search__input:focus {
       border-color: {{ section.settings.foreground_color }} !important;
+    }
+
+    .header-cart bq-mini-cart {
+      --cart-icon-color: {{ section.settings.foreground_color }};
     }
   {% endif %}
 </style>

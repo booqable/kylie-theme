@@ -1,0 +1,263 @@
+.product-page {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+
+  max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 24px var(--horizontal-padding);
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+
+  flex: 0 0 40%;
+
+  gap: 32px;
+}
+
+.product-info__title {
+  font-size: 24px;
+  line-height: 32px;
+
+  font-weight: var(--font-weight-semibold);
+
+  color: var(--color-primary-foreground);
+
+  margin-bottom: 8px;
+}
+
+.product-info__label {
+  margin-bottom: 8px;
+}
+
+.product-info__title .skeleton {
+  width: 175px;
+
+  padding: 16px 0;
+}
+
+bq-product-price {
+  font-size: 24px;
+  line-height: 32px;
+
+  font-family: var(--font-body);
+
+  color: var(--color-primary-foreground);
+}
+
+bq-product-price-label {
+  display: block;
+
+  font-size: 14px;
+  line-height: 20px;
+
+  font-family: var(--font-body);
+
+  color: var(--color-placeholder);
+}
+
+bq-product-variations-select {
+  display: block;
+
+  margin-bottom: 20px;
+}
+
+.product-info__availability-container {
+  display: flex;
+  align-items: center;
+
+  padding: 15px 0;
+}
+
+bq-product-availability {
+  font-family: var(--font-body);
+
+  color: var(--color-white);
+
+  font-size: 14px;
+  line-height: 20px;
+
+  font-weight: var(--font-weight-semibold);
+}
+
+bq-product-availability[visible="true"] {
+  margin-right: 8px;
+}
+
+bq-product-availability::part(availability-container) {
+  padding: 5px 12px;
+
+  border-radius: var(--border-radius-lg);
+}
+
+bq-product-availability::part(available) {
+  background-color: var(--color-green);
+}
+
+bq-product-availability::part(unavailable) {
+  background-color: var(--color-red);
+}
+
+bq-product-availability-calendar {
+  cursor: pointer;
+
+  text-decoration: underline;
+
+  font-size: 14px;
+
+  color: var(--color-primary-foreground);
+  font-family: var(--font-body);
+}
+
+.product-button__period .skeleton {
+  width: 50px;
+}
+
+.product-button__price .skeleton {
+  width: 75px;
+
+  padding: 16px 0;
+}
+
+.product-gallery {
+  overflow: hidden;
+
+  flex: 0 0 45%;
+
+  position: relative;
+}
+
+.product-description__label {
+  font-size: 20px;
+  line-height: 28px;
+
+  font-weight: var(--font-weight-semibold);
+
+  color: var(--color-primary-foreground);
+
+  margin-bottom: 8px;
+}
+
+.product-description__label .skeleton {
+  width: 125px;
+
+  padding: 10px 0;
+}
+
+.product-description__content-container {
+  line-height: 1.5;
+
+  color: var(--color-primary-foreground);
+}
+
+.product-description__content-item {
+  margin-bottom: 4px;
+}
+
+.product-description__content-item:nth-child(1) .skeleton {
+  width: 245px;
+}
+
+.product-description__content-item:nth-child(2) .skeleton {
+  width: 150px;
+}
+
+.product-description__content-item:nth-child(3) .skeleton {
+  width: 195px;
+}
+
+.product-gallery__preview {
+  position: relative;
+
+  height: 365px;
+
+  margin-bottom: 16px;
+}
+
+.product-gallery__preview-inner {
+  height: 100%;
+}
+
+.product-gallery__preview-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: var(--border-radius-sm);
+
+  min-width: 100%;
+  height: 100%;
+}
+
+.product-gallery__preview-item:empty {
+  background-color: var(--color-image-placeholder);
+}
+
+.product-gallery__preview {
+  border-radius: var(--border-radius-sm);
+
+  overflow: hidden;
+}
+
+.product-gallery__preview .carousel__inner {
+  padding: 0;
+}
+
+.product-gallery__items .carousel__inner {
+  gap: 8px;
+
+  padding: 0;
+}
+
+.product-gallery__item-container {
+  min-width: 64px;
+  height: 64px;
+
+  border-radius: var(--border-radius-sm);
+
+  background-color: var(--color-image-placeholder);
+  border: 1px solid var(--color-border);
+
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .product-page {
+    flex-direction: column;
+
+    padding: 24px 0;
+  }
+
+  .product-button {
+    padding: 0 var(--horizontal-padding);
+
+    margin-bottom: 16px;
+  }
+
+  .product-info__title,
+  .product-gallery,
+  .product-description {
+    padding: 0 var(--horizontal-padding);
+  }
+
+  .product-info .bq-control {
+    position: sticky;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-primary-background);
+
+    padding: 16px;
+  }
+
+  bq-product-button {
+    --add-button-button-max-width: 100%;
+  }
+}

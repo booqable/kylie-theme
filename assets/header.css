@@ -390,8 +390,12 @@
   color: var(--color-accent-foreground) !important;
 }
 
-.header-cart .booqable-cart-button:not(:empty) + i {
+.header-cart bq-mini-cart[initialized="true"] + i {
   display: none;
+}
+
+.header-cart .fa-spinner-third {
+  color: var(--color-primary-foreground);
 }
 
 .header-cart .bq-icon-cart::before {
