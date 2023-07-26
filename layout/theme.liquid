@@ -32,6 +32,10 @@
       --color-body-alternative: {{ settings.primary_foreground_color | append: "99" }};
       --color-border: {{ settings.primary_foreground_color | append: "66" }};
 
+      --cart-icon-color: var(--color-primary-foreground);
+      --cart-lines-background-color: var(--color-accent-background);
+      --cart-lines-color: var(--color-accent-foreground);
+
       {% if settings.heading_font != blank %}
         --font-heading: {{ settings.heading_font.family }}, {{ settings.heading_font.fallback_families }};
       {% endif %}
@@ -86,10 +90,12 @@
   {% section 'footer' %}
 
   <script src="{{ "lazysizes.min.js" | asset_url }}" defer></script>
-  <script src="{{ "focus-point.min.js" | asset_url }}" defer></script>
   <script src="{{ "index.js" | asset_url }}" defer></script>
-  <script src="{{ "carousels.js" | asset_url }}" defer></script>
   <script src="{{ "menus.js" | asset_url }}" defer></script>
+
+  {% unless enabled_features contains "next_product_page" %}
+    <script src="{{ "carousels.js" | asset_url }}" defer></script>
+  {% endunless %}
 
   {{ content_for_body }}
 

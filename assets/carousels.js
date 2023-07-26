@@ -125,7 +125,7 @@ const initProductGallery = () => {
   const thumbsInner = gallery.querySelector(
     ".product-gallery__items .carousel__inner"
   );
-  const thumbs = thumbsInner.querySelectorAll(
+  const thumbs = thumbsInner?.querySelectorAll(
     ".product-gallery__item-container img"
   );
 
