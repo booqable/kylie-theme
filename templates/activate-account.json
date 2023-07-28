@@ -1,0 +1,12 @@
+{
+  "name": "Activate account",
+  "layout": "session",
+  "sections": {
+    "activate-account": {
+      "type": "activate-account",
+      "blocks": {},
+      "settings": {}
+    }
+  },
+  "order": ["activate-account"]
+}

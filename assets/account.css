@@ -1,0 +1,210 @@
+.account {
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 0 16px;
+}
+
+.account__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+@media screen and (min-width: 375px) {
+  .account__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (min-width: 810px) {
+  .account__title {
+    font-size: 36px;
+    line-height: 44px;
+  }  
+}
+
+.account__title--centered {
+  text-align: center;
+}
+
+.account__title-icon {
+  color: var(--color-primary);
+  font-size: 32px;
+  margin-left: 0 auto 16px;
+  text-align: center;
+}
+
+@media screen and (min-width: 375px) {
+  .account__title-icon {
+    font-size: 40px;
+  }
+}
+
+.description {
+  color: var(--color-typo);
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.description--centered {
+  text-align: center;
+}
+
+.account__button {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  line-height: 24px;
+  padding: 12px 0px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.account__button--primary {
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  color: white;
+}
+
+.account__button--secondary {
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-primary);
+  color: black;
+  text-decoration: none;
+}
+
+.account__button--minimal {
+  color: var(--color-primary);
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.account-fieldset__label {
+  background:  linear-gradient(0deg, white 0%, white 44%, transparent 44%);
+  color: var(--color-grey-dark);
+  font-size: 14px;
+  left: 16px;
+  padding: 0 2px;
+  position: relative;
+  top: 8px;
+  transition-duration: 300ms;
+  transition-property: top, color, background-color;
+}
+
+.account-fieldset__label:has(+ input:focus) {
+  color: var(--color-primary);
+}
+
+.account-fieldset__label:not(:has(+ input:focus)):has(+ input:placeholder-shown) {
+  background-color: transparent;
+  color: var(--color-grey-dark);
+  font-size: 16px;
+  top: 37px;
+}
+
+.account-fieldset--error .account-fieldset__label {
+  background:  linear-gradient(0deg, var(--color-danger-background) 0%, var(--color-danger-background) 44%, transparent 44%);
+  color: var(--color-danger-dark);
+}
+
+.account-fieldset__static-label, .account-fieldset__radio-label {
+  color: var(--color-typo);
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 2px;
+}
+
+.account-fieldset--error .account-fieldset__static-label {
+  color: var(--color-danger-dark); 
+}
+
+.account-fieldset__input{
+  border-radius: 8px;
+  border: 1px solid var(--color-grey-medium);
+  font-size: 16px;
+  line-height: 38px;
+  margin: 0 0 6px 0;
+  padding: 8px;
+  width: 100%;
+}
+
+.account-fieldset__input:focus {
+  border-color: var(--color-primary);
+  border-width: 2px;
+  line-height: 36px;
+  outline: none;
+  padding: 8px 7px;
+}
+
+.account-fieldset--error .account-fieldset__input {
+  background-color: var(--color-danger-background);
+  border-color: var(--color-danger-base);
+}
+
+.account__error-message {
+  color: var(--color-danger-dark);
+  font-size: 14px;
+}
+
+.account__separator {
+  border-bottom: 1px solid #D8DCE0;
+  border: none;
+  margin-bottom: 24px;
+}
+
+.account__link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.account__alert {
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 12px 16px;
+}
+
+.account__alert--info {
+  background-color: var(--color-blue-background);
+  border: 1px solid var(--color-primary);
+  color: var(--color-typo);
+}
+
+.account__alert--danger {
+  background-color: var(--color-danger-background);
+  border: 1px solid var(--color-danger-base);
+  color: var(--color-danger-dark);
+}
+
+.account__divider {
+  margin-bottom: 24px;
+}
+
+.account__divider--small {
+  margin-bottom: 16px;
+}
+
+.account-type-options {
+  display: flex;
+}
+
+.account-type-options__first-option {
+  margin-right: 24px;
+}
+
+.breadcrumbs {
+  align-items: center;
+  color: var(--color-primary);
+  display: flex;
+  font-size: 16px;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.breadcrumbs__chevron {
+  margin-right: 8px;
+}
