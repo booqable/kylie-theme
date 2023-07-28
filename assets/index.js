@@ -1,14 +1,32 @@
+let focalImageTimeout;
+let previewBarTimeout;
+let tryCount = 0;
+
 const initFocalImages = () => {
+  if (!window.imageFocus) {
+    if (focalImageTimeout) clearTimeout(focalImageTimeout);
+
+    focalImageTimeout = setTimeout(() => {
+      initFocalImages();
+    }, 10);
+
+    return;
+  }
+
+  clearTimeout(focalImageTimeout);
+
   document.querySelectorAll(".focal-image").forEach((focalImage) => {
     const x = focalImage.getAttribute("data-focal-x");
     const y = focalImage.getAttribute("data-focal-y");
 
-    new window.imageFocus.FocusedImage(focalImage, {
+    new window.imageFocus(focalImage, {
       focus: {
         x: parseFloat(x) || 0,
         y: parseFloat(y) || 0,
       },
     });
+
+    focalImage.style.opacity = 1;
   });
 };
 
@@ -34,6 +52,35 @@ const initSearch = () => {
   };
 
   search.addEventListener("submit", handleSearchSubmit);
+};
+
+const handleSetMobileMenuHeight = () => {
+  if (window.innerWidth > 762) return;
+
+  let totalHeight = 0;
+
+  const previewBar = document.querySelector(".preview-bar__container");
+
+  if (!previewBar && tryCount < 5) {
+    tryCount += 1;
+
+    if (previewBarTimeout) clearTimeout(previewBarTimeout);
+
+    previewBarTimeout = setTimeout(() => {
+      handleSetMobileMenuHeight();
+    }, 100);
+
+    return;
+  }
+
+  const header = document.querySelector(".header__wrapper");
+  const menu = document.querySelector(".header-floating-menu__wrapper");
+
+  totalHeight =
+    header.getBoundingClientRect().height +
+    (previewBar?.getBoundingClientRect().height ?? 0);
+
+  menu.style.height = `calc(100vh - ${totalHeight}px)`;
 };
 
 const handleScrollIn = (target) => {
@@ -103,8 +150,13 @@ const handleMessages = ({ type, data, isTrusted }) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Initializers
-  initFocalImages();
   initSearch();
+  initFocalImages();
+  handleSetMobileMenuHeight();
+});
+
+window.addEventListener("resize", () => {
+  handleSetMobileMenuHeight();
 });
 
 window.addEventListener("scroll", handleScroll);

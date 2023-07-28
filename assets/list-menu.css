@@ -36,7 +36,7 @@
 }
 
 .list-menu__item [id^="floating-child-"]:checked ~ .list-submenu, .list-menu__item [id^="floating-grandchild-"]:checked ~ .list-submenu {
-  max-height: 100vh;
+  max-height: 200vh;
 
   transition: max-height 200ms;
 }

@@ -1,6 +1,12 @@
 {{ "date-picker.css" | asset_url | stylesheet_tag }}
 
-<bq-date-picker data-primary-color="{{ settings.primary_color }}"></bq-date-picker>
+{% if settings.primary_color != blank %}
+  {% assign color = settings.primary_color %}
+{% else %}
+  {% assign color = branding_color %}
+{% endif %}
+
+{% render "date-picker", branding_color: color %}
 
 {% schema %}
 {

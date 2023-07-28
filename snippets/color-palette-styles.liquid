@@ -10,6 +10,9 @@
     --color-image-placeholder: {{ settings.primary_foreground_color | append: "1A" }};
     --color-body-alternative: {{ settings.primary_foreground_color | append: "99" }};
     --color-border: {{ settings.primary_foreground_color | append: "66" }};
+    --cart-icon-color: var(--color-primary-foreground);
+    --cart-lines-background-color: var(--color-accent-background);
+    --cart-lines-color: var(--color-accent-foreground);
 
     {% if settings.heading_font != blank %}
       --font-heading: {{ settings.heading_font.family }}, {{ settings.heading_font.fallback_families }};
