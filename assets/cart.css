@@ -29,10 +29,6 @@
   grid-gap: 32px;
 }
 
-.cart .cart__footer.cart__footer--single {
-  display: flex;
-}
-
 @media screen and (max-width: 576px) {
   .cart .cart__footer {
     grid-template-columns: 1fr;

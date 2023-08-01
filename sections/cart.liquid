@@ -10,12 +10,13 @@
   </div>
 {% endif %}
 
-{% if section.settings.show_services %}
-  <div class="cart__footer">
+
+<div class="cart__footer">
+  {% if section.settings.show_services %}
     {{ cart | services }}
-    {{ cart | totals }}
-  </div>
-{% endif %}
+  {% endif %}
+  {{ cart | totals }}
+</div>
 
 {% schema %}
 {
@@ -26,7 +27,13 @@
   "settings": [
     {
       "type": "header",
-      "content": "Settings"
+      "content": "Title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Cart"
     },
     {
       "type": "checkbox",
@@ -35,10 +42,8 @@
       "default": true
     },
     {
-      "type": "input",
-      "id": "title",
-      "label": "Title",
-      "default": "Cart"
+      "type": "header",
+      "content": "Elements"
     },
     {
       "type": "checkbox",
