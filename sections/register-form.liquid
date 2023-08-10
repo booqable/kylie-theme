@@ -1,0 +1,198 @@
+{{ "account.css" | asset_url | stylesheet_tag }}
+
+<div class="account">
+  <h3 class="account__title">{{ section.settings.title }}</h3>
+  <div class="account__divider">
+    {{ section.settings.login_description }}
+    <a class="account__link" href="{{ routes.login_url }}">
+      {{ section.settings.login_link_label }}
+    </a>
+  </div>
+
+  {% form 'register' %}
+    <div class="{% if form.errors.name %}account-fieldset--error{% endif %}">
+      <label for="user_name" class="account-fieldset__label">{{ section.settings.name_label }}</label>
+      <input
+        value="{{ form.name }}"
+        placeholder=" "
+        autofocus="autofocus"
+        class="account-fieldset__input"
+        autocomplete="name"
+        type="name"
+        name="user[name]"
+        id="user_name">
+      <div class="account__error-message">{{ form.errors.name }}</div>
+    </div>
+
+    <div class="{% if form.errors.email %}account-fieldset--error{% endif %}">
+      <label for="user_email" class="account-fieldset__label">{{ section.settings.email_label }}</label>
+      <input
+        value="{{ form.email }}"
+        placeholder=" "
+        autofocus="autofocus"
+        class="account-fieldset__input"
+        autocomplete="email"
+        type="email"
+        name="user[email]"
+        id="user_email">
+      <div class="account__error-message">{{ form.errors.email }}</div>
+    </div>
+
+    <div class="{% if form.errors.password %}account-fieldset--error{% endif %}">
+      <label for="user_password" class="account-fieldset__label">{{ section.settings.password_label }}</label>
+      <input
+        autocomplete="new-password"
+        placeholder=" "
+        class="account-fieldset__input"
+        type="password"
+        name="user[password]"
+        id="user_password">
+      <div class="account__error-message">{{ form.errors.password }}</div>
+    </div>
+
+    <div class="{% if form.errors.password_confirmation %}account-fieldset--error{% endif %} account__divider">
+      <label for="user_password_confirmation" class="account-fieldset__label">{{ section.settings.password_confirmation_label }}</label>
+      <input
+        autocomplete="new-password"
+        placeholder=" "
+        class="account-fieldset__input"
+        type="password"
+        name="user[password_confirmation]"
+        id="user_password_confirmation">
+      <div class="account__error-message">{{ form.errors.password_confirmation }}</div>
+    </div>
+
+    <div class="{% if form.errors.customer %}account-fieldset--error{% endif %} account__divider">
+      <label class="account-fieldset__static-label">{{ section.settings.account_type_label }}</label>
+
+      <div class="account-type-options">
+        <div class="account-type-options__first-option">
+          <input
+            type="radio"
+            name="user[legal_type]"
+            id="user_legal_type_person"
+            value="person"
+            {% if form.legal_type == 'person' %}checked{% endif %}>
+          <label class="account-fieldset__radio-label" for="user_legal_type_person">{{ section.settings.private_label }}</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            name="user[legal_type]"
+            id="user_legal_type_commercial"
+            value="commercial"
+            {% if form.legal_type == 'commercial' %}checked{% endif %}>
+          <label class="account-fieldset__radio-label" for="user_legal_type_commercial">{{ section.settings.company_label }}</label>
+        </div>
+      </div>
+      <div class="account__error-message">{{ form.errors.customer }}</div>
+    </div>
+
+    <div class="account__divider--small">
+      <input
+        type="checkbox"
+        name="user[agreement_accepted]"
+        id="user_agreement_accepted"
+        value="true"
+        {% if form.agreement_accepted %}checked{% endif %}>
+      <label for="user_agreement_accepted">
+        {{ section.settings.i_agree_label }}
+        <a
+          class="account__link"
+          href="https://booqable.com/agreement"
+          target="_blank">{{ section.settings.terms_and_agreements_label }}</a>
+      </label>
+      <div class="account__error-message">{{ form.errors.agreement_accepted }}</div>
+    </div>
+
+    {%- if alert -%}
+      <div class="account__alert">{{ alert }}</div>
+    {%- endif -%}
+
+    <input
+      type="submit"
+      class="account__button account__button--primary"
+      name="commit"
+      value="Sign up"
+      data-disable-with="Sign up">
+  {% endform %}
+</div>
+
+{% schema %}
+  {
+    "name": "Register form",
+    "important": true,
+    "unique": true,
+    "templates": ["register"],
+    "settings": [
+      {
+        "type": "header",
+        "content": "Translations"
+      },
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title",
+        "default": "Create an account"
+      },
+      {
+        "id": "login_description",
+        "type": "text",
+        "label": "Log in description",
+        "default": "Already have an account?"
+      },
+      {
+        "id": "login_link_label",
+        "type": "text",
+        "label": "Log in link label",
+        "default": "Log in"
+      }, {
+        "id": "name_label",
+        "type": "text",
+        "label": "Name field label",
+        "default": "Full name"
+      }, {
+        "id": "email_label",
+        "type": "text",
+        "label": "Email field label",
+        "default": "Email"
+      }, {
+        "id": "password_label",
+        "type": "text",
+        "label": "Password field label",
+        "default": "Password"
+      }, {
+        "id": "password_confirmation_label",
+        "type": "text",
+        "label": "Password confirmation field label",
+        "default": "Password confirmation"
+      }, {
+        "id": "account_type_label",
+        "type": "text",
+        "label": "Account type label",
+        "default": "Account type"
+      }, {
+        "id": "private_label",
+        "type": "text",
+        "label": "Private label",
+        "default": "Private"
+      }, {
+        "id": "company_label",
+        "type": "text",
+        "label": "Company label",
+        "default": "Company"
+      }, {
+        "id": "i_agree_label",
+        "type": "text",
+        "label": "I agree...",
+        "default": "I agree to the"
+      }, {
+        "id": "terms_and_agreements_label",
+        "type": "text",
+        "label": "Terms and agreements",
+        "default": "Terms and agreements"
+      }
+    ]
+  }
+{% endschema %}

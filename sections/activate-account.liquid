@@ -1,0 +1,50 @@
+{{ "account.css" | asset_url | stylesheet_tag }}
+
+<div class="account">
+
+  <div class="account__title-icon">
+    <i class="fa-solid fa-badge-check breadcrumbs__chevron"></i>
+  </div>
+
+  <h3 class="account__title account__title--centered">
+    {{ section.settings.title }}
+  </h3>
+
+  <div class="description description--centered">
+    {{ section.settings.description }}
+  </div>
+
+  <a href="{{ routes.cart_url }}" class="account__button account__button--primary">
+    {{ section.settings.view_cart }}
+  </a>
+</div>
+
+{% schema %}
+  {
+    "name": "Activate account",
+    "important": true,
+    "unique": true,
+    "templates": ["activate-account"],
+    "settings": [
+      {
+        "type": "header",
+        "content": "Translations"
+      }, {
+        "id": "title",
+        "type": "text",
+        "label": "Title",
+        "default": "Account confirmed"
+      }, {
+        "id": "description",
+        "type": "text",
+        "label": "Description",
+        "default": "Your account has been confirmed. You can now log in and continue using the website."
+      }, {
+        "id": "view_cart",
+        "type": "text",
+        "label": "View cart",
+        "default": "View cart"
+      }
+    ]
+  }
+{% endschema %}

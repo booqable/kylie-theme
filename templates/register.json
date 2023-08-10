@@ -1,0 +1,12 @@
+{
+  "name": "Register",
+  "layout": "session",
+  "sections": {
+    "register-form": {
+      "type": "register-form",
+      "blocks": {},
+      "settings": {}
+    }
+  },
+  "order": ["register-form"]
+}

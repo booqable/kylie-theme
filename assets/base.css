@@ -6,12 +6,21 @@
   --border-radius-md: 12px;
   --border-radius-lg: 20px;
   /* Colors */
+  --color-primary: #395DB8;
+  --color-blue-background: #D7E2FF;
   --color-white: #ffffff;
   --color-green: #8fcc40;
   --color-red: #f85454;
   --color-backdrop: #0c2747b3;
   --color-typo: #0c2747;
+  --color-grey-dark: #687687;
+  --color-grey-medium: #949CA6;
+  --color-grey-light: #D8DCE0;
+  --color-danger-base: #F53669;
+  --color-danger-background: #FFEAEF;
+  --color-danger-dark: #B40030;
   --color-placeholder: #0c2747b3;
+  
   /* Font weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
