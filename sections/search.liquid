@@ -25,7 +25,7 @@
           }}{% endif %}</a>
           {{ result | product_availability }}
           <a href="{{ result.url }}">
-            <h3 class="product__name">{{ result.name }}</h3>
+            <h3 class="product__name truncate">{{ result.name }}</h3>
           </a>
           {{ result | product_price_label }}
           {{ result | product_price }}
