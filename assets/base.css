@@ -188,9 +188,3 @@ input {
 [data-focus="true"] {
   box-shadow: 0 0 0 3px #395db899;
 }
-
-.truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
