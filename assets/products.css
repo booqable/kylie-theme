@@ -5,6 +5,10 @@
   margin: 16px auto;
 }
 
+.products .carousel__inner {
+  align-items: flex-start;
+}
+
 .products__title {
   font-size: 36px;
   line-height: 44px;
