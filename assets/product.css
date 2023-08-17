@@ -62,28 +62,7 @@
 .product bq-product-availability {
   display: block;
 
-  font-size: 14px;
-  line-height: 20px;
-
-  font-weight: var(--font-weight-semibold);
-
   margin-bottom: 8px;
-
-  color: var(--color-white);
-}
-
-.product bq-product-availability::part(availability-container) {
-  padding: 5px 12px;
-
-  border-radius: var(--border-radius-lg);
-}
-
-.product bq-product-availability::part(available) {
-  background-color: var(--color-green);
-}
-
-.product bq-product-availability::part(unavailable) {
-  background-color: var(--color-red);
 }
 
 .product bq-product-price-label {

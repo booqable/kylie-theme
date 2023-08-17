@@ -31,6 +31,8 @@
 }
 
 .product-info__label {
+  color: var(--color-primary-foreground);
+
   margin-bottom: 8px;
 }
 
@@ -73,33 +75,8 @@ bq-product-variations-select {
   padding: 15px 0;
 }
 
-bq-product-availability {
-  font-family: var(--font-body);
-
-  color: var(--color-white);
-
-  font-size: 14px;
-  line-height: 20px;
-
-  font-weight: var(--font-weight-semibold);
-}
-
 bq-product-availability[visible="true"] {
   margin-right: 8px;
-}
-
-bq-product-availability::part(availability-container) {
-  padding: 5px 12px;
-
-  border-radius: var(--border-radius-lg);
-}
-
-bq-product-availability::part(available) {
-  background-color: var(--color-green);
-}
-
-bq-product-availability::part(unavailable) {
-  background-color: var(--color-red);
 }
 
 bq-product-availability-calendar {
