@@ -61,10 +61,7 @@
   <script src="{{ "lazysizes.min.js" | asset_url }}" defer></script>
   <script src="{{ "index.js" | asset_url }}" defer></script>
   <script src="{{ "menus.js" | asset_url }}" defer></script>
-
-  {% unless enabled_features contains "next_product_page" %}
-    <script src="{{ "carousels.js" | asset_url }}" defer></script>
-  {% endunless %}
+  <script src="{{ "carousels.js" | asset_url }}" defer></script>
 
   {{ content_for_body }}
 
