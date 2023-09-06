@@ -55,7 +55,9 @@ const initSearch = () => {
 };
 
 const handleSetMobileMenuHeight = () => {
-  if (window.innerWidth > 762) return;
+  const menu = document.querySelector(".header-floating-menu__wrapper");
+
+  if (window.innerWidth > 762 || !menu) return;
 
   let totalHeight = 0;
 
@@ -74,7 +76,6 @@ const handleSetMobileMenuHeight = () => {
   }
 
   const header = document.querySelector(".header__wrapper");
-  const menu = document.querySelector(".header-floating-menu__wrapper");
 
   totalHeight =
     header.getBoundingClientRect().height +

@@ -1,7 +1,7 @@
 {{ "product-page-legacy.css" | asset_url | stylesheet_tag }}
 {{ "carousels.css" | asset_url | stylesheet_tag }}
 
-<div class="product-gallery">
+<div class="product-gallery product-gallery--legacy">
   <div class="product-gallery__preview carousel carousel--snap-center">
     <div class="product-gallery__preview-inner carousel__inner infinite-scroll">
       {% for image in product.images %}

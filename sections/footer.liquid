@@ -58,7 +58,10 @@
   {% if section.settings.show_copyright %}
     <div class="footer__bottom">
       <div class="footer__copyright footer__copyright--align-{{ section.settings.align_copyright }}">
-        &copy; {{ "now" | date: "%Y" }}, {{ shop.name }} | <a href="https://booqable.com/?source=Shop&campaign=Cart" target="_blank" title="Powered by Booqable Rental Software">Powered by Booqable</a>
+        &copy; {{ "now" | date: "%Y" }}, {{ shop.name }}
+        {% unless enabled_features contains "hide_powered_by_in_shop" %}
+          | <a href="https://booqable.com/?source=Shop&campaign=Cart" target="_blank" title="Powered by Booqable Rental Software">Powered by Booqable</a>
+        {% endunless %}
       </div>
     </div>
   {% endif %}

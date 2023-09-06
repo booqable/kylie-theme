@@ -114,7 +114,9 @@ const initCarousels = () => {
 const initProductGallery = () => {
   if (!window.location.href.includes("products")) return;
 
-  const gallery = document.querySelector(".product-gallery");
+  const gallery = document.querySelector(".product-gallery--legacy");
+
+  if (!gallery) return;
 
   // Main preview
   const previewInner = gallery.querySelector(".product-gallery__preview-inner");
