@@ -4,17 +4,12 @@
   <h3 class="cart__title">{{ section.settings.title }}</h3>
 {% endif %}
 
-{% if section.settings.show_lines %}
-  <div class="cart__lines">
-    {{ cart | lines }}
-  </div>
-{% endif %}
-
+<div class="cart__lines">
+  {{ cart | lines }}
+</div>
 
 <div class="cart__footer">
-  {% if section.settings.show_services %}
-    {{ cart | services }}
-  {% endif %}
+  {{ cart | services }}
   {{ cart | totals }}
 </div>
 
@@ -39,22 +34,6 @@
       "type": "checkbox",
       "id": "show_title",
       "label": "Show title",
-      "default": true
-    },
-    {
-      "type": "header",
-      "content": "Elements"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_lines",
-      "label": "Show lines",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_services",
-      "label": "Show services",
       "default": true
     }
   ],
