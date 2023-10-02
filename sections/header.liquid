@@ -48,7 +48,7 @@
   {% endif %}
 </style>
 
-<div class="header__wrapper {% if section.settings.menu != blank %}header__wrapper--with-menu{% endif %}">
+<div class="header__wrapper{% if section.settings.menu != blank %} header__wrapper--with-menu{% endif %}{% if show_mini_cart %} header__wrapper--with-mini-cart{% endif %}">
   <div class="header__link-container">
     <a href="{{ routes.root_url }}" class="header__link">
       {% if section.settings.logo.url != blank %}
@@ -137,10 +137,12 @@
       </form>
     </div>
   </div>
-  <div class="header-cart">
-    {{ cart_button }}
-    <i class="fa-regular fa-spinner-third fa-spin"></i>
-  </div>
+  {% if show_mini_cart %}
+    <div class="header-cart">
+      {{ cart_button }}
+      <i class="fa-regular fa-spinner-third fa-spin"></i>
+    </div>
+  {% endif %}
   {% if section.settings.menu != blank %}
     <div class="header-floating-menu">
       <input type="checkbox" id="floating-menu-trigger">
