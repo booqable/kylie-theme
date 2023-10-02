@@ -48,7 +48,7 @@
   {% endif %}
 </style>
 
-<div class="header__wrapper{% if section.settings.menu != blank %} header__wrapper--with-menu{% endif %}{% if show_mini_cart %} header__wrapper--with-mini-cart{% endif %}">
+<div class="header__wrapper{% if section.settings.menu != blank %} header__wrapper--with-menu{% endif %}{% if show_mini_cart %} header__wrapper--with-mini-cart{% else %} header__wrapper--without-mini-cart{% endif %}">
   <div class="header__link-container">
     <a href="{{ routes.root_url }}" class="header__link">
       {% if section.settings.logo.url != blank %}
