@@ -55,13 +55,18 @@
       {% endif %}
     {% endcase %}
   {% endfor %}
-  {% if section.settings.show_copyright %}
+  {% if section.settings.show_copyright or show_powered_by %}
     <div class="footer__bottom">
       <div class="footer__copyright footer__copyright--align-{{ section.settings.align_copyright }}">
-        &copy; {{ "now" | date: "%Y" }}, {{ shop.name }}
-        {% unless enabled_features contains "hide_powered_by_in_shop" %}
-          | <a href="https://booqable.com/?source=Shop&campaign=Cart" target="_blank" title="Powered by Booqable Rental Software">Powered by Booqable</a>
-        {% endunless %}
+        {% if section.settings.show_copyright %}
+          &copy; {{ "now" | date: "%Y" }}, {{ shop.name }}
+          {% if show_powered_by %}
+            &nbsp;|&nbsp;
+          {% endif %}
+        {% endif %}
+        {% if show_powered_by %}
+          <a href="https://booqable.com/?source=Shop&campaign=Cart" target="_blank" title="Powered by Booqable Rental Software">Powered by Booqable</a>
+        {% endif %}
       </div>
     </div>
   {% endif %}
