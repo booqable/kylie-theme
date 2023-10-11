@@ -1,0 +1,44 @@
+{{ "cart.css" | asset_url | stylesheet_tag }}
+
+{% if section.settings.show_title %}
+  <h3 class="cart__title">{{ section.settings.title }}</h3>
+{% endif %}
+
+<div class="cart__lines">
+  {{ cart | lines }}
+</div>
+
+<div class="cart__footer">
+  {{ cart | services }}
+  {{ cart | totals }}
+</div>
+
+{% schema %}
+{
+  "name": "Cart",
+  "description": "Display all necessary information about the cart",
+  "tag": "section",
+  "class": "cart",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Cart"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show title",
+      "default": true
+    }
+  ],
+  "templates": ["cart"],
+  "unique": true,
+  "important": true
+}
+{% endschema %}
