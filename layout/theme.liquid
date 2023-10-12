@@ -1,76 +1,83 @@
 <!DOCTYPE html>
 <html lang="{{ locale }}">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% comment %} Base stylesheets {% endcomment %}
-  {{ "base.css" | asset_url | stylesheet_tag }}
-  {{ "rx.css" | asset_url | stylesheet_tag }}
-  {% comment %} Fonts {% endcomment %}
-  <script src="https://kit.fontawesome.com/ff3b3de2b5.js" crossorigin="anonymous"></script>
-  {{ content_for_header }}
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} Base stylesheets {% endcomment %}
+    {{ "base.css" | asset_url | stylesheet_tag }}
+    {{ "rx.css" | asset_url | stylesheet_tag }}
+    {% comment %} Fonts {% endcomment %}
+    <script src="https://kit.fontawesome.com/ff3b3de2b5.js" crossorigin="anonymous"></script>
+    {{ content_for_header }}
 
-  {% include 'fonts' %}
-  {% include 'color-palette-styles' %}
+    {% include 'fonts' %}
+    {% include 'color-palette-styles' %}
 
-  {% if shop.favicon_url %}
-    <link rel="shortcut icon" href="{{ shop.favicon_url }}" />
-  {% endif %}
-
-  {% if page_title == blank %}
-    <title>{{ shop.name }}</title>
-    <meta property="og:title" content="{{ shop.name }}">
-    <meta name="twitter:title" content="{{ shop.name }}">
-  {% else %}
-    <title>{{ page_title }}</title>
-    <meta property="og:title" content="{{ page_title }}">
-    <meta name="twitter:title" content="{{ page_title }}">
-  {% endif %}
-
-  <meta property="og:site_name" content="{{ shop.name }}">
-
-  {% if page_description != blank %}
-    <meta name="description" content="{{ page_description }}">
-    <meta property="og:description" content="{{ page_description }}">
-    <meta name="twitter:description" content="{{ page_description }}">
-  {% endif %}
-  <meta name="twitter:card" content="summary">
-  <meta property="og:locale" content="{{ locale }}">
-
-  {% if product == blank %}
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ canonical_url }}">
-  {% else %}
-    <meta property="og:type" content="product">
-    <meta property="og:url" content="{{ product.url }}">
-
-    {% assign image = product.images.first %}
-    {% if image.url != blank %}
-      <meta property="og:image" content="{{ image.url | image_url }}">
-      <meta property="og:image:secure_url" content="{{ image.url | image_url }}">
-      <meta property="og:image:alt" content="{{ product.name }}">
-      <meta name="twitter:image" content="{{ image.url | image_url }}">
-      <meta name="twitter:image:alt" content="{{ product.name }}">
+    {% if shop.favicon_url %}
+      <link rel="shortcut icon" href="{{ shop.favicon_url }}" />
     {% endif %}
-  {% endif %}
-</head>
-<body>
 
-  {% section 'header' %}
+    {% if page_title == blank %}
+      <title>{{ shop.name }}</title>
+      <meta property="og:title" content="{{ shop.name }}">
+      <meta name="twitter:title" content="{{ shop.name }}">
+    {% else %}
+      <title>{{ page_title }}</title>
+      <meta property="og:title" content="{{ page_title }}">
+      <meta name="twitter:title" content="{{ page_title }}">
+    {% endif %}
 
-  <main id="main">
-    {{ content_for_layout }}
-  </main>
+    <meta property="og:site_name" content="{{ shop.name }}">
 
-  {% section 'footer' %}
+    {% if page_description != blank %}
+      <meta name="description" content="{{ page_description }}">
+      <meta property="og:description" content="{{ page_description }}">
+      <meta name="twitter:description" content="{{ page_description }}">
+    {% endif %}
+    <meta name="twitter:card" content="summary">
+    <meta property="og:locale" content="{{ locale }}">
 
-  <script src="{{ "lazysizes.min.js" | asset_url }}" defer></script>
-  <script src="{{ "index.js" | asset_url }}" defer></script>
-  <script src="{{ "menus.js" | asset_url }}" defer></script>
-  <script src="{{ "carousels.js" | asset_url }}" defer></script>
+    {% if product == blank %}
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="{{ canonical_url }}">
+    {% else %}
+      <meta property="og:type" content="product">
+      <meta property="og:url" content="{{ product.url }}">
 
-  {{ content_for_body }}
+      {% assign image = product.images.first %}
+      {% if image.url != blank %}
+        <meta property="og:image" content="{{ image.url | image_url }}">
+        <meta property="og:image:secure_url" content="{{ image.url | image_url }}">
+        <meta property="og:image:alt" content="{{ product.name }}">
+        <meta name="twitter:image" content="{{ image.url | image_url }}">
+        <meta name="twitter:image:alt" content="{{ product.name }}">
+      {% endif %}
+    {% endif %}
+  </head>
+  <body>
 
-</body>
+    {% if settings.primary_color != blank %}
+      {% assign color = settings.primary_color %}
+    {% else %}
+      {% assign color = branding_color %}
+    {% endif %}
+    <bq-date-picker-modal branding-color="{{ color }}"></bq-date-picker-modal>
+
+    {% section 'header' %}
+
+    <main id="main">
+      {{ content_for_layout }}
+    </main>
+
+    {% section 'footer' %}
+
+    <script src="{{ "lazysizes.min.js" | asset_url }}" defer></script>
+    <script src="{{ "index.js" | asset_url }}" defer></script>
+    <script src="{{ "menus.js" | asset_url }}" defer></script>
+    <script src="{{ "carousels.js" | asset_url }}" defer></script>
+
+    {{ content_for_body }}
+
+  </body>
 </html>
