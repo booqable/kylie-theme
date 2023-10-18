@@ -104,7 +104,7 @@
           {% endif %}
 
           <div id="{{ block.id }}" class="date-location">
-            {% render "date-picker", branding_color: color %}
+            <bq-date-picker branding-color="{{ color }}"></bq-date-picker>
           </div>
       {% endcase %}
     {% endfor %}
