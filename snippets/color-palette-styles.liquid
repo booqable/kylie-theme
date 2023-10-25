@@ -15,10 +15,10 @@
     --cart-lines-color: var(--color-accent-foreground);
 
     {% if settings.heading_font != blank %}
-      --font-heading: {{ settings.heading_font.family }}, {{ settings.heading_font.fallback_families }};
+      --font-heading: "{{ settings.heading_font.family }}", {{ settings.heading_font.fallback_families }};
     {% endif %}
     {% if settings.body_font != blank %}
-      --font-body: {{ settings.body_font.family }}, {{ settings.body_font.fallback_families }};
+      --font-body: "{{ settings.body_font.family }}", {{ settings.body_font.fallback_families }};
     {% endif %}
   }
 </style>
