@@ -1,7 +1,13 @@
 {{ "cart.css" | asset_url | stylesheet_tag }}
 
 {% if section.settings.show_title %}
-  <h3 class="cart__title">{{ section.settings.title }}</h3>
+  <h3 class="cart__title">
+    {% if section.settings.title != blank %}
+      {{ section.settings.title }}
+    {% else %}
+      {{ cart.title }}
+    {% endif %}
+  </h3>
 {% endif %}
 
 <div class="cart__lines">
@@ -28,7 +34,8 @@
       "type": "text",
       "id": "title",
       "label": "Title",
-      "default": "Cart"
+      "default": "Cart",
+      "info": "Leave blank to use title defined in the translations"
     },
     {
       "type": "checkbox",
