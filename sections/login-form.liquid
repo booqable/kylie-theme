@@ -43,6 +43,10 @@
       <div class="account__alert account__alert--danger">{{ alert }}</div>
     {%- endif -%}
 
+    {%- if notice -%}
+      <div class="account__alert account__alert--info">{{ notice }}</div>
+    {%- endif -%}
+
     <div class="account__divider">
       <input
         type="submit"
