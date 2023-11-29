@@ -22,12 +22,18 @@
   {% if section.settings.foreground_color != blank %}
     .header__text-logo,
     .header__nav-item,
+    .header__nav--desktop .header__nav-link,
     .header-search__input,
     .header-search__icon,
     .header-floating-menu__icon,
     .header__nav .list-menu__item .list-menu__item-caret,
-    .header-cart .fa-spinner-third {
+    .header-cart .fa-spinner-third,
+    .header__link img {
       color: {{ section.settings.foreground_color }};
+    }
+
+    .header__nav--desktop .header__nav-link:hover span {
+      border-color: {{ section.settings.foreground_color }};
     }
 
     .header-search__input {
@@ -42,8 +48,13 @@
       border-color: {{ section.settings.foreground_color }} !important;
     }
 
-    .header-cart bq-mini-cart {
-      --cart-icon-color: {{ section.settings.foreground_color }};
+    .list-menu--vertical > .list-menu__item {
+      border-color: {{ section.settings.foreground_color | append: "66" }} !important;
+    }
+
+    .header-cart bq-minicart-button {
+      --minicart-button-color: {{ section.settings.foreground_color }};
+      --minicart-button-hover-color: {{ section.settings.foreground_color }};
     }
   {% endif %}
 </style>
