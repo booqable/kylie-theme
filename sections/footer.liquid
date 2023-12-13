@@ -10,7 +10,7 @@
       {% when "socials" %}
         {% include "socials" %}
       {% when "menu" %}
-        <nav id="{{ block.id }}" class="footer__nav">
+        <nav id="{{ section.key }}-{{ block.id }}" class="footer__nav">
           <ul class="list-menu footer__menu footer__menu--align-{{ block.settings.align }}">
             {% for link in block.settings.menu.items %}
               <li class="list-menu__item">
@@ -28,7 +28,7 @@
         </nav>
       {% when "payment-methods" %}
         {% if payment_methods.size > 0 %}
-          <div id="{{ block.id }}" class="footer__payment-methods footer__payment-methods--align-{{ block.settings.align }}">
+          <div id="{{ section.key }}-{{ block.id }}" class="footer__payment-methods footer__payment-methods--align-{{ block.settings.align }}">
             {% for provider in payment_methods %}
               {% case provider %}
                 {% when "paypal" %}
