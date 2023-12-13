@@ -34,6 +34,8 @@
 .sidebar-navigation {
   position: relative;
 
+  top: var(--preview-bar-height, 0);
+
   background-color: var(--color-primary-background);
 }
 
@@ -211,7 +213,7 @@
   .sidebar-navigation {
     position: fixed;
 
-    top: 0;
+    top: var(--preview-bar-height, 0);
     left: 0;
     right: 0;
     bottom: 0;
