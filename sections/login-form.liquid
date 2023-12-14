@@ -60,7 +60,9 @@
 
     <a href="{{ routes.register_url }}" class="account__button account__button--secondary account__divider">{{ section.settings.create_account_label }}</a>
 
-    <a href="" class="account__button account__button--minimal">{{ section.settings.continue_as_guest_label }}</a>
+    {%- if shop.allow_guest_checkout and guest_checkout_url -%}
+      <a href="{{ guest_checkout_url }}" class="account__button account__button--minimal">{{ section.settings.continue_as_guest_label }}</a>
+    {%- endif -%}
 
   {% endform %}
 </div>
