@@ -36,6 +36,44 @@
         },
         "disabled": null
       }
+    },
+    "color_schemes": {
+      "background-1": {
+        "type": "color_scheme",
+        "settings": {
+          "background": "#fdfbf7",
+          "background_gradient": "linear-gradient(180deg, rgba(240, 244, 236, 1), rgba(241, 235, 226, 1) 100%)",
+          "text": "#2e2a39",
+          "button": "#9b046f",
+          "button_label": "#fdfbf7",
+          "secondary_button_label": "#2e2a39",
+          "shadow": "#2e2a39"
+        }
+      },
+      "background-2": {
+        "type": "color_scheme",
+        "settings": {
+          "background": "#edffa7",
+          "background_gradient": "radial-gradient(rgba(255, 229, 229, 1), rgba(255, 224, 218, 1) 25%, rgba(215, 255, 137, 1) 100%)",
+          "text": "#2e2a39",
+          "button": "#2e2a39",
+          "button_label": "#edffa7",
+          "secondary_button_label": "#2e2a39",
+          "shadow": "#2e2a39"
+        }
+      },
+      "inverse": {
+        "type": "color_scheme",
+        "settings": {
+          "background": "#2e2a39",
+          "background_gradient": "",
+          "text": "#fdfbf7",
+          "button": "#fdfbf7",
+          "button_label": "#2e2a39",
+          "secondary_button_label": "#fdfbf7",
+          "shadow": "#2e2a39"
+        }
+      }
     }
   },
   "variations": {
