@@ -8,7 +8,7 @@
 
 <style>
   {% for block in section.blocks %}
-    .columns-{{ section.key }} #{{ block.id }} .bq-button {
+    .columns-{{ section.key }} #{{ section.key }}-{{ block.id }} .bq-button {
       color: var(--color-primary-foreground);
 
       {% if block.settings.use_solid_button %}
@@ -30,7 +30,7 @@
 <div class="columns-{{ section.key }} columns__container columns__container--count-{{ section.settings.columns_count }}">
   {% if section.blocks.size >= 1 and column_exists %}
     {% for block in section.blocks %}
-      <div id="{{ block.id }}" class="columns__column post">
+      <div id="{{ section.key }}-{{ block.id }}" class="columns__column post">
         {% if block.settings.image.url != blank %}
           {% if block.settings.image_border_radius == true %}
             {% assign class = "post__image post__image--border-radius" %}

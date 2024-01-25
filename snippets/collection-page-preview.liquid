@@ -7,7 +7,7 @@
 <div class="collection-page__wrapper {% if section.blocks.size > 0 %}collection-page__wrapper--with-sidebar{% endif %}">
   <div class="collection-page__sidebar-navigation">
     {% if section.blocks.size > 0 %}
-      {% render "sidebar-navigation", menus: section.blocks, sticky: section.settings.sticky_sidebar, mode: "desktop", current_url: current_url %}
+      {% render "sidebar-navigation", menus: section.blocks, sticky: section.settings.sticky_sidebar, mode: "desktop", current_url: current_url, section_key: section.key %}
     {% endif %}
   </div>
   <div class="collection-page__inner">
@@ -17,7 +17,7 @@
       </div>
       <div class="collection-page__sidebar-navigation--mobile">
         {% if section.blocks.size > 0 %}
-          {% render "sidebar-navigation", menus: section.blocks, sticky: section.settings.sticky_sidebar, mode: "mobile", toggle: section.settings.sidebar_toggle %}
+          {% render "sidebar-navigation", menus: section.blocks, sticky: section.settings.sticky_sidebar, mode: "mobile", toggle: section.settings.sidebar_toggle, section_key: section.key %}
         {% endif %}
       </div>
     </div>

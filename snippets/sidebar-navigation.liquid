@@ -23,7 +23,7 @@
         {% if block.settings.menu != blank %}
           {% assign menu_index = forloop.index %}
           {% assign menu = block.settings.menu %}
-          <div id="{{ block.id }}" class="sidebar-navigation-menu">
+          <div id="{{ section_key }}-{{ block.id }}" class="sidebar-navigation-menu">
             {% if block.settings.title != blank %}
               <h3 class="sidebar-navigation-menu__title">{{ block.settings.title }}</h3>
             {% endif %}

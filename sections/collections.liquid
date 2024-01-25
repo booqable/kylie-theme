@@ -12,7 +12,7 @@
 <div class="collections__list">
   {% if section.blocks.size >= 1 and section.blocks.first.settings.collection != blank %}
     {% for block in section.blocks %}
-      <a id="{{ block.id }}" href="{{ block.settings.collection.url }}">
+      <a id="{{ section.key }}-{{ block.id }}" href="{{ block.settings.collection.url }}">
         <div class="collection">
           {% if block.settings.collection.image.url != blank %}
             {{ block.settings.collection.image.url | image_tag:
