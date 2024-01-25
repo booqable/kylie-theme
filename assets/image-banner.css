@@ -106,6 +106,8 @@
 
   position: relative;
 
+  color: var(--color-foreground);
+
   z-index: 1;
 }
 
@@ -136,6 +138,8 @@
   line-height: 28px;
 
   position: relative;
+
+  color: var(--color-foreground);
 
   z-index: 1;
 }
@@ -174,7 +178,14 @@
 
   position: relative;
 
+  color: var(--color-link);
+
   z-index: 1;
+}
+
+.image-banner .bq-button--solid {
+  background-color: var(--color-button);
+  color: var(--color-button-text);
 }
 
 .image-banner .date-location {

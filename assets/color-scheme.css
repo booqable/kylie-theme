@@ -1,0 +1,61 @@
+.color-schemes .color-scheme {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 16px;
+
+  min-height: 500px;
+
+  background-color: var(--color-background);
+}
+
+.color-schemes .color-scheme .title {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  text-align: center;
+
+  color: var(--color-foreground);
+}
+
+.color-schemes .color-scheme .subtitle {
+  margin: 0;
+
+  font-size: 18px;
+
+  text-align: center;
+
+  color: var(--color-foreground);
+}
+
+.color-schemes .color-scheme .box {
+  width: 75px;
+  height: 75px;
+
+  border-radius: 8px;
+
+  background-color: var(--color-foreground);
+  box-shadow: 10px 10px 10px rgba(var(--color-shadow), 0.4);
+}
+
+.color-schemes .color-scheme .buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 16px;
+}
+
+.color-schemes .color-scheme .buttons .primary {
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+}
+
+.color-schemes .color-scheme .link {
+  color: var(--color-link);
+}

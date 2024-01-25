@@ -54,6 +54,25 @@
         <meta name="twitter:image:alt" content="{{ product.name }}">
       {% endif %}
     {% endif %}
+
+    <style>
+      {% for scheme in settings.color_schemes -%}
+        {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+          {% if forloop.index == 1 -%}
+            :root,
+          {%- endif %}
+          .color-{{ scheme.id }} {
+            --color-background: {{ scheme.settings.background }};
+            --color-foreground: {{ scheme.settings.text }};
+            --color-shadow: {{ scheme.settings.shadow.rgb }};
+            --color-button: {{ scheme.settings.button }};
+            --color-button-text: {{ scheme.settings.button_label }};
+            --color-secondary-button: {{ scheme.settings.background }};
+            --color-secondary-button-text: {{ scheme.settings.secondary_button_label }};
+            --color-link: {{ scheme.settings.secondary_button_label }};
+          }
+      {% endfor %}
+    </style>
   </head>
   <body>
 

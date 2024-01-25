@@ -30,42 +30,21 @@
     {% case block.type %}
       {% when "heading" %}
         .image-banner-{{ section.key }} #{{ block.id }}{
-          color: var(--color-primary-foreground);
-
           {% if block.settings.color != blank %}
             color: {{ block.settings.color }};
           {% endif %}
         }
       {% when "text" %}
         .image-banner-{{ section.key }} #{{ block.id }} {
-          color: var(--color-primary-foreground);
-
           {% if block.settings.color != blank %}
             color: {{ block.settings.color }};
-          {% endif %}
-        }
-      {% when "button" %}
-        .image-banner-{{ section.key }} #{{ block.id }} {
-          color: var(--color-primary-foreground);
-
-          {% if block.settings.use_solid_button %}
-            background-color: var(--color-accent-background);
-            color: var(--color-accent-foreground);
-          {% endif %}
-
-          {% if block.settings.use_solid_button and block.settings.background_color != blank %}
-            background-color: {{ block.settings.background_color }};
-          {% endif %}
-
-          {% if block.settings.label_color != blank %}
-            color: {{ block.settings.label_color }};
           {% endif %}
         }
     {% endcase %}
   {% endfor %}
 </style>
 
-<div class="image-banner-{{ section.key }} image-banner__wrapper {% if section.settings.fluid_width %}image-banner__wrapper--fluid-width{% endif %}">
+<div class="image-banner-{{ section.key }} image-banner__wrapper {% if section.settings.fluid_width %}image-banner__wrapper--fluid-width{% endif %} color-{{ section.settings.color_scheme.id }}">
   {% if section.settings.background_image.url != blank and section.settings.fluid_width == true %}
     {{ section.settings.background_image.url | image_tag:
       loading: 'lazy',
@@ -144,6 +123,11 @@
       "placeholder": "Default"
     },
     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    },
+    {
       "type": "header",
       "content": "Overlay"
     },
@@ -161,7 +145,7 @@
       "placeholder": "Transparent"
     },
     {
-      "type": "number",
+      "type": "range",
       "min": 0,
       "max": 100,
       "id": "overlay_opacity",

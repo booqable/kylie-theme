@@ -1,0 +1,27 @@
+{{ "color-scheme.css" | asset_url | stylesheet_tag }}
+
+<div class="color-scheme color-{{ section.settings.color_scheme.id }}">
+  <p class="title">Title</p>
+  <p class="subtitle">{{ section.settings.color_scheme.id }}</p>
+  <div class="box"></div>
+  <div class="buttons">
+    <a href="#" class="bq-button bq-button--size-md bq-button--solid primary">Button</a>
+  </div>
+  <a href="#" class="link">Link</a>
+</div>
+
+{% schema %}
+{
+  "name": "Color Scheme Demo Section",
+  "description": "A section to demonstrate color schemes capabilities.",
+  "tag": "div",
+  "class": "color-schemes",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme"
+    }
+  ]
+}
+{% endschema %}
