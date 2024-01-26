@@ -9,6 +9,14 @@
     </div>
   {% endif %}
 
+  {%- if alert -%}
+    <div class="account__alert account__alert--danger">{{ alert }}</div>
+  {%- endif -%}
+
+  {%- if notice -%}
+    <div class="account__alert account__alert--info">{{ notice }}</div>
+  {%- endif -%}
+
   {% form 'login' %}
     <div>
       <label for="user_email" class="account-fieldset__label">{{ section.settings.email_label }}</label>
@@ -38,14 +46,6 @@
     <div class="account__divider">
       <a href="{{ routes.new_reset_password_url }}" class="account__link">{{ section.settings.reset_password_label }}</a>
     </div>
-
-    {%- if alert -%}
-      <div class="account__alert account__alert--danger">{{ alert }}</div>
-    {%- endif -%}
-
-    {%- if notice -%}
-      <div class="account__alert account__alert--info">{{ notice }}</div>
-    {%- endif -%}
 
     <div class="account__divider">
       <input
