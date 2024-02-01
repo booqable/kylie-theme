@@ -84,29 +84,6 @@ const handleSetMobileMenuHeight = () => {
   menu.style.height = `calc(100vh - ${totalHeight}px)`;
 };
 
-const handleScroll = () => {
-  const previewBar = document.querySelector(".preview-bar__container");
-
-  const header = document.querySelector("header");
-  const contentContainer = document.querySelector("#main");
-
-  let headerHeight = header.getBoundingClientRect().height;
-
-  if (window.scrollY > 0) {
-    if (previewBar) {
-      headerHeight += previewBar.getBoundingClientRect().height;
-    }
-
-    header.classList.add("fixed");
-    contentContainer.style.marginTop = `${headerHeight}px`;
-  }
-
-  if (window.scrollY === 0) {
-    header.classList.remove("fixed");
-    contentContainer.style.marginTop = 0;
-  }
-};
-
 document.addEventListener("DOMContentLoaded", () => {
   // Initializers
   initSearch();
@@ -118,5 +95,4 @@ window.addEventListener("resize", () => {
   handleSetMobileMenuHeight();
 });
 
-// window.addEventListener("scroll", handleScroll);
 window.addEventListener("message", handleMessages);
