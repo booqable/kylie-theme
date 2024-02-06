@@ -145,7 +145,7 @@
     "settings": [
       {
         "type": "checkbox",
-        "id": "cookie_notice_activated",
+        "id": "cn_activated",
         "label": "Show cookie notice"
       },
       {
@@ -154,37 +154,37 @@
       },
       {
         "type": "text",
-        "id": "cookie_notice_banner_text",
+        "id": "cn_consent_modal_title",
         "label": "Title",
         "default": "This website uses cookies"
       },
       {
         "type": "contentEditor",
-        "id": "cookie_notice_banner_description",
+        "id": "cn_consent_modal_description",
         "label": "Description",
         "default": "This website collects cookies to deliver you the best possible user experience."
       },
       {
         "type": "text",
-        "id": "cookie_notice_button_accept_all",
+        "id": "cn_consent_modal_accept_all",
         "label": "All cookies button label",
         "default": "Accept all cookies"
       },
       {
         "type": "text",
-        "id": "cookie_notice_button_accept_essential",
+        "id": "cn_consent_modal_accept_essential",
         "label": "Essential cookies button label",
         "default": "Accept only essential cookies"
       },
       {
         "type": "text",
-        "id": "cookie_notice_button_manage_preferences",
+        "id": "cn_consent_modal_manage_preferences",
         "label": "Cookie preferences button label",
         "default": "Manage individual preferences"
       },
       {
         "type": "text",
-        "id": "cookie_notice_link_privacy_policy",
+        "id": "cn_consent_modal_privacy_policy",
         "label": "Privacy policy button label",
         "default": "Privacy policy"
       },
@@ -194,37 +194,37 @@
       },
       {
         "type": "text",
-        "id": "cookie_notice_preferences_title",
+        "id": "cn_preferences_modal_title",
         "label": "Title",
         "default": "Manage cookie preferences"
       },
       {
         "type": "text",
-        "id": "cookie_notice_button_save_preferences",
+        "id": "cn_preferences_modal_save_preferences",
         "label": "Save preferences button label",
         "default": "Accept current selection"
       },
       {
         "type": "text",
-        "id": "cookie_notice_essential_cookies_title",
+        "id": "cn_preferences_modal_essential_cookies_title",
         "label": "Essential cookies title",
         "default": "Strictly Necessary cookies"
       },
       {
         "type": "text",
-        "id": "cookie_notice_essential_cookies_description",
+        "id": "cn_preferences_modal_essential_cookies_description",
         "label": "Essential cookies description",
         "default": "These cookies are essential for the proper functioning of the website and cannot be disabled."
       },
       {
         "type": "text",
-        "id": "cookie_notice_tracking_cookies_title",
+        "id": "cn_preferences_modal_tracking_cookies_title",
         "label": "Tracking cookies title",
         "default": "Performance and Analytics"
       },
       {
         "type": "text",
-        "id": "cookie_notice_tracking_cookies_description",
+        "id": "cn_preferences_modal_tracking_cookies_description",
         "label": "Tracking cookies description",
         "default": "These cookies collect information about how you use our website. All of the data is anonymized and cannot be used to identify you."
       }
