@@ -185,7 +185,7 @@
       {
         "type": "text",
         "id": "cn_consent_modal_privacy_policy",
-        "label": "Privacy policy button label",
+        "label": "Privacy policy link label",
         "default": "Privacy policy"
       },
       {
