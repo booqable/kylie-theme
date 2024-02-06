@@ -168,19 +168,19 @@
         "type": "text",
         "id": "cn_consent_modal_accept_all",
         "label": "All cookies button label",
-        "default": "Accept all cookies"
+        "default": "Accept all"
       },
       {
         "type": "text",
         "id": "cn_consent_modal_accept_essential",
         "label": "Essential cookies button label",
-        "default": "Accept only essential cookies"
+        "default": "Accept only essential"
       },
       {
         "type": "text",
         "id": "cn_consent_modal_manage_preferences",
         "label": "Cookie preferences button label",
-        "default": "Manage individual preferences"
+        "default": "Manage preferences"
       },
       {
         "type": "text",
@@ -196,13 +196,25 @@
         "type": "text",
         "id": "cn_preferences_modal_title",
         "label": "Title",
-        "default": "Manage cookie preferences"
+        "default": "Manage your cookie preferences"
+      },
+      {
+        "type": "text",
+        "id": "cn_preferences_modal_accept_all",
+        "label": "All cookies button label",
+        "default": "Accept all"
+      },
+      {
+        "type": "text",
+        "id": "cn_preferences_modal_accept_essential",
+        "label": "Essential cookies button label",
+        "default": "Accept only essential"
       },
       {
         "type": "text",
         "id": "cn_preferences_modal_save_preferences",
         "label": "Save preferences button label",
-        "default": "Accept current selection"
+        "default": "Save preferences"
       },
       {
         "type": "text",
