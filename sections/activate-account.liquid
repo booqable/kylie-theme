@@ -14,9 +14,10 @@
     {{ section.settings.description }}
   </div>
 
-  <a href="{{ routes.cart_url }}" class="account__button account__button--primary">
-    {{ section.settings.view_cart }}
+  <a href="{{ routes.login_url }}" class="account__button account__button--primary">
+    {{ section.settings.login_label }}
   </a>
+
 </div>
 
 {% schema %}
@@ -40,10 +41,10 @@
         "label": "Description",
         "default": "Your account has been confirmed. You can now log in and continue using the website."
       }, {
-        "id": "view_cart",
+        "id": "login_label",
         "type": "text",
-        "label": "View cart",
-        "default": "View cart"
+        "label": "Login button label",
+        "default": "Log in"
       }
     ]
   }
