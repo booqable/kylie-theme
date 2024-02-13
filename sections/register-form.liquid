@@ -102,10 +102,31 @@
         {% if form.agreement_accepted %}checked{% endif %}>
       <label for="user_agreement_accepted">
         {{ section.settings.i_agree_label }}
-        <a
-          class="account__link"
-          href="https://booqable.com/agreement"
-          target="_blank">{{ section.settings.terms_and_agreements_label }}</a>
+
+        <span class="account__agreement">
+          <input type="checkbox" id="user_agreement_opener" style="display: none">
+          <label for="user_agreement_opener" class="account__agreement-opener">
+            {{ section.settings.terms_and_agreements_label }}
+          </label>
+
+          <span class="account__agreement-modal bq-content rx-content" style="display: none">
+            <span class="account__agreement-content">
+              <span class="account__agreement-inner">
+                <label for="user_agreement_opener" class="account__agreement-closer">X</label>
+
+                <span class="account__agreement-text">
+                  {{- form.agreement_content -}}
+
+                  <span class="account__agreement-buttons">
+                    <label class="account__agreement-button account__button account__button--primary" for="user_agreement_opener">
+                      {{ section.settings.terms_and_agreements_button_label }}
+                    </label>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
       </label>
       <div class="account__error-message">{{ form.errors.agreement_accepted }}</div>
     </div>
@@ -192,6 +213,11 @@
         "type": "text",
         "label": "Terms and agreements",
         "default": "Terms and agreements"
+      }, {
+        "id": "terms_and_agreements_button_label",
+        "type": "text",
+        "label": "Terms and agreements button (Modal window)",
+        "default": "Agree"
       }
     ]
   }
