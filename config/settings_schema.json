@@ -159,7 +159,7 @@
         "default": "This website uses cookies"
       },
       {
-        "type": "contentEditor",
+        "type": "textarea",
         "id": "cn_consent_modal_description",
         "label": "Description",
         "default": "This website collects cookies to deliver you the best possible user experience."
