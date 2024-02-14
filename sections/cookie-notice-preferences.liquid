@@ -27,7 +27,12 @@
   <div class="bq-content rx-content text-{{ section.key }}">
     {{ section.settings.paragraph_text }}
   </div>
-  <button type="button" class="bq-button bq-button--size-md bq-button--solid" data-cc="show-preferencesModal">{{ section.settings.button_text }}</button> <!-- TODO: Use in-house function instead of `data-cc="show-preferencesModal"` -->
+  <button type="button"
+    class="bq-button bq-button--size-md bq-button--solid"
+    onclick="CookieNotice.showPreferencesModal()"
+  >
+    {{ section.settings.button_text }}
+  </button>
 </div>
 
 {% schema %}
