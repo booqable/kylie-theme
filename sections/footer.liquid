@@ -59,7 +59,7 @@
     <div class="footer__bottom">
       <div class="footer__copyright footer__copyright--align-{{ section.settings.align_copyright }}">
         {% if section.settings.show_copyright %}
-          &copy; {{ "now" | date: "%Y" }}, {{ shop.name }}
+          &copy; {{ "now" | date: "%Y" }}, {{ shop.name }} | <a href="{{ routes.privacy_policy_url }}">Privacy policy</a>
           {% if show_powered_by %}
             &nbsp;|&nbsp;
           {% endif %}
