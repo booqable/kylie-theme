@@ -1,0 +1,54 @@
+<style>
+  .cookie-notice-preferences {
+    max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 0 var(--horizontal-padding);
+  }
+
+  .cookie-notice-preferences__inner {
+    background-color: #EFF1F3; /* TODO: Make this a setting */
+    border-radius: 8px;
+    padding: 16px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cookie-notice-preferences__inner button {
+    background-color: var(--color-accent-background);
+    color: var(--color-accent-foreground);
+  }
+</style>
+
+<div class="cookie-notice-preferences__inner">
+  <div class="bq-content rx-content text-{{ section.key }}">
+    {{ section.settings.paragraph_text }}
+  </div>
+  <button type="button" class="bq-button bq-button--size-md bq-button--solid" data-cc="show-preferencesModal">{{ section.settings.button_text }}</button> <!-- TODO: Use in-house function instead of `data-cc="show-preferencesModal"` -->
+</div>
+
+{% schema %}
+{
+  "name": "Cookie notice preferences",
+  "description": "Display text in various styles.",
+  "tag": "div",
+  "class": "cookie-notice-preferences",
+  "settings": [
+    {
+      "type": "contentEditor",
+      "id": "paragraph_text",
+      "label": "Paragraph",
+      "default": "<p>View or change your cookie preferences.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Cookie preferences"
+    }
+  ]
+}
+{% endschema %}

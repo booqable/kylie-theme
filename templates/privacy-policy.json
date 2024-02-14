@@ -37,6 +37,10 @@
       },
       "disabled": null
     },
+    "cookie-notice-preferences": {
+      "type": "cookie-notice-preferences",
+      "settings": {}
+    },
     "text_2_title": {
       "type": "text",
       "blocks": {},
@@ -61,6 +65,7 @@
   "order": [
     "image-banner",
     "text_1",
+    "cookie-notice-preferences",
     "text_2_title",
     "text_2_content"
   ]
