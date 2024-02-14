@@ -1,39 +1,41 @@
-<style>
-  .cookie-notice-preferences {
-    max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
-    width: 100%;
+{%- if settings.cn_activated %}
+  <style>
+    .cookie-notice-preferences {
+      max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
+      width: 100%;
 
-    margin: 0 auto;
-    padding: 0 var(--horizontal-padding);
-  }
+      margin: 0 auto;
+      padding: 0 var(--horizontal-padding);
+    }
 
-  .cookie-notice-preferences__inner {
-    background-color: {{ section.settings.background_color }};
-    border-radius: 8px;
-    padding: 16px 24px;
+    .cookie-notice-preferences__inner {
+      background-color: {{ section.settings.background_color }};
+      border-radius: 8px;
+      padding: 16px 24px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  .cookie-notice-preferences__inner button {
-    background-color: var(--color-accent-background);
-    color: var(--color-accent-foreground);
-  }
-</style>
+    .cookie-notice-preferences__inner button {
+      background-color: var(--color-accent-background);
+      color: var(--color-accent-foreground);
+    }
+  </style>
 
-<div class="cookie-notice-preferences__inner">
-  <div class="bq-content rx-content text-{{ section.key }}">
-    {{ section.settings.paragraph_text }}
+  <div class="cookie-notice-preferences__inner">
+    <div class="bq-content rx-content text-{{ section.key }}">
+      {{ section.settings.paragraph_text }}
+    </div>
+    <button type="button"
+      class="bq-button bq-button--size-md bq-button--solid"
+      onclick="CookieNotice.showPreferencesModal()"
+    >
+      {{ section.settings.button_text }}
+    </button>
   </div>
-  <button type="button"
-    class="bq-button bq-button--size-md bq-button--solid"
-    onclick="CookieNotice.showPreferencesModal()"
-  >
-    {{ section.settings.button_text }}
-  </button>
-</div>
+{%- endif %}
 
 {% schema %}
 {
