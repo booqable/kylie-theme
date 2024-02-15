@@ -157,6 +157,11 @@
   margin-bottom: 24px;
 }
 
+.account__link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
 .account__agreement-opener {
   color: var(--color-link);
   cursor: pointer;
