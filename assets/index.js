@@ -91,6 +91,13 @@ document.addEventListener("DOMContentLoaded", () => {
   handleSetMobileMenuHeight();
 });
 
+document.addEventListener("turbo:render", () => {
+  // Initializers
+  initSearch();
+  initFocalImages();
+  handleSetMobileMenuHeight();
+});
+
 window.addEventListener("resize", () => {
   handleSetMobileMenuHeight();
 });

@@ -166,4 +166,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initProductGallery();
 });
 
+document.addEventListener("turbo:render", () => {
+  // Initializers
+  initCarousels();
+  initProductGallery();
+});
+
 window.addEventListener("resize", handleWindowResize);
