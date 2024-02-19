@@ -150,7 +150,7 @@
       },
       {
         "type": "header",
-        "content": "Consent modal"
+        "content": "Consent popup"
       },
       {
         "type": "text",
@@ -190,7 +190,7 @@
       },
       {
         "type": "header",
-        "content": "Preferences modal"
+        "content": "Preferences popup"
       },
       {
         "type": "text",
