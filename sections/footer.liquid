@@ -60,8 +60,8 @@
       <div class="footer__copyright footer__copyright--align-{{ section.settings.align_copyright }}">
         {% if section.settings.show_copyright %}
           &copy; {{ "now" | date: "%Y" }}, {{ shop.name }}
-          {% if settings.cn_activated %}
-            &nbsp;|&nbsp;<a href="{{ routes.privacy_policy_url }}">{{ settings.cn_consent_modal_privacy_policy | escape }}</a>
+          {% if settings.cookie_notice_activated %}
+            &nbsp;|&nbsp;<a href="{{ routes.privacy_policy_url }}">{{ settings.cookie_notice_consent_modal_privacy_policy | escape }}</a>
           {% endif %}
           {% if show_powered_by %}
             &nbsp;|&nbsp;
