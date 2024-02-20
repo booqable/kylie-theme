@@ -183,12 +183,6 @@
         "default": "Manage preferences"
       },
       {
-        "type": "text",
-        "id": "cookie_notice_consent_modal_privacy_policy",
-        "label": "Privacy policy link label",
-        "default": "Privacy policy"
-      },
-      {
         "type": "header",
         "content": "Preferences popup"
       },

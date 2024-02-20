@@ -61,7 +61,7 @@
         {% if section.settings.show_copyright %}
           &copy; {{ "now" | date: "%Y" }}, {{ shop.name }}
           {% if settings.cookie_notice_activated %}
-            &nbsp;|&nbsp;<a href="{{ routes.privacy_policy_url }}">{{ settings.cookie_notice_consent_modal_privacy_policy | escape }}</a>
+            &nbsp;|&nbsp;<a href="{{ routes.privacy_policy_url }}">{{ section.settings.privacy_policy_link_text | escape }}</a>
           {% endif %}
           {% if show_powered_by %}
             &nbsp;|&nbsp;
@@ -90,6 +90,12 @@
       "type": "checkbox",
       "id": "show_copyright",
       "label": "Show copyright"
+    },
+    {
+      "type": "text",
+      "id": "privacy_policy_link_text",
+      "label": "Privacy policy link text",
+      "default": "Privacy policy"
     }
   ],
   "blocks": [
