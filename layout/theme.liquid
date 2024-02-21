@@ -79,5 +79,18 @@
 
     {{ content_for_body }}
 
+    <style>
+      #cc-main {
+        --cc-bg: {{ settings.primary_background_color }};
+        --cc-font-family: var(--font-body);
+
+        --cc-primary-color: {{ settings.primary_foreground_color }};
+        --cc-secondary-color: {{ settings.primary_foreground_color }};
+
+        --cc-btn-primary-bg: {{ settings.primary_color }};
+        --cc-btn-primary-color: {{ settings.accent_foreground_color }};
+        --cc-btn-primary-border-color: transparent;
+      }
+    </style>
   </body>
 </html>
