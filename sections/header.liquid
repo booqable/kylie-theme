@@ -56,7 +56,20 @@
       --minicart-button-color: {{ section.settings.foreground_color }};
       --minicart-button-hover-color: {{ section.settings.foreground_color }};
     }
+
   {% endif %}
+
+  .header__wrapper--with-menu {
+    grid-template-columns: max-content 1fr max-content{% if section.blocks.size > 0 %} repeat({{ section.blocks.size }}, max-content){% endif %};
+  }
+
+  .header__wrapper--with-mini-cart {
+    grid-template-columns: 1fr max-content 50px{% if section.blocks.size > 0 %} repeat({{ section.blocks.size }}, max-content){% endif %};
+  }
+
+  .header__wrapper--with-menu.header__wrapper--with-mini-cart {
+    grid-template-columns: max-content 1fr max-content 50px{% if section.blocks.size > 0 %} repeat({{ section.blocks.size }}, max-content){% endif %};
+  }
 </style>
 
 <div class="header__wrapper{% if section.settings.menu != blank %} header__wrapper--with-menu{% endif %}{% if show_mini_cart %} header__wrapper--with-mini-cart{% else %} header__wrapper--without-mini-cart{% endif %}">
@@ -204,6 +217,13 @@
       </div>
     </div>
   {% endif %}
+
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'app' %}
+        {% include 'app' %}
+    {% endcase %}
+  {% endfor %}
 </div>
 
 {% schema %}
@@ -212,6 +232,11 @@
   "tag": "header",
   "class": "header",
   "templates": [],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
   "settings": [
     {
       "type": "header",
