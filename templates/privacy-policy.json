@@ -1,0 +1,72 @@
+{
+  "name": "Privacy policy",
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Privacy policy",
+            "size": "md"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "settings": {
+        "fluid_width": false,
+        "overlay_enabled": true,
+        "overlay_color": "#D9E3F0",
+        "vertical_spacing": "sm",
+        "overlay_opacity": "40",
+        "content_align": "center",
+        "background_image": "booqable://assets/background-abstract.jpeg"
+      },
+      "disabled": false
+    },
+    "text_1": {
+      "type": "text",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "text": "<p>Cookie policy by Booqable, 2024</p><p>Booqable collects cookies to deliver you the best possible user experience.</p>",
+        "align": "left"
+      },
+      "disabled": null
+    },
+    "cookie-notice-preferences": {
+      "type": "cookie-notice-preferences",
+      "settings": {}
+    },
+    "text_2_title": {
+      "type": "text",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "text": "<h2>How and why we use cookies</h2>",
+        "align": "left"
+      },
+      "disabled": null
+    },
+    "text_2_content": {
+      "type": "text",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "text": "<p>Use this page to explain what data you collect, with which techniques and why you collect this data.</p>",
+        "align": "left"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "image-banner",
+    "text_1",
+    "cookie-notice-preferences",
+    "text_2_title",
+    "text_2_content"
+  ]
+}
