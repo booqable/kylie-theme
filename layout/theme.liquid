@@ -15,14 +15,14 @@
     {% include 'color-palette-styles' %}
     <style>
       #cc-main {
-        --cc-bg: {{ settings.primary_background_color }};
+        --cc-bg: var(--color-primary-background);
         --cc-font-family: var(--font-body);
 
-        --cc-primary-color: {{ settings.primary_foreground_color }};
-        --cc-secondary-color: {{ settings.primary_foreground_color }};
+        --cc-primary-color: var(--color-primary-foreground);
+        --cc-secondary-color: var(--color-primary-foreground);
 
-        --cc-btn-primary-bg: {{ settings.primary_color }};
-        --cc-btn-primary-color: {{ settings.accent_foreground_color }};
+        --cc-btn-primary-bg: var(--color-accent-background);
+        --cc-btn-primary-color: var(--color-accent-foreground);
         --cc-btn-primary-border-color: transparent;
       }
     </style>
