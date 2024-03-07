@@ -84,11 +84,6 @@ const handleSetMobileMenuHeight = () => {
   menu.style.height = `calc(100vh - ${totalHeight}px)`;
 };
 
-const handleScrollIn = (target) => {
-  target?.setAttribute("data-focus", "true");
-  target?.scrollIntoView({ behavior: "smooth", block: "center" });
-};
-
 const handleScroll = () => {
   const previewBar = document.querySelector(".preview-bar__container");
 
@@ -112,43 +107,6 @@ const handleScroll = () => {
   }
 };
 
-const handleRemoveFocus = () => {
-  document
-    .querySelectorAll("[data-focus]")
-    ?.forEach((node) => node.removeAttribute("data-focus"));
-};
-
-const handleMessages = ({ type, data, isTrusted }) => {
-  if (type === "message" && !!data && isTrusted) {
-    handleRemoveFocus();
-
-    let target;
-
-    switch (data.type) {
-      case "out":
-        handleRemoveFocus();
-        break;
-      case "section":
-        target = document.querySelector(`#main #section-${data.id}`);
-
-        handleScrollIn(target);
-        break;
-      case "block":
-        target = document.querySelector(
-          `#section-${data.sectionId} #${data.id}`
-        );
-
-        handleScrollIn(target);
-        break;
-      case "footer":
-        target = document.querySelector("footer");
-
-        handleScrollIn(target);
-        break;
-    }
-  }
-};
-
 document.addEventListener("DOMContentLoaded", () => {
   // Initializers
   initSearch();
@@ -161,4 +119,3 @@ window.addEventListener("resize", () => {
 });
 
 window.addEventListener("scroll", handleScroll);
-window.addEventListener("message", handleMessages);
