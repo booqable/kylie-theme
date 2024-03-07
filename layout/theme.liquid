@@ -65,13 +65,6 @@
 
     {% section 'footer' %}
 
-    {% if settings.primary_color != blank %}
-      {% assign color = settings.primary_color %}
-    {% else %}
-      {% assign color = branding_color %}
-    {% endif %}
-    <bq-date-picker-modal branding-color="{{ color }}"></bq-date-picker-modal>
-
     <script src="{{ "lazysizes.min.js" | asset_url }}" defer></script>
     <script src="{{ "index.js" | asset_url }}" defer></script>
     <script src="{{ "menus.js" | asset_url }}" defer></script>
