@@ -7,6 +7,8 @@
 <div class="footer__content">
   {% for block in section.blocks %}
     {% case block.type %}
+      {% when 'app' %}
+        {% render "app", block: block, section: section %}
       {% when "socials" %}
         {% include "socials" %}
       {% when "menu" %}
@@ -227,6 +229,9 @@
           "default": "center"
         }
       ]
+    },
+    {
+      "type": "@app"
     }
   ]
 }

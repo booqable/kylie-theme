@@ -30,18 +30,6 @@
   background-color: var(--color-primary-background);
 }
 
-.header__wrapper--with-menu {
-  grid-template-columns: max-content 1fr max-content;
-}
-
-.header__wrapper--with-mini-cart {
-  grid-template-columns: 1fr max-content 50px;
-}
-
-.header__wrapper--with-menu.header__wrapper--with-mini-cart {
-  grid-template-columns: max-content 1fr max-content 50px;
-}
-
 .header__link {
   text-decoration: none;
 
