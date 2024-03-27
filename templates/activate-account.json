@@ -8,5 +8,8 @@
       "settings": {}
     }
   },
-  "order": ["activate-account"]
+  "order": ["activate-account"],
+  "editor_settings": {
+    "visible_when": ["user_authentication_enabled"]
+  }
 }

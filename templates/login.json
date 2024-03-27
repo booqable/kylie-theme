@@ -8,5 +8,8 @@
       "settings": {}
     }
   },
-  "order": ["login-form"]
+  "order": ["login-form"],
+  "editor_settings": {
+    "visible_when": ["user_authentication_enabled"]
+  }
 }
