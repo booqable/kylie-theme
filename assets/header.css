@@ -455,6 +455,15 @@
   display: none;
 }
 
+.header__nav--desktop .header-app {
+  margin-left: auto;
+}
+
+.header__nav--mobile .header-app {
+  display: flex;
+  margin: 16px;
+}
+
 @media (max-width: 1100px) {
   .header__nav .list-menu--horizontal > .list-menu__item:not(:last-child) {
     margin-right: 16px;

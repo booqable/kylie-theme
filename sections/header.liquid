@@ -1,6 +1,8 @@
 {{ "header.css" | asset_url | stylesheet_tag }}
 {{ "list-menu.css" | asset_url | stylesheet_tag }}
 
+{% assign app = section.blocks | where: "type", "app" | first -%}
+
 <style>
   {% if section.settings.background_color != blank %}
     .header,
@@ -141,9 +143,17 @@
             {% endif %}
           </li>
         {% endfor %}
+
+        {% if app %}
+          <li class="header-app">
+            {% render 'app', block: app, section: section, size: "desktop" %}
+          </li>
+        {% endif %}
+
       </ul>
     </nav>
   {% endif %}
+
   <div class="header-search">
     <input type="checkbox" id="floating-search">
     <label for="floating-search" class="header-search__trigger">
@@ -161,6 +171,7 @@
       </form>
     </div>
   </div>
+
   {% if show_mini_cart %}
     <div class="header-cart">
       {{ cart_button }}
@@ -213,17 +224,16 @@
               {% endif %}
             </li>
           {% endfor %}
+
+          {% if app %}
+            <li class="header-app">
+              {% render 'app', block: app, section: section, size: "mobile" %}
+            </li>
+          {% endif %}
         </ul>
       </div>
     </div>
   {% endif %}
-
-  {% for block in section.blocks %}
-    {% case block.type %}
-      {% when 'app' %}
-        {% render 'app', block: block, section: section %}
-    {% endcase %}
-  {% endfor %}
 </div>
 
 {% schema %}
