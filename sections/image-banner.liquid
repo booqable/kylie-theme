@@ -89,7 +89,7 @@
         {% when "heading" %}
           <h1 id="{{ block.id }}" class="image-banner__title image-banner__title--size-{{ block.settings.size }}">{{ block.settings.text | escape }}</h1>
         {% when "text" %}
-          <p id="{{ block.id }}" class="image-banner__text image-banner__text--size-{{ block.settings.size }}">{{ block.settings.text | escape }}</p>
+          <p id="{{ block.id }}" class="image-banner__text image-banner__text--size-{{ block.settings.size }}">{{ block.settings.text }}</p>
         {% when "button" %}
           <div class="image-banner__button-container image-banner__button-container--align-{{ section.settings.content_align }}">
             <a id="{{ block.id }}" class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" {% if block.settings.use_new_tab %}target="_blank"{% endif %}>
