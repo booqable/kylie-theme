@@ -91,6 +91,7 @@
   flex-flow: row wrap;
   align-items: center;
 
+  margin: 0 -4px;
   padding: 15px 0;
 }
 
@@ -115,10 +116,14 @@
 .footer__payment-methods svg {
   max-height: 32px;
   max-width: 75px;
+  width: 100%;
 }
 
-.footer__payment-methods i:not(:last-child) {
-  margin-right: 8px;
+.footer__payment-methods span[title],
+.footer__payment-methods i {
+  margin: 0 4px 4px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .footer__social {
