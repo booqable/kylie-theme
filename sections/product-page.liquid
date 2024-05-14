@@ -1,11 +1,7 @@
 {% if canonical_url contains "/1?" or canonical_url contains "/1#" %}
   {% include "product-page-preview" %}
 {% else %}
-  {% if enabled_features contains "next_product_page" %}
-    {% include "product-page-next" %}
-  {% else %}
-    {% include "product-page-legacy" %}
-  {% endif %}
+  {% include "product-page" %}
 {% endif %}
 
 {% schema %}
