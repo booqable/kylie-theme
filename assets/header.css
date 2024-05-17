@@ -475,11 +475,11 @@
 }
 
 @media (max-width: 762px) {
-  .header__wrapper--with-menu, .header__wrapper--with-mini-cart {
+  .header .header__wrapper--with-menu, .header .header__wrapper--with-mini-cart {
     grid-template-columns: 1fr repeat(2, 50px);
   }
-  
-  .header__wrapper--with-menu.header__wrapper--with-mini-cart {
+
+  .header .header__wrapper--with-menu.header__wrapper--with-mini-cart {
     grid-template-columns: 1fr repeat(3, 50px);
   }
 
@@ -562,5 +562,6 @@
 
   .header__image-logo {
     max-width: 100%;
+    padding-right: 16px;
   }
 }
