@@ -52,8 +52,8 @@
         type="submit"
         class="account__button account__button--primary"
         name="commit"
-        value="{{ section.settings.login_label }}"
-        data-disable-with="Log in">
+        value="{{ section.settings.button_login_label }}"
+        data-disable-with="{{ section.settings.button_login_label }}">
     </div>
 
     <hr class="account__separator" />
@@ -103,7 +103,7 @@
         "label": "Password field label",
         "default": "Password"
       }, {
-        "id": "login_label",
+        "id": "button_login_label",
         "type": "text",
         "label": "Log in button label",
         "default": "Log in"
