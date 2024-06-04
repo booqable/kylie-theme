@@ -135,8 +135,8 @@
       type="submit"
       class="account__button account__button--primary"
       name="commit"
-      value="Sign up"
-      data-disable-with="Sign up">
+      value="{{ section.settings.button_sign_up_label }}"
+      data-disable-with="{{ section.settings.button_sign_up_label }}">
   {% endform %}
 </div>
 
@@ -218,6 +218,11 @@
         "type": "text",
         "label": "Terms and agreements button (Modal window)",
         "default": "Agree"
+      }, {
+        "id": "button_sign_up_label",
+        "type": "text",
+        "label": "Sign up button",
+        "default": "Sign up"
       }
     ]
   }
