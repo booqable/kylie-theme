@@ -6,11 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% comment %} Base stylesheets {% endcomment %}
   {{ "base.css" | asset_url | stylesheet_tag }}
-  {{ "sessions-layout.css" | asset_url | stylesheet_tag }}
-  {{ "header.css" | asset_url | stylesheet_tag }}
+
+  {% if section_preview != true %}
+    {{ "sessions-layout.css" | asset_url | stylesheet_tag }}
+    {{ "header.css" | asset_url | stylesheet_tag }}
+  {% endif %}
   {% comment %} Fonts {% endcomment %}
   <script src="https://kit.fontawesome.com/ff3b3de2b5.js" crossorigin="anonymous"></script>
-  {{ content_for_header }}
+
+  {% if section_preview %}
+    {{ options_and_scripts }}
+    {{ content_for_styles }}
+  {% else %}
+    {{ content_for_header }}
+  {% endif %}
 
   {% include 'fonts' %}
   {% include 'color-palette-styles' %}
@@ -44,34 +53,35 @@
 </head>
 <body>
 
-  <div class="header__wrapper">
-    <div>
-      <a href="{{ routes.root_url }}" class="header__link">
-          {% if section.settings.logo.url != blank %}
-            <img
-              src="{{ section.settings.logo | image_url }}"
-              alt="{{ shop.name }}"
-              class="header__image-logo"
-            >
-          {% elsif section.settings.custom_title != blank %}
-            <h1 class="header__text-logo">{{ section.settings.custom_title }}</h1>
-          {% elsif shop.logo_url != blank %}
-            <img
-              src="{{ shop.logo_url }}"
-              alt="{{ shop.name }}"
-              class="header__image-logo"
-            >
-          {% else %}
-            <h1 class="header__text-logo">{{ shop.name }}</h1>
-          {% endif %}
-        </a>
+  {% if section_preview != true %}
+    <div class="header__wrapper">
+      <div>
+        <a href="{{ routes.root_url }}" class="header__link">
+            {% if section.settings.logo.url != blank %}
+              <img
+                src="{{ section.settings.logo | image_url }}"
+                alt="{{ shop.name }}"
+                class="header__image-logo"
+              >
+            {% elsif section.settings.custom_title != blank %}
+              <h1 class="header__text-logo">{{ section.settings.custom_title }}</h1>
+            {% elsif shop.logo_url != blank %}
+              <img
+                src="{{ shop.logo_url }}"
+                alt="{{ shop.name }}"
+                class="header__image-logo"
+              >
+            {% else %}
+              <h1 class="header__text-logo">{{ shop.name }}</h1>
+            {% endif %}
+          </a>
+      </div>
     </div>
-  </div>
+  {% endif %}
 
   <main id="main">
     {{ content_for_layout }}
   </main>
-
 
   {{ content_for_body }}
 
