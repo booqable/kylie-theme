@@ -1,4 +1,3 @@
-/* Toggle and expand styles */
 .list-menu__item [id^="sidebar-navigation-menu-child-"],
 .list-menu__item [id^="sidebar-navigation-menu-grandchild-"] {
   display: none;
