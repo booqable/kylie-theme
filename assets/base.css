@@ -166,6 +166,33 @@ input {
   padding: 32px 0;
 }
 
+.spacer__inner--preview {
+  position: relative;
+  margin-top: 16px;
+  background-image: repeating-linear-gradient(
+    315deg,
+    var(--color-primary-background),
+    var(--color-primary-background) 6px,
+    var(--color-border) 6px,
+    var(--color-border) 7px
+  );
+  border-radius: 12px;
+}
+
+.spacer__inner--preview span {
+  display: inline-block;
+
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  transform: translateY(-50%);
+
+  padding: 4px 6px;
+
+  background-color: var(--color-primary-background);
+  color: var(--color-primary-foreground);
+}
+
 .skeleton {
   display: inline-flex;
 
