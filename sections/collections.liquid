@@ -28,9 +28,15 @@
       </a>
     {% endfor %}
   {% else %}
-    {% for block in (1..2) %}
-      <div id="{{ section.blocks.first.id }}" class="collection-cleanstate skeleton"></div>
-    {% endfor %}
+    <div class="collection">
+      {{ "booqable://assets/background-abstract.jpeg" | image_tag:
+        loading: 'lazy',
+        class: 'collection__image',
+        widths: '450, 550, 650',
+        sizes: '(max-width: 576px) 450px, (max-width: 768px) 550px, 650px'
+      }}
+      <h3 class="collection__name">Collection</h3>
+    </div>
   {% endif %}
 </div>
 
@@ -56,6 +62,7 @@
     {
       "type": "checkbox",
       "id": "enable_show_more",
+      "default": true,
       "label": "Enable show more"
     }
   ],

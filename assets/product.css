@@ -65,7 +65,7 @@
   margin-bottom: 8px;
 }
 
-.product bq-product-price-label {
+.product bq-product-price-label, .bq-product-price-label {
   display: block;
 
   font-size: 16px;
@@ -76,7 +76,7 @@
   margin: 0;
 }
 
-.product bq-product-price {
+.product bq-product-price, .bq-product-price {
   display: block;
 
   font-size: 16px;
