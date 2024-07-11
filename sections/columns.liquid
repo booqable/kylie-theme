@@ -71,15 +71,19 @@
       </div>
     {% endfor %}
   {% else %}
-    {% for column in (1..2) %}
-      <div id="{{ section.blocks.first.id }}" class="columns__column column-cleanstate">
-        <div class="column-cleanstate__image skeleton"></div>
-        <div class="column-cleanstate__title skeleton"></div>
-        {% for line in (1..4) %}
-          <div class="column-cleanstate__line column-cleanstate__line--{{ forloop.index }} skeleton"></div>
-        {% endfor %}
+    <div class="columns__column post">
+      {{ "booqable://assets/background-mountains.jpeg" | image_tag:
+        loading: 'lazy',
+        widths: "700, 900, 1400",
+        class: "post__image post__image--border-radius"
+      }}
+      <div class="post__content">
+        <h3 class="post__title">Column</h3>
+        <div class="bq-content rx-content post__text">
+          <p>Add some text to tell a story, explain how renting with your company works, or to let your potential customers know about the value you offer. Use this space however you like and fill it with whatever you want.</p>
+        </div>
       </div>
-    {% endfor %}
+    </div>
   {% endif %}
 </div>
 
@@ -111,7 +115,8 @@
         },
         {
           "id": "image",
-          "type": "image_picker"
+          "type": "image_picker",
+          "default": "booqable://assets/background-mountains.jpeg"
         },
         {
           "id": "image_alt",
@@ -121,7 +126,8 @@
         {
           "id": "image_border_radius",
           "type": "checkbox",
-          "label": "Use round corners"
+          "label": "Use round corners",
+          "default": true
         },
         {
           "type": "header",
@@ -130,12 +136,14 @@
         {
           "id": "title",
           "type": "text",
-          "label": "Title"
+          "label": "Title",
+          "default": "Column"
         },
         {
           "id": "text",
           "type": "contentEditor",
-          "label": "Text"
+          "label": "Text",
+          "default": "<p>Add some text to tell a story, explain how renting with your company works, or to let your potential customers know about the value you offer. Use this space however you like and fill it with whatever you want.</p>"
         },
         {
           "type": "header",
