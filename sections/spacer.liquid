@@ -8,9 +8,12 @@
   }
 </style>
 
-<div class="spacer-{{ section.key }} spacer__inner spacer__inner--{{ section.settings.size }}">
+<div class="spacer-{{ section.key }} spacer__inner spacer__inner--{{ section.settings.size }}{% if section_preview %} spacer__inner--preview{% endif %}">
   {% if section.settings.use_hr %}
     <hr>
+  {% endif %}
+  {% if section_preview %}
+    <span>This section will render an empty space</span>
   {% endif %}
 </div>
 

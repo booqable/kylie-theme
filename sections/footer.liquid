@@ -1,8 +1,10 @@
 {{ "footer.css" | asset_url | stylesheet_tag }}
 
 <!-- Icons -->
-{% assign fa = "paypal,stripe,ideal,alipay" | split: "," %}
+{% assign fa  = "paypal,stripe,ideal,alipay" | split: "," %}
 {% assign svg = "p24,eps,bancontact,giropay" | split: "," %}
+
+{% assign app = section.blocks | where: "type", "app" | first -%}
 
 <div class="footer__content">
   {% for block in section.blocks %}
@@ -57,6 +59,12 @@
   {% endfor %}
   {% if section.settings.show_copyright or show_powered_by %}
     <div class="footer__bottom">
+      {% if app %}
+        <div class="footer-app">
+          {% render "app", block: app, section: section %}
+        </div>
+      {% endif %}
+
       <div class="footer__copyright footer__copyright--align-{{ section.settings.align_copyright }}">
         {% if section.settings.show_copyright %}
           &copy; {{ "now" | date: "%Y" }}, {{ shop.name }}
@@ -81,6 +89,7 @@
   "tag": "footer",
   "class": "footer",
   "templates": [],
+  "layout": true,
   "settings": [
     {
       "type": "header",
@@ -227,6 +236,9 @@
           "default": "center"
         }
       ]
+    },
+    {
+      "type": "@app"
     }
   ]
 }

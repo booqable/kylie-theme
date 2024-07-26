@@ -1,4 +1,4 @@
-{%- if settings.cookie_notice_activated %}
+{%- if settings.cookie_notice_activated or section_preview %}
   <style>
     .cookie-notice-preferences {
       max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
@@ -18,13 +18,17 @@
       align-items: center;
     }
 
+    .cookie-notice-preferences__inner--preview {
+      margin-top: 16px;
+    }
+
     .cookie-notice-preferences__inner button {
       background-color: var(--color-accent-background);
       color: var(--color-accent-foreground);
     }
   </style>
 
-  <div class="cookie-notice-preferences__inner">
+  <div class="cookie-notice-preferences__inner{% if section_preview %} cookie-notice-preferences__inner--preview{% endif %}">
     <div class="bq-content rx-content text-{{ section.key }}">
       {{ section.settings.paragraph_text }}
     </div>

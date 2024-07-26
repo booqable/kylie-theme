@@ -66,18 +66,24 @@
 
 .footer__bottom {
   padding: 32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer__copyright--align-left {
   text-align: left;
+  margin-right: auto;
 }
 
 .footer__copyright--align-center {
   text-align: center;
+  margin: 0 auto;
 }
 
 .footer__copyright--align-right {
   text-align: right;
+  margin-left: auto;
 }
 
 .footer__payment-methods {
@@ -85,6 +91,7 @@
   flex-flow: row wrap;
   align-items: center;
 
+  margin: 0 -4px;
   padding: 15px 0;
 }
 
@@ -109,10 +116,14 @@
 .footer__payment-methods svg {
   max-height: 32px;
   max-width: 75px;
+  width: 100%;
 }
 
-.footer__payment-methods i:not(:last-child) {
-  margin-right: 8px;
+.footer__payment-methods span[title],
+.footer__payment-methods i {
+  margin: 0 4px 4px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .footer__social {
@@ -172,9 +183,19 @@
   text-decoration: underline;
 }
 
+.footer-app {
+  display: inline-block;
+}
+
 @media (max-width: 576px) {
+  .footer__bottom {
+    padding: 8px 0 32px 0;
+    flex-direction: column;
+  }
+
   .footer__copyright {
     text-align: center;
+    margin: 0;
   }
 
   .footer__menu {
@@ -191,5 +212,10 @@
 
   .footer__menu > .list-menu__item {
     margin-bottom: 16px;
+  }
+
+  .footer-app {
+    display: initial;
+    margin: 16px 0;
   }
 }
