@@ -1,0 +1,15 @@
+{
+  "name": "Accept invitation",
+  "layout": "session",
+  "sections": {
+    "accept-invitation-form": {
+      "type": "accept-invitation-form",
+      "blocks": {},
+      "settings": {}
+    }
+  },
+  "order": ["accept-invitation-form"],
+  "editor_settings": {
+    "visible_only_when": ["user_authentication_enabled"]
+  }
+}
