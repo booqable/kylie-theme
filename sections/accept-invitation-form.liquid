@@ -33,10 +33,11 @@
 
     {% form 'accept_invitation' %}
       {%- render 'form-session-pages',
-          field_1: "password",
-          field_1_label: section.settings.password_label,
-          field_2: "password_confirmation",
-          field_2_label: section.settings.password_confirmation_label,
+          form_name: "accept_invitation",
+          password_name: "password",
+          password_label: section.settings.password_label,
+          password_confirmation_name: "password_confirmation",
+          password_confirmation_label: section.settings.password_confirmation_label,
           button_label: section.settings.button_accept_label
       -%}
     {% endform %}

@@ -42,29 +42,13 @@
       <div class="account__error-message">{{ form.errors.email }}</div>
     </div>
 
-    <div class="{% if form.errors.password %}account-fieldset--error{% endif %}">
-      <label for="user_password" class="account-fieldset__label">{{ section.settings.password_label }}</label>
-      <input
-        autocomplete="new-password"
-        placeholder=" "
-        class="account-fieldset__input"
-        type="password"
-        name="user[password]"
-        id="user_password">
-      <div class="account__error-message">{{ form.errors.password }}</div>
-    </div>
-
-    <div class="{% if form.errors.password_confirmation %}account-fieldset--error{% endif %} account__divider">
-      <label for="user_password_confirmation" class="account-fieldset__label">{{ section.settings.password_confirmation_label }}</label>
-      <input
-        autocomplete="new-password"
-        placeholder=" "
-        class="account-fieldset__input"
-        type="password"
-        name="user[password_confirmation]"
-        id="user_password_confirmation">
-      <div class="account__error-message">{{ form.errors.password_confirmation }}</div>
-    </div>
+    {%- render 'form-session-pages',
+        form_name: "register",
+        password_name: "password",
+        password_label: section.settings.password_label,
+        password_confirmation_name: "password_confirmation",
+        password_confirmation_label: section.settings.password_confirmation_label
+    -%}
 
     <div class="{% if form.errors.customer %}account-fieldset--error{% endif %} account__divider">
       <label class="account-fieldset__static-label">{{ section.settings.account_type_label }}</label>
