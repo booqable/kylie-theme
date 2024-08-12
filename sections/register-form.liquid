@@ -43,10 +43,9 @@
     </div>
 
     {%- render 'form-password-session-pages',
+        form: form,
         form_name: "register",
-        password_name: "password",
         password_label: section.settings.password_label,
-        password_confirmation_name: "password_confirmation",
         password_confirmation_label: section.settings.password_confirmation_label
     -%}
 
