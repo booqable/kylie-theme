@@ -1,0 +1,74 @@
+{% comment %}
+
+  This snippet is using for rendering the form on Edit password, Accept invitation and Reset password pages.
+
+
+  field_1 - "string" required, the type of the first field
+  field_1_label - "string" required, the label of the first field
+  field_2 - "string" required, the type of the second field
+  field_2_label - "string" required, the label of the second field
+  button_label - "string" required
+
+  Usage:
+
+  {%- render 'form-session-pages',
+      field_1: "password",
+      field_1_label: section.settings.password_label,
+      field_2: "password_confirmation",
+      field_2_label: section.settings.password_confirmation_label,
+      button_label: section.settings.change_my_password
+  -%}
+
+{% endcomment %}
+
+{%- if field_1 contains "password" or field_2 contains "password" -%}
+  {% assign field_type = "password" %}
+  {% assign autocomplete = "new-password" %}
+{%- endif -%}
+{%- if field_1 contains "email" or field_2 contains "email" -%}
+  {% assign field_type = "email" %}
+  {% assign autocomplete = "email" %}
+{%- endif -%}
+
+{%- if field_1_label != blank -%}
+  <div class="{% if form.errors.field_1 %}account-fieldset--error{% endif %}">
+    <label for="user_{{- field_1 -}}" class="account-fieldset__label">{{ field_1_label }}</label><br>
+    <input
+      value="{{- form.field_1 -}}"
+      placeholder=" "
+      class="account-fieldset__input"
+      autofocus="autofocus"
+      autocomplete="{{- autocomplete -}}"
+      type="{{- field_type -}}"
+      name="user[{{- field_1 -}}]"
+      id="user_{{- field_1 -}}">
+    <div class="account__error-message">{{ form.errors.field_1 }}</div>
+  </div>
+{%- endif -%}
+
+{%- if field_2_label != blank -%}
+  <div class="account__divider--small {% if form.errors.field_2 %}account-fieldset--error{% endif %}">
+    <label for="user_{{- field_2 -}}" class="account-fieldset__label">{{ field_2_label }}</label><br>
+    <input
+      value="{{ form.field_2 }}"
+      placeholder=" "
+      class="account-fieldset__input"
+      {% unless field_1_label != blank %}
+        autofocus="autofocus"
+      {% endunless %}
+      autocomplete="{{- autocomplete -}}"
+      type="{{- field_type -}}"
+      name="user[{{- field_2 -}}]"
+      id="user_{{- field_2 -}}">
+    <div class="account__error-message">{{ form.errors.field_2 }}</div>
+  </div>
+{%- endif -%}
+
+<div class="actions">
+  <input
+    type="submit"
+    class="account__button account__button--primary"
+    name="commit"
+    value="{{ button_label }}"
+    data-disable-with="{{ button_label }}">
+</div>
