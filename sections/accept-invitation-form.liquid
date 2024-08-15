@@ -1,0 +1,95 @@
+{{ "account.css" | asset_url | stylesheet_tag }}
+
+<div class="account">
+
+  {%- if alert -%}
+    <div class="account__alert account__alert--danger">{{ alert }}</div>
+  {%- endif -%}
+
+  {%- if notice -%}
+    <div class="account__alert account__alert--info">{{ notice }}</div>
+  {%- endif -%}
+
+  {%- if success_link_url -%}
+    <a href="{{ success_link_url }}">{{ section.settings.success_link_label }}</a>
+  {%- endif -%}
+
+  {%- if hide_form == false -%}
+    {% if section.settings.you_are_invited or section.settings.please_enter_password %}
+      <div class="account__alert account__alert--info">
+        {% if section.settings.you_are_invited %}
+          <p>
+            {{ section.settings.you_are_invited }}
+          </p>
+        {% endif %}
+
+        {% if section.settings.please_enter_password %}
+          <p>
+            {{ section.settings.please_enter_password }}
+          </p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% form 'accept_invitation' %}
+      {%- render 'form-password-session-pages',
+          form: form,
+          form_name: "accept_invitation",
+          password_label: section.settings.password_label,
+          password_confirmation_label: section.settings.password_confirmation_label,
+          button_label: section.settings.button_accept_label
+      -%}
+    {% endform %}
+  {%- endif -%}
+</div>
+
+{% schema %}
+  {
+    "name": "Accept invitation form",
+    "important": true,
+    "unique": true,
+    "templates": ["accept-invitation"],
+    "settings": [
+      {
+        "type": "header",
+        "content": "Translations"
+      },
+      {
+        "id": "you_are_invited",
+        "type": "text",
+        "label": "Accept invitation title",
+        "default": "You've been invited to create an account."
+      },
+      {
+        "id": "please_enter_password",
+        "type": "text",
+        "label": "Password instructions",
+        "default": "If you want to continue, please enter your password below."
+      },
+      {
+        "id": "password_label",
+        "type": "text",
+        "label": "Password field label",
+        "default": "New password"
+      },
+      {
+        "id": "password_confirmation_label",
+        "type": "text",
+        "label": "Password confirmation field label",
+        "default": "Confirm new password"
+      },
+      {
+        "id": "button_accept_label",
+        "type": "text",
+        "label": "Accept button label",
+        "default": "Accept invite"
+      },
+      {
+        "id": "success_link_label",
+        "type": "text",
+        "label": "Success link label",
+        "default": "Continue to the store"
+      }
+    ]
+  }
+{% endschema %}
