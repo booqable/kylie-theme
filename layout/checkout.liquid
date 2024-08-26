@@ -8,14 +8,22 @@
   <script src="https://kit.fontawesome.com/ff3b3de2b5.js" crossorigin="anonymous"></script>
   {{ content_for_checkout_header }}
 
-  {% include 'fonts' %}
-  {% include 'color-palette-styles' %}
+  {% render 'fonts', settings: settings %}
+  {% render 'color-palette-styles', settings: settings %}
 
-  {% if shop.favicon_url %}
-    <link rel="shortcut icon" href="{{ shop.favicon_url }}" />
-  {% endif %}
+  {% render 'page-metadata',
+    canonical_url: canonical_url,
+    page_title: page_title,
+    page_description: page_description,
+    page_meta_image_url: page_meta_image_url,
+    page_meta_image_alt: page_meta_image_alt,
+    product: product,
+    shop: shop,
+    locale: locale
+  %}
 </head>
 <body>
+  yooooo
   {{ content_for_layout }}
 
   {{ content_for_body }}
