@@ -22,7 +22,7 @@
   {% endif %}
 
   {% render 'fonts', settings: settings %}
-  {% render 'color-palette-styles', settings: settings %}
+  {% render 'color-palette-styles', settings: settings, branding_color: branding_color %}
 
   {%- unless section_preview -%}
     {% render 'page-metadata',
