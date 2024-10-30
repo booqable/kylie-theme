@@ -29,9 +29,9 @@
 }
 
 .account__title-icon {
-  color: var(--color-primary);
+  color: var(--color-accent-background);
   font-size: 32px;
-  margin-left: 0 auto 16px;
+  margin: 0 auto 16px;
   text-align: center;
 }
 
@@ -66,20 +66,20 @@
 }
 
 .account__button--primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-accent-background);
   border-radius: var(--border-radius-sm);
   color: white;
 }
 
 .account__button--secondary {
   border-radius: var(--border-radius-sm);
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-accent-background);
   color: black;
   text-decoration: none;
 }
 
 .account__button--minimal {
-  color: var(--color-primary);
+  color: var(--color-accent-background);
   font-weight: normal;
   text-decoration: none;
 }
@@ -97,7 +97,7 @@
 }
 
 .account-fieldset__label:has(+ input:focus) {
-  color: var(--color-primary);
+  color: var(--color-accent-background);
 }
 
 .account-fieldset__label:not(:has(+ input:focus)):has(+ input:placeholder-shown) {
@@ -134,7 +134,7 @@
 }
 
 .account-fieldset__input:focus {
-  border-color: var(--color-primary);
+  border-color: var(--color-accent-background);
   border-width: 2px;
   line-height: 36px;
   outline: none;
@@ -158,12 +158,12 @@
 }
 
 .account__link {
-  color: var(--color-primary);
+  color: var(--color-accent-background);
   text-decoration: none;
 }
 
 .account__agreement-opener {
-  color: var(--color-link);
+  color: var(--color-accent-background);
   cursor: pointer;
 }
 
@@ -228,7 +228,7 @@
   right: 23%;
   transform: rotate(45deg);
   height: 2px;
-  background: var(--color-link);
+  background: var(--color-accent-background);
 }
 
 .account__agreement-closer:after {
@@ -298,7 +298,7 @@
 
 .breadcrumbs {
   align-items: center;
-  color: var(--color-primary);
+  color: var(--color-accent-background);
   display: flex;
   font-size: 16px;
   margin-bottom: 16px;

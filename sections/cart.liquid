@@ -1,5 +1,7 @@
 {{ "cart.css" | asset_url | stylesheet_tag }}
 
+{% render 'cart-components-styles' %}
+
 {% if section.settings.show_title %}
   <h3 class="cart__title">
     {% if section.settings.title != blank %}
