@@ -2,6 +2,7 @@
   margin: 0 auto;
   max-width: 400px;
   padding: 0 16px;
+  color: var(--color-primary-foreground);
 }
 
 .account__title {
@@ -41,8 +42,12 @@
   }
 }
 
+.account__title + .account__divider {
+  color: var(--color-primary-foreground-translucent);
+}
+
 .description {
-  color: var(--color-typo);
+  color: var(--color-primary-foreground-translucent);
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 24px;
@@ -68,13 +73,13 @@
 .account__button--primary {
   background-color: var(--color-accent-background);
   border-radius: var(--border-radius-sm);
-  color: white;
+  color: var(--color-accent-foreground);
 }
 
 .account__button--secondary {
   border-radius: var(--border-radius-sm);
   border: 1px solid var(--color-accent-background);
-  color: black;
+  color: var(--color-primary-foreground);
   text-decoration: none;
 }
 
@@ -85,8 +90,8 @@
 }
 
 .account-fieldset__label {
-  background:  linear-gradient(0deg, white 0%, white 44%, transparent 44%);
-  color: var(--color-grey-dark);
+  background: linear-gradient(0deg, var(--color-primary-background) 0%, var(--color-primary-background) 44%, transparent 44%);
+  color: var(--color-primary-foreground);
   font-size: 14px;
   left: 16px;
   padding: 0 2px;
@@ -96,24 +101,23 @@
   transition-property: top, color, background-color;
 }
 
-.account-fieldset__label:has(+ input:focus) {
-  color: var(--color-accent-background);
-}
-
 .account-fieldset__label:not(:has(+ input:focus)):has(+ input:placeholder-shown) {
   background-color: transparent;
-  color: var(--color-grey-dark);
+  color: var(--color-primary-foreground);
   font-size: 16px;
   top: 37px;
 }
 
 .account-fieldset--error .account-fieldset__label {
-  background:  linear-gradient(0deg, var(--color-danger-background) 0%, var(--color-danger-background) 44%, transparent 44%);
+  background: linear-gradient(0deg, var(--color-danger-background) 0%, var(--color-danger-background) 44%, transparent 44%);
+  color: var(--color-danger-dark);
+}
+
+.account-fieldset--error .account-fieldset__label:not(:has(+ input:focus)):has(+ input:placeholder-shown) {
   color: var(--color-danger-dark);
 }
 
 .account-fieldset__static-label, .account-fieldset__radio-label {
-  color: var(--color-typo);
   font-size: 16px;
   line-height: 24px;
   padding: 0 2px;
@@ -123,9 +127,13 @@
   color: var(--color-danger-dark);
 }
 
-.account-fieldset__input{
+.account-fieldset__input {
+  -webkit-box-shadow: inset 0 0 0 50px var(--color-primary-background);
+  -webkit-text-fill-color: var(--color-primary-foreground);
   border-radius: 8px;
-  border: 1px solid var(--color-grey-medium);
+  border: 1px solid var(--color-primary-foreground);
+  background: var(--color-primary-background);
+  color: var(--color-primary-foreground);
   font-size: 16px;
   line-height: 38px;
   margin: 0 0 6px 0;
@@ -134,7 +142,6 @@
 }
 
 .account-fieldset__input:focus {
-  border-color: var(--color-accent-background);
   border-width: 2px;
   line-height: 36px;
   outline: none;
@@ -144,6 +151,9 @@
 .account-fieldset--error .account-fieldset__input {
   background-color: var(--color-danger-background);
   border-color: var(--color-danger-base);
+  color: var(--color-danger-dark);
+  -webkit-box-shadow: inset 0 0 0 50px var(--color-danger-background);
+  -webkit-text-fill-color: var(--color-danger-dark);
 }
 
 .account__error-message {
@@ -158,12 +168,12 @@
 }
 
 .account__link {
-  color: var(--color-accent-background);
+  color: var(--color-link);
   text-decoration: none;
 }
 
 .account__agreement-opener {
-  color: var(--color-accent-background);
+  color: var(--color-link);
   cursor: pointer;
 }
 
@@ -228,7 +238,7 @@
   right: 23%;
   transform: rotate(45deg);
   height: 2px;
-  background: var(--color-accent-background);
+  background: var(--color-link);
 }
 
 .account__agreement-closer:after {
