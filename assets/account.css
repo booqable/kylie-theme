@@ -73,7 +73,7 @@
 .account__button--primary {
   background-color: var(--color-accent-background);
   border-radius: var(--border-radius-sm);
-  color: white;
+  color: var(--color-accent-foreground);
 }
 
 .account__button--secondary {
