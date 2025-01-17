@@ -14,6 +14,33 @@
   gap: 18px;
 }
 
+.columns__title {
+  color: var(--color-primary-foreground);
+
+  margin-bottom: 24px;
+}
+
+.columns__title--size-sm {
+  font-size: 24px;
+  line-height: 1.3333;
+
+  font-weight: var(--font-weight-medium);
+}
+
+.columns__title--size-md {
+  font-size: 36px;
+  line-height: 1.25;
+
+  font-weight: var(--font-weight-semibold);
+}
+
+.columns__title--size-lg {
+  font-size: 44px;
+  line-height: 1.2;
+
+  font-weight: var(--font-weight-bold);
+}
+
 .columns .columns__column .post__image {
   margin-bottom: 16px;
 }
@@ -65,11 +92,11 @@
   .columns .columns__container--count-1 {
     grid-template-columns: 1fr;
   }
-  
+
   .columns .columns__container--count-2 {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .columns .columns__container--count-3 {
     grid-template-columns: repeat(3, 1fr);
   }
