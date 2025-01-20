@@ -7,6 +7,17 @@
 {% endif %}
 
 <style>
+  .columns__title--position-{{ section.settings.title_position }} {
+    text-align: {{ section.settings.title_position }};
+  }
+  .columns__container--alignment {
+    text-align: {{ section.settings.content_align }};
+  }
+  {% if section.settings.content_color != blank %}
+  .columns .post__text {
+    --color-primary-foreground: {{ section.settings.content_color }};
+  }
+  {% endif %}
   {% for block in section.blocks %}
     .columns-{{ section.key }} #{{ block.id }} .bq-button {
       color: var(--color-primary-foreground);
@@ -27,7 +38,11 @@
   {% endfor %}
 </style>
 
-<div class="columns-{{ section.key }} columns__container columns__container--count-{{ section.settings.columns_count }}">
+<h2 class="columns__title columns__title--size-{{ section.settings.title_size }} columns__title--position-{{ section.settings.title_position }}">
+  {{ section.settings.title }}
+</h2>
+
+<div class="columns-{{ section.key }} columns__container columns__container--alignment columns__container--count-{{ section.settings.columns_count }}">
   {% if section.blocks.size >= 1 and column_exists %}
     {% for block in section.blocks %}
       <div id="{{ block.id }}" class="columns__column post">
@@ -57,7 +72,7 @@
         {% endif %}
         <div class="post__content">
           {% if block.settings.title %}
-            <h3 class="post__title">{{ block.settings.title }}</h3>
+            <h3 class="post__title post__title--size-{{ section.settings.heading_size }}">{{ block.settings.title }}</h3>
           {% endif %}
           {% if block.settings.text %}
             <div class="bq-content rx-content post__text">{{ block.settings.text }}</div>
@@ -78,7 +93,7 @@
         class: "post__image post__image--border-radius"
       }}
       <div class="post__content">
-        <h3 class="post__title">Column</h3>
+        <h3 class="post__title post__title--size-{{ section.settings.heading_size }}">Column</h3>
         <div class="bq-content rx-content post__text">
           <p>Add some text to tell a story, explain how renting with your company works, or to let your potential customers know about the value you offer. Use this space however you like and fill it with whatever you want.</p>
         </div>
@@ -94,6 +109,105 @@
   "tag": "section",
   "class": "columns",
   "settings": [
+    {
+      "type": "header",
+      "content": "General"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_size",
+      "label": "Title size",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "md"
+    },
+    {
+      "type": "select",
+      "id": "title_position",
+      "label": "Title position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "md"
+    },
+    {
+      "type": "select",
+      "id": "content_align",
+      "label": "Content alignment",
+      "options": [
+        {
+          "value": "justify",
+          "label": "Justify"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "justify"
+    },
+    {
+      "type": "color",
+      "id": "content_color",
+      "label": "Text color",
+      "placeholder": "Default"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
     {
       "type": "number",
       "id": "columns_count",
@@ -136,7 +250,7 @@
         {
           "id": "title",
           "type": "text",
-          "label": "Title",
+          "label": "Heading",
           "default": "Column"
         },
         {
