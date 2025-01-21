@@ -110,9 +110,10 @@ const handleScroll = () => {
 document.addEventListener("DOMContentLoaded", () => {
   // Initializers
   initSearch();
-  initFocalImages();
   handleSetMobileMenuHeight();
 });
+
+window.addEventListener("load", initFocalImages);
 
 window.addEventListener("resize", () => {
   handleSetMobileMenuHeight();
