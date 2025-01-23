@@ -90,12 +90,22 @@
           <h1 id="{{ block.id }}" class="image-banner__title image-banner__title--size-{{ block.settings.size }}">{{ block.settings.text | escape }}</h1>
         {% when "text" %}
           <p id="{{ block.id }}" class="image-banner__text image-banner__text--size-{{ block.settings.size }}">{{ block.settings.text }}</p>
-        {% when "button" %}
-          <div class="image-banner__button-container image-banner__button-container--align-{{ section.settings.content_align }}">
-            <a id="{{ block.id }}" class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" {% if block.settings.use_new_tab %}target="_blank"{% endif %}>
-              {{ block.settings.text | escape }}
-            </a>
-          </div>
+      {% endcase %}
+    {% endfor %}
+
+    <div class="image-banner__button-container image-banner__button-container--align-{{ section.settings.content_align }}">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when "button" %}
+              <a id="{{ block.id }}" class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" {% if block.settings.use_new_tab %}target="_blank"{% endif %}>
+                {{ block.settings.text | escape }}
+              </a>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    {% for block in section.blocks %}
+      {% case block.type %}
         {% when "date-picker" %}
           {% if settings.primary_color != blank %}
             {% assign color = settings.primary_color %}
@@ -213,11 +223,12 @@
       "default": "md"
     }
   ],
-  "max_blocks": 4,
+  "max_blocks": 5,
   "blocks": [
     {
       "type": "heading",
       "name": "Heading",
+      "limit": 1,
       "settings": [
         {
           "type": "text",
@@ -256,6 +267,7 @@
     {
       "type": "text",
       "name": "Text",
+      "limit": 1,
       "settings": [
         {
           "type": "textarea",
@@ -295,6 +307,7 @@
     {
       "type": "button",
       "name": "Button",
+      "limit": 2,
       "settings": [
         {
           "type": "text",
@@ -355,6 +368,7 @@
     {
       "type": "date-picker",
       "name": "Date Picker",
+      "limit": 1,
       "settings": []
     }
   ]
