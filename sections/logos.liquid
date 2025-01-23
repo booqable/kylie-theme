@@ -1,0 +1,125 @@
+{{ "logos.css" | asset_url | stylesheet_tag }}
+
+<style>
+  .logos__title--position-{{ section.settings.title_position }} {
+    text-align: {{ section.settings.title_position }};
+  }
+</style>
+
+<div class="logos__wrapper">
+  {% if section.settings.title != blank %}
+    <h2 class="logos__title logos__title--size-{{ section.settings.title_size }} logos__title--position-{{ section.settings.title_position }}">
+      {{ section.settings.title -}}
+    </h2>
+  {% endif %}
+
+  <div class="logos__images">
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        {% assign image = block.settings.image %}
+
+        <div class="logos__image-wrapper" id="{{- block.id -}}">
+          {% if image.url != blank %}
+            {{ block.settings.image.url | image_tag:
+              loading: 'lazy',
+              widths: '700',
+              sizes: '700px',
+              class: 'logos__image',
+              alt: block.settings.image_alt
+            }}
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="logos__image-wrapper">
+        {{ "booqable://assets/image-partner-logo-preview-black.png" | image_tag:
+            loading: 'lazy',
+            widths: '750',
+            sizes: '750px',
+            class: 'logos__image',
+        }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Logos",
+    "description": "Show logos of your partners or brands you cary",
+    "tag": "section",
+    "class": "logos",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "We work for"
+      },
+      {
+        "type": "select",
+        "id": "title_size",
+        "label": "Title size",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          }
+        ],
+        "default": "sm"
+      },
+      {
+        "type": "select",
+        "id": "title_position",
+        "label": "Title position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      }
+    ],
+    "max_blocks": 16,
+    "blocks": [
+      {
+        "type": "logo",
+        "name": "Logo",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "default": "booqable://assets/image-partner-logo-preview-black.png"
+          },
+          {
+            "type": "text",
+            "id": "image_alt",
+            "label": "Image alternative text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
