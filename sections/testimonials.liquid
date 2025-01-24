@@ -1,0 +1,180 @@
+{% if section.blocks.size > 0 %}
+  {{ "testimonials.css" | asset_url | stylesheet_tag }}
+
+  <style>
+    .testimonials__title--position-{{ section.settings.title_position }} {
+      text-align: {{ section.settings.title_position }};
+    }
+
+    {% if section.settings.name_color != blank %}
+      .testimonials__cite {
+        color: {{ section.settings.name_color }};
+      }
+    {% endif %}
+
+    {% if section.settings.star_color != blank %}
+      .testimonials__star i {
+        color: {{ section.settings.star_color }};
+      }
+    {% endif %}
+  </style>
+
+  <div class="testimonials__wrapper">
+    {% if section.settings.title != blank %}
+      <h2 class="testimonials__title testimonials__title--size-{{ section.settings.title_size }} testimonials__title--position-{{ section.settings.title_position }}">
+        {{ section.settings.title }}
+      </h2>
+    {% endif %}
+
+    <div class="testimonials__list">
+      {% for block in section.blocks %}
+        {% assign stars_full  = block.settings.stars %}
+        {% assign stars_empty = block.settings.stars | plus: 1 %}
+
+        {% if block.settings.description != blank %}
+          <blockquote class="testimonials__blockquote">
+            <div class="testimonials__stars">
+              {% for i in (1..stars_full) %}
+                <span class="testimonials__star">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                </span>
+              {% endfor %}
+              {% for i in (stars_empty..5) %}
+                <span class="testimonials__star">
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                </span>
+              {% endfor %}
+            </div>
+
+            <q class="testimonials__quote bq-content rx-content">
+              {{ block.settings.description }}
+            </q>
+
+            {% if block.settings.name != blank or block.settings.position != blank %}
+              <cite class="testimonials__cite">
+                {% if block.settings.name != blank %}
+                  {{ block.settings.name }}
+                {% endif %}
+                {% if block.settings.position != blank %}
+                  <small class="testimonials__small text-regular">
+                    {{ block.settings.position }}
+                  </small>
+                {% endif %}
+              </cite>
+            {% endif %}
+          </blockquote>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Testimonials",
+    "description": "Show testimonials from individual customers",
+    "tag": "section",
+    "class": "testimonials",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "What our customers say"
+      },
+      {
+        "type": "select",
+        "id": "title_size",
+        "label": "Title size",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          }
+        ],
+        "default": "lg"
+      },
+      {
+        "type": "select",
+        "id": "title_position",
+        "label": "Title position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "color",
+        "id": "star_color",
+        "label": "Stars color",
+        "placeholder": "Default"
+      },
+      {
+        "type": "color",
+        "id": "name_color",
+        "label": "Name color",
+        "placeholder": "Default"
+      }
+    ],
+    "max_blocks": 9,
+    "blocks": [
+      {
+        "type": "testimonial",
+        "name": "Testimonial",
+        "settings": [
+          {
+            "type": "range",
+            "id": "stars",
+            "label": "Stars",
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "unit": "",
+            "default": 5
+          },
+          {
+            "type": "contentEditor",
+            "id": "description",
+            "label": "Content",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name",
+            "default": "Name Surname"
+          },
+          {
+            "type": "text",
+            "id": "position",
+            "label": "Position",
+            "default": "Position, Company name"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

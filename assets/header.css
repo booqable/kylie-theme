@@ -248,6 +248,8 @@
   margin-left: 8px;
 
   font-size: 14px;
+
+  color: var(--color-primary-foreground);
 }
 
 .header__nav .list-submenu .list-menu__item-caret {
