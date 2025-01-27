@@ -1,0 +1,151 @@
+.tiles {
+  max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 var(--horizontal-padding);
+  color: var(--color-primary-foreground);
+}
+
+.tiles__title {
+  color: var(--color-primary-foreground);
+
+  margin-bottom: 28px;
+}
+
+.tiles__title--size-sm {
+  font-size: 24px;
+  line-height: 1.3333;
+
+  font-weight: var(--font-weight-medium);
+}
+
+.tiles__title--size-md {
+  font-size: 36px;
+  line-height: 1.25;
+
+  font-weight: var(--font-weight-semibold);
+}
+
+.tiles__title--size-lg {
+  font-size: 44px;
+  line-height: 1.2;
+
+  font-weight: var(--font-weight-bold);
+}
+
+.tiles__description {
+  margin-bottom: 30px;
+
+  color: var(--color-primary-foreground-lightened);
+}
+
+.tiles__description--size-sm.bq-content {
+  font-size: 16px;
+}
+
+.tiles__description--size-md.bq-content {
+  font-size: 18px;
+}
+
+.tiles__description--size-lg.bq-content {
+  font-size: 20px;
+}
+
+.tiles__description.bq-content p {
+  font-size: inherit;
+}
+
+.tiles__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.tiles__items {
+  width: 100%;
+}
+
+.tiles__items:not(:has(.tiles__item:only-child)) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.tiles__item {
+  display: flex;
+}
+
+.tiles__icon {
+  flex: 0 1 auto;
+}
+
+.tiles__icon i {
+  font-size: 40px;
+}
+
+.tiles__item-text-area {
+  flex: 1 1 auto;
+}
+
+.tiles__icon + .tiles__item-text-area {
+  padding-left: 27px;
+}
+
+.tiles__heading {
+  margin-bottom: 2px;
+}
+
+.tiles__heading--size-sm {
+  font-size: 20px;
+  line-height: 1.3333;
+
+  font-weight: var(--font-weight-medium);
+}
+
+.tiles__heading--size-md {
+  font-size: 24px;
+  line-height: 1.25;
+
+  font-weight: var(--font-weight-semibold);
+}
+
+.tiles__heading--size-lg {
+  font-size: 32px;
+  line-height: 1.2;
+
+  font-weight: var(--font-weight-bold);
+}
+
+.tiles__text {
+  color: var(--color-primary-foreground-lightened);
+}
+
+.tiles__text--size-sm.bq-content {
+  font-size: 14px;
+}
+
+.tiles__text--size-md.bq-content {
+  font-size: 16px;
+}
+
+.tiles__text--size-lg.bq-content {
+  font-size: 18px;
+}
+
+.tiles__text.bq-content p {
+  font-size: inherit;
+}
+
+@media (min-width: 992px) {
+  .tiles__wrapper {
+    flex-direction: row;
+  }
+
+  .tiles__text-area {
+    width: 36%;
+  }
+
+  .tiles__text-area + .tiles__items {
+    width: 64%;
+  }
+}

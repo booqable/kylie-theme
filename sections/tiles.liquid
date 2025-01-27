@@ -1,0 +1,236 @@
+{{ "tiles.css" | asset_url | stylesheet_tag }}
+
+<style>
+  {% if section.settings.icon_color != blank %}
+    .tiles__icon i {
+      color: {{ section.settings.icon_color }};
+    }
+  {% endif %}
+</style>
+
+<div class="tiles__wrapper">
+  {% if section.settings.title != blank or section.settings.description != blank or section.settings.button_label != blank and section.settings.button_url != blank %}
+    <div class="tiles__text-area">
+      {% if section.settings.title != blank %}
+        <h2 class="tiles__title tiles__title--size-{{ section.settings.title_size }}">
+          {{ section.settings.title }}
+        </h2>
+      {% endif %}
+      {% if section.settings.description != blank %}
+        <div class="tiles__description tiles__description--size-{{ section.settings.title_size }} bq-content rx-content">
+          {{ section.settings.description }}
+        </div>
+      {% endif %}
+      {% if section.settings.button_label != blank and section.settings.button_url != blank %}
+        <a class="bq-button bq-button--size-md bq-button--solid" href="{{ section.settings.button_url }}">
+          {{ section.settings.button_label }}
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="tiles__items">
+    {% for block in section.blocks %}
+      <div class="tiles__item">
+        {% if block.settings.icon != "empty" and block.settings.heading != blank or block.settings.icon != "empty" and block.settings.text != blank %}
+          <div class="tiles__icon">
+            <i class="fa fa-{{ block.settings.icon }}"></i>
+          </div>
+        {% endif %}
+
+        {% if block.settings.heading != blank or block.settings.text != blank %}
+          <div class="tiles__item-text-area">
+            {% if block.settings.heading != blank %}
+              <h3 class="tiles__heading tiles__heading--size-{{ section.settings.heading_size }}">
+                {{ block.settings.heading }}
+              </h3>
+            {% endif %}
+
+            {% if block.settings.text != blank %}
+              <div class="tiles__text bq-content rx-content tiles__text--size-{{ section.settings.heading_size }}">
+                {{ block.settings.text }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Tiles",
+    "tag": "section",
+    "class": "tiles",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "contentEditor",
+        "id": "description",
+        "label": "Description",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."
+      },
+      {
+        "type": "select",
+        "id": "title_size",
+        "label": "Title and description size",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          }
+        ],
+        "default": "lg"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label",
+        "default": "More"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button URL",
+        "default": "#"
+      },
+      {
+        "type": "header",
+        "content": "Item"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "label": "Heading and text size",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          }
+        ],
+        "default": "md"
+      },
+      {
+        "type": "color",
+        "id": "icon_color",
+        "label": "Icon color",
+        "placeholder": "Default"
+      }
+    ],
+    "max_blocks": 9,
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "select",
+            "id": "icon",
+            "label": "Icon",
+            "options": [
+              {
+                "value": "empty",
+                "label": "No icon"
+              },
+              {
+                "value": "address-card",
+                "label": "Address card"
+              },
+              {
+                "value": "calendar",
+                "label": "Calendar"
+              },
+              {
+                "value": "circle-check",
+                "label": "Circle check"
+              },
+              {
+                "value": "clock-o",
+                "label": "Clock"
+              },
+              {
+                "value": "comments",
+                "label": "Comments"
+              },
+              {
+                "value": "credit-card-alt",
+                "label": "Credit card"
+              },
+              {
+                "value": "envelope",
+                "label": "Envelope"
+              },
+              {
+                "value": "exclamation",
+                "label": "Exclamation"
+              },
+              {
+                "value": "fax",
+                "label": "Fax"
+              },
+              {
+                "value": "globe",
+                "label": "Globe"
+              },
+              {
+                "value": "info",
+                "label": "Info"
+              },
+              {
+                "value": "phone",
+                "label": "Phone"
+              },
+              {
+                "value": "tag",
+                "label": "Tag"
+              },
+              {
+                "value": "warning",
+                "label": "Warning"
+              }
+            ],
+            "default": "circle-check"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "contentEditor",
+            "id": "text",
+            "label": "Text",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
