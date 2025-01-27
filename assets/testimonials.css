@@ -76,8 +76,10 @@
 
   font-size: 16px;
   font-weight: var(--font-weight-medium);
+}
 
-  color: var(--color-primary-foreground) !important;
+.testimonials__cite .testimonials__small {
+  color: var(--color-primary-foreground-lightened);
 }
 
 @media (min-width: 992px) {
