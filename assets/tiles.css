@@ -55,6 +55,11 @@
   font-size: inherit;
 }
 
+.tiles .bq-button {
+  background-color: var(--color-accent-background);
+  color: var(--color-accent-foreground);
+}
+
 .tiles__wrapper {
   display: flex;
   flex-direction: column;
