@@ -21,7 +21,7 @@
 {% endif %}
 
 {% if section.settings.title %}
-  <h2 class="products__title">{{ section.settings.title }}</h2>
+  <h2 class="products__title products__title--size-{{ section.settings.title_size }}">{{ section.settings.title }}</h2>
 {% endif %}
 {% if data_exists %}
   {% if section.settings.use_carousel %}
@@ -91,6 +91,26 @@
       "type": "text",
       "id": "title",
       "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_size",
+      "label": "Title size",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "md"
     },
     {
       "type": "collection",

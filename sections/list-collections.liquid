@@ -1,7 +1,7 @@
 {{ "collections.css" | asset_url | stylesheet_tag }}
 
 {% if section.settings.title %}
-  <h2 class="collections__title">{{ section.settings.title }}</h2>
+  <h2 class="collections__title collections__title--size-{{ section.settings.title_size }}">{{ section.settings.title }}</h2>
 {% endif %}
 {% paginate collections %}
   {% if collections.size > 0 %}
@@ -47,8 +47,24 @@
       "label": "Title"
     },
     {
-      "type": "header",
-      "content": "Cleanstate"
+      "type": "select",
+      "id": "title_size",
+      "label": "Title size",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "md"
     },
     {
       "type": "header",
