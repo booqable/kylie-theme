@@ -274,16 +274,48 @@
     "logos": {
       "type": "logos",
       "blocks": {
-        "logo": {
+        "logo_455765": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-preview-black.png"
+            "image": "booqable://assets/image-partner-logo-2.png"
+          },
+          "disabled": null
+        },
+        "logo_455766": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3.png"
+          },
+          "disabled": null
+        },
+        "logo_455767": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-2.png"
+          },
+          "disabled": null
+        },
+        "logo_455768": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-1.png"
+          },
+          "disabled": null
+        },
+        "logo_455769": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3.png"
           },
           "disabled": null
         }
       },
       "block_order": [
-        "logo"
+        "logo_455765",
+        "logo_455766",
+        "logo_455767",
+        "logo_455768",
+        "logo_455769"
       ],
       "settings": {
         "title": "We work for",
@@ -342,6 +374,7 @@
         "testimonial_741322"
       ],
       "settings": {
+        "name_color": "#F7D041",
         "title": "What our customers say",
         "title_position": "left",
         "title_size": "lg"

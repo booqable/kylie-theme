@@ -14,13 +14,13 @@
     text-align: {{ section.settings.content_align }};
   }
   {% if section.settings.content_color != blank %}
-  #section-{{ section.key }} .columns .post__text {
+  #section-{{ section.key }}.columns .post__text {
     --color-primary-foreground: {{ section.settings.content_color }};
   }
   {% endif %}
   {% for block in section.blocks %}
     .columns-{{ section.key }} #{{ block.id }} .bq-button {
-      color: var(--color-primary-foreground);
+      color: var(--color-link);
 
       {% if block.settings.use_solid_button %}
         background-color: var(--color-accent-background);
