@@ -2,18 +2,18 @@
   {{ "testimonials.css" | asset_url | stylesheet_tag }}
 
   <style>
-    .testimonials__title--position-{{ section.settings.title_position }} {
+    #section-{{ section.key }} .testimonials__title--position-{{ section.settings.title_position }} {
       text-align: {{ section.settings.title_position }};
     }
 
     {% if section.settings.name_color != blank %}
-      .testimonials__cite {
+      #section-{{ section.key }} .testimonials__cite {
         color: {{ section.settings.name_color }};
       }
     {% endif %}
 
     {% if section.settings.star_color != blank %}
-      .testimonials__star i {
+      #section-{{ section.key }} .testimonials__star i {
         color: {{ section.settings.star_color }};
       }
     {% endif %}
@@ -130,13 +130,13 @@
         "type": "color",
         "id": "star_color",
         "label": "Stars color",
-        "placeholder": "Default"
+        "default": "#000000"
       },
       {
         "type": "color",
         "id": "name_color",
         "label": "Name color",
-        "placeholder": "Default"
+        "default": "#000000"
       }
     ],
     "max_blocks": 9,

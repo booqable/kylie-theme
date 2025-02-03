@@ -1,7 +1,7 @@
 {{ "collections.css" | asset_url | stylesheet_tag }}
 
 {% if section.settings.title %}
-  <h2 class="collections__title">{{ section.settings.title }}</h2>
+  <h2 class="collections__title collections__title--size-{{ section.settings.title_size }}">{{ section.settings.title }}</h2>
 {% endif %}
 {% if section.settings.enable_show_more %}
   <a href="{{ routes.collections_url }}" class="collections__show-more">
@@ -12,10 +12,19 @@
 <div class="collections__list">
   {% if section.blocks.size >= 1 and section.blocks.first.settings.collection != blank %}
     {% for block in section.blocks %}
+      {% assign featured_image = "" %}
+      {% assign first_product = block.settings.collection.products | first %}
+
       <a id="{{ block.id }}" href="{{ block.settings.collection.url }}">
         <div class="collection">
           {% if block.settings.collection.image.url != blank %}
-            {{ block.settings.collection.image.url | image_tag:
+            {% assign featured_image = block.settings.collection.image.url %}
+          {% elsif first_product and first_product.images.first != empty %}
+            {% assign featured_image = first_product.images.first %}
+          {% endif %}
+
+          {% if featured_image != blank %}
+            {{ featured_image | image_tag:
               loading: 'lazy',
               class: 'collection__image',
               widths: '450, 550, 650',
@@ -23,6 +32,7 @@
               alt: block.settings.collection.name
             }}
           {% endif %}
+
           <h3 class="collection__name">{{ block.settings.collection.name }}</h3>
         </div>
       </a>
@@ -52,6 +62,26 @@
       "id": "title",
       "label": "Title",
       "default": "Collections"
+    },
+    {
+      "type": "select",
+      "id": "title_size",
+      "label": "Title size",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "md"
     },
     {
       "type": "text",
