@@ -1,17 +1,26 @@
 {{ "collections.css" | asset_url | stylesheet_tag }}
 
 {% if section.settings.title %}
-  <h2 class="collections__title">{{ section.settings.title }}</h2>
+  <h2 class="collections__title collections__title--size-{{ section.settings.title_size }}">{{ section.settings.title }}</h2>
 {% endif %}
 {% paginate collections %}
   {% if collections.size > 0 %}
     <div class="collections__list">
       {% for collection in collections %}
+        {% assign featured_image = "" %}
+        {% assign first_product = collection.products | first %}
+
         <a href="{{ collection.url }}">
           <div class="collection">
             {% if collection.image.url != blank %}
+              {% assign featured_image = collection.image.url %}
+            {% elsif first_product and first_product.images.first != empty %}
+              {% assign featured_image = first_product.images.first %}
+            {% endif %}
+
+            {% if featured_image != blank %}
               {% assign alt = collection.name | append: ' collection image' %}
-              {{ collection.image.url | image_tag:
+              {{ featured_image | image_tag:
                 loading: 'lazy',
                 class: 'collection__image',
                 alt: alt,
@@ -47,8 +56,24 @@
       "label": "Title"
     },
     {
-      "type": "header",
-      "content": "Cleanstate"
+      "type": "select",
+      "id": "title_size",
+      "label": "Title size",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "md"
     },
     {
       "type": "header",

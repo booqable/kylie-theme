@@ -7,26 +7,26 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "text": "Hire from us",
-            "size": "lg"
+            "size": "lg",
+            "text": "Hire from us"
           },
           "disabled": null
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Tell something about your company, describe what you do and what makes you unique.",
-            "size": "md"
+            "size": "md",
+            "text": "Tell something about your company, describe what you do and what makes you unique."
           },
           "disabled": null
         },
         "button": {
           "type": "button",
           "settings": {
-            "text": "View all products",
-            "use_solid_button": true,
             "size": "md",
-            "url": "booqable://collections/all"
+            "text": "View all products",
+            "url": "booqable://collections/all",
+            "use_solid_button": true
           },
           "disabled": null
         }
@@ -37,15 +37,15 @@
         "button"
       ],
       "settings": {
-        "fluid_width": true,
-        "overlay_enabled": true,
-        "overlay_color": "#D9E3F0",
-        "vertical_spacing": "lg",
-        "overlay_opacity": "40",
+        "background_image": "booqable://assets/background-abstract.jpeg",
         "content_align": "center",
-        "background_image": "booqable://assets/background-abstract.jpeg"
+        "fluid_width": true,
+        "overlay_color": "#D9E3F0",
+        "overlay_enabled": true,
+        "overlay_opacity": "40",
+        "vertical_spacing": "lg"
       },
-      "disabled": false
+      "disabled": null
     },
     "date-picker": {
       "type": "date-picker",
@@ -59,11 +59,12 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "collection": "all",
-        "snap": "center",
+        "collection": "all-products",
         "paginate_per": 12,
-        "use_carousel": true,
-        "title": "Featured products"
+        "snap": "center",
+        "title": "Featured products",
+        "title_size": "md",
+        "use_carousel": true
       },
       "disabled": null
     },
@@ -73,25 +74,25 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "text": "Image with text",
-            "size": "md"
+            "size": "md",
+            "text": "Image with text"
           },
           "disabled": null
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Add some text to tell a story, explain how renting with your company works, or to let your potential customers know about the value you offer. Use this space however you like and fill it with whatever you want.",
-            "size": "sm"
+            "size": "sm",
+            "text": "Add some text to tell a story, explain how renting with your company works, or to let your potential customers know about the value you offer. Use this space however you like and fill it with whatever you want."
           },
           "disabled": null
         },
         "button": {
           "type": "button",
           "settings": {
+            "size": "md",
             "text": "Button label",
-            "use_solid_button": true,
-            "size": "md"
+            "use_solid_button": true
           },
           "disabled": null
         }
@@ -103,12 +104,12 @@
       ],
       "settings": {
         "background_image": "booqable://assets/background-abstract-alt.jpeg",
+        "content_align": "left",
         "fluid_width": false,
-        "overlay_enabled": true,
         "overlay_color": "#D9E3F0",
-        "vertical_spacing": "sm",
+        "overlay_enabled": true,
         "overlay_opacity": "40",
-        "content_align": "left"
+        "vertical_spacing": "sm"
       },
       "disabled": null
     },
@@ -117,8 +118,8 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "use_hr": true,
-        "size": "md"
+        "size": "md",
+        "use_hr": true
       },
       "disabled": null
     },
@@ -127,8 +128,8 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "use_hr": true,
-        "size": "lg"
+        "size": "lg",
+        "use_hr": true
       },
       "disabled": null
     },
@@ -147,11 +148,11 @@
         "column": {
           "type": "column",
           "settings": {
+            "button_size": "md",
+            "image": "booqable://assets/background-mountains.jpeg",
             "image_border_radius": true,
             "text": "<p>Add some text to tell a story, explain how renting with your company works, or to let your potential customers know about the value you offer. Use this space however you like and fill it with whatever you want.</p>",
-            "button_size": "md",
             "title": "Column 1",
-            "image": "booqable://assets/background-mountains.jpeg",
             "use_solid_button": false
           },
           "disabled": null
@@ -159,11 +160,11 @@
         "column_242972": {
           "type": "column",
           "settings": {
+            "button_size": "md",
+            "image": "booqable://assets/background-mountains.jpeg",
             "image_border_radius": true,
             "text": "<p>Add some text to tell a story, explain how renting with your company works, or to let your potential customers know about the value you offer. Use this space however you like and fill it with whatever you want.</p>",
-            "button_size": "md",
             "title": "Column 2",
-            "image": "booqable://assets/background-mountains.jpeg",
             "use_solid_button": true
           },
           "disabled": null
@@ -171,11 +172,11 @@
         "column_535502": {
           "type": "column",
           "settings": {
+            "button_size": "md",
+            "image": "booqable://assets/background-mountains.jpeg",
             "image_border_radius": true,
             "text": "<p>Add some text to tell a story, explain how renting with your company works, or to let your potential customers know about the value you offer. Use this space however you like and fill it with whatever you want.</p>",
-            "button_size": "md",
             "title": "Column 3",
-            "image": "booqable://assets/background-mountains.jpeg",
             "use_solid_button": true
           },
           "disabled": null
