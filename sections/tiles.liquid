@@ -22,7 +22,7 @@
         </div>
       {% endif %}
       {% if section.settings.button_label != blank and section.settings.button_url != blank %}
-        <a class="bq-button bq-button--size-md bq-button--solid" href="{{ section.settings.button_url }}">
+        <a class="bq-button bq-button--size-{{ section.settings.button_size }} bq-button--solid" href="{{ section.settings.button_url }}">
           {{ section.settings.button_label }}
         </a>
       {% endif %}
@@ -112,6 +112,26 @@
         "id": "button_url",
         "label": "Button URL",
         "default": "#"
+      },
+      {
+        "type": "select",
+        "id": "button_size",
+        "label": "Button size",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          }
+        ],
+        "default": "md"
       },
       {
         "type": "header",
