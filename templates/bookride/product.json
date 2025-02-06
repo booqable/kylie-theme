@@ -37,7 +37,7 @@
         "infinite_scroll": true,
         "paginate_per": 12,
         "snap": "center",
-        "title": "RECOMENDED PRODUCTS",
+        "title": "Recommended products",
         "title_size": "lg",
         "use_carousel": true,
         "use_pagination": true

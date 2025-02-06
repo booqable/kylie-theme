@@ -9,7 +9,7 @@
           "settings": {
             "color": "#FFFFFF",
             "size": "xl",
-            "text": "COLLECTIONS"
+            "text": "Collections"
           },
           "disabled": null
         },
@@ -28,7 +28,7 @@
         "text"
       ],
       "settings": {
-        "background_image": "booqable://assets/image-hero-3.jpeg",
+        "background_image": "booqable://assets/image-hero-2.jpg",
         "content_align": "left",
         "fluid_width": true,
         "overlay_color": "#000000",
@@ -46,7 +46,7 @@
         "button_label": "Browse all products",
         "heading": "No collections",
         "text": "Unfortunately, we couldn’t find any collections.",
-        "title": "SHOP BY COLLECTION",
+        "title": "Shop by collection",
         "title_size": "lg"
       },
       "disabled": null

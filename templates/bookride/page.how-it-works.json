@@ -8,7 +8,7 @@
           "type": "heading",
           "settings": {
             "color": "#FFFFFF",
-            "text": "HOW IT WORKS",
+            "text": "How it works",
             "size": "xl"
           },
           "disabled": null
@@ -16,7 +16,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "color": "#8C8F90",
+            "color": "#FFFFFF",
             "text": "Tell something about your company, describe what you do and what makes you unique.",
             "size": "sm"
           },
@@ -28,12 +28,12 @@
         "text"
       ],
       "settings": {
-        "background_image": "booqable://assets/image-hero.jpeg",
+        "background_image": "booqable://assets/image-hero-3.jpeg",
         "content_align": "center",
         "fluid_width": true,
-        "overlay_enabled": true,
         "overlay_color": "#000000",
-        "overlay_opacity": "60",
+        "overlay_enabled": true,
+        "overlay_opacity": "40",
         "vertical_spacing": "sm"
       },
       "disabled": false

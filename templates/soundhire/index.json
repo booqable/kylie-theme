@@ -341,7 +341,7 @@
         "logo_455769"
       ],
       "settings": {
-        "title": "We work for",
+        "title": "WE WORK FOR",
         "title_position": "center",
         "title_size": "sm"
       },
@@ -422,7 +422,7 @@
           "type": "column",
           "settings": {
             "button": "Read more",
-            "button_size": "md",
+            "button_size": "lg",
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-1.jpg",
             "image_border_radius": true,
@@ -436,7 +436,7 @@
           "type": "column",
           "settings": {
             "button": "Read more",
-            "button_size": "md",
+            "button_size": "lg",
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-2.jpg",
             "image_border_radius": true,
@@ -450,7 +450,7 @@
           "type": "column",
           "settings": {
             "button": "Read more",
-            "button_size": "md",
+            "button_size": "lg",
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-3.jpg",
             "image_border_radius": true,
@@ -558,7 +558,7 @@
         "content_color": "#8C8F90",
         "columns_count": 2,
         "heading_size": "sm",
-        "title_section": "Visit & contact us",
+        "title_section": "VISIT & CONTACT US",
         "title_position": "center",
         "title_size": "lg"
       },

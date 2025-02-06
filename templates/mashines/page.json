@@ -16,7 +16,7 @@
       },
       "block_order": ["heading"],
       "settings": {
-        "background_image": "booqable://assets/image-hero.jpeg",
+        "background_image": "booqable://assets/image-hero-2.jpg",
         "content_align": "left",
         "fluid_width": true,
         "overlay_color": "#000000",
