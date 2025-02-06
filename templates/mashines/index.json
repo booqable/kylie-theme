@@ -25,7 +25,7 @@
         "button": {
           "type": "button",
           "settings": {
-            "size": "md",
+            "size": "lg",
             "text": "Check our products",
             "url": "booqable://collections/all",
             "use_solid_button": true
@@ -163,7 +163,7 @@
         "button": {
           "type": "button",
           "settings": {
-            "size": "md",
+            "size": "lg",
             "text": "Contact us",
             "use_solid_button": true
           },
@@ -172,7 +172,7 @@
         "button_159563": {
           "type": "button",
           "settings": {
-            "size": "md",
+            "size": "lg",
             "text": "Call us",
             "use_solid_button": true
           },
@@ -253,6 +253,7 @@
       ],
       "settings": {
         "button_label": "More about us",
+        "button_size": "lg",
         "button_url": "booqable://root/",
         "description": "Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have.",
         "heading_size": "sm",
@@ -398,7 +399,7 @@
           "type": "column",
           "settings": {
             "button": "Read more",
-            "button_size": "md",
+            "button_size": "lg",
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-1.jpg",
             "image_border_radius": true,
@@ -412,7 +413,7 @@
           "type": "column",
           "settings": {
             "button": "Read more",
-            "button_size": "md",
+            "button_size": "lg",
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-2.jpg",
             "image_border_radius": true,
@@ -426,7 +427,7 @@
           "type": "column",
           "settings": {
             "button": "Read more",
-            "button_size": "md",
+            "button_size": "lg",
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-3.jpg",
             "image_border_radius": true,
@@ -443,12 +444,12 @@
         "column_535502"
       ],
       "settings": {
+        "columns_count": 3,
         "content_align": "left",
         "content_color": "#8C8F90",
-        "columns_count": 3,
         "heading_size": "lg",
-        "title_section": "What’s going on",
         "title_position": "left",
+        "title_section": "What’s going on",
         "title_size": "lg"
       },
       "disabled": null
@@ -530,12 +531,12 @@
         "column_242245"
       ],
       "settings": {
+        "columns_count": 2,
         "content_align": "center",
         "content_color": "#8C8F90",
-        "columns_count": 2,
         "heading_size": "sm",
-        "title_section": "Visit & contact us",
         "title_position": "center",
+        "title_section": "Visit & contact us",
         "title_size": "lg"
       },
       "disabled": null
@@ -573,7 +574,7 @@
         "button_556956": {
           "type": "button",
           "settings": {
-            "size": "md",
+            "size": "lg",
             "text": "Email us",
             "use_solid_button": true
           },
@@ -582,7 +583,7 @@
         "button_556957": {
           "type": "button",
           "settings": {
-            "size": "md",
+            "size": "lg",
             "text": "Call us",
             "use_solid_button": true
           },
