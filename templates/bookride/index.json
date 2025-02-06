@@ -400,7 +400,7 @@
           "type": "column",
           "settings": {
             "button": "Read more",
-            "button_size": "md",
+            "button_size": "lg",
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-1.jpg",
             "image_border_radius": true,
@@ -414,7 +414,7 @@
           "type": "column",
           "settings": {
             "button": "Read more",
-            "button_size": "md",
+            "button_size": "lg",
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-2.jpg",
             "image_border_radius": true,
@@ -428,7 +428,7 @@
           "type": "column",
           "settings": {
             "button": "Read more",
-            "button_size": "md",
+            "button_size": "lg",
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-3.jpg",
             "image_border_radius": true,
@@ -445,12 +445,12 @@
         "column_535502"
       ],
       "settings": {
+        "columns_count": 3,
         "content_align": "left",
         "content_color": "#8C8F90",
-        "columns_count": 3,
         "heading_size": "lg",
-        "title_section": "What’s going on",
         "title_position": "left",
+        "title_section": "What’s going on",
         "title_size": "lg"
       },
       "disabled": null
@@ -532,12 +532,12 @@
         "column_242245"
       ],
       "settings": {
+        "columns_count": 2,
         "content_align": "center",
         "content_color": "#8C8F90",
-        "columns_count": 2,
         "heading_size": "sm",
-        "title_section": "Visit & contact us",
         "title_position": "center",
+        "title_section": "Visit & contact us",
         "title_size": "lg"
       },
       "disabled": null

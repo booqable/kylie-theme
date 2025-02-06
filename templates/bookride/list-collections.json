@@ -1,0 +1,67 @@
+{
+  "name": "Collections",
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "color": "#FFFFFF",
+            "size": "xl",
+            "text": "Collections"
+          },
+          "disabled": null
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "color": "#FFFFFF",
+            "size": "sm",
+            "text": "Add some text to tell a story, explain how renting with your company works, or to let your potential customers know about the value you offer. Use this space however you like and fill it with whatever you want."
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "background_image": "booqable://assets/image-hero-3.jpeg",
+        "content_align": "left",
+        "fluid_width": true,
+        "overlay_color": "#000000",
+        "overlay_enabled": true,
+        "overlay_opacity": "40",
+        "vertical_spacing": "sm"
+      },
+      "disabled": null
+    },
+    "list-collections": {
+      "type": "list-collections",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "Browse all products",
+        "heading": "No collections",
+        "text": "Unfortunately, we couldn’t find any collections.",
+        "title": "Shop by collection",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "date-picker": {
+      "type": "date-picker",
+      "blocks": {},
+      "block_order": [],
+      "settings": {},
+      "disabled": null
+    }
+  },
+  "order": [
+    "image-banner",
+    "date-picker",
+    "list-collections"
+  ]
+}
