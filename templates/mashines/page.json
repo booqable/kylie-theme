@@ -1,0 +1,48 @@
+{
+  "name": "Page",
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "color": "#FFFFFF",
+            "size": "xl",
+            "text": "{{ page.title }}"
+          },
+          "disabled": false
+        }
+      },
+      "block_order": ["heading"],
+      "settings": {
+        "background_image": "booqable://assets/image-hero-2.jpg",
+        "content_align": "left",
+        "fluid_width": true,
+        "overlay_color": "#000000",
+        "overlay_enabled": true,
+        "overlay_opacity": 60,
+        "vertical_spacing": "sm"
+      },
+      "disabled": false
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "sm",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "text": {
+      "type": "text",
+      "blocks": {},
+      "block_order": [],
+      "settings": { "align": "left", "text": "{{ page.content }}" },
+      "disabled": false
+    }
+  },
+  "order": ["image-banner", "spacer", "text"]
+}

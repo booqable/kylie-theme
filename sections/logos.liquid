@@ -1,7 +1,7 @@
 {{ "logos.css" | asset_url | stylesheet_tag }}
 
 <style>
-  .logos__title--position-{{ section.settings.title_position }} {
+  #section-{{ section.key }} .logos__title--position-{{ section.settings.title_position }} {
     text-align: {{ section.settings.title_position }};
   }
 </style>
