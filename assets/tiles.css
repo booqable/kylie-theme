@@ -39,6 +39,10 @@
   color: var(--color-primary-foreground-lightened);
 }
 
+.tiles__description.bq-content {
+  font-family: var(--font-body);
+}
+
 .tiles__description--size-sm.bq-content {
   font-size: 16px;
 }
@@ -123,6 +127,10 @@
 
 .tiles__text {
   color: var(--color-primary-foreground-lightened);
+}
+
+.tiles__text.bq-content {
+  font-family: var(--font-body);
 }
 
 .tiles__text--size-sm.bq-content {
