@@ -18,7 +18,7 @@
           "settings": {
             "color": "#FFFFFF",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "From tables and chairs to bounce houses and décor, we provide high-quality party rentals for any occasion."
           },
           "disabled": null
         },
@@ -148,7 +148,7 @@
           "settings": {
             "color": "#FFFFFF",
             "size": "lg",
-            "text": "We serve your day"
+            "text": "Book your rentals now"
           },
           "disabled": null
         },
@@ -204,8 +204,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Free delivery",
-            "text": "Free delivery for all orders above $100"
+            "title": "One-stop shop",
+            "text": "Everything you need for an unforgettable event, all in one place."
           },
           "disabled": null
         },
@@ -213,8 +213,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "20 years of experience",
-            "text": "We know how to do it"
+            "title": "Flexible rental options",
+            "text": "Rent by the day or weekend with easy extensions."
           },
           "disabled": null
         },
@@ -222,8 +222,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Trusted provider",
-            "text": "Experience with many high profile events"
+            "title": "Reliable delivery and setup",
+            "text": "We handle the logistics so you can focus on celebrating."
           },
           "disabled": null
         },
@@ -231,8 +231,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Value-for-money solutions",
-            "text": "From DIY to full production"
+            "title": "High-quality equipment",
+            "text": "Clean, well-maintained, and ready to impress."
           },
           "disabled": null
         }
@@ -271,35 +271,35 @@
         "logo_455765": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
+            "image": "booqable://assets/image-logo-1.webp"
           },
           "disabled": null
         },
         "logo_455766": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-logo-2.webp"
           },
           "disabled": null
         },
         "logo_455767": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
+            "image": "booqable://assets/image-logo-3.webp"
           },
           "disabled": null
         },
         "logo_455768": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1.png"
+            "image": "booqable://assets/image-logo-4.webp"
           },
           "disabled": null
         },
         "logo_455769": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-logo-5.webp"
           },
           "disabled": null
         }
@@ -334,9 +334,9 @@
         "testimonial_741320": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "The best party rental company! Everything arrived on time, and the setup was flawless.",
+            "name": "Amanda P.",
+            "position": "Birthday Party Host",
             "stars": 5
           },
           "disabled": null
@@ -344,9 +344,9 @@
         "testimonial_741321": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Exceptional service! The tent and seating arrangement were perfect for our wedding. Highly recommend!",
+            "name": "James and Lisa S.",
+            "position": "Newlyweds",
             "stars": 5
           },
           "disabled": null
@@ -354,9 +354,9 @@
         "testimonial_741322": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Great selection and friendly staff. Made our corporate event a huge success! Will rent from them again.",
+            "name": "Michael R.",
+            "position": "Event Planner",
             "stars": 5
           },
           "disabled": null
@@ -395,10 +395,10 @@
             "button": "Read more",
             "button_size": "lg",
             "button_url": "booqable://root/",
-            "image": "booqable://assets/image-columns-1.jpg",
+            "image": "booqable://assets/image-columns-1.webp",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "What you need to know",
+            "text": "<p>Planning an event? Don’t forget these essential rentals to keep your guests comfortable and entertained!</p>",
+            "title": "Top 10 Must-Have Party Rentals for Any Event",
             "use_solid_button": false
           },
           "disabled": null
@@ -409,10 +409,10 @@
             "button": "Read more",
             "button_size": "lg",
             "button_url": "booqable://root/",
-            "image": "booqable://assets/image-columns-2.jpg",
+            "image": "booqable://assets/image-columns-2.webp",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "10 best table setups",
+            "text": "<p>Not sure which tent size and style to go for? We break down your options to help you make the best choice.</p>",
+            "title": "How to Choose the Right Tent for Your Event",
             "use_solid_button": false
           },
           "disabled": null
@@ -423,10 +423,10 @@
             "button": "Read more",
             "button_size": "lg",
             "button_url": "booqable://root/",
-            "image": "booqable://assets/image-columns-3.jpg",
+            "image": "booqable://assets/image-columns-3.webp",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "Playlists to start your party",
+            "text": "<p>Throw an amazing event without overspending! Here’s how to save money while still creating a stunning setup.</p>",
+            "title": "5 Budget-Friendly Party Planning Tips",
             "use_solid_button": false
           },
           "disabled": null
@@ -443,7 +443,7 @@
         "content_color": "#8C8F90",
         "heading_size": "lg",
         "title_position": "left",
-        "title_section": "What’s going on",
+        "title_section": "For your next event",
         "title_size": "lg"
       },
       "disabled": null
@@ -561,7 +561,7 @@
           "settings": {
             "color": "#140202",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit. Suspendisse varius enim in eros elementum <br>tristique."
+            "text": "Planning a party? Let us handle the rentals while you enjoy <br>the celebration! Contact us today for a free quote and rental availability."
           },
           "disabled": null
         },
