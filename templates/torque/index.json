@@ -18,7 +18,7 @@
           "settings": {
             "color": "#B2B4B8",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "From excavators to power tools, we provide high-quality rental equipment to keep your projects running smoothly and on schedule."
           },
           "disabled": null
         },
@@ -39,7 +39,7 @@
         "button"
       ],
       "settings": {
-        "background_image": "booqable://assets/image-hero.jpg",
+        "background_image": "booqable://assets/image-hero.webp",
         "content_align": "left",
         "fluid_width": true,
         "overlay_color": "#000000",
@@ -156,7 +156,7 @@
           "settings": {
             "color": "#FFFFFF",
             "size": "lg",
-            "text": "We serve your day"
+            "text": "Get a quote today"
           },
           "disabled": null
         },
@@ -212,8 +212,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Free delivery",
-            "text": "Free delivery for all orders above $100"
+            "title": "Top-tier equipment",
+            "text": "Well-maintained and high-performance machinery from trusted brands."
           },
           "disabled": null
         },
@@ -221,8 +221,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "20 years of experience",
-            "text": "We know how to do it"
+            "title": "Flexible rental options",
+            "text": "Daily, weekly, and monthly rentals to fit your project timeline."
           },
           "disabled": null
         },
@@ -230,8 +230,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Trusted provider",
-            "text": "Experience with many high profile events"
+            "title": "On-time delivery",
+            "text": "Reliable drop-off and pick-up so you stay on schedule."
           },
           "disabled": null
         },
@@ -239,8 +239,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Value-for-money solutions",
-            "text": "From DIY to full production"
+            "title": "Expert support",
+            "text": "Knowledgeable team to help you find the right equipment."
           },
           "disabled": null
         }
@@ -255,7 +255,7 @@
         "button_label": "More about us",
         "button_size": "lg",
         "button_url": "booqable://root/",
-        "description": "Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have.",
+        "description": "Whether you need heavy machinery, power tools, or site essentials, our well-maintained fleet is ready to tackle any job.",
         "heading_size": "sm",
         "title_section": "Services",
         "title_size": "lg"
@@ -278,35 +278,35 @@
         "logo_455765": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
+            "image": "booqable://assets/image-logo-1.webp"
           },
           "disabled": null
         },
         "logo_455766": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-logo-2.webp"
           },
           "disabled": null
         },
         "logo_455767": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
+            "image": "booqable://assets/image-logo-3.webp"
           },
           "disabled": null
         },
         "logo_455768": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1.png"
+            "image": "booqable://assets/image-logo-4.webp"
           },
           "disabled": null
         },
         "logo_455769": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-logo-5.webp"
           },
           "disabled": null
         }
@@ -341,9 +341,9 @@
         "testimonial_741320": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "The excavator we rented was in perfect condition, and the team was super helpful. Will definitely use them again!",
+            "name": "Mark R.",
+            "position": "General Contractor",
             "stars": 5
           },
           "disabled": null
@@ -351,9 +351,9 @@
         "testimonial_741321": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Fast delivery, great prices, and excellent customer service. The best rental experience I’ve had!",
+            "name": "Sarah L.",
+            "position": "Project Manager",
             "stars": 5
           },
           "disabled": null
@@ -361,9 +361,9 @@
         "testimonial_741322": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "They had everything I needed for my job site, and the rental process was seamless. Highly recommend!",
+            "name": "James T.",
+            "position": "Site Supervisor",
             "stars": 5
           },
           "disabled": null
@@ -401,10 +401,10 @@
             "button": "Read more",
             "button_size": "lg",
             "button_url": "booqable://root/",
-            "image": "booqable://assets/image-columns-1.jpg",
+            "image": "booqable://assets/image-columns-1.webp",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "Safety tips before you step on a lawn mower",
+            "text": "<p>Not sure what equipment you need? This guide breaks down the must-have machinery for different types of projects and how to pick the right tools for the job.</p>",
+            "title": "How to Choose the Right Construction Equipment for Your Project",
             "use_solid_button": false
           },
           "disabled": null
@@ -415,10 +415,10 @@
             "button": "Read more",
             "button_size": "lg",
             "button_url": "booqable://root/",
-            "image": "booqable://assets/image-columns-2.jpg",
+            "image": "booqable://assets/image-columns-2.webp",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "10 tips to get your lawn summer ready",
+            "text": "<p>Explore the cost benefits of renting versus purchasing construction equipment and how it can save you money while keeping your projects flexible.</p>",
+            "title": "Rent vs. Buy: Why Renting Construction Equipment Makes Sense",
             "use_solid_button": false
           },
           "disabled": null
@@ -431,8 +431,8 @@
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-3.jpg",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "How to ride a excavator in your garden",
+            "text": "<p>Safety is key on any job site. Learn essential tips for operating construction equipment safely and efficiently to prevent accidents and downtime.</p>",
+            "title": "The Top 5 Safety Tips for Operating Heavy Construction Equipment",
             "use_solid_button": false
           },
           "disabled": null
@@ -449,7 +449,7 @@
         "content_color": "#8C8F90",
         "heading_size": "lg",
         "title_position": "left",
-        "title_section": "What’s going on",
+        "title_section": "Tips & tricks",
         "title_size": "lg"
       },
       "disabled": null
@@ -567,7 +567,7 @@
           "settings": {
             "color": "#131313",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit. Suspendisse varius enim in eros elementum <br>tristique."
+            "text": "<p>Need equipment for your next project? Our team is <br> here to help! Contact us today for a quote, <br>rental availability, or expert advice.</p>"
           },
           "disabled": null
         },

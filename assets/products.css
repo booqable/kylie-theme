@@ -47,6 +47,10 @@
   padding: 0 var(--horizontal-padding);
 }
 
+.products__inner:not(:has(> .producta:only-child)) {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
 .products__inner .product {
   max-width: none;
 }
@@ -68,6 +72,10 @@
 
   .products__inner .product {
     max-width: 320px;
+  }
+
+  .products__inner:not(:has(> .product:only-child)) .product {
+    max-width: none;
   }
 }
 
