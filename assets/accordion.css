@@ -1,0 +1,60 @@
+.accordion {
+  max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
+  width: 100%;
+  margin: 30px auto;
+  padding: 0 var(--horizontal-padding);
+  background: var(--color-primary-background);
+  color: var(--color-primary-foreground);
+}
+
+.accordion__title {
+  color: var(--color-primary-foreground);
+
+  margin-bottom: 24px;
+}
+
+.accordion__title--size-sm {
+  font-size: 24px;
+  line-height: 1.3333;
+
+  font-weight: var(--font-weight-semibold);
+}
+
+.accordion__title--size-md {
+  font-size: 36px;
+  line-height: 1.25;
+
+  font-weight: var(--font-weight-semibold);
+}
+
+.accordion__title--size-lg {
+  font-size: 44px;
+  line-height: 1.2;
+
+  font-weight: var(--font-weight-bold);
+}
+
+.accordion__description--size-sm.bq-content {
+  font-size: 14px;
+}
+
+.accordion__description--size-md.bq-content {
+  font-size: 16px;
+}
+
+.accordion__description--size-lg.bq-content {
+  font-size: 18px;
+}
+
+.accordion__description.bq-content p {
+  font-size: inherit;
+}
+
+.accordion__top {
+  padding-bottom: 26px;
+}
+
+.accordion__content {
+  max-width: 680px;
+  margin: 0 auto;
+}

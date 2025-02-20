@@ -61,12 +61,13 @@
 
 .collections__list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 32px;
 }
 
-.collections__list:not(:has(> a:only-child)) {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.collections__list:has(> a:only-child),
+.collections__list:has(> .collection:only-child) {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
 
 .collections__list a {
