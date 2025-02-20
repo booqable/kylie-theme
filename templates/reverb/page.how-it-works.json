@@ -28,7 +28,7 @@
         "text"
       ],
       "settings": {
-        "background_image": "booqable://assets/image-hero-2.jpg",
+        "background_image": "booqable://assets/image-hero.jpeg",
         "content_align": "center",
         "fluid_width": true,
         "overlay_color": "#000000",
