@@ -9,7 +9,7 @@
           "settings": {
             "color": "#FFFFFF",
             "size": "xl",
-            "text": "Rent your van at Vanable"
+            "text": "Rent your van today"
           },
           "disabled": null
         },
@@ -18,7 +18,7 @@
           "settings": {
             "color": "#FFFFFF",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "Whether you need a van for moving, business, or a road trip, we offer affordable <br>and flexible rental options to get you where you need to go."
           },
           "disabled": null
         },
@@ -129,8 +129,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Free delivery",
-            "text": "Free delivery for all orders above $100"
+            "title": "Variety of vans",
+            "text": "From compact cargo vans to spacious passenger vans."
           },
           "disabled": null
         },
@@ -138,8 +138,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "20 years of experience",
-            "text": "We know how to do it"
+            "title": "Flexible rental options",
+            "text": "Daily, weekly, and long-term rentals available."
           },
           "disabled": null
         },
@@ -147,8 +147,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Trusted provider",
-            "text": "Experience with many high profile events"
+            "title": "Competitive pricing",
+            "text": "Always transparent pricing with no hidden fees."
           },
           "disabled": null
         },
@@ -156,8 +156,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Value-for-money solutions",
-            "text": "From DIY to full production"
+            "title": "Easy booking process",
+            "text": "Reserve online, over the phone, or visit us in-store."
           },
           "disabled": null
         }
@@ -172,7 +172,7 @@
         "button_label": "More about us",
         "button_size": "lg",
         "button_url": "booqable://root/",
-        "description": "Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have.",
+        "description": "Whether you’re moving house, transporting equipment, or planning a group trip, we have the perfect van for you.",
         "heading_size": "sm",
         "icon_color": "#EBA928",
         "title_section": "Services",
@@ -198,7 +198,7 @@
           "settings": {
             "color": "#FFFFFF",
             "size": "lg",
-            "text": "We serve your day"
+            "text": "Get a free quote"
           },
           "disabled": null
         },
@@ -227,7 +227,7 @@
         "button_159563"
       ],
       "settings": {
-        "background_image": "booqable://assets/image-hero-2.jpg",
+        "background_image": "booqable://assets/image-hero-2.webp",
         "content_align": "center",
         "fluid_width": false,
         "overlay_color": "#000000",
@@ -253,35 +253,28 @@
         "logo_455765": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
+            "image": "booqable://assets/image-logo-1.webp"
           },
           "disabled": null
         },
         "logo_455766": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-logo-2.webp"
           },
           "disabled": null
         },
         "logo_455767": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
+            "image": "booqable://assets/image-logo-3.webp"
           },
           "disabled": null
         },
         "logo_455768": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1.png"
-          },
-          "disabled": null
-        },
-        "logo_455769": {
-          "type": "logo",
-          "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-logo-4.webp"
           },
           "disabled": null
         }
@@ -290,11 +283,10 @@
         "logo_455765",
         "logo_455766",
         "logo_455767",
-        "logo_455768",
-        "logo_455769"
+        "logo_455768"
       ],
       "settings": {
-        "title": "We work for",
+        "title": "Rent vans from",
         "title_position": "center",
         "title_size": "sm"
       },
@@ -342,9 +334,9 @@
         "testimonial_741320": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Rented a passenger van for a family road trip, and it was perfect! Spacious, clean, and super comfortable.",
+            "name": "David R.",
+            "position": "Road Trip Enthusiast",
             "stars": 5
           },
           "disabled": null
@@ -352,9 +344,9 @@
         "testimonial_741321": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Great experience renting a cargo van for moving. The process was simple, and the van was in great condition.",
+            "name": "Jessica T.",
+            "position": "Recent Mover",
             "stars": 5
           },
           "disabled": null
@@ -362,9 +354,9 @@
         "testimonial_741322": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Fast, easy, and affordable van rental! Will definitely use this company again for business transport.",
+            "name": "Mark L.",
+            "position": "Small Business Owner",
             "stars": 5
           },
           "disabled": null
@@ -372,9 +364,9 @@
         "testimonial_741323": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Fantastic service! The booking process was smooth, and the van was in excellent condition. It made our business trip so much easier.",
+            "name": "Samantha W.",
+            "position": "Business Traveler",
             "stars": 5
           },
           "disabled": null
@@ -382,9 +374,9 @@
         "testimonial_741324": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "We rented a moving van for the weekend, and everything was perfect. Plenty of space, great rates, and super friendly staff!",
+            "name": "Tom H.",
+            "position": "Recent Mover",
             "stars": 5
           },
           "disabled": null
@@ -392,9 +384,9 @@
         "testimonial_741325": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Highly recommend! The van was spotless and fuel-efficient, and the rental process was quick and easy. Will use again!",
+            "name": "Chris D.",
+            "position": "Frequent Renter",
             "stars": 5
           },
           "disabled": null
@@ -436,10 +428,10 @@
             "button": "Read more",
             "button_size": "lg",
             "button_url": "booqable://root/",
-            "image": "booqable://assets/image-columns-1.jpg",
+            "image": "booqable://assets/image-columns-1.webp",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "Rent a delivery van for the holiday’s",
+            "text": "<p>Not sure which vehicle is right for your move? We break down the differences to help you choose.</p>",
+            "title": "Cargo Van vs. Moving Truck: Which One Should You Rent?",
             "use_solid_button": false
           },
           "disabled": null
@@ -450,10 +442,10 @@
             "button": "Read more",
             "button_size": "lg",
             "button_url": "booqable://root/",
-            "image": "booqable://assets/image-columns-2.jpg",
+            "image": "booqable://assets/image-columns-2.webp",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "Safety tips before you go on the road",
+            "text": "<p>Make the most of your rental with these simple tips for packing, driving, and returning your van.</p>",
+            "title": "Top Tips for a Stress-Free Van Rental Experience",
             "use_solid_button": false
           },
           "disabled": null
@@ -464,10 +456,10 @@
             "button": "Read more",
             "button_size": "lg",
             "button_url": "booqable://root/",
-            "image": "booqable://assets/image-columns-3.jpg",
+            "image": "booqable://assets/image-columns-3.webp",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "Ride safe and be on time. See how:",
+            "text": "<p>Save money, travel together, and enjoy a rental van for your next group adventure.</p>",
+            "title": "Planning a Group Trip? Here’s Why You Should Rent a Passenger Van",
             "use_solid_button": false
           },
           "disabled": null
@@ -484,7 +476,7 @@
         "content_color": "#8C8F90",
         "heading_size": "lg",
         "title_position": "left",
-        "title_section": "What’s going on",
+        "title_section": "Your van guides",
         "title_size": "lg"
       },
       "disabled": null
@@ -602,7 +594,7 @@
           "settings": {
             "color": "#140202",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit. Suspendisse varius enim in eros elementum <br>tristique."
+            "text": "Need a reliable van rental? We’re here to help! Contact us today <br>for availability, pricing, and expert assistance in choosing the perfect van for your needs."
           },
           "disabled": null
         },

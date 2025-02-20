@@ -9,16 +9,16 @@
           "settings": {
             "color": "#FFFFFF",
             "size": "xl",
-            "text": "Get The Job Done. Rent it"
+            "text": "Explore the city with our bikes"
           },
           "disabled": null
         },
         "text": {
           "type": "text",
           "settings": {
-            "color": "#B2B4B8",
+            "color": "#FFFFFF",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "From city cruisers to mountain bikes, we’ve got the perfect ride for your next adventure. Easy rentals, affordable rates, and hassle-free service!"
           },
           "disabled": null
         },
@@ -62,6 +62,32 @@
       "block_order": [],
       "settings": {
         "size": "sm",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "collection": "all-products",
+        "infinite_scroll": true,
+        "paginate_per": 12,
+        "snap": "center",
+        "title": "Featured products",
+        "title_size": "lg",
+        "use_carousel": true,
+        "use_pagination": true
+      },
+      "disabled": null
+    },
+    "spacer_988332": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
         "use_hr": false
       },
       "disabled": null
@@ -112,7 +138,7 @@
       },
       "disabled": null
     },
-    "spacer_988332": {
+    "spacer_868256": {
       "type": "spacer",
       "blocks": {},
       "block_order": [],
@@ -122,23 +148,54 @@
       },
       "disabled": null
     },
-    "products": {
-      "type": "products",
-      "blocks": {},
-      "block_order": [],
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_741320": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Best bike rental experience ever! The process was seamless, and the bike was great. Highly recommend!",
+            "name": "Emily R.",
+            "position": "Tourist",
+            "stars": 5
+          },
+          "disabled": null
+        },
+        "testimonial_741321": {
+          "type": "testimonial",
+          "settings": {
+            "description": "The staff was super friendly and helped us find the perfect bikes for our city tour. Loved the route suggestions!",
+            "name": "Jake M.",
+            "position": "Weekend Explorer",
+            "stars": 5
+          },
+          "disabled": null
+        },
+        "testimonial_741322": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Affordable and convenient. The e-bikes were a game-changer for our sightseeing day!",
+            "name": "Lisa and Tom J.",
+            "position": "Couple on Vacation",
+            "stars": 5
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_741320",
+        "testimonial_741321",
+        "testimonial_741322"
+      ],
       "settings": {
-        "collection": "all-products",
-        "infinite_scroll": false,
-        "paginate_per": 12,
-        "snap": "center",
-        "title": "Featured products",
-        "title_size": "lg",
-        "use_carousel": false,
-        "use_pagination": true
+        "name_color": "#286ED8",
+        "title": "What our customers say",
+        "title_position": "left",
+        "title_size": "lg"
       },
       "disabled": null
     },
-    "spacer_868256": {
+    "spacer_784256": {
       "type": "spacer",
       "blocks": {},
       "block_order": [],
@@ -156,7 +213,7 @@
           "settings": {
             "color": "#FFFFFF",
             "size": "lg",
-            "text": "We serve your day"
+            "text": "Call to reserve"
           },
           "disabled": null
         },
@@ -185,17 +242,17 @@
         "button_159563"
       ],
       "settings": {
-        "background_image": "booqable://assets/image-hero-2.jpg",
+        "background_image": "booqable://assets/image-hero-2.jpeg",
         "content_align": "center",
         "fluid_width": false,
         "overlay_color": "#000000",
         "overlay_enabled": true,
         "overlay_opacity": "40",
-        "vertical_spacing": "sm"
+        "vertical_spacing": "md"
       },
       "disabled": null
     },
-    "spacer_784256": {
+    "spacer_784258": {
       "type": "spacer",
       "blocks": {},
       "block_order": [],
@@ -212,8 +269,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Free delivery",
-            "text": "Free delivery for all orders above $100"
+            "title": "Top-quality bikes",
+            "text": "Well-maintained, comfortable, and ready to ride."
           },
           "disabled": null
         },
@@ -221,8 +278,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "20 years of experience",
-            "text": "We know how to do it"
+            "title": "Easy booking",
+            "text": "Online, phone, or walk-in reservations available."
           },
           "disabled": null
         },
@@ -230,8 +287,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Trusted provider",
-            "text": "Experience with many high profile events"
+            "title": "Convenient locations",
+            "text": "Pick up your bike at prime spots near popular attractions."
           },
           "disabled": null
         },
@@ -239,8 +296,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Value-for-money solutions",
-            "text": "From DIY to full production"
+            "title": "Friendly support",
+            "text": "Expert advice and route recommendations to enhance your ride."
           },
           "disabled": null
         }
@@ -255,8 +312,9 @@
         "button_label": "More about us",
         "button_size": "lg",
         "button_url": "booqable://root/",
-        "description": "Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have.",
+        "description": "Whether you’re looking to explore the city, hit the trails, or cruise along the beach, we have a wide selection of high-quality bikes to fit your needs.",
         "heading_size": "sm",
+        "icon_color": "#EBA928",
         "title_section": "Services",
         "title_size": "lg"
       },
@@ -278,35 +336,28 @@
         "logo_455765": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
+            "image": "booqable://assets/image-logo-1.webp"
           },
           "disabled": null
         },
         "logo_455766": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-logo-2.webp"
           },
           "disabled": null
         },
         "logo_455767": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
+            "image": "booqable://assets/image-logo-3.webp"
           },
           "disabled": null
         },
         "logo_455768": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1.png"
-          },
-          "disabled": null
-        },
-        "logo_455769": {
-          "type": "logo",
-          "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-logo-4.webp"
           },
           "disabled": null
         }
@@ -315,70 +366,12 @@
         "logo_455765",
         "logo_455766",
         "logo_455767",
-        "logo_455768",
-        "logo_455769"
+        "logo_455768"
       ],
       "settings": {
-        "title": "We work for",
+        "title": "Rent bikes from",
         "title_position": "center",
         "title_size": "sm"
-      },
-      "disabled": null
-    },
-    "spacer_784258": {
-      "type": "spacer",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "size": "lg",
-        "use_hr": false
-      },
-      "disabled": null
-    },
-    "testimonials": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial_741320": {
-          "type": "testimonial",
-          "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
-            "stars": 5
-          },
-          "disabled": null
-        },
-        "testimonial_741321": {
-          "type": "testimonial",
-          "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
-            "stars": 5
-          },
-          "disabled": null
-        },
-        "testimonial_741322": {
-          "type": "testimonial",
-          "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
-            "stars": 5
-          },
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "testimonial_741320",
-        "testimonial_741321",
-        "testimonial_741322"
-      ],
-      "settings": {
-        "name_color": "#F7D041",
-        "title": "What our customers say",
-        "title_position": "left",
-        "title_size": "lg"
       },
       "disabled": null
     },
@@ -403,8 +396,8 @@
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-1.jpg",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "Safety tips before you step on a lawn mower",
+            "text": "<p>Discover breathtaking bike trails and hidden gems perfect for your next cycling adventure.</p>",
+            "title": "Top 5 Scenic Bike Routes to Explore in Gibraltar",
             "use_solid_button": false
           },
           "disabled": null
@@ -417,8 +410,8 @@
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-2.jpg",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "10 tips to get your lawn summer ready",
+            "text": "<p>Not sure whether to go electric or pedal-powered? Check out the pros and cons to help you decide.</p>",
+            "title": "E-Bike vs. Road Bike: Which Should You Rent?",
             "use_solid_button": false
           },
           "disabled": null
@@ -431,8 +424,8 @@
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-3.jpg",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "How to ride a excavator in your garden",
+            "text": "<p>A must-read guide for every rider—learn the essential safety tips before you hit the road!</p>",
+            "title": "Safety Tips: How to Stay Safe on the Road & Trails",
             "use_solid_button": false
           },
           "disabled": null
@@ -449,7 +442,7 @@
         "content_color": "#8C8F90",
         "heading_size": "lg",
         "title_position": "left",
-        "title_section": "What’s going on",
+        "title_section": "Guides",
         "title_size": "lg"
       },
       "disabled": null
@@ -567,7 +560,7 @@
           "settings": {
             "color": "#131313",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit. Suspendisse varius enim in eros elementum <br>tristique."
+            "text": "Ready to ride? We’re here to help you find the perfect bike <br>for your adventure! Contact us to book your rental or visit us in-store."
           },
           "disabled": null
         },
@@ -622,17 +615,17 @@
     "image-banner",
     "date-picker",
     "spacer",
-    "collections",
-    "spacer_988332",
     "products",
+    "spacer_988332",
+    "collections",
     "spacer_868256",
-    "image-banner_478138",
+    "testimonials",
     "spacer_784256",
+    "image-banner_478138",
+    "spacer_784258",
     "tiles",
     "spacer_784257",
     "logos",
-    "spacer_784258",
-    "testimonials",
     "spacer_784259",
     "columns",
     "spacer_784260",
