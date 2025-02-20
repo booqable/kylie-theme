@@ -171,14 +171,14 @@
         }
       }
     },
-    "velo": {
+    "traverse": {
       "accent_foreground_color": "#FFFFFF",
-      "link_color": "#286ED8",
+      "link_color": "#C12B32",
       "primary_background_color": "#FFFFFF",
-      "primary_foreground_color": "#0E0702",
-      "primary_color": "#286ED8",
-      "heading_font": "raleway",
-      "body_font": "raleway",
+      "primary_foreground_color": "#140202",
+      "primary_color": "#C12B32",
+      "heading_font": "open-sans",
+      "body_font": "open-sans",
       "sections": {
         "header": {
           "type": "header",
@@ -234,14 +234,14 @@
         }
       }
     },
-    "van": {
+    "velo": {
       "accent_foreground_color": "#FFFFFF",
-      "link_color": "#C12B32",
+      "link_color": "#286ED8",
       "primary_background_color": "#FFFFFF",
-      "primary_foreground_color": "#140202",
-      "primary_color": "#C12B32",
-      "heading_font": "open-sans",
-      "body_font": "open-sans",
+      "primary_foreground_color": "#0E0702",
+      "primary_color": "#286ED8",
+      "heading_font": "raleway",
+      "body_font": "raleway",
       "sections": {
         "header": {
           "type": "header",
