@@ -18,7 +18,7 @@
           "settings": {
             "color": "#8C8F90",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "From concerts to corporate events, we provide top-quality sound systems, speakers, and <br>microphones to ensure your audience hears every word and beat perfectly."
           },
           "disabled": null
         },
@@ -156,7 +156,7 @@
           "settings": {
             "color": "#FFFFFF",
             "size": "lg",
-            "text": "WE SERVE YOUR DAY"
+            "text": "GET A QUOTE NOW"
           },
           "disabled": null
         },
@@ -300,35 +300,21 @@
         "logo_455765": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
+            "image": "booqable://assets/image-logo-1.webp"
           },
           "disabled": null
         },
         "logo_455766": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-logo-2.webp"
           },
           "disabled": null
         },
         "logo_455767": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
-          },
-          "disabled": null
-        },
-        "logo_455768": {
-          "type": "logo",
-          "settings": {
-            "image": "booqable://assets/image-partner-logo-1.png"
-          },
-          "disabled": null
-        },
-        "logo_455769": {
-          "type": "logo",
-          "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-logo-3.webp"
           },
           "disabled": null
         }
@@ -336,12 +322,10 @@
       "block_order": [
         "logo_455765",
         "logo_455766",
-        "logo_455767",
-        "logo_455768",
-        "logo_455769"
+        "logo_455767"
       ],
       "settings": {
-        "title": "WE WORK FOR",
+        "title": "WE WORK WITH",
         "title_position": "center",
         "title_size": "sm"
       },
@@ -363,9 +347,9 @@
         "testimonial_741320": {
           "type": "testimonial",
           "settings": {
-            "description": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SUSPENDISSE VARIUS ENIM IN EROS ELEMENTUM TRISTIQUE. DUIS CURSUS, MI QUIS VIVERRA ORNARE.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "The sound quality was incredible! We rented a full PA system for our wedding, and everything worked perfectly",
+            "name": "Sarah & Mike T.",
+            "position": "Newlyweds",
             "stars": 5
           },
           "disabled": null
@@ -373,9 +357,9 @@
         "testimonial_741321": {
           "type": "testimonial",
           "settings": {
-            "description": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SUSPENDISSE VARIUS ENIM IN EROS ELEMENTUM TRISTIQUE. DUIS CURSUS, MI QUIS VIVERRA ORNARE.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Fantastic service and top-tier equipment. The team even helped us set everything up. Highly recommend!",
+            "name": "Jason M.",
+            "position": "Event Coordinator",
             "stars": 5
           },
           "disabled": null
@@ -383,9 +367,9 @@
         "testimonial_741322": {
           "type": "testimonial",
           "settings": {
-            "description": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SUSPENDISSE VARIUS ENIM IN EROS ELEMENTUM TRISTIQUE. DUIS CURSUS, MI QUIS VIVERRA ORNARE.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "We needed microphones and speakers for a corporate seminar, and the rental process was seamless. Great experience!",
+            "name": "Laura T.",
+            "position": "Corporate Event Planner",
             "stars": 5
           },
           "disabled": null
@@ -426,8 +410,8 @@
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-1.jpg",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "REVIEW – THE BOSE MB4 SUB SPEAKER",
+            "text": "<p>Not sure what sound equipment you need? This guide breaks down different audio setups for events of all sizes.</p>",
+            "title": "HOW TO CHOOSE THE BEST SOUND EQUIPMENT FOR YOUR EVENT",
             "use_solid_button": false
           },
           "disabled": null
@@ -440,8 +424,8 @@
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-2.jpg",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "CHOOSING A PA SYSTEM FOR PURCHASE OR HIRE",
+            "text": "<p>Find out when it makes sense to rent audio gear and set it up yourself—or when you should call in an expert.</p>",
+            "title": "DIY SOUND SETUP VS. HIRING A PRO: WHAT'S BEST FOR YOUR EVENT",
             "use_solid_button": false
           },
           "disabled": null
@@ -454,8 +438,8 @@
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-3.jpg",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "TIPS FOR PERFECT WEDDING SOUND",
+            "text": "<p>Don’t let poor audio ruin your event! Learn how to troubleshoot common sound issues before they happen.</p>",
+            "title": "5 COMMON SOUND ISSUES AT EVENTS (AND HOW TO AVOID THEM)",
             "use_solid_button": false
           },
           "disabled": null
@@ -471,7 +455,7 @@
         "content_color": "#8C8F90",
         "columns_count": 3,
         "heading_size": "lg",
-        "title_section": "WHAT’S GOING ON",
+        "title_section": "FROM OUR EXPERTS",
         "title_position": "left",
         "title_size": "lg"
       },
@@ -590,7 +574,7 @@
           "settings": {
             "color": "#131313",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Suspendisse varius enim in eros elementum tristique."
+            "text": "Need top-quality sound equipment for your next event? <br>We’re here to help! Contact us today for a free quote, rental availability, or expert advice."
           },
           "disabled": null
         },
