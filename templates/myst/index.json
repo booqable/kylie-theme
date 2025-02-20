@@ -8,7 +8,7 @@
           "type": "heading",
           "settings": {
             "size": "xl",
-            "text": "Rent your halloween with us"
+            "text": "Rent your halloween costume with us"
           },
           "disabled": null
         },
@@ -17,7 +17,7 @@
           "settings": {
             "color": "",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "From classic monsters to pop culture icons, we have the perfect <br>costume for any party, event, or trick-or-treating adventure."
           },
           "disabled": null
         },
@@ -160,9 +160,9 @@
         "testimonial_741320": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Amazing selection! I found the perfect vampire costume with all the details included. It looked fantastic!",
+            "name": "Rachel L.",
+            "position": "Halloween Enthusiast",
             "stars": 5
           },
           "disabled": null
@@ -170,9 +170,9 @@
         "testimonial_741321": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Rented a group costume set for our Halloween party, and it was a huge hit! Super easy and affordable.",
+            "name": "Jake M.",
+            "position": "Party Host",
             "stars": 5
           },
           "disabled": null
@@ -180,9 +180,9 @@
         "testimonial_741322": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Great service and high-quality costumes. I’ll definitely be renting from them again next halloween!",
+            "name": "Daniel S.",
+            "position": "Cosplay Fan",
             "stars": 5
           },
           "disabled": null
@@ -219,7 +219,7 @@
           "type": "heading",
           "settings": {
             "size": "lg",
-            "text": "We serve your day"
+            "text": "Reserve your costume"
           },
           "disabled": null
         },
@@ -279,8 +279,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Free delivery",
-            "text": "Free delivery for all orders above $100"
+            "title": "Massive selection",
+            "text": "Thousands of costumes for adults, kids, and groups."
           },
           "disabled": null
         },
@@ -288,8 +288,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "20 years of experience",
-            "text": "We know how to do it"
+            "title": "High-quality costumes",
+            "text": "Professionally cleaned and well-maintained outfits."
           },
           "disabled": null
         },
@@ -297,8 +297,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Trusted provider",
-            "text": "Experience with many high profile events"
+            "title": "Flexible rentals",
+            "text": "Rent for a day, weekend, or the whole spooky season!"
           },
           "disabled": null
         },
@@ -306,8 +306,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Value-for-money solutions",
-            "text": "From DIY to full production"
+            "title": "Easy returns",
+            "text": "Convenient drop-off locations and hassle-free returns."
           },
           "disabled": null
         }
@@ -322,7 +322,7 @@
         "button_label": "More about us",
         "button_size": "lg",
         "button_url": "booqable://root/",
-        "description": "Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have.",
+        "description": "Whether you’re looking for something spooky, hilarious, or a show-stopping outfit, we have costumes for all ages, styles, and sizes.",
         "heading_size": "sm",
         "icon_color": "#EBA928",
         "title_section": "Services",
@@ -346,35 +346,35 @@
         "logo_455765": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
+            "image": "booqable://assets/image-logo-1.webp"
           },
           "disabled": null
         },
         "logo_455766": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-logo-2.webp"
           },
           "disabled": null
         },
         "logo_455767": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
+            "image": "booqable://assets/image-logo-3.webp"
           },
           "disabled": null
         },
         "logo_455768": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1.png"
+            "image": "booqable://assets/image-logo-4.webp"
           },
           "disabled": null
         },
         "logo_455769": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-logo-5.webp"
           },
           "disabled": null
         }
@@ -387,7 +387,7 @@
         "logo_455769"
       ],
       "settings": {
-        "title": "We work for",
+        "title": "Costumes from your favorite films and shows",
         "title_position": "center",
         "title_size": "sm"
       },
@@ -414,8 +414,8 @@
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-1.jpg",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "What you need to know",
+            "text": "<p>Not sure what to wear? Check out the trendiest costumes for this Halloween season!</p>",
+            "title": "Top 10 Halloween Costumes That Will Steal the Show This Year",
             "use_solid_button": false
           },
           "disabled": null
@@ -428,8 +428,8 @@
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-2.jpg",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "How to prepare a pumpkin for Halloween",
+            "text": "<p>Save time, money, and hassle—find out why renting your costume is the best option!</p>",
+            "title": "DIY vs. Rental: Why Renting a Costume is the Better Choice",
             "use_solid_button": false
           },
           "disabled": null
@@ -442,8 +442,8 @@
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-3.jpg",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "Playlists to start your Halloween party",
+            "text": "<p>Tips and tricks to elevate your look with accessories, makeup, and more!</p>",
+            "title": "How to Make Your Halloween Costume Stand Out",
             "use_solid_button": false
           },
           "disabled": null
@@ -460,7 +460,7 @@
         "content_color": "#8C8F90",
         "heading_size": "lg",
         "title_position": "left",
-        "title_section": "What’s going on",
+        "title_section": "Tips & tricks (or treats)",
         "title_size": "lg"
       },
       "disabled": null
@@ -578,7 +578,7 @@
           "settings": {
             "color": "",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit. Suspendisse varius enim in eros elementum <br>tristique."
+            "text": "Looking for the perfect Halloween costume? We’ve got <br>you covered! Contact us today to check availability, <br>reserve your outfit, or visit our store to browse in person."
           },
           "disabled": null
         },
