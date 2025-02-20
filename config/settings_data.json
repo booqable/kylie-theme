@@ -45,7 +45,7 @@
         }
       }
     },
-    "mashines": {
+    "torque": {
       "accent_foreground_color": "#131313",
       "link_color": "#F7D041",
       "primary_background_color": "#FFFFFF",
