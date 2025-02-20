@@ -1,0 +1,671 @@
+{
+  "name": "Home",
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "color": "#FFFFFF",
+            "size": "xl",
+            "text": "Rent your van today"
+          },
+          "disabled": null
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "color": "#FFFFFF",
+            "size": "sm",
+            "text": "Whether you need a van for moving, business, or a road trip, we offer affordable <br>and flexible rental options to get you where you need to go."
+          },
+          "disabled": null
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Shop products",
+            "url": "booqable://collections/all",
+            "use_solid_button": true
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "background_image": "booqable://assets/image-hero.jpeg",
+        "content_align": "left",
+        "fluid_width": true,
+        "overlay_color": "#000000",
+        "overlay_enabled": true,
+        "overlay_opacity": "60",
+        "vertical_spacing": "lg"
+      },
+      "disabled": null
+    },
+    "date-picker": {
+      "type": "date-picker",
+      "blocks": {},
+      "block_order": [],
+      "settings": {},
+      "disabled": null
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "sm",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_784525": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          },
+          "disabled": null
+        },
+        "collection_784526": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          },
+          "disabled": null
+        },
+        "collection_784527": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          },
+          "disabled": null
+        },
+        "collection_784528": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_784525",
+        "collection_784526",
+        "collection_784527",
+        "collection_784528"
+      ],
+      "settings": {
+        "enable_show_more": true,
+        "show_more_label": "Browse all collections",
+        "title": "Shop by collection",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_868256": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "tiles": {
+      "type": "tiles",
+      "blocks": {
+        "item_965477": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "Variety of vans",
+            "text": "From compact cargo vans to spacious passenger vans."
+          },
+          "disabled": null
+        },
+        "item_965478": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "Flexible rental options",
+            "text": "Daily, weekly, and long-term rentals available."
+          },
+          "disabled": null
+        },
+        "item_965479": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "Competitive pricing",
+            "text": "Always transparent pricing with no hidden fees."
+          },
+          "disabled": null
+        },
+        "item_965480": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "Easy booking process",
+            "text": "Reserve online, over the phone, or visit us in-store."
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_965477",
+        "item_965478",
+        "item_965479",
+        "item_965480"
+      ],
+      "settings": {
+        "button_label": "More about us",
+        "button_size": "lg",
+        "button_url": "booqable://root/",
+        "description": "Whether you’re moving house, transporting equipment, or planning a group trip, we have the perfect van for you.",
+        "heading_size": "sm",
+        "icon_color": "#EBA928",
+        "title_section": "Services",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_784257": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "image-banner_478138": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "color": "#FFFFFF",
+            "size": "lg",
+            "text": "Get a free quote"
+          },
+          "disabled": null
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Contact us",
+            "use_solid_button": true
+          },
+          "disabled": null
+        },
+        "button_159563": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Call us",
+            "use_solid_button": true
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading",
+        "button",
+        "button_159563"
+      ],
+      "settings": {
+        "background_image": "booqable://assets/image-hero-2.webp",
+        "content_align": "center",
+        "fluid_width": false,
+        "overlay_color": "#000000",
+        "overlay_enabled": true,
+        "overlay_opacity": "40",
+        "vertical_spacing": "md"
+      },
+      "disabled": null
+    },
+    "spacer_784258": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "logos": {
+      "type": "logos",
+      "blocks": {
+        "logo_455765": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-logo-1.webp"
+          },
+          "disabled": null
+        },
+        "logo_455766": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-logo-2.webp"
+          },
+          "disabled": null
+        },
+        "logo_455767": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-logo-3.webp"
+          },
+          "disabled": null
+        },
+        "logo_455768": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-logo-4.webp"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "logo_455765",
+        "logo_455766",
+        "logo_455767",
+        "logo_455768"
+      ],
+      "settings": {
+        "title": "Rent vans from",
+        "title_position": "center",
+        "title_size": "sm"
+      },
+      "disabled": null
+    },
+    "spacer_784259": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "collection": "all-products",
+        "infinite_scroll": true,
+        "paginate_per": 12,
+        "snap": "center",
+        "title": "Featured products",
+        "title_size": "lg",
+        "use_carousel": true,
+        "use_pagination": true
+      },
+      "disabled": null
+    },
+    "spacer_988332": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_741320": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Rented a passenger van for a family road trip, and it was perfect! Spacious, clean, and super comfortable.",
+            "name": "David R.",
+            "position": "Road Trip Enthusiast",
+            "stars": 5
+          },
+          "disabled": null
+        },
+        "testimonial_741321": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Great experience renting a cargo van for moving. The process was simple, and the van was in great condition.",
+            "name": "Jessica T.",
+            "position": "Recent Mover",
+            "stars": 5
+          },
+          "disabled": null
+        },
+        "testimonial_741322": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Fast, easy, and affordable van rental! Will definitely use this company again for business transport.",
+            "name": "Mark L.",
+            "position": "Small Business Owner",
+            "stars": 5
+          },
+          "disabled": null
+        },
+        "testimonial_741323": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Fantastic service! The booking process was smooth, and the van was in excellent condition. It made our business trip so much easier.",
+            "name": "Samantha W.",
+            "position": "Business Traveler",
+            "stars": 5
+          },
+          "disabled": null
+        },
+        "testimonial_741324": {
+          "type": "testimonial",
+          "settings": {
+            "description": "We rented a moving van for the weekend, and everything was perfect. Plenty of space, great rates, and super friendly staff!",
+            "name": "Tom H.",
+            "position": "Recent Mover",
+            "stars": 5
+          },
+          "disabled": null
+        },
+        "testimonial_741325": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Highly recommend! The van was spotless and fuel-efficient, and the rental process was quick and easy. Will use again!",
+            "name": "Chris D.",
+            "position": "Frequent Renter",
+            "stars": 5
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_741320",
+        "testimonial_741321",
+        "testimonial_741322",
+        "testimonial_741323",
+        "testimonial_741324",
+        "testimonial_741325"
+      ],
+      "settings": {
+        "name_color": "#C12B32",
+        "star_color": "#EBA928",
+        "title": "What our customers say",
+        "title_position": "left",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_784256": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "columns": {
+      "type": "columns",
+      "blocks": {
+        "column": {
+          "type": "column",
+          "settings": {
+            "button": "Read more",
+            "button_size": "lg",
+            "button_url": "booqable://root/",
+            "image": "booqable://assets/image-columns-1.webp",
+            "image_border_radius": true,
+            "text": "<p>Not sure which vehicle is right for your move? We break down the differences to help you choose.</p>",
+            "title": "Cargo Van vs. Moving Truck: Which One Should You Rent?",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_242972": {
+          "type": "column",
+          "settings": {
+            "button": "Read more",
+            "button_size": "lg",
+            "button_url": "booqable://root/",
+            "image": "booqable://assets/image-columns-2.webp",
+            "image_border_radius": true,
+            "text": "<p>Make the most of your rental with these simple tips for packing, driving, and returning your van.</p>",
+            "title": "Top Tips for a Stress-Free Van Rental Experience",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_535502": {
+          "type": "column",
+          "settings": {
+            "button": "Read more",
+            "button_size": "lg",
+            "button_url": "booqable://root/",
+            "image": "booqable://assets/image-columns-3.webp",
+            "image_border_radius": true,
+            "text": "<p>Save money, travel together, and enjoy a rental van for your next group adventure.</p>",
+            "title": "Planning a Group Trip? Here’s Why You Should Rent a Passenger Van",
+            "use_solid_button": false
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "column",
+        "column_242972",
+        "column_535502"
+      ],
+      "settings": {
+        "columns_count": 3,
+        "content_align": "left",
+        "content_color": "#8C8F90",
+        "heading_size": "lg",
+        "title_position": "left",
+        "title_section": "Your van guides",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_784260": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "columns_345612": {
+      "type": "columns",
+      "blocks": {
+        "column_242242": {
+          "type": "column",
+          "settings": {
+            "button": "",
+            "button_size": "md",
+            "button_url": "",
+            "image": "",
+            "image_border_radius": true,
+            "text": "<p>0000 Long lane, Unit 111 <br>Amsterdam NL</p>",
+            "title": "Location",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_242243": {
+          "type": "column",
+          "settings": {
+            "button": "",
+            "button_size": "md",
+            "button_url": "",
+            "image": "",
+            "image_border_radius": true,
+            "text": "<p>By appointment only</p>",
+            "title": "Showroom & Consultations",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_242244": {
+          "type": "column",
+          "settings": {
+            "button": "",
+            "button_size": "md",
+            "button_url": "",
+            "image": "",
+            "image_border_radius": true,
+            "text": "<p>Monday - Friday, 9:00 AM - 5:00 PM <br>For quotes and general inquiries</p>",
+            "title": "Phone availability",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_242245": {
+          "type": "column",
+          "settings": {
+            "button": "",
+            "button_size": "md",
+            "button_url": "",
+            "image": "",
+            "image_border_radius": true,
+            "text": "<p>Come pick up from us, or we can deliver to you</p>",
+            "title": "Pickup & Delivery",
+            "use_solid_button": false
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "column_242242",
+        "column_242243",
+        "column_242244",
+        "column_242245"
+      ],
+      "settings": {
+        "columns_count": 2,
+        "content_align": "center",
+        "content_color": "#8C8F90",
+        "heading_size": "sm",
+        "title_position": "center",
+        "title_section": "Visit & contact us",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_784261": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "image-banner_478139": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_342345": {
+          "type": "heading",
+          "settings": {
+            "size": "lg",
+            "text": "Contact us"
+          },
+          "disabled": null
+        },
+        "text_098765": {
+          "type": "text",
+          "settings": {
+            "color": "#140202",
+            "size": "sm",
+            "text": "Need a reliable van rental? We’re here to help! Contact us today <br>for availability, pricing, and expert assistance in choosing the perfect van for your needs."
+          },
+          "disabled": null
+        },
+        "button_556956": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Email us",
+            "use_solid_button": true
+          },
+          "disabled": null
+        },
+        "button_556957": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Call us",
+            "use_solid_button": true
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading_342345",
+        "text_098765",
+        "button_556956",
+        "button_556957"
+      ],
+      "settings": {
+        "background_color": "#EEEDEB",
+        "content_align": "center",
+        "fluid_width": true,
+        "overlay_color": "#000000",
+        "overlay_enabled": false,
+        "overlay_opacity": "40",
+        "vertical_spacing": "sm"
+      },
+      "disabled": null
+    },
+    "spacer_784262": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "image-banner",
+    "date-picker",
+    "spacer",
+    "collections",
+    "spacer_868256",
+    "tiles",
+    "spacer_784257",
+    "image-banner_478138",
+    "spacer_784258",
+    "logos",
+    "spacer_784259",
+    "products",
+    "spacer_988332",
+    "testimonials",
+    "spacer_784256",
+    "columns",
+    "spacer_784260",
+    "columns_345612",
+    "spacer_784261",
+    "image-banner_478139",
+    "spacer_784262"
+  ]
+}

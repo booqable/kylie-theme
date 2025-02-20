@@ -1,0 +1,108 @@
+{
+  "name": "How it works",
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "color": "#FFFFFF",
+            "text": "How it works",
+            "size": "xl"
+          },
+          "disabled": null
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "color": "#FFFFFF",
+            "text": "Tell something about your company, describe what you do and what makes you unique.",
+            "size": "sm"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "background_image": "booqable://assets/image-hero.jpeg",
+        "content_align": "center",
+        "fluid_width": true,
+        "overlay_color": "#000000",
+        "overlay_enabled": true,
+        "overlay_opacity": "60",
+        "vertical_spacing": "sm"
+      },
+      "disabled": false
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "md"
+      },
+      "disabled": null
+    },
+    "accordion": {
+      "type": "accordion",
+      "blocks": {
+        "item_347182": {
+          "type": "item",
+          "settings": {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "heading": "Question text goes here"
+          },
+          "disabled": null
+        },
+        "item_347183": {
+          "type": "item",
+          "settings": {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "heading": "Question text goes here"
+          },
+          "disabled": null
+        },
+        "item_347184": {
+          "type": "item",
+          "settings": {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "heading": "Question text goes here"
+          },
+          "disabled": null
+        },
+        "item_347185": {
+          "type": "item",
+          "settings": {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "heading": "Question text goes here"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_347182",
+        "item_347183",
+        "item_347184",
+        "item_347185"
+      ],
+      "settings": {
+        "behavior": "multiple",
+        "description": "<p>Add some text to tell a story, explain how renting with your company works, or to <br>let your potential customers know about the value you offer. Use this space <br>however you like and fill it with whatever you want.</p>",
+        "text_color": "#8C8F90",
+        "text_position": "center",
+        "title": "Everything you wondered, and more",
+        "title_size": "lg"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "image-banner",
+    "spacer",
+    "accordion"
+  ]
+}
