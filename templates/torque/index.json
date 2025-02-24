@@ -44,7 +44,7 @@
         "fluid_width": true,
         "overlay_color": "#000000",
         "overlay_enabled": true,
-        "overlay_opacity": "60",
+        "overlay_opacity": 60,
         "vertical_spacing": "lg"
       },
       "disabled": null

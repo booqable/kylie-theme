@@ -42,7 +42,7 @@
         "fluid_width": true,
         "overlay_color": "#D9E3F0",
         "overlay_enabled": true,
-        "overlay_opacity": "40",
+        "overlay_opacity": 40,
         "vertical_spacing": "lg"
       },
       "disabled": null
