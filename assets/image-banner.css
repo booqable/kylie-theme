@@ -21,7 +21,7 @@
 }
 
 .image-banner__wrapper--fluid-width .image-banner__inner {
-  background: none;
+  background-color: none;
 
   border-radius: 0;
 
@@ -102,7 +102,7 @@
   font-size: 24px;
   line-height: 32px;
 
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-medium);
 }
 
 .image-banner__title--size-md {
@@ -117,13 +117,6 @@
   line-height: 48px;
 
   font-weight: var(--font-weight-bold);
-}
-
-.image-banner__title--size-xl {
-  font-size: 52px;
-  line-height: 60px;
-
-  font-weight: var(--font-weight-extrabold);
 }
 
 .image-banner__text {
