@@ -34,6 +34,10 @@
   font-weight: var(--font-weight-bold);
 }
 
+.accordion__description {
+  color: var(--color-primary-foreground-lightened);
+}
+
 .accordion__description--size-sm.bq-content {
   font-size: 14px;
 }
