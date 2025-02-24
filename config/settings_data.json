@@ -1,45 +1,13 @@
 {
-  "current": {
-    "sections": {
-      "header": {
-        "type": "header",
-        "blocks": {},
-        "block_order": [],
-        "settings": {
-          "menu": "main-menu",
-          "logo": "",
-          "background_color": "",
-          "foreground_color": "",
-          "search_placeholder": "Search products"
-        },
-        "disabled": null
-      },
-      "footer": {
-        "type": "footer",
-        "blocks": {
-          "menu": {
-            "type": "menu",
-            "settings": {
-              "menu": "main-menu",
-              "align": "center"
-            },
-            "disabled": null
-          }
-        },
-        "block_order": [
-          "menu"
-        ],
-        "settings": {
-          "show_copyright": true,
-          "show_powered_by": true,
-          "align_copyright": "right"
-        },
-        "disabled": null
-      }
-    }
-  },
   "variations": {
-    "default": {
+    "kylie": {
+      "accent_foreground_color": "#FFFFFF",
+      "link_color": "#395DB8",
+      "primary_background_color": "#FFFFFF",
+      "primary_foreground_color": "#0C2747",
+      "primary_color": "#395DB8",
+      "heading_font": "source-sans-pro",
+      "body_font": "source-sans-pro",
       "sections": {
         "header": {
           "type": "header",
@@ -71,8 +39,70 @@
           ],
           "settings": {
             "show_copyright": true,
-            "show_powered_by": true,
-            "align_copyright": "right"
+            "privacy_policy_link_text": "Privacy policy"
+          },
+          "disabled": null
+        }
+      }
+    },
+    "torque": {
+      "accent_foreground_color": "#131313",
+      "link_color": "#F7D041",
+      "primary_background_color": "#FFFFFF",
+      "primary_foreground_color": "#0E0702",
+      "primary_color": "#F7D041",
+      "heading_font": "roboto-condensed",
+      "body_font": "noto-sans",
+      "sections": {
+        "header": {
+          "type": "header",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "menu": "main-menu",
+            "logo": "booqable://assets/logo.png",
+            "background_color": "",
+            "foreground_color": "",
+            "search_placeholder": "What are you looking for?"
+          },
+          "disabled": null
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu": {
+              "type": "menu",
+              "settings": {
+                "align": "center",
+                "menu": "main-menu"
+              },
+              "disabled": null
+            },
+            "socials": {
+              "type": "socials",
+              "settings": {
+                "align": "center",
+                "size": "sm",
+                "spacing": "lg"
+              },
+              "disabled": null
+            },
+            "payment-methods": {
+              "type": "payment-methods",
+              "settings": {
+                "align": "right"
+              },
+              "disabled": null
+            }
+          },
+          "block_order": [
+            "menu",
+            "socials",
+            "payment-methods"
+          ],
+          "settings": {
+            "show_copyright": true,
+            "privacy_policy_link_text": "Privacy policy"
           },
           "disabled": null
         }

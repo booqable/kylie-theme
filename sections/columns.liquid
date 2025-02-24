@@ -7,20 +7,20 @@
 {% endif %}
 
 <style>
-  .columns__title--position-{{ section.settings.title_position }} {
+  #section-{{ section.key }} .columns__title--position-{{ section.settings.title_position }} {
     text-align: {{ section.settings.title_position }};
   }
-  .columns__container--alignment {
+  #section-{{ section.key }} .columns__container--alignment {
     text-align: {{ section.settings.content_align }};
   }
   {% if section.settings.content_color != blank %}
-  .columns .post__text {
+  #section-{{ section.key }}.columns .post__text {
     --color-primary-foreground: {{ section.settings.content_color }};
   }
   {% endif %}
   {% for block in section.blocks %}
     .columns-{{ section.key }} #{{ block.id }} .bq-button {
-      color: var(--color-primary-foreground);
+      color: var(--color-link);
 
       {% if block.settings.use_solid_button %}
         background-color: var(--color-accent-background);
@@ -39,7 +39,7 @@
 </style>
 
 <h2 class="columns__title columns__title--size-{{ section.settings.title_size }} columns__title--position-{{ section.settings.title_position }}">
-  {{ section.settings.title }}
+  {{ section.settings.title_section }}
 </h2>
 
 <div class="columns-{{ section.key }} columns__container columns__container--alignment columns__container--count-{{ section.settings.columns_count }}">
@@ -71,13 +71,13 @@
           }}
         {% endif %}
         <div class="post__content">
-          {% if block.settings.title %}
+          {% if block.settings.title != blank %}
             <h3 class="post__title post__title--size-{{ section.settings.heading_size }}">{{ block.settings.title }}</h3>
           {% endif %}
-          {% if block.settings.text %}
+          {% if block.settings.text != blank %}
             <div class="bq-content rx-content post__text">{{ block.settings.text }}</div>
           {% endif %}
-          {% if block.settings.button_url %}
+          {% if block.settings.button_url != blank %}
             <a class="bq-button bq-button--size-{{ block.settings.button_size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.button_url }}" {% if block.settings.use_new_tab %}target="_blank"{% endif %}>
               {{ block.settings.button }}
             </a>
@@ -115,7 +115,7 @@
     },
     {
       "type": "text",
-      "id": "title",
+      "id": "title_section",
       "label": "Title"
     },
     {
@@ -188,15 +188,15 @@
       "label": "Content alignment",
       "options": [
         {
-          "value": "justify",
-          "label": "Justify"
+          "value": "left",
+          "label": "Left"
         },
         {
           "value": "center",
           "label": "Center"
         }
       ],
-      "default": "justify"
+      "default": "left"
     },
     {
       "type": "color",
