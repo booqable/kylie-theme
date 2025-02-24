@@ -6,12 +6,6 @@
     #section-{{ section.key }} .accordion__top-text--position-{{ section.settings.title_position }} {
       text-align: {{ section.settings.title_position }};
     }
-
-    {% if section.settings.text_color != blank %}
-      #section-{{ section.key }} .accordion__description {
-        color: {{ section.settings.text_color }};
-      }
-    {% endif %}
   </style>
 
   <div class="accordion__wrapper">
@@ -103,12 +97,6 @@
           }
         ],
         "default": "center"
-      },
-      {
-        "type": "color",
-        "id": "text_color",
-        "label": "Text color",
-        "default": "#131313"
       },
       {
         "type": "select",
