@@ -92,7 +92,6 @@
       "settings": {
         "behavior": "multiple",
         "description": "<p>Add some text to tell a story, explain how renting with your company works, or to <br>let your potential customers know about the value you offer. Use this space <br>however you like and fill it with whatever you want.</p>",
-        "text_color": "",
         "text_position": "center",
         "title": "Everything you wondered, and more",
         "title_size": "lg"
