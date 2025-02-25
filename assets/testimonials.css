@@ -15,7 +15,7 @@
   font-size: 24px;
   line-height: 1.3333;
 
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semibold);
 }
 
 .testimonials__title--size-md {
@@ -69,6 +69,8 @@
 
 .testimonials__cite {
   font-style: normal;
+
+  color: var(--color-link);
 }
 
 .testimonials__small {

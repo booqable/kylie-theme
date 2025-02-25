@@ -21,7 +21,7 @@
         "overlay_enabled": true,
         "overlay_color": "#D9E3F0",
         "vertical_spacing": "sm",
-        "overlay_opacity": "40",
+        "overlay_opacity": 40,
         "content_align": "center",
         "background_image": "booqable://assets/background-abstract.jpeg"
       },
