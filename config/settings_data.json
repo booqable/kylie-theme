@@ -45,6 +45,69 @@
         }
       }
     },
+    "reverb": {
+      "accent_foreground_color": "#FFFFFF",
+      "link_color": "#D86328",
+      "primary_background_color": "#FFFFFF",
+      "primary_foreground_color": "#131313",
+      "primary_color": "#D86328",
+      "heading_font": "oswald",
+      "body_font": "roboto",
+      "sections": {
+        "header": {
+          "type": "header",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "menu": "main-menu",
+            "logo": "booqable://assets/logo.png",
+            "background_color": "",
+            "foreground_color": "",
+            "search_placeholder": "What are you looking for?"
+          },
+          "disabled": null
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu": {
+              "type": "menu",
+              "settings": {
+                "align": "center",
+                "menu": "main-menu"
+              },
+              "disabled": null
+            },
+            "socials": {
+              "type": "socials",
+              "settings": {
+                "align": "center",
+                "size": "sm",
+                "spacing": "lg"
+              },
+              "disabled": null
+            },
+            "payment-methods": {
+              "type": "payment-methods",
+              "settings": {
+                "align": "right"
+              },
+              "disabled": null
+            }
+          },
+          "block_order": [
+            "menu",
+            "socials",
+            "payment-methods"
+          ],
+          "settings": {
+            "show_copyright": true,
+            "privacy_policy_link_text": "Privacy policy"
+          },
+          "disabled": null
+        }
+      }
+    },
     "torque": {
       "accent_foreground_color": "#131313",
       "link_color": "#F7D041",
