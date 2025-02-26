@@ -108,6 +108,69 @@
         }
       }
     },
+    "myst": {
+      "accent_foreground_color": "#181717",
+      "link_color": "#FD9909",
+      "primary_background_color": "#FFFFFF",
+      "primary_foreground_color": "#181717",
+      "primary_color": "#FD9909",
+      "heading_font": "bokor",
+      "body_font": "work-sans",
+      "sections": {
+        "header": {
+          "type": "header",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "menu": "main-menu",
+            "logo": "booqable://assets/logo.png",
+            "background_color": "",
+            "foreground_color": "",
+            "search_placeholder": "What are you looking for?"
+          },
+          "disabled": null
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu": {
+              "type": "menu",
+              "settings": {
+                "align": "center",
+                "menu": "main-menu"
+              },
+              "disabled": null
+            },
+            "socials": {
+              "type": "socials",
+              "settings": {
+                "align": "center",
+                "size": "sm",
+                "spacing": "lg"
+              },
+              "disabled": null
+            },
+            "payment-methods": {
+              "type": "payment-methods",
+              "settings": {
+                "align": "right"
+              },
+              "disabled": null
+            }
+          },
+          "block_order": [
+            "menu",
+            "socials",
+            "payment-methods"
+          ],
+          "settings": {
+            "show_copyright": true,
+            "privacy_policy_link_text": "Privacy policy"
+          },
+          "disabled": null
+        }
+      }
+    },
     "reverb": {
       "accent_foreground_color": "#FFFFFF",
       "link_color": "#D86328",

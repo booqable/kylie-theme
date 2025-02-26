@@ -1,0 +1,37 @@
+{
+  "name": "Collection",
+  "sections": {
+    "collection-page": {
+      "type": "collection-page",
+      "blocks": {
+        "sidebar-menu": {
+          "type": "sidebar-menu",
+          "settings": {
+            "menu": "main-menu"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": ["sidebar-menu"],
+      "settings": {
+        "button_label": "Browse all products",
+        "heading": "No products",
+        "show_collection_name": true,
+        "sidebar_toggle": "Menu",
+        "text": "Unfortunately, we couldn’t find any products in this collection."
+      },
+      "disabled": null
+    },
+    "date-picker": {
+      "type": "date-picker",
+      "blocks": {},
+      "block_order": [],
+      "settings": {},
+      "disabled": null
+    }
+  },
+  "order": [
+    "date-picker",
+    "collection-page"
+  ]
+}
