@@ -1,0 +1,651 @@
+{
+  "name": "Home",
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "color": "#FFFFFF",
+            "size": "xl",
+            "text": "RENT HIGH-QUALITY SOUND PA’S AND LIGHTS TODAY"
+          },
+          "disabled": null
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "color": "#8C8F90",
+            "size": "sm",
+            "text": "From concerts to corporate events, we provide top-quality sound systems, speakers, and <br>microphones to ensure your audience hears every word and beat perfectly."
+          },
+          "disabled": null
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Check our products",
+            "url": "booqable://collections/all",
+            "use_solid_button": true
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "background_image": "booqable://assets/image-hero.jpeg",
+        "content_align": "left",
+        "fluid_width": true,
+        "overlay_color": "#000000",
+        "overlay_enabled": true,
+        "overlay_opacity": "50",
+        "vertical_spacing": "lg"
+      },
+      "disabled": null
+    },
+    "date-picker": {
+      "type": "date-picker",
+      "blocks": {},
+      "block_order": [],
+      "settings": {},
+      "disabled": null
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "sm",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_784525": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          },
+          "disabled": null
+        },
+        "collection_784526": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          },
+          "disabled": null
+        },
+        "collection_784527": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          },
+          "disabled": null
+        },
+        "collection_784528": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_784525",
+        "collection_784526",
+        "collection_784527",
+        "collection_784528"
+      ],
+      "settings": {
+        "enable_show_more": true,
+        "show_more_label": "Browse all collections",
+        "title": "SHOP BY COLLECTION",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_988332": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "collection": "all-products",
+        "infinite_scroll": false,
+        "paginate_per": 12,
+        "snap": "center",
+        "title": "FEATURED PRODUCTS",
+        "title_size": "lg",
+        "use_carousel": false,
+        "use_pagination": true
+      },
+      "disabled": null
+    },
+    "spacer_868256": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "image-banner_478138": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "color": "#FFFFFF",
+            "size": "lg",
+            "text": "GET A QUOTE NOW"
+          },
+          "disabled": null
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Contact us",
+            "use_solid_button": true
+          },
+          "disabled": null
+        },
+        "button_159563": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Call us",
+            "use_solid_button": true
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading",
+        "button",
+        "button_159563"
+      ],
+      "settings": {
+        "background_image": "booqable://assets/image-hero-2.jpeg",
+        "content_align": "center",
+        "fluid_width": false,
+        "overlay_color": "#000000",
+        "overlay_enabled": true,
+        "overlay_opacity": "40",
+        "vertical_spacing": "md"
+      },
+      "disabled": null
+    },
+    "spacer_784256": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "tiles": {
+      "type": "tiles",
+      "blocks": {
+        "item_965477": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "Free delivery",
+            "text": "Free delivery for all orders above $100"
+          },
+          "disabled": null
+        },
+        "item_965478": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "Top-Notch support",
+            "text": "Chat with us if you’ve any questions"
+          },
+          "disabled": null
+        },
+        "item_965479": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "20 years of experience",
+            "text": "We know how to do it"
+          },
+          "disabled": null
+        },
+        "item_965480": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "Trusted provider",
+            "text": "Experience with many high profile events"
+          },
+          "disabled": null
+        },
+        "item_965481": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "Legendary brands",
+            "text": "Bose, Yamaha, RCF & more."
+          },
+          "disabled": null
+        },
+        "item_965482": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "Value-for-money solutions",
+            "text": "From DIY to full production"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_965477",
+        "item_965478",
+        "item_965479",
+        "item_965480",
+        "item_965481",
+        "item_965482"
+      ],
+      "settings": {
+        "button_label": "",
+        "button_size": "lg",
+        "button_url": "",
+        "description": "",
+        "heading_size": "sm",
+        "icon_color": "#00AD6F",
+        "title_position": "center",
+        "title_section": "SERVICES",
+        "title_size": "md"
+      },
+      "disabled": null
+    },
+    "spacer_784258": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "logos": {
+      "type": "logos",
+      "blocks": {
+        "logo_455765": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-logo-1.webp"
+          },
+          "disabled": null
+        },
+        "logo_455766": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-logo-2.webp"
+          },
+          "disabled": null
+        },
+        "logo_455767": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-logo-3.webp"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "logo_455765",
+        "logo_455766",
+        "logo_455767"
+      ],
+      "settings": {
+        "title": "WE WORK WITH",
+        "title_position": "center",
+        "title_size": "sm"
+      },
+      "disabled": null
+    },
+    "spacer_784259": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_741320": {
+          "type": "testimonial",
+          "settings": {
+            "description": "The sound quality was incredible! We rented a full PA system for our wedding, and everything worked perfectly",
+            "name": "Sarah & Mike T.",
+            "position": "Newlyweds",
+            "stars": 5
+          },
+          "disabled": null
+        },
+        "testimonial_741321": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Fantastic service and top-tier equipment. The team even helped us set everything up. Highly recommend!",
+            "name": "Jason M.",
+            "position": "Event Coordinator",
+            "stars": 5
+          },
+          "disabled": null
+        },
+        "testimonial_741322": {
+          "type": "testimonial",
+          "settings": {
+            "description": "We needed microphones and speakers for a corporate seminar, and the rental process was seamless. Great experience!",
+            "name": "Laura T.",
+            "position": "Corporate Event Planner",
+            "stars": 5
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_741320",
+        "testimonial_741321",
+        "testimonial_741322"
+      ],
+      "settings": {
+        "name_color": "#D86328",
+        "star_color": "#00AD6F",
+        "title": "WHAT OUR CUSTOMERS SAY",
+        "title_position": "left",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_784257": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "columns": {
+      "type": "columns",
+      "blocks": {
+        "column": {
+          "type": "column",
+          "settings": {
+            "button": "Read more",
+            "button_size": "lg",
+            "button_url": "booqable://root/",
+            "image": "booqable://assets/image-columns-1.jpg",
+            "image_border_radius": true,
+            "text": "<p>Not sure what sound equipment you need? This guide breaks down different audio setups for events of all sizes.</p>",
+            "title": "HOW TO CHOOSE THE BEST SOUND EQUIPMENT FOR YOUR EVENT",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_242972": {
+          "type": "column",
+          "settings": {
+            "button": "Read more",
+            "button_size": "lg",
+            "button_url": "booqable://root/",
+            "image": "booqable://assets/image-columns-2.jpg",
+            "image_border_radius": true,
+            "text": "<p>Find out when it makes sense to rent audio gear and set it up yourself—or when you should call in an expert.</p>",
+            "title": "DIY SOUND SETUP VS. HIRING A PRO: WHAT'S BEST FOR YOUR EVENT",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_535502": {
+          "type": "column",
+          "settings": {
+            "button": "Read more",
+            "button_size": "lg",
+            "button_url": "booqable://root/",
+            "image": "booqable://assets/image-columns-3.jpg",
+            "image_border_radius": true,
+            "text": "<p>Don’t let poor audio ruin your event! Learn how to troubleshoot common sound issues before they happen.</p>",
+            "title": "5 COMMON SOUND ISSUES AT EVENTS (AND HOW TO AVOID THEM)",
+            "use_solid_button": false
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "column",
+        "column_242972",
+        "column_535502"
+      ],
+      "settings": {
+        "content_align": "left",
+        "content_color": "#8C8F90",
+        "columns_count": 3,
+        "heading_size": "lg",
+        "title_section": "FROM OUR EXPERTS",
+        "title_position": "left",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_784260": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "columns_345612": {
+      "type": "columns",
+      "blocks": {
+        "column_242242": {
+          "type": "column",
+          "settings": {
+            "button": "",
+            "button_size": "md",
+            "button_url": "",
+            "image": "",
+            "image_border_radius": true,
+            "text": "<p>0000 Long lane, Unit 111 <br>Amsterdam NL</p>",
+            "title": "Location",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_242243": {
+          "type": "column",
+          "settings": {
+            "button": "",
+            "button_size": "md",
+            "button_url": "",
+            "image": "",
+            "image_border_radius": true,
+            "text": "<p>By appointment only</p>",
+            "title": "Showroom & Consultations",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_242244": {
+          "type": "column",
+          "settings": {
+            "button": "",
+            "button_size": "md",
+            "button_url": "",
+            "image": "",
+            "image_border_radius": true,
+            "text": "<p>Monday - Friday, 9:00 AM - 5:00 PM <br>For quotes and general inquiries</p>",
+            "title": "Phone availability",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_242245": {
+          "type": "column",
+          "settings": {
+            "button": "",
+            "button_size": "md",
+            "button_url": "",
+            "image": "",
+            "image_border_radius": true,
+            "text": "<p>Come pick up from us, or we can deliver to you</p>",
+            "title": "Pickup & Delivery",
+            "use_solid_button": false
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "column_242242",
+        "column_242243",
+        "column_242244",
+        "column_242245"
+      ],
+      "settings": {
+        "content_align": "center",
+        "content_color": "#8C8F90",
+        "columns_count": 2,
+        "heading_size": "sm",
+        "title_section": "VISIT & CONTACT US",
+        "title_position": "center",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_784261": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "image-banner_478139": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_342345": {
+          "type": "heading",
+          "settings": {
+            "size": "lg",
+            "text": "CONTACT US"
+          },
+          "disabled": null
+        },
+        "text_098765": {
+          "type": "text",
+          "settings": {
+            "color": "#131313",
+            "size": "sm",
+            "text": "Need top-quality sound equipment for your next event? <br>We’re here to help! Contact us today for a free quote, rental availability, or expert advice."
+          },
+          "disabled": null
+        },
+        "button_556956": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Email us",
+            "use_solid_button": true
+          },
+          "disabled": null
+        },
+        "button_556957": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Call us",
+            "use_solid_button": true
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading_342345",
+        "text_098765",
+        "button_556956",
+        "button_556957"
+      ],
+      "settings": {
+        "background_color": "#EEEDEB",
+        "content_align": "center",
+        "fluid_width": true,
+        "overlay_color": "#000000",
+        "overlay_enabled": false,
+        "overlay_opacity": "40",
+        "vertical_spacing": "sm"
+      },
+      "disabled": null
+    },
+    "spacer_784262": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "image-banner",
+    "date-picker",
+    "spacer",
+    "collections",
+    "spacer_988332",
+    "products",
+    "spacer_868256",
+    "image-banner_478138",
+    "spacer_784256",
+    "tiles",
+    "spacer_784258",
+    "logos",
+    "spacer_784259",
+    "testimonials",
+    "spacer_784257",
+    "columns",
+    "spacer_784260",
+    "columns_345612",
+    "spacer_784261",
+    "image-banner_478139",
+    "spacer_784262"
+  ]
+}

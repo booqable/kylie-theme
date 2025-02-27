@@ -1,0 +1,65 @@
+{
+  "name": "Product",
+  "sections": {
+    "product-page": {
+      "type": "product-page",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "description_label": "Description",
+        "variation_label": "Variation"
+      },
+      "disabled": null
+    },
+    "date-picker": {
+      "type": "date-picker",
+      "blocks": {},
+      "block_order": [],
+      "settings": {},
+      "disabled": null
+    },
+    "spacer_988332": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "collection": "all-products",
+        "infinite_scroll": true,
+        "paginate_per": 12,
+        "snap": "center",
+        "title": "RECOMENDED PRODUCTS",
+        "title_size": "lg",
+        "use_carousel": true,
+        "use_pagination": true
+      },
+      "disabled": null
+    },
+    "spacer_988333": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "date-picker",
+    "product-page",
+    "spacer_988332",
+    "products",
+    "spacer_988333"
+  ]
+}
