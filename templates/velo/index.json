@@ -1,0 +1,637 @@
+{
+  "name": "Home",
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "color": "#FFFFFF",
+            "size": "xl",
+            "text": "Explore the city with our bikes"
+          },
+          "disabled": null
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "color": "#FFFFFF",
+            "size": "sm",
+            "text": "From city cruisers to mountain bikes, we’ve got the perfect ride for your next adventure. Easy rentals, affordable rates, and hassle-free service!"
+          },
+          "disabled": null
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Check our products",
+            "url": "booqable://collections/all",
+            "use_solid_button": true
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "background_image": "booqable://assets/image-hero.jpg",
+        "content_align": "left",
+        "fluid_width": true,
+        "overlay_color": "#000000",
+        "overlay_enabled": true,
+        "overlay_opacity": "60",
+        "vertical_spacing": "lg"
+      },
+      "disabled": null
+    },
+    "date-picker": {
+      "type": "date-picker",
+      "blocks": {},
+      "block_order": [],
+      "settings": {},
+      "disabled": null
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "sm",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "collection": "all-products",
+        "infinite_scroll": true,
+        "paginate_per": 12,
+        "snap": "center",
+        "title": "Featured products",
+        "title_size": "lg",
+        "use_carousel": true,
+        "use_pagination": true
+      },
+      "disabled": null
+    },
+    "spacer_988332": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_784525": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          },
+          "disabled": null
+        },
+        "collection_784526": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          },
+          "disabled": null
+        },
+        "collection_784527": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          },
+          "disabled": null
+        },
+        "collection_784528": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_784525",
+        "collection_784526",
+        "collection_784527",
+        "collection_784528"
+      ],
+      "settings": {
+        "enable_show_more": true,
+        "show_more_label": "Browse all collections",
+        "title": "Shop by collection",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_868256": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_741320": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Best bike rental experience ever! The process was seamless, and the bike was great. Highly recommend!",
+            "name": "Emily R.",
+            "position": "Tourist",
+            "stars": 5
+          },
+          "disabled": null
+        },
+        "testimonial_741321": {
+          "type": "testimonial",
+          "settings": {
+            "description": "The staff was super friendly and helped us find the perfect bikes for our city tour. Loved the route suggestions!",
+            "name": "Jake M.",
+            "position": "Weekend Explorer",
+            "stars": 5
+          },
+          "disabled": null
+        },
+        "testimonial_741322": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Affordable and convenient. The e-bikes were a game-changer for our sightseeing day!",
+            "name": "Lisa and Tom J.",
+            "position": "Couple on Vacation",
+            "stars": 5
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_741320",
+        "testimonial_741321",
+        "testimonial_741322"
+      ],
+      "settings": {
+        "name_color": "#286ED8",
+        "title": "What our customers say",
+        "title_position": "left",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_784256": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "image-banner_478138": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "color": "#FFFFFF",
+            "size": "lg",
+            "text": "Call to reserve"
+          },
+          "disabled": null
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Contact us",
+            "use_solid_button": true
+          },
+          "disabled": null
+        },
+        "button_159563": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Call us",
+            "use_solid_button": true
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading",
+        "button",
+        "button_159563"
+      ],
+      "settings": {
+        "background_image": "booqable://assets/image-hero-2.jpeg",
+        "content_align": "center",
+        "fluid_width": false,
+        "overlay_color": "#000000",
+        "overlay_enabled": true,
+        "overlay_opacity": "40",
+        "vertical_spacing": "md"
+      },
+      "disabled": null
+    },
+    "spacer_784258": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "tiles": {
+      "type": "tiles",
+      "blocks": {
+        "item_965477": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "Top-quality bikes",
+            "text": "Well-maintained, comfortable, and ready to ride."
+          },
+          "disabled": null
+        },
+        "item_965478": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "Easy booking",
+            "text": "Online, phone, or walk-in reservations available."
+          },
+          "disabled": null
+        },
+        "item_965479": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "Convenient locations",
+            "text": "Pick up your bike at prime spots near popular attractions."
+          },
+          "disabled": null
+        },
+        "item_965480": {
+          "type": "item",
+          "settings": {
+            "icon": "circle-check",
+            "title": "Friendly support",
+            "text": "Expert advice and route recommendations to enhance your ride."
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "item_965477",
+        "item_965478",
+        "item_965479",
+        "item_965480"
+      ],
+      "settings": {
+        "button_label": "More about us",
+        "button_size": "lg",
+        "button_url": "booqable://root/",
+        "description": "Whether you’re looking to explore the city, hit the trails, or cruise along the beach, we have a wide selection of high-quality bikes to fit your needs.",
+        "heading_size": "sm",
+        "icon_color": "#EBA928",
+        "title_section": "Services",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_784257": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "logos": {
+      "type": "logos",
+      "blocks": {
+        "logo_455765": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-logo-1.webp"
+          },
+          "disabled": null
+        },
+        "logo_455766": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-logo-2.webp"
+          },
+          "disabled": null
+        },
+        "logo_455767": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-logo-3.webp"
+          },
+          "disabled": null
+        },
+        "logo_455768": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-logo-4.webp"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "logo_455765",
+        "logo_455766",
+        "logo_455767",
+        "logo_455768"
+      ],
+      "settings": {
+        "title": "Rent bikes from",
+        "title_position": "center",
+        "title_size": "sm"
+      },
+      "disabled": null
+    },
+    "spacer_784259": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "columns": {
+      "type": "columns",
+      "blocks": {
+        "column": {
+          "type": "column",
+          "settings": {
+            "button": "Read more",
+            "button_size": "lg",
+            "button_url": "booqable://root/",
+            "image": "booqable://assets/image-columns-1.jpg",
+            "image_border_radius": true,
+            "text": "<p>Discover breathtaking bike trails and hidden gems perfect for your next cycling adventure.</p>",
+            "title": "Top 5 Scenic Bike Routes to Explore in Gibraltar",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_242972": {
+          "type": "column",
+          "settings": {
+            "button": "Read more",
+            "button_size": "lg",
+            "button_url": "booqable://root/",
+            "image": "booqable://assets/image-columns-2.jpg",
+            "image_border_radius": true,
+            "text": "<p>Not sure whether to go electric or pedal-powered? Check out the pros and cons to help you decide.</p>",
+            "title": "E-Bike vs. Road Bike: Which Should You Rent?",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_535502": {
+          "type": "column",
+          "settings": {
+            "button": "Read more",
+            "button_size": "lg",
+            "button_url": "booqable://root/",
+            "image": "booqable://assets/image-columns-3.jpg",
+            "image_border_radius": true,
+            "text": "<p>A must-read guide for every rider—learn the essential safety tips before you hit the road!</p>",
+            "title": "Safety Tips: How to Stay Safe on the Road & Trails",
+            "use_solid_button": false
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "column",
+        "column_242972",
+        "column_535502"
+      ],
+      "settings": {
+        "columns_count": 3,
+        "content_align": "left",
+        "content_color": "#8C8F90",
+        "heading_size": "lg",
+        "title_position": "left",
+        "title_section": "Guides",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_784260": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "columns_345612": {
+      "type": "columns",
+      "blocks": {
+        "column_242242": {
+          "type": "column",
+          "settings": {
+            "button": "",
+            "button_size": "md",
+            "button_url": "",
+            "image": "",
+            "image_border_radius": true,
+            "text": "<p>0000 Long lane, Unit 111 <br>Amsterdam NL</p>",
+            "title": "Location",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_242243": {
+          "type": "column",
+          "settings": {
+            "button": "",
+            "button_size": "md",
+            "button_url": "",
+            "image": "",
+            "image_border_radius": true,
+            "text": "<p>By appointment only</p>",
+            "title": "Showroom & Consultations",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_242244": {
+          "type": "column",
+          "settings": {
+            "button": "",
+            "button_size": "md",
+            "button_url": "",
+            "image": "",
+            "image_border_radius": true,
+            "text": "<p>Monday - Friday, 9:00 AM - 5:00 PM <br>For quotes and general inquiries</p>",
+            "title": "Phone availability",
+            "use_solid_button": false
+          },
+          "disabled": null
+        },
+        "column_242245": {
+          "type": "column",
+          "settings": {
+            "button": "",
+            "button_size": "md",
+            "button_url": "",
+            "image": "",
+            "image_border_radius": true,
+            "text": "<p>Come pick up from us, or we can deliver to you</p>",
+            "title": "Pickup & Delivery",
+            "use_solid_button": false
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "column_242242",
+        "column_242243",
+        "column_242244",
+        "column_242245"
+      ],
+      "settings": {
+        "columns_count": 2,
+        "content_align": "center",
+        "content_color": "#8C8F90",
+        "heading_size": "sm",
+        "title_position": "center",
+        "title_section": "Visit & contact us",
+        "title_size": "lg"
+      },
+      "disabled": null
+    },
+    "spacer_784261": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    },
+    "image-banner_478139": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_342345": {
+          "type": "heading",
+          "settings": {
+            "size": "lg",
+            "text": "Contact us"
+          },
+          "disabled": null
+        },
+        "text_098765": {
+          "type": "text",
+          "settings": {
+            "color": "#131313",
+            "size": "sm",
+            "text": "Ready to ride? We’re here to help you find the perfect bike <br>for your adventure! Contact us to book your rental or visit us in-store."
+          },
+          "disabled": null
+        },
+        "button_556956": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Email us",
+            "use_solid_button": true
+          },
+          "disabled": null
+        },
+        "button_556957": {
+          "type": "button",
+          "settings": {
+            "size": "lg",
+            "text": "Call us",
+            "use_solid_button": true
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading_342345",
+        "text_098765",
+        "button_556956",
+        "button_556957"
+      ],
+      "settings": {
+        "background_color": "#EEEDEB",
+        "content_align": "center",
+        "fluid_width": true,
+        "overlay_color": "#000000",
+        "overlay_enabled": false,
+        "overlay_opacity": "40",
+        "vertical_spacing": "sm"
+      },
+      "disabled": null
+    },
+    "spacer_784262": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "lg",
+        "use_hr": false
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "image-banner",
+    "date-picker",
+    "spacer",
+    "products",
+    "spacer_988332",
+    "collections",
+    "spacer_868256",
+    "testimonials",
+    "spacer_784256",
+    "image-banner_478138",
+    "spacer_784258",
+    "tiles",
+    "spacer_784257",
+    "logos",
+    "spacer_784259",
+    "columns",
+    "spacer_784260",
+    "columns_345612",
+    "spacer_784261",
+    "image-banner_478139",
+    "spacer_784262"
+  ]
+}
