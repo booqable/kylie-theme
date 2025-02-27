@@ -57,6 +57,7 @@
 
 .testimonials__blockquote .testimonials__quote {
   font-size: inherit;
+  font-family: var(--font-heading);
 
   padding-bottom: 16px;
 }

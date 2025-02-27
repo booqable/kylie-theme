@@ -1,6 +1,9 @@
 {{ "tiles.css" | asset_url | stylesheet_tag }}
 
 <style>
+  #section-{{ section.key }} .tiles__title--position-{{ section.settings.title_position }} {
+    text-align: {{ section.settings.title_position }};
+  }
   {% if section.settings.icon_color != blank %}
     #section-{{ section.key }} .tiles__icon i {
       color: {{ section.settings.icon_color }};
@@ -8,8 +11,14 @@
   {% endif %}
 </style>
 
+{% if section.settings.title_section != blank and section.settings.description == blank and section.settings.button_label == blank or section.settings.title_section != blank and section.settings.description == blank and section.settings.button_url == blank %}
+  <h2 class="tiles__title tiles__title--position-{{ section.settings.title_position }} tiles__title--size-{{ section.settings.title_size }}">
+    {{ section.settings.title_section }}
+  </h2>
+{% endif %}
+
 <div class="tiles__wrapper">
-  {% if section.settings.title_section != blank or section.settings.description != blank or section.settings.button_label != blank and section.settings.button_url != blank %}
+  {% if section.settings.description != blank or section.settings.button_label != blank and section.settings.button_url != blank %}
     <div class="tiles__text-area">
       {% if section.settings.title_section != blank %}
         <h2 class="tiles__title tiles__title--size-{{ section.settings.title_size }}">
@@ -73,6 +82,27 @@
         "id": "title_section",
         "label": "Title",
         "default": "Title"
+      },
+      {
+        "type": "select",
+        "id": "title_position",
+        "label": "Title position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left",
+        "info": "Only applies if there are no description and button"
       },
       {
         "type": "contentEditor",
