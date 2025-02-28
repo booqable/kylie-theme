@@ -41,6 +41,13 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/reverb_preview.png",
     "version": "beta"
   },
+  "summit": {
+    "detail_url": "https://booqable.com/themes/summit/",
+    "market": "Tecnology / IT",
+    "preview_url": "https://summit.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/summit_preview.png",
+    "version": "beta"
+  },
   "torque": {
     "detail_url": "https://booqable.com/themes/torque/",
     "market": "Tools / Construction",
