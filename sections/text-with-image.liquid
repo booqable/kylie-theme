@@ -1,0 +1,216 @@
+{{ "text-with-image.css" | asset_url | stylesheet_tag }}
+
+{%- assign image_position        = section.settings.image_position -%}
+
+{% comment %} CSS variables start {% endcomment %}
+{%- capture variables -%}
+  {%- case image_position -%}
+    {%- when 'left' -%}
+      --flex-direction-mobile: column-reverse;
+      --flex-direction: row-reverse;
+      --justify-content: flex-end;
+      --text-margin-right: auto;
+      --text-margin-left: 0;
+      --text-margin-top: 0;
+      --text-margin-bottom: 34px;
+      --left: -35px;
+      --right: auto;
+      --image-left: 55px;
+      --image-right: auto;
+      --image-left-classic: 16px;
+      --image-right-classic: auto;
+      --bg-image-left: auto;
+      --bg-image-right: 0;
+      --overlay-left: auto;
+      --overlay-right: -15%;
+      --overlay-top: auto;
+      --overlay-bottom: 0;
+      --overlay-rotate: 71.35% 59.5%;
+      --overlay-left-ex: calc(100% - 200px);
+      --overlay-right-ex: auto;
+      --overlay-direction: left;
+      --overlay-transform: translate(-50%, 0);
+    {%- when 'right' -%}
+      --flex-direction-mobile: column;
+      --flex-direction: row;
+      --justify-content: flex-start;
+      --text-margin-right: 0;
+      --text-margin-left: auto;
+      --text-margin-top: 34px;
+      --text-margin-bottom: 0;
+      --left: auto;
+      --right: -35px;
+      --image-left: auto;
+      --image-right: 55px;
+      --image-left-classic: auto;
+      --image-right-classic: 16px;
+      --bg-image-left: 0;
+      --bg-image-right: auto;
+      --overlay-left: -15%;
+      --overlay-right: auto;
+      --overlay-top: 0;
+      --overlay-bottom: auto;
+      --overlay-rotate: 28.65% 40.5%;
+      --overlay-left-ex: auto;
+      --overlay-right-ex: calc(100% - 200px);
+      --overlay-direction: right;
+      --overlay-transform: translate(-40%, 0);
+    {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+<div class="text-image__wrapper" style="{{- variables | escape -}}">
+  <div class="text-image__columns">
+    {% if section.settings.title != blank or section.settings.description != blank or section.settings.button_label != blank and section.settings.button_url != blank %}
+      <div class="text-image__col">
+        {% if section.settings.title != blank %}
+          <h2 class="text-image__title text-image__title--size-{{ section.settings.title_size }}">
+            {{ section.settings.title }}
+          </h2>
+        {% endif %}
+
+        {% if section.settings.description != blank %}
+          <div class="text-image__description text-image__description--size-{{ section.settings.title_size }} bq-content rx-content">
+            {{ section.settings.description }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.button_label != blank and section.settings.button_url != blank %}
+          <div class="text-image__buttons">
+            <a href="{{ section.settings.button_url }}" class="bq-button bq-button--size-{{ section.settings.button_size }} bq-button--solid">
+              {{ section.settings.button_label }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.image.url != blank %}
+      <div class="text-image__col">
+        <div class="text-image__holder">
+          <div class="text-image__image-wrapper">
+            {{ section.settings.image.url | image_tag:
+              loading: 'lazy',
+              widths = '700, 900',
+              sizes = '(max-width: 576px) 900px, 700px',
+              class: 'text-image__image'
+            }}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text with image",
+    "description": "Add text with an optional image to highlight a page or product",
+    "tag": "section",
+    "class": "text-image",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "contentEditor",
+        "id": "description",
+        "label": "Description",
+        "default": "Description"
+      },
+      {
+        "type": "select",
+        "id": "title_size",
+        "label": "Title and text size",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          },
+          {
+            "value": "xl",
+            "label": "Extra Large"
+          }
+        ],
+        "default": "xl"
+      },
+      {
+        "type": "header",
+        "content": "Button"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Label",
+        "default": "Button"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Link",
+        "default": "booqable://root"
+      },
+      {
+        "type": "select",
+        "id": "button_size",
+        "label": "Size",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          }
+        ],
+        "default": "md"
+      },
+      {
+        "type": "header",
+        "content": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image (optional)",
+        "default": "booqable://assets/image-text-image.jpg"
+      },
+      {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      }
+    ]
+  }
+{% endschema %}

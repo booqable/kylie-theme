@@ -1,0 +1,7 @@
+.text-image {
+  max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 var(--horizontal-padding);
+  color: var(--color-primary-foreground);
+}
