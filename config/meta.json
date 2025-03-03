@@ -13,11 +13,11 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/arc_preview.png",
     "version": "beta"
   },
-  "current": {
-    "detail_url": "https://booqable.com/themes/current/",
+  "float": {
+    "detail_url": "https://booqable.com/themes/float/",
     "market": "Boats / Kayaks",
-    "preview_url": "https://current.booqable.store/",
-    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/current_preview.png",
+    "preview_url": "https://float.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/float_preview.png",
     "version": "beta"
   },
   "kylie": {
