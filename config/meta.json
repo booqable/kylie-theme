@@ -68,5 +68,12 @@
     "preview_url": "https://velo.booqable.store/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/velo_preview.png",
     "version": "beta"
+  },
+  "wayfarer": {
+    "detail_url": "https://booqable.com/themes/wayfarer/",
+    "market": "Baby / Child Care",
+    "preview_url": "https://wayfarer.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/wayfarer_preview.png",
+    "version": "beta"
   }
 }
