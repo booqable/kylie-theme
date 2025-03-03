@@ -6,6 +6,13 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/arc_preview.png",
     "version": "beta"
   },
+  "float": {
+    "detail_url": "https://booqable.com/themes/float/",
+    "market": "Boats / Kayaks",
+    "preview_url": "https://float.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/float_preview.png",
+    "version": "beta"
+  },
   "kylie": {
     "detail_url": "https://booqable.com/themes/kylie/",
     "market": "AV / Camera",
