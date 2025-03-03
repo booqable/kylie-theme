@@ -1,4 +1,11 @@
 {
+  "aero": {
+    "detail_url": "https://booqable.com/themes/aero/",
+    "market": "House / Storage",
+    "preview_url": "https://aero.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/aero_preview.png",
+    "version": "beta"
+  },
   "arc": {
     "detail_url": "https://booqable.com/themes/arc/",
     "market": "House / Storage",
@@ -32,6 +39,13 @@
     "market": "Event / Party",
     "preview_url": "https://reverb.booqable.store/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/reverb_preview.png",
+    "version": "beta"
+  },
+  "summit": {
+    "detail_url": "https://booqable.com/themes/summit/",
+    "market": "Tecnology / IT",
+    "preview_url": "https://summit.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/summit_preview.png",
     "version": "beta"
   },
   "torque": {
