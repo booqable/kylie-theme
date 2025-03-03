@@ -126,7 +126,7 @@
         }
       }
     },
-    "current": {
+    "float": {
       "accent_foreground_color": "#292827",
       "link_color": "#99D828",
       "primary_background_color": "#FFFFFF",
