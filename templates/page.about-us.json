@@ -1,0 +1,21 @@
+{
+  "name": "About us",
+  "sections": {
+    "text-with-image": {
+      "type": "text-with-image",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "Get in touch",
+        "button_size": "lg",
+        "description": "Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have perfected the art of translating treasured fantasies into a reality of elegance. element symbolises the pinnacle of luxury, where love and beauty are harmoniously intertwined.",
+        "title": "Our story",
+        "title_size": "lg"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "text-with-image"
+  ]
+}
