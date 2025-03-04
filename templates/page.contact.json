@@ -28,6 +28,7 @@
         "text"
       ],
       "settings": {
+        "background_image": "booqable://assets/image-background-gray.jpg",
         "button_label": "Send message",
         "content_align": "top",
         "content_justify": "left",
