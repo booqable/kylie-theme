@@ -1,0 +1,70 @@
+{
+  "name": "Contact",
+  "sections": {
+    "form": {
+      "type": "form",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "color": "",
+            "size": "lg",
+            "text": "Get in touch"
+          },
+          "disabled": null
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "color": "",
+            "size": "lg",
+            "text": "Tell something about your company, describe what you do and what makes you unique."
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "background_image": "booqable://assets/image-background-gray.jpg",
+        "button_label": "Send message",
+        "content_align": "top",
+        "content_justify": "left",
+        "placement": "right",
+        "title": "Send us a message",
+        "vertical_spacing": "sm"
+      },
+      "disabled": null
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "size": "md"
+      },
+      "disabled": null
+    },
+    "text-with-image": {
+      "type": "text-with-image",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "",
+        "button_size": "lg",
+        "description": "<p><b>Address</b></p><p>89 Lake View Ave. Fairborn, <br>OH 45324</p><p><b>Contact</b></p><p>Email: <a href=\"mailto: fakeemail@example.com\">fakeemail@example.com</a> <br>Phone: <a href=\"tel: +103216549870\">032 1654 9870</a></p>",
+        "image_position": "left",
+        "title": "Contact information",
+        "title_size": "md"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "form",
+    "text-with-image",
+    "spacer"
+  ]
+}
