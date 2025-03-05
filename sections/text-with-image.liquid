@@ -1,0 +1,149 @@
+{{ "text-with-image.css" | asset_url | stylesheet_tag }}
+
+<div class="text-image__wrapper">
+  <div class="text-image__columns text-image__columns--image-{{ section.settings.image_position }}-side">
+    {% if section.settings.title != blank or section.settings.description != blank or section.settings.button_label != blank and section.settings.button_url != blank %}
+      <div class="text-image__col text-image__col--text">
+        {% if section.settings.title != blank %}
+          <h2 class="text-image__title text-image__title--size-{{ section.settings.title_size }}">
+            {{ section.settings.title }}
+          </h2>
+        {% endif %}
+
+        {% if section.settings.description != blank %}
+          <div class="text-image__description text-image__description--size-{{ section.settings.title_size }} bq-content rx-content">
+            {{ section.settings.description }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.button_label != blank and section.settings.button_url != blank %}
+          <div class="text-image__buttons">
+            <a href="{{ section.settings.button_url }}" class="bq-button bq-button--size-{{ section.settings.button_size }} bq-button--solid">
+              {{ section.settings.button_label }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.image.url != blank %}
+      <div class="text-image__col text-image__col--image">
+        {{ section.settings.image.url | image_tag:
+          loading: 'lazy',
+          class: 'text-image__image',
+          sizes: '(max-width: 576px) 700px, 900px',
+          widths: '700, 900'
+        }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text with image",
+    "description": "Add text with an optional image to highlight a page or product",
+    "tag": "section",
+    "class": "text-image",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "contentEditor",
+        "id": "description",
+        "label": "Description",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      },
+      {
+        "type": "select",
+        "id": "title_size",
+        "label": "Title and text size",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          }
+        ],
+        "default": "lg"
+      },
+      {
+        "type": "header",
+        "content": "Button"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Label",
+        "default": "Button"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Link",
+        "default": "booqable://root"
+      },
+      {
+        "type": "select",
+        "id": "button_size",
+        "label": "Size",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          }
+        ],
+        "default": "md"
+      },
+      {
+        "type": "header",
+        "content": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "default": "booqable://assets/image-lights.jpg"
+      },
+      {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "right"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,124 @@
+.text-image {
+  max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px var(--horizontal-padding);
+  color: var(--color-primary-foreground);
+}
+
+.text-image__title {
+  color: var(--color-primary-foreground);
+
+  margin-bottom: 28px;
+}
+
+.text-image__title:only-child {
+  margin-bottom: 0;
+}
+
+.text-image__title--size-sm {
+  font-size: 24px;
+  line-height: 1.3333;
+
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-image__title--size-md {
+  font-size: 36px;
+  line-height: 1.25;
+
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-image__title--size-lg {
+  font-size: 44px;
+  line-height: 1.2;
+
+  font-weight: var(--font-weight-bold);
+}
+
+.text-image__description {
+  margin-bottom: 30px;
+
+  color: var(--color-primary-foreground-lightened);
+}
+
+.text-image__description:only-child {
+  margin-bottom: 0;
+}
+
+.text-image__description.bq-content {
+  font-family: var(--font-body);
+}
+
+.text-image__description--size-sm.bq-content {
+  font-size: 14px;
+}
+
+.text-image__description--size-md.bq-content {
+  font-size: 16px;
+}
+
+.text-image__description--size-lg.bq-content {
+  font-size: 20px;
+}
+
+.text-image__description.bq-content p {
+  font-size: inherit;
+}
+
+.text-image .bq-button {
+  background-color: var(--color-accent-background);
+  color: var(--color-accent-foreground);
+}
+
+.text-image__columns {
+  display: grid;
+}
+
+.text-image__columns:not(:has(.text-image__col:only-child)) {
+  gap: 32px;
+}
+
+.text-image__columns--image-left-side {
+  grid-template-areas: "image" "text";
+}
+
+.text-image__columns--image-right-side {
+  grid-template-areas: "text" "image";
+}
+
+.text-image__col--text {
+  grid-area: text;
+}
+
+.text-image__col--image {
+  grid-area: image;
+  text-align: center;
+}
+
+.text-image__image {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 992px) {
+  .text-image__columns {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    align-items: center;
+  }
+
+  .text-image__columns--image-left-side {
+    grid-template-areas: "image text";
+  }
+
+  .text-image__columns--image-right-side {
+    grid-template-areas: "text image";
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-image__columns:not(:has(.text-image__col:only-child)) {
+    gap: 72px;
+  }
+}

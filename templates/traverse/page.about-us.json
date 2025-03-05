@@ -1,0 +1,60 @@
+{
+  "name": "About us",
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "color": "#FFFFFF",
+            "size": "xl",
+            "text": "About us"
+          },
+          "disabled": null
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "color": "#FFFFFF",
+            "size": "sm",
+            "text": "Tell something about your company, describe what you do and what makes you unique."
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "background_image": "booqable://assets/image-hero.jpeg",
+        "content_align": "center",
+        "fluid_width": true,
+        "overlay_color": "#000000",
+        "overlay_enabled": true,
+        "overlay_opacity": 60,
+        "vertical_spacing": "sm"
+      },
+      "disabled": null
+    },
+    "text-with-image": {
+      "type": "text-with-image",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "Get in touch",
+        "button_size": "lg",
+        "description": "Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have perfected the art of translating treasured fantasies into a reality of elegance. element symbolises the pinnacle of luxury, where love and beauty are harmoniously intertwined.",
+        "image": "booqable://assets/image-text-image.jpg",
+        "title": "Our story",
+        "title_size": "lg"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "image-banner",
+    "text-with-image"
+  ]
+}
