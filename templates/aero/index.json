@@ -18,7 +18,7 @@
           "settings": {
             "color": "#FFFFFF",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. "
+            "text": "Whether you need temporary cooling for an event, office, or home, we offer fast, reliable, and affordable air conditioning rentals to keep you comfortable."
           },
           "disabled": null
         },
@@ -39,7 +39,7 @@
         "button"
       ],
       "settings": {
-        "background_image": "booqable://assets/image-hero.jpeg",
+        "background_image": "booqable://assets/image-hero.webp",
         "content_align": "left",
         "fluid_width": true,
         "overlay_color": "#000000",
@@ -138,9 +138,9 @@
         "testimonial_741320": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Lifesaver! Our office AC broke down, and we had a rental delivered the same day. Great service and super efficient unit.",
+            "name": "Jessica T.",
+            "position": "Office manager",
             "stars": 5
           },
           "disabled": null
@@ -148,9 +148,9 @@
         "testimonial_741321": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Rented an AC unit for my wedding, and it made all the difference. Guests were comfortable, and the process was seamless!",
+            "name": "Mark & Lisa M.",
+            "position": "Newlyweds",
             "stars": 5
           },
           "disabled": null
@@ -158,9 +158,9 @@
         "testimonial_741322": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Needed emergency cooling for our server room, and they came through fast. Highly recommend for any business!",
+            "name": "Daniel P.",
+            "position": "IT specialist",
             "stars": 5
           },
           "disabled": null
@@ -168,9 +168,9 @@
         "testimonial_741323": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "We rented a portable AC unit during a heatwave, and it was a game-changer! Quick delivery, easy setup, and super effective cooling.",
+            "name": "Amanda R.",
+            "position": "Home renter",
             "stars": 5
           },
           "disabled": null
@@ -178,9 +178,9 @@
         "testimonial_741324": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Great experience renting an AC for our corporate event. The team handled everything from delivery to setup, and our guests stayed comfortable all night.",
+            "name": "James L.",
+            "position": "Event planner",
             "stars": 5
           },
           "disabled": null
@@ -188,9 +188,9 @@
         "testimonial_741325": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Fast service and excellent customer support! Our warehouse needed temporary cooling, and the rental unit worked perfectly. Will definitely use again.",
+            "name": "Chris M.",
+            "position": "Warehouse manager",
             "stars": 5
           },
           "disabled": null
@@ -231,7 +231,7 @@
           "settings": {
             "color": "#FFFFFF",
             "size": "lg",
-            "text": "We serve your day"
+            "text": "Get a Free Quote | Browse AC Units | Call to Rent"
           },
           "disabled": null
         },
@@ -260,7 +260,7 @@
         "button_159563"
       ],
       "settings": {
-        "background_image": "booqable://assets/image-hero-2.jpeg",
+        "background_image": "booqable://assets/image-hero-2.webp",
         "content_align": "center",
         "fluid_width": false,
         "overlay_color": "#000000",
@@ -287,8 +287,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Free delivery",
-            "text": "Free delivery for all orders above $100"
+            "title": "Portable Air Conditioners",
+            "text": "Perfect for homes, offices, and small spaces"
           },
           "disabled": null
         },
@@ -296,8 +296,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "20 years of experience",
-            "text": "We know how to do it"
+            "title": "Commercial AC Units",
+            "text": "High-capacity cooling for large spaces."
           },
           "disabled": null
         },
@@ -305,8 +305,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Trusted provider",
-            "text": "Experience with many high profile events"
+            "title": "Event Cooling Solutions",
+            "text": "Keep guests comfortable at weddings, festivals, and conferences."
           },
           "disabled": null
         },
@@ -314,8 +314,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Value-for-money solutions",
-            "text": "From DIY to full production"
+            "title": "Emergency Cooling",
+            "text": "Fast rentals for server rooms, medical facilities, and urgent needs."
           },
           "disabled": null
         }
@@ -330,7 +330,7 @@
         "button_label": "More about us",
         "button_size": "lg",
         "button_url": "booqable://root/",
-        "description": "Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have.",
+        "description": "We provide <b>high-performance air conditioning rentals</b> for homes, offices, events, and emergency cooling needs. Our units are <b>efficient, powerful, and easy to install</b>, giving you instant relief from the heat.",
         "heading_size": "sm",
         "icon_color": "#EBA928",
         "title_section": "Services",
@@ -354,35 +354,21 @@
         "logo_455765": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1.png"
+            "image": "booqable://assets/image-partner-logo-1.webp"
           },
           "disabled": null
         },
         "logo_455766": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
+            "image": "booqable://assets/image-partner-logo-2.webp"
           },
           "disabled": null
         },
         "logo_455767": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
-          },
-          "disabled": null
-        },
-        "logo_455768": {
-          "type": "logo",
-          "settings": {
-            "image": "booqable://assets/image-partner-logo-1.png"
-          },
-          "disabled": null
-        },
-        "logo_455769": {
-          "type": "logo",
-          "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-partner-logo-3.webp"
           },
           "disabled": null
         }
@@ -390,12 +376,10 @@
       "block_order": [
         "logo_455765",
         "logo_455766",
-        "logo_455767",
-        "logo_455768",
-        "logo_455769"
+        "logo_455767"
       ],
       "settings": {
-        "title": "We work for",
+        "title": "Rent from trusted brands",
         "title_position": "center",
         "title_size": "sm"
       },
@@ -420,10 +404,10 @@
             "button": "Read more",
             "button_size": "lg",
             "button_url": "booqable://root/",
-            "image": "booqable://assets/image-columns-1.jpeg",
+            "image": "booqable://assets/image-hero.webp",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "Prevent maintenance with these tips",
+            "text": "<p>Portable, window, or industrial AC? Find out which unit best suits your needs.</p>",
+            "title": "How to Choose the Right Air Conditioner",
             "use_solid_button": false
           },
           "disabled": null
@@ -434,10 +418,10 @@
             "button": "Read more",
             "button_size": "lg",
             "button_url": "booqable://root/",
-            "image": "booqable://assets/image-columns-2.jpeg",
+            "image": "booqable://assets/image-hero-2.webp",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "The best settings for a hot day",
+            "text": "<p>Avoid costly purchases—learn why renting an air conditioner is a cost-effective solution.</p>",
+            "title": "Why Renting is a Smart Choice for Businesses",
             "use_solid_button": false
           },
           "disabled": null
@@ -448,10 +432,10 @@
             "button": "Read more",
             "button_size": "lg",
             "button_url": "booqable://root/",
-            "image": "booqable://assets/image-columns-3.jpeg",
+            "image": "booqable://assets/image-columns-3.webp",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "How to use an airco in the bedroom?",
+            "text": "<p>Make the most of your AC rental with these easy energy-saving tricks.</p>",
+            "title": "5 Tips to Maximize Your Rental Air Conditioner",
             "use_solid_button": false
           },
           "disabled": null
@@ -587,7 +571,7 @@
           "settings": {
             "color": "",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "Need to cool down fast? We’ve got you covered! Contact us today <br>for expert advice, pricing, and rental availability."
           },
           "disabled": null
         },

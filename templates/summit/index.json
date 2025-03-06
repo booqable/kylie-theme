@@ -9,7 +9,7 @@
           "settings": {
             "color": "",
             "size": "xl",
-            "text": "Quick & Easy Payment Terminal Rentals"
+            "text": "Easy Payment Terminal Rentals"
           },
           "disabled": null
         },
@@ -18,7 +18,7 @@
           "settings": {
             "color": "",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. "
+            "text": "From small businesses to large events, we provide reliable and affordable payment <br>terminal rentals to keep your transactions seamless and secure."
           },
           "disabled": null
         },
@@ -99,8 +99,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Free delivery",
-            "text": "Free delivery for all orders above $100"
+            "title": "Fast & Secure Payments",
+            "text": "Process transactions in seconds with PCI-compliant devices."
           },
           "disabled": null
         },
@@ -108,8 +108,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "20 years of experience",
-            "text": "We know how to do it"
+            "title": "Short & Long-Term Rentals",
+            "text": "Flexible rental plans to fit your business needs."
           },
           "disabled": null
         },
@@ -117,8 +117,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Trusted provider",
-            "text": "Experience with many high profile events"
+            "title": "Easy Setup & 24/7 Support",
+            "text": "Quick plug-and-play devices with expert assistance."
           },
           "disabled": null
         },
@@ -126,8 +126,8 @@
           "type": "item",
           "settings": {
             "icon": "circle-check",
-            "title": "Value-for-money solutions",
-            "text": "From DIY to full production"
+            "title": "Contactless & EMV Chip Enabled",
+            "text": "Accept all modern payment methods securely."
           },
           "disabled": null
         }
@@ -142,7 +142,7 @@
         "button_label": "More about us",
         "button_size": "lg",
         "button_url": "booqable://root/",
-        "description": "Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have.",
+        "description": "Whether you need a short-term solution or a flexible rental plan, our devices ensure <b>fast, secure, and hassle-free transactions</b> for you and your customers.",
         "heading_size": "sm",
         "icon_color": "#EBA928",
         "title_section": "Services",
@@ -208,7 +208,7 @@
           "settings": {
             "color": "#FFFFFF",
             "size": "lg",
-            "text": "We serve your day"
+            "text": "Get a Free Quote"
           },
           "disabled": null
         },
@@ -263,35 +263,35 @@
         "logo_455765": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1.png"
+            "image": "booqable://assets/image-partner-logo-1.webp"
           },
           "disabled": null
         },
         "logo_455766": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2.png"
+            "image": "booqable://assets/image-partner-logo-2.webp"
           },
           "disabled": null
         },
         "logo_455767": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-partner-logo-3.webp"
           },
           "disabled": null
         },
         "logo_455768": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1.png"
+            "image": "booqable://assets/image-partner-logo-4.webp"
           },
           "disabled": null
         },
         "logo_455769": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3.png"
+            "image": "booqable://assets/image-partner-logo-5.webp"
           },
           "disabled": null
         }
@@ -304,7 +304,7 @@
         "logo_455769"
       ],
       "settings": {
-        "title": "We work for",
+        "title": "Accept payments with",
         "title_position": "center",
         "title_size": "sm"
       },
@@ -326,9 +326,9 @@
         "testimonial_741320": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Rented a mobile card reader for our pop-up store, and it worked flawlessly! Super easy to set up and use.",
+            "name": "James L.",
+            "position": "Small business owner",
             "stars": 5
           },
           "disabled": null
@@ -336,9 +336,9 @@
         "testimonial_741321": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "We needed payment terminals for a weekend trade show, and the service was excellent. Reliable and hassle-free rentals!",
+            "name": "Mark R.",
+            "position": "Event organizer",
             "stars": 5
           },
           "disabled": null
@@ -346,9 +346,9 @@
         "testimonial_741322": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Great experience! The POS rental made handling transactions at our festival seamless. Highly recommend",
+            "name": "Lisa T.",
+            "position": "Vendor coordinator",
             "stars": 5
           },
           "disabled": null
@@ -389,8 +389,8 @@
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-1.jpg",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "Tips for Payment Terminals at Events",
+            "text": "<p>Learn how renting a payment terminal can save costs and increase sales for temporary events or seasonal businesses.</p>",
+            "title": "Why Renting is the Smart Choice for Events",
             "use_solid_button": false
           },
           "disabled": null
@@ -403,8 +403,8 @@
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-2.jpg",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "How to Choose the Right Payment Terminal",
+            "text": "<p>Not sure what to rent? Here’s what to consider when choosing a payment solution for your business.</p>",
+            "title": "The Top Features to Look for in a POS",
             "use_solid_button": false
           },
           "disabled": null
@@ -417,8 +417,8 @@
             "button_url": "booqable://root/",
             "image": "booqable://assets/image-columns-3.jpg",
             "image_border_radius": true,
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>",
-            "title": "The Benefits of Renting Payment Terminals",
+            "text": "<p>Explore the rise of contactless payments and why businesses should adapt to the trend.</p>",
+            "title": "How Contactless is Changing Payments",
             "use_solid_button": false
           },
           "disabled": null
@@ -554,7 +554,7 @@
           "settings": {
             "color": "",
             "size": "sm",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit. Suspendisse varius enim in eros elementum tristique."
+            "text": "Need a reliable payment solution for your business or event? We’re here to help! <br>Contact us today for availability, pricing, and expert recommendations."
           },
           "disabled": null
         },
