@@ -37,7 +37,7 @@
         "button"
       ],
       "settings": {
-        "background_image": "booqable://assets/background-abstract.jpeg",
+        "background_image": "booqable://assets/image-background-placeholder.jpg",
         "content_align": "center",
         "fluid_width": true,
         "overlay_color": "#D9E3F0",

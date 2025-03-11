@@ -23,7 +23,7 @@
         "vertical_spacing": "sm",
         "overlay_opacity": 40,
         "content_align": "center",
-        "background_image": "booqable://assets/background-abstract.jpeg"
+        "background_image": "booqable://assets/image-background-placeholder.jpg"
       },
       "disabled": false
     },
