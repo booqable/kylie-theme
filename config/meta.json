@@ -2,77 +2,77 @@
   "aero": {
     "detail_url": "https://booqable.com/themes/aero/",
     "market": "House / Storage",
-    "preview_url": "https://aero.booqable.store/",
+    "preview_url": "https://aero.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/aero_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "arc": {
     "detail_url": "https://booqable.com/themes/arc/",
-    "market": "House / Storage",
-    "preview_url": "https://arc.booqable.store/",
+    "market": "Event / Party",
+    "preview_url": "https://arc.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/arc_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "float": {
     "detail_url": "https://booqable.com/themes/float/",
     "market": "Boats / Kayaks",
-    "preview_url": "https://float.booqable.store/",
+    "preview_url": "https://float.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/float_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "kylie": {
     "detail_url": "https://booqable.com/themes/kylie/",
     "market": "AV / Camera",
-    "preview_url": "https://kylie.booqable.store/",
+    "preview_url": "https://kylie.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/kylie_preview.png",
     "version": 1
   },
   "myst": {
     "detail_url": "https://booqable.com/themes/myst/",
     "market": "Clothing",
-    "preview_url": "https://myst.booqable.store/",
+    "preview_url": "https://myst.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/myst_preview.png",
     "version": "beta"
   },
   "reverb": {
     "detail_url": "https://booqable.com/themes/reverb/",
     "market": "Event / Party",
-    "preview_url": "https://reverb.booqable.store/",
+    "preview_url": "https://reverb.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/reverb_preview.png",
     "version": "beta"
   },
   "summit": {
     "detail_url": "https://booqable.com/themes/summit/",
     "market": "Tecnology / IT",
-    "preview_url": "https://summit.booqable.store/",
+    "preview_url": "https://summit.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/summit_preview.png",
     "version": "beta"
   },
   "torque": {
     "detail_url": "https://booqable.com/themes/torque/",
     "market": "Tools / Construction",
-    "preview_url": "https://torque.booqable.store/",
+    "preview_url": "https://torque.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/torque_preview.png",
     "version": "beta"
   },
   "traverse": {
     "detail_url": "https://booqable.com/themes/traverse/",
     "market": "Vehicles / Trailers",
-    "preview_url": "https://traverse.booqable.store/",
+    "preview_url": "https://traverse.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/traverse_preview.png",
     "version": "beta"
   },
   "velo": {
     "detail_url": "https://booqable.com/themes/velo/",
     "market": "Sports / Activities",
-    "preview_url": "https://velo.booqable.store/",
+    "preview_url": "https://velo.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/velo_preview.png",
     "version": "beta"
   },
   "wayfarer": {
     "detail_url": "https://booqable.com/themes/wayfarer/",
     "market": "Baby / Child Care",
-    "preview_url": "https://wayfarer.booqable.store/",
+    "preview_url": "https://wayfarer.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/wayfarer_preview.png",
     "version": "beta"
   }
