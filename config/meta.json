@@ -32,48 +32,48 @@
     "market": "Clothing",
     "preview_url": "https://myst.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/myst_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "reverb": {
     "detail_url": "https://booqable.com/themes/reverb/",
-    "market": "Event / Party",
+    "market": "AV / Camera",
     "preview_url": "https://reverb.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/reverb_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "summit": {
     "detail_url": "https://booqable.com/themes/summit/",
-    "market": "Tecnology / IT",
+    "market": "Technology / IT",
     "preview_url": "https://summit.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/summit_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "torque": {
     "detail_url": "https://booqable.com/themes/torque/",
     "market": "Tools / Construction",
     "preview_url": "https://torque.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/torque_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "traverse": {
     "detail_url": "https://booqable.com/themes/traverse/",
     "market": "Vehicles / Trailers",
     "preview_url": "https://traverse.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/traverse_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "velo": {
     "detail_url": "https://booqable.com/themes/velo/",
-    "market": "Sports / Activities",
+    "market": "Bikes / Scooters",
     "preview_url": "https://velo.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/velo_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "wayfarer": {
     "detail_url": "https://booqable.com/themes/wayfarer/",
     "market": "Baby / Child Care",
     "preview_url": "https://wayfarer.booqableshop.com/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/wayfarer_preview.png",
-    "version": "beta"
+    "version": 1
   }
 }
