@@ -47,9 +47,12 @@
                   alt: item.name
                 }}{% endif %}</a>
                 {{ item | product_availability }}
-                <a href="{{ item.url }}">
+                <a class="product__link" href="{{ item.url }}">
                   <h3 class="product__name">{{ item.name }}</h3>
                 </a>
+                {%- if item.excerpt != blank and section.settings.show_excerpt -%}
+                  <div class="product__description">{{- item.excerpt -}}</div>
+                {%- endif -%}
                 {{ item | product_price_label }}
                 {{ item | product_price }}
               </div>
@@ -84,6 +87,12 @@
       "id": "show_collection_name",
       "label": "Show collection name",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "label": "Show description excerpt",
+      "default": false
     },
     {
       "type": "header",

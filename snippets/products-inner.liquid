@@ -20,9 +20,12 @@
         alt: product.name
       }}{% endif %}</a>
       {{ product | product_availability }}
-      <a href="{{ product.url }}">
+      <a class="product__link" href="{{ product.url }}">
         <h3 class="product__name">{{ product.name }}</h3>
       </a>
+      {%- if product.excerpt != blank and section.settings.show_excerpt -%}
+        <div class="product__description">{{- product.excerpt -}}</div>
+      {%- endif -%}
       {{ product | product_price_label }}
       {{ product | product_price }}
     </div>
