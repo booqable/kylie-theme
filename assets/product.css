@@ -3,6 +3,11 @@
   max-width: 196px;
 }
 
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
 .product a {
   text-decoration: none;
 }
@@ -57,6 +62,18 @@
   margin-bottom: 4px;
 
   color: var(--color-primary-foreground);
+}
+
+.product:not(:has(.product__description)) .product__link {
+  flex-grow: 1;
+}
+
+.product .product__description {
+  margin-bottom: 16px;
+  overflow-wrap: anywhere;
+  flex-grow: 1;
+
+  color: var(--color-primary-foreground-lightened);
 }
 
 .product bq-product-availability {

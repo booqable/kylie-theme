@@ -24,9 +24,12 @@
             focal: focal
           }}{% endif %}</a>
           {{ result | product_availability }}
-          <a href="{{ result.url }}">
+          <a class="product__link" href="{{ result.url }}">
             <h3 class="product__name">{{ result.name }}</h3>
           </a>
+          {%- if result.excerpt != blank and section.settings.show_excerpt -%}
+            <div class="product__description">{{- result.excerpt -}}</div>
+          {%- endif -%}
           {{ result | product_price_label }}
           {{ result | product_price }}
         </div>
@@ -44,6 +47,12 @@
   "tag": "section",
   "class": "search",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "label": "Show description excerpt",
+      "default": false
+    },
     {
       "type": "header",
       "content": "Translations"

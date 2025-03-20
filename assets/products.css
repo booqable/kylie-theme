@@ -6,7 +6,7 @@
 }
 
 .products .carousel__inner {
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .products__title {
