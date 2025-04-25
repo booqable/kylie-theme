@@ -26,8 +26,10 @@
       {%- if product.excerpt != blank and section.settings.show_excerpt -%}
         <div class="product__description">{{- product.excerpt -}}</div>
       {%- endif -%}
-      {{ product | product_price_label }}
-      {{ product | product_price }}
+      {%- if product | product_price_label != blank and product | product_price != blank -%}
+        {{ product | product_price_label }}
+        {{ product | product_price }}
+      {%- endif -%}
     </div>
   {% else %}
     <div class="product-cleanstate {% if section.settings.use_carousel %}carousel__item{% endif %}">
