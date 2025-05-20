@@ -31,9 +31,9 @@ const initFocalImages = () => {
 };
 
 const initSearch = () => {
-  const search = document.querySelector("#search");
+  const searchForm = document.querySelector("#search");
   const url = new URL(window.location.href);
-  const input = search.querySelector("input");
+  const input = searchForm.querySelector("input");
 
   if (!!url.searchParams.get("q")) {
     input.value = url.searchParams.get("q");
@@ -51,7 +51,7 @@ const initSearch = () => {
     window.location.href = url.href;
   };
 
-  search.addEventListener("submit", handleSearchSubmit);
+  searchForm.addEventListener("submit", handleSearchSubmit);
 };
 
 const handleSetMobileMenuHeight = () => {
