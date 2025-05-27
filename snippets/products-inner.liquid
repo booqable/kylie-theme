@@ -26,7 +26,7 @@
       {%- if product.excerpt != blank and section.settings.show_excerpt -%}
         <div class="product__description">{{- product.excerpt -}}</div>
       {%- endif -%}
-      {%- if product | product_price_label != blank and product | product_price != blank -%}
+      {%- if product | product_price_label and product | product_price -%}
         {{ product | product_price_label }}
         {{ product | product_price }}
       {%- endif -%}
