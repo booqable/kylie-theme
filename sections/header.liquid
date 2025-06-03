@@ -3,6 +3,10 @@
 
 {% assign app = section.blocks | where: "type", "app" | first -%}
 
+{% if app %}
+  {{ "app.css" | asset_url | stylesheet_tag }}
+{% endif %}
+
 <style>
   {% if section.settings.background_color != blank %}
     .header,

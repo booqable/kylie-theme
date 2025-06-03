@@ -1,0 +1,25 @@
+{%- assign app = section.blocks | where: "type", "app" | first -%}
+
+{%- if app != blank -%}
+  {{ "app.css" | asset_url | stylesheet_tag }}
+
+  <div class="app__wrapper">
+    <div class="app__content">
+      {% render 'app', block: app, section: section %}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "App",
+    "tag": "section",
+    "class": "app",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "@app"
+      }
+    ]
+  }
+{% endschema %}
