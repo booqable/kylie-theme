@@ -289,6 +289,7 @@
 
 .header-search__trigger {
   display: none;
+  cursor: pointer;
 }
 
 .header-search__input-wrapper {
@@ -476,7 +477,7 @@
   }
 }
 
-@media (max-width: 762px) {
+@media (max-width: 991px) {
   .header .header__wrapper--with-menu, .header .header__wrapper--with-mini-cart {
     grid-template-columns: 1fr repeat(2, 50px);
   }
@@ -548,6 +549,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .header-floating-menu__trigger {
+    cursor: pointer;
   }
 
   .header-floating-menu

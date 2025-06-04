@@ -1,0 +1,114 @@
+.app__wrapper {
+  color: var(--color-primary-foreground);
+  background: var(--color-primary-background);
+  max-width: calc(var(--max-width) + var(--horizontal-padding) * 2);
+  width: 100%;
+  margin: 30px auto;
+  padding: 0 var(--horizontal-padding);
+}
+
+.app-desktop {
+  display: none;
+}
+
+.accessibe-widget {
+  justify-content: flex-start !important;
+}
+
+.accessibe-widget .accessibe-widget__wrapper {
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.accessibe-widget .accessibe-widget__label {
+  padding-left: 4px;
+}
+
+.accessibe-widget .accessibe-widget__icon,
+.accessibe-widget .accessibe-widget__label {
+  color: var(--color-primary-foreground) !important;
+}
+
+.accessibe-widget .accessibe-widget__icon path {
+  fill: var(--color-primary-foreground) !important;
+}
+
+.app-mobile .weglot-widget__wrapper {
+  border-radius: var(--border-radius-sm) !important;
+}
+
+.weglot-widget {
+  justify-content: flex-start !important;
+}
+
+.weglot-widget__wrapper .weglot-widget__label {
+  gap: 0px !important;
+}
+
+.weglot-widget__wrapper .weglot-widget__label:has(.weglot-widget__currentlang:not(:empty)) {
+  gap: 5px !important;
+}
+
+.weglot-widget__dropdown {
+  border-radius: var(--border-radius-sm) !important;
+  box-shadow: 0 0 8px var(--color-border) !important;
+}
+
+.weglot-widget__dropdown--up {
+  bottom: calc(100% + 2px) !important;
+  top: auto !important;
+}
+
+.weglot-widget__dropdown--down {
+  bottom: auto !important;
+  top: calc(100% + 2px) !important;
+}
+
+.weglot-widget__item span {
+  white-space: nowrap;
+}
+
+@media (min-width: 992px) {
+  .app-desktop {
+    display: block;
+  }
+
+  .app-mobile {
+    display: none;
+  }
+
+  .app-desktop [data-short-names="true"] {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .accessibe-widget .accessibe-widget__wrapper {
+    justify-content: center;
+    border-radius: var(--border-radius-lg);
+  }
+
+  .app-desktop .weglot-widget__label .weglot-widget__currentlang {
+    font-size: 16px;
+    line-height: 42px !important;
+  }
+
+  .app-desktop .weglot-widget__dropdown--up {
+    bottom: auto !important;
+    top: calc(100% + 2px) !important;
+  }
+
+  .app-desktop .weglot-widget__item {
+    color: var(--color-primary-foreground);
+  }
+}
+
+@media (hover: hover) {
+  .accessibe-widget__wrapper:hover .accessibe-widget__icon,
+  .accessibe-widget__wrapper:hover .accessibe-widget__label,
+  .weglot-widget__wrapper:hover .weglot-widget__label {
+    opacity: 0.6;
+  }
+}
