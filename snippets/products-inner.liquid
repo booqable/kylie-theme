@@ -7,6 +7,8 @@
   {% endcase %}
   {% if product != blank %}
     {% assign image = product.images.first %}
+    {%- assign price = product | product_price -%}
+    {%- assign price_label = product | product_price_label -%}
     {% if settings.use_focal_images %}
       {% assign focal = image.coordinates %}
     {% endif %}
@@ -26,11 +28,9 @@
       {%- if product.excerpt != blank and section.settings.show_excerpt -%}
         <div class="product__description">{{- product.excerpt -}}</div>
       {%- endif -%}
-      {%- assign has_price_label = product | product_price_label -%}
-      {%- assign has_price = product | product_price -%}
-      {%- if has_price_label and has_price -%}
-        {{ product | product_price_label }}
-        {{ product | product_price }}
+      {%- if price and price_label -%}
+        {{ price }}
+        {{ price_label }}
       {%- endif -%}
     </div>
   {% else %}
