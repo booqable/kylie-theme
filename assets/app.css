@@ -11,6 +11,28 @@
   display: none;
 }
 
+.app__preview {
+  height: 200px;
+  border-radius: var(--border-radius-sm);
+  background-image: repeating-linear-gradient(
+    315deg,
+    var(--color-primary-background),
+    var(--color-primary-background) 6px,
+    var(--color-border) 6px,
+    var(--color-border) 7px
+  ) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spacer__preview span {
+  display: block;
+  padding: 8px 12px;
+  background-color: var(--color-primary-background);
+  color: var(--color-primary-foreground);
+}
+
 .accessibe-widget {
   justify-content: flex-start !important;
 }
@@ -88,6 +110,11 @@
   .accessibe-widget .accessibe-widget__wrapper {
     justify-content: center;
     border-radius: var(--border-radius-lg);
+  }
+
+  .app-desktop .accessibe-widget .accessibe-widget__wrapper {
+    padding: 0;
+    width: 40px;
   }
 
   .app-desktop .weglot-widget__label .weglot-widget__currentlang {
