@@ -1,7 +1,7 @@
 {{ "product-page.css" | asset_url | stylesheet_tag }}
 
 <div class="product-gallery">
-  {{ product | product_gallery: 
+  {{ product | product_gallery:
     enable_thumbnails: true,
     enable_controls: true,
     infinite_scroll: true
@@ -10,7 +10,16 @@
 <div class="product-details">
   <div class="product-info">
     <h1 class="product-info__title">{{ product.name }}</h1>
-    
+
+    {% if product.description != blank and section.settings.description_placement == "top" %}
+      <div class="product-description">
+        <p class="product-description__label">{{ section.settings.description_label }}</p>
+        <div class="product-description__content-container bq-content rx-content">
+          {{ product.description }}
+        </div>
+      </div>
+    {% endif %}
+
     <div class="product-button">
       {% if product.variants.size > 1 %}
         <p class="product-info__label">{{ section.settings.variation_label }}</p>
@@ -26,7 +35,7 @@
       {{ product | product_button }}
     </div>
   </div>
-  {% if product.description != blank %}
+  {% if product.description != blank and section.settings.description_placement == "bottom" %}
     <div class="product-description">
       <p class="product-description__label">{{ section.settings.description_label }}</p>
       <div class="product-description__content-container bq-content rx-content">

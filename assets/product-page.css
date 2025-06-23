@@ -108,6 +108,10 @@ bq-product-availability-calendar {
   position: relative;
 }
 
+.product-info__title + .product-description {
+  margin: 32px 0 40px;
+}
+
 .product-description__label {
   font-size: 20px;
   line-height: 28px;
