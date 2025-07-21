@@ -8,7 +8,6 @@
       "settings": {
         "description_label": "Description",
         "description_placement": "bottom",
-        "variation_label": "Variation"
       },
       "disabled": null
     },
