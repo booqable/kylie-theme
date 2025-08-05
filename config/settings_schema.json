@@ -74,10 +74,56 @@
     "name": "Images",
     "settings": [
       {
+        "type": "header",
+        "content": "Product card image settings"
+      },
+      {
+        "type": "select",
+        "id": "product_card_image_fit",
+        "label": "Image fit",
+        "options": [
+          {
+            "value": "cover",
+            "label": "Cover"
+          },
+          {
+            "value": "contain",
+            "label": "Contain"
+          }
+        ],
+        "default": "contain"
+      },
+      {
         "type": "checkbox",
         "id": "use_focal_images",
         "label": "Use focal images",
-        "info": "Display point focused images for products instead of full sized"
+        "info": "Display point focused image instead of full sized. Overwrites the 'Image fit' values."
+      },
+      {
+        "type": "header",
+        "content": "Collection image settings"
+      },
+      {
+        "type": "select",
+        "id": "collection_card_image_fit",
+        "label": "Image fit",
+        "options": [
+          {
+            "value": "cover",
+            "label": "Cover"
+          },
+          {
+            "value": "contain",
+            "label": "Contain"
+          }
+        ],
+        "default": "cover"
+      },
+      {
+        "type": "checkbox",
+        "id": "collection_card_image_overlay",
+        "label": "Show image overlay",
+        "default": true
       }
     ]
   },
