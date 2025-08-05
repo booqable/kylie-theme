@@ -1,7 +1,5 @@
 {{ "product-page.css" | asset_url | stylesheet_tag }}
 
-{%- assign variation_label               = 'store.variant' | user_t | default: section.settings.variation_label -%}
-
 <div class="product-gallery">
   {{ product | product_gallery:
     enable_thumbnails: true,
@@ -24,7 +22,7 @@
 
     <div class="product-button">
       {% if product.variants.size > 1 %}
-        <p class="product-info__label">{{- variation_label -}}</p>
+        <p class="product-info__label">{{ 'store.variant' | user_t }}</p>
       {% endif %}
       {{ product | bundle_items }}
       {{ product | product_variations_select }}
