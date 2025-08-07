@@ -1,6 +1,6 @@
 <style>
   :root {
-    {% if theme_scope == 'local' %}
+    {% if is_local_theme %}
       --color-accent-background: {{ settings.primary_color }};
     {% else %}
       --color-accent-background: {{ branding_color }};
@@ -27,7 +27,7 @@
       --font-body: "{{ settings.body_font.family }}", {{ settings.body_font.fallback_families }};
     {% endif %}
 
-    {% if theme_scope == 'local' %}
+    {% if is_local_theme %}
       --branding-color: {{ settings.primary_color }};
     {% else %}
       --branding-color: {{ branding_color }};
