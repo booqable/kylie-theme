@@ -5,7 +5,26 @@
 <h1 class="search__title">{{ section.settings.search_results_title }} “{{ query }}”</h1>
 {% endif %}
 {% paginate results %}
-  <div class="search-results {% if results_count == 0 %}no-results{% endif %}">
+  {% assign card_image_fit = settings.product_card_image_fit %}
+
+  {% comment %} CSS variables start {% endcomment %}
+  {% capture image_variables %}
+    {% case card_image_fit %}
+      {% when 'cover' %}
+        --object-fit: cover;
+      {% when 'contain' %}
+        --object-fit: contain;
+    {% endcase %}
+  {% endcapture %}
+
+  {% if settings.use_focal_images %}
+    {% capture image_variables %}
+      --object-fit: cover;
+    {% endcapture %}
+  {% endif %}
+  {% comment %} CSS variables end {% endcomment %}
+
+  <div class="search-results{% if results_count == 0 %} no-results{% endif %}"{% if card_image_fit != blank %} style="{{- image_variables | escape -}}"{% endif %}>
     {% if results_count == 0 %}
       {% include "cleanstate" %}
     {% else %}

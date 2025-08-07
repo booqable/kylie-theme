@@ -24,9 +24,28 @@
   <h2 class="products__title products__title--size-{{ section.settings.title_size }}">{{ section.settings.title }}</h2>
 {% endif %}
 {% if data_exists %}
+  {% assign card_image_fit = settings.product_card_image_fit %}
+
+  {% comment %} CSS variables start {% endcomment %}
+  {% capture image_variables %}
+    {% case card_image_fit %}
+      {% when 'cover' %}
+        --object-fit: cover;
+      {% when 'contain' %}
+        --object-fit: contain;
+    {% endcase %}
+  {% endcapture %}
+
+  {% if settings.use_focal_images %}
+    {% capture image_variables %}
+      --object-fit: cover;
+    {% endcapture %}
+  {% endif %}
+  {% comment %} CSS variables end {% endcomment %}
+
   {% if section.settings.use_carousel %}
     <div class="carousel carousel--snap-{{ section.settings.snap }}">
-      <div class="carousel__inner {% if section.settings.infinite_scroll %}infinite-scroll{% endif %}">
+      <div class="carousel__inner {% if section.settings.infinite_scroll %}infinite-scroll{% endif %}"{% if card_image_fit != blank %} style="{{- image_variables | escape -}}"{% endif %}>
         {% include "products-inner" %}
       </div>
       <div class="carousel__controls">
@@ -43,7 +62,7 @@
       {% assign per_page = section.settings.paginate_per | times: 1 %}
       {% assign key = section.key %}
       {% paginate data by per_page page_param: key %}
-        <div class="products__inner">
+        <div class="products__inner"{% if card_image_fit != blank %} style="{{- image_variables | escape -}}"{% endif %}>
           {% include "products-inner" %}
         </div>
         {% if paginate.pages > 1 %}
@@ -51,7 +70,7 @@
         {% endif %}
       {% endpaginate %}
     {% else %}
-      <div class="products__inner">
+      <div class="products__inner"{% if card_image_fit != blank %} style="{{- image_variables | escape -}}"{% endif %}>
         {% include "products-inner" %}
       </div>
     {% endif %}

@@ -11,6 +11,25 @@
 {% if canonical_url contains "/1?" or canonical_url contains "/1#" %}
   {% include "collection-page-preview" %}
 {% else %}
+  {% assign card_image_fit = settings.product_card_image_fit %}
+
+  {% comment %} CSS variables start {% endcomment %}
+  {% capture image_variables %}
+    {% case card_image_fit %}
+      {% when 'cover' %}
+        --object-fit: cover;
+      {% when 'contain' %}
+        --object-fit: contain;
+    {% endcase %}
+  {% endcapture %}
+
+  {% if settings.use_focal_images %}
+    {% capture image_variables %}
+      --object-fit: cover;
+    {% endcapture %}
+  {% endif %}
+  {% comment %} CSS variables end {% endcomment %}
+
   <div class="collection-page__wrapper {% if section.blocks.size > 0 %}collection-page__wrapper--with-sidebar{% endif %}">
     <div class="collection-page__sidebar-navigation">
       {% if section.blocks.size > 0 %}
@@ -31,7 +50,7 @@
       {% if collection.items_count > 0 %}
         {% assign paginate_object = collection.items %}
         {% paginate paginate_object %}
-          <div class="collection-page__items">
+          <div class="collection-page__items"{% if card_image_fit != blank %} style="{{- image_variables | escape -}}"{% endif %}>
             {% for item in paginate_object %}
               {% assign image = item.images.first %}
               {% if settings.use_focal_images %}
