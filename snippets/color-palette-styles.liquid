@@ -1,6 +1,11 @@
 <style>
   :root {
-    --color-accent-background: {% if settings.primary_color != blank %}{{ settings.primary_color }}{% else %}{{ branding_color }}{% endif %};
+    {% if is_local_theme %}
+      --color-accent-background: {{ settings.primary_color }};
+    {% else %}
+      --color-accent-background: {{ branding_color }};
+    {% endif %}
+
     --color-accent-foreground: {{ settings.accent_foreground_color }};
     --color-primary-background: {{ settings.primary_background_color }};
     --color-primary-foreground: {{ settings.primary_foreground_color }};
@@ -22,7 +27,7 @@
       --font-body: "{{ settings.body_font.family }}", {{ settings.body_font.fallback_families }};
     {% endif %}
 
-    {% if settings.primary_color != blank %}
+    {% if is_local_theme %}
       --branding-color: {{ settings.primary_color }};
     {% else %}
       --branding-color: {{ branding_color }};
