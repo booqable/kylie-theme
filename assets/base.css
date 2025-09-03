@@ -45,6 +45,7 @@
 
 body {
   background-color: var(--color-primary-background);
+  overflow-wrap: anywhere;
 }
 
 /* Overriding redactor implementation of separator */
