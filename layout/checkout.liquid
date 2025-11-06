@@ -9,7 +9,7 @@
   {{ content_for_checkout_header }}
 
   {% render 'fonts', settings: settings %}
-  {% render 'color-palette-styles', settings: settings, branding_color: branding_color %}
+  {% render 'color-palette-styles', settings: settings, branding_color: branding_color, is_local_theme: is_local_theme %}
 
   {% render 'page-metadata',
     canonical_url: canonical_url,
