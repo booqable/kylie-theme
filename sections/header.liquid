@@ -1,7 +1,7 @@
 {{ "header.css" | asset_url | stylesheet_tag }}
 {{ "list-menu.css" | asset_url | stylesheet_tag }}
 
-{% assign app = section.blocks | where: "type", "app" | first -%}
+{% assign apps = section.blocks | where: "type", "app" -%}
 
 {% if app %}
   {{ "app.css" | asset_url | stylesheet_tag }}
@@ -148,11 +148,11 @@
           </li>
         {% endfor %}
 
-        {% if app %}
+        {% for app in apps %}
           <li class="header-app">
             {% render 'app', block: app, section: section, size: "desktop" %}
           </li>
-        {% endif %}
+        {% endfor %}
 
       </ul>
     </nav>
@@ -229,11 +229,11 @@
             </li>
           {% endfor %}
 
-          {% if app %}
+          {% for app in apps %}
             <li class="header-app">
               {% render 'app', block: app, section: section, size: "mobile" %}
             </li>
-          {% endif %}
+          {% endfor %}
         </ul>
       </div>
     </div>
