@@ -40,7 +40,7 @@
 
   <div class="tiles__items">
     {% for block in section.blocks %}
-      <div class="tiles__item">
+      <div id="{{ block.id }}" class="tiles__item">
         {% if block.settings.icon != "empty" and block.settings.heading != blank or block.settings.icon != "empty" and block.settings.text != blank %}
           <div class="tiles__icon">
             <i class="fa fa-{{ block.settings.icon }}"></i>
