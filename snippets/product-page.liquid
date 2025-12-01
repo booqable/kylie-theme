@@ -2,9 +2,14 @@
 
 <div class="product-gallery">
   {{ product | product_gallery:
-    enable_thumbnails: true,
-    enable_controls: true,
-    infinite_scroll: true
+    image_fit_desktop: section.settings.image_fit_desktop,
+    enable_thumbnails_desktop: section.settings.enable_thumbnails_desktop,
+    infinite_scroll_desktop: section.settings.infinite_scroll_desktop,
+    enable_controls_desktop: section.settings.enable_controls_desktop,
+    image_fit_mobile: section.settings.image_fit_mobile,
+    enable_thumbnails_mobile: section.settings.enable_thumbnails_mobile,
+    infinite_scroll_mobile: section.settings.infinite_scroll_mobile,
+    enable_controls_mobile: section.settings.enable_controls_mobile
   }}
 </div>
 <div class="product-details">
