@@ -4,7 +4,7 @@
 {% assign fa  = "paypal,stripe,ideal,alipay" | split: "," %}
 {% assign svg = "p24,eps,bancontact,giropay" | split: "," %}
 
-{% assign app = section.blocks | where: "type", "app" | first -%}
+{% assign apps = section.blocks | where: "type", "app" -%}
 
 {% if app %}
   {{ "app.css" | asset_url | stylesheet_tag }}
@@ -63,11 +63,11 @@
   {% endfor %}
   {% if section.settings.show_copyright or show_powered_by %}
     <div class="footer__bottom">
-      {% if app %}
+      {% for app in apps %}
         <div class="footer-app">
           {% render "app", block: app, section: section %}
         </div>
-      {% endif %}
+      {% endfor %}
 
       <div class="footer__copyright footer__copyright--align-{{ section.settings.align_copyright }}">
         {% if section.settings.show_copyright %}
