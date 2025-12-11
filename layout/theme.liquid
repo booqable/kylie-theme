@@ -7,6 +7,7 @@
     {% comment %} Base stylesheets {% endcomment %}
     {{ "base.css" | asset_url | stylesheet_tag }}
     {{ "rx.css" | asset_url | stylesheet_tag }}
+    {{ "focal-image.css" | asset_url | stylesheet_tag }}
     {% comment %} Fonts {% endcomment %}
     <script src="https://kit.fontawesome.com/ff3b3de2b5.js" crossorigin="anonymous"></script>
     {{ content_for_header }}
@@ -39,6 +40,7 @@
     <script src="{{ "index.js" | asset_url }}" defer></script>
     <script src="{{ "menus.js" | asset_url }}" defer></script>
     <script src="{{ "carousels.js" | asset_url }}" defer></script>
+    <script src="{{ "js-focal-image.js" | asset_url }}" defer></script>
 
     {{ content_for_body }}
 
