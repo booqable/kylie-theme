@@ -40,7 +40,7 @@
   {% if section.settings.use_carousel %}
     <div class="carousel carousel--snap-{{ section.settings.snap }}">
       <div class="carousel__inner {% if section.settings.infinite_scroll %}infinite-scroll{% endif %}"{% if card_image_fit != blank %} style="{{- image_variables | escape -}}"{% endif %}>
-        {% include "products-inner", image_fit: card_image_fit %}
+        {% include "products-inner" %}
       </div>
       <div class="carousel__controls">
         <div class="carousel__control prev">
@@ -57,7 +57,7 @@
       {% assign key = section.key %}
       {% paginate data by per_page page_param: key %}
         <div class="products__inner"{% if card_image_fit != blank %} style="{{- image_variables | escape -}}"{% endif %}>
-          {% include "products-inner", image_fit: card_image_fit %}
+          {% include "products-inner" %}
         </div>
         {% if paginate.pages > 1 %}
           {% include "pagination" %}
@@ -65,7 +65,7 @@
       {% endpaginate %}
     {% else %}
       <div class="products__inner"{% if card_image_fit != blank %} style="{{- image_variables | escape -}}"{% endif %}>
-        {% include "products-inner", image_fit: card_image_fit %}
+        {% include "products-inner" %}
       </div>
     {% endif %}
   {% endif %}
