@@ -16,12 +16,6 @@
         --object-fit: contain;
     {% endcase %}
   {% endcapture %}
-
-  {% if settings.use_focal_images %}
-    {% capture image_variables %}
-      --object-fit: cover;
-    {% endcapture %}
-  {% endif %}
   {% comment %} CSS variables end {% endcomment %}
 
   <div class="search-results{% if results_count == 0 %} no-results{% endif %}"{% if card_image_fit != blank %} style="{{- image_variables | escape -}}"{% endif %}>

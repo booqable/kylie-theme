@@ -35,12 +35,6 @@
         --object-fit: contain;
     {% endcase %}
   {% endcapture %}
-
-  {% if settings.use_focal_images %}
-    {% capture image_variables %}
-      --object-fit: cover;
-    {% endcapture %}
-  {% endif %}
   {% comment %} CSS variables end {% endcomment %}
 
   {% if section.settings.use_carousel %}

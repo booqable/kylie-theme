@@ -22,12 +22,6 @@
         --object-fit: contain;
     {% endcase %}
   {% endcapture %}
-
-  {% if settings.use_focal_images %}
-    {% capture image_variables %}
-      --object-fit: cover;
-    {% endcapture %}
-  {% endif %}
   {% comment %} CSS variables end {% endcomment %}
 
   <div class="collection-page__wrapper {% if section.blocks.size > 0 %}collection-page__wrapper--with-sidebar{% endif %}">
