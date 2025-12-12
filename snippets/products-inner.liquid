@@ -9,8 +9,10 @@
     {% assign image = product.images.first %}
     {%- assign price = product | product_price -%}
     {%- assign price_label = product | product_price_label -%}
-    {% if settings.use_focal_images %}
+    {% if settings.use_focal_images and image_fit == "cover" %}
       {% assign focal = image.coordinates %}
+    {% else %}
+      {% assign focal = nil %}
     {% endif %}
     <div id="{% if data_type == 'blocks' %}{{ item.id }}{% else %}{{ product.id }}{% endif %}" class="product {% if section.settings.use_carousel %}carousel__item{% endif %}">
       <a href="{{ product.url }}" class="product__image-container">{% if image != blank %}{{ image.url | image_tag:

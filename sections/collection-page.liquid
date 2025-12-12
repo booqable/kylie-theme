@@ -53,8 +53,10 @@
           <div class="collection-page__items"{% if card_image_fit != blank %} style="{{- image_variables | escape -}}"{% endif %}>
             {% for item in paginate_object %}
               {% assign image = item.images.first %}
-              {% if settings.use_focal_images %}
+              {% if settings.use_focal_images and card_image_fit == "cover" %}
                 {% assign focal = image.coordinates %}
+              {% else %}
+                {% assign focal = nil %}
               {% endif %}
               <div class="product">
                 <a href="{{ item.url }}" class="product__image-container">{% if image != blank %}{{ image.url | image_tag:

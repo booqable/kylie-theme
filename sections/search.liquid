@@ -30,8 +30,10 @@
     {% else %}
       {% for result in results %}
         {% assign image = result.images.first %}
-        {% if settings.use_focal_images %}
+        {% if settings.use_focal_images and card_image_fit == "cover" %}
           {% assign focal = image.coordinates %}
+        {% else %}
+          {% assign focal = nil %}
         {% endif %}
         <div class="product">
           <a href="{{ result.url }}" class="product__image-container">{% if image.url != blank %}{{ image.url | image_tag:
