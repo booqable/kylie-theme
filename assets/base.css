@@ -67,11 +67,6 @@ input {
   color: var(--color-typo);
 }
 
-.focal-image {
-  opacity: 0;
-
-  transition: opacity 150ms ease;
-}
 
 .bq-sidebar-head *,
 .bq-branded.bq-title,
