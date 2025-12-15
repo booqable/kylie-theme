@@ -216,7 +216,3 @@ bq-product-availability {
   font-family: var(--font-body);
   font-weight: var(--font-weight-semibold);
 }
-
-[data-focus="true"] {
-  box-shadow: 0 0 0 3px #395db899;
-}
