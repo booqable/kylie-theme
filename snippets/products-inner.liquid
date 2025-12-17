@@ -16,7 +16,7 @@
     {% else %}
       {% assign focal = nil %}
     {% endif %}
-    <div id="{% if data_type == 'blocks' %}{{ item.id }}{% else %}{{ product.id }}{% endif %}" class="product {% if section.settings.use_carousel %}carousel__item{% endif %}">
+    <div id="{% if data_type == 'blocks' %}{{ item.id }}{% else %}{{ product.id }}{% endif %}" {% if data_type == 'blocks' %}data-block-key="{{ item.id }}" data-block-name="{{ item.name }}"{% endif %} class="product {% if section.settings.use_carousel %}carousel__item{% endif %}">
       <a href="{{ product.url }}" class="product__image-container">{% if image != blank %}{{ image.url | image_tag:
         loading: 'lazy',
         class: 'product__image',

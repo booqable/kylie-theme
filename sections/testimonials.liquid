@@ -32,7 +32,7 @@
         {% assign stars_empty = block.settings.stars | plus: 1 %}
 
         {% if block.settings.description != blank %}
-          <blockquote id="{{ block.id }}" class="testimonials__blockquote">
+          <blockquote id="{{ block.id }}" data-block-key="{{ block.id }}" data-block-name="{{ block.name }}" class="testimonials__blockquote">
             <div class="testimonials__stars">
               {% for i in (1..stars_full) %}
                 <span class="testimonials__star">

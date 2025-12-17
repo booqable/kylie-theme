@@ -56,12 +56,12 @@
   {% for block in section.blocks %}
     {% case block.type %}
       {% when "heading" %}
-        <h1 id="{{ block.id }}" class="form__title form__title--size-{{ block.settings.size }}">{{ block.settings.text | escape }}</h1>
+        <h1 id="{{ block.id }}" data-block-key="{{ block.id }}" data-block-name="{{ block.name }}" class="form__title form__title--size-{{ block.settings.size }}">{{ block.settings.text | escape }}</h1>
       {% when "text" %}
-        <p id="{{ block.id }}" class="form__text form__text--size-{{ block.settings.size }}">{{ block.settings.text | escape }}</p>
+        <p id="{{ block.id }}" data-block-key="{{ block.id }}" data-block-name="{{ block.name }}" class="form__text form__text--size-{{ block.settings.size }}">{{ block.settings.text | escape }}</p>
       {% when "button" %}
         <div class="form__button-container form__button-container--align-{{ section.settings.content_justify }}">
-          <a id="{{ block.id }}" class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" {% if block.settings.use_new_tab %}target="_blank"{% endif %}>
+          <a id="{{ block.id }}" data-block-key="{{ block.id }}" data-block-name="{{ block.name }}" class="bq-button bq-button--size-{{ block.settings.size }} {% if block.settings.use_solid_button %}bq-button--solid{% endif %}" href="{{ block.settings.url }}" {% if block.settings.use_new_tab %}target="_blank"{% endif %}>
             {{ block.settings.text | escape }}
           </a>
         </div>

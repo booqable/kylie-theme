@@ -19,7 +19,7 @@
 {% if blocks.size > 0 %}
   <ul class="accordion-block">
     {% for block in blocks %}
-      <li class="accordion-block__item" id="{{- block.id -}}">
+      <li class="accordion-block__item" id="{{- block.id -}}" data-block-key="{{ block.id }}" data-block-name="{{ block.name }}">
         {% if block.settings.heading != blank %}
           <input
             {% if behavior == "single" %}type="radio"{% else %}type="checkbox"{% endif %}
