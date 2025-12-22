@@ -18,7 +18,7 @@
       {% for block in section.blocks %}
         {% assign image = block.settings.image %}
 
-        <div class="logos__image-wrapper" id="{{- block.id -}}">
+        <div class="logos__image-wrapper" id="{{- block.id -}}" data-block-key="{{ block.id }}" data-block-name="{{ block.name }}">
           {% if image.url != blank %}
             {{ block.settings.image.url | image_tag:
               loading: 'lazy',

@@ -45,7 +45,7 @@
 <div class="columns-{{ section.key }} columns__container columns__container--alignment columns__container--count-{{ section.settings.columns_count }}">
   {% if section.blocks.size >= 1 and column_exists %}
     {% for block in section.blocks %}
-      <div id="{{ block.id }}" class="columns__column post">
+      <div id="{{ block.id }}" data-block-key="{{ block.id }}" data-block-name="{{ block.name }}" class="columns__column post">
         {% if block.settings.image.url != blank %}
           {% if block.settings.image_border_radius == true %}
             {% assign class = "post__image post__image--border-radius" %}

@@ -7,6 +7,7 @@
 
 .products .carousel__inner {
   align-items: stretch;
+  padding: 12px 0;
 }
 
 .products__title {
@@ -82,10 +83,6 @@
 @media (min-width: 820px) {
   .products {
     padding: 0 var(--horizontal-padding);
-  }
-
-  .products .carousel__inner {
-    padding: 0;
   }
 
   .products__title {

@@ -28,7 +28,7 @@
       {% assign featured_image = "" %}
       {% assign first_product = block.settings.collection.products | first %}
 
-      <a id="{{ block.id }}" href="{{ block.settings.collection.url }}">
+      <a id="{{ block.id }}" data-block-key="{{ block.id }}" data-block-name="{{ block.name }}" href="{{ block.settings.collection.url }}">
         <div class="collection">
           {% if block.settings.collection.image.url != blank %}
             {% assign featured_image = block.settings.collection.image.url %}
