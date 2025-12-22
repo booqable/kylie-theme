@@ -7,7 +7,7 @@
       "block_order": [],
       "settings": {
         "description_label": "Description",
-        "description_placement": "bottom",
+        "description_placement": "bottom"
       },
       "disabled": null
     },
